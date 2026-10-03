@@ -1,15 +1,12 @@
 import { z } from 'zod';
 import { getListResponseSchema } from '../helpers/index.js';
+import { buildListQueryParamsSchema } from '../helpers/build-list-query-params-schema.js';
 
 export const GetArticleBySlugSchema = z.object({
   slug: z.string(),
 });
 
-export const GetArticlesListQueriesSchema = z
-  .object({
-    pageIndex: z.coerce.number(),
-  })
-  .partial();
+export const GetArticlesListQueriesSchema = buildListQueryParamsSchema();
 
 export const CreateArticleSchema = z.object({
   title: z.string(),

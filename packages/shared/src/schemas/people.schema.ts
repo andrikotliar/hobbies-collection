@@ -1,21 +1,20 @@
 import { z } from 'zod';
 import { PersonRole } from '../enums/index.js';
 import { getArrayFromQuery, getBoolFromQuery, getListResponseSchema } from '../helpers/index.js';
+import { buildListQueryParamsSchema } from '../helpers/build-list-query-params-schema.js';
 
 export const CreatePersonSchema = z.object({
   name: z.string(),
   selected: z.boolean().optional(),
 });
 
-export const GetPeopleListQuerySchema = z
-  .object({
-    pageIndex: z.coerce.number(),
-    q: z.string().optional().nullable(),
-    role: z.enum(PersonRole).nullable(),
+export const GetPeopleListQuerySchema = buildListQueryParamsSchema(
+  z.object({
+    role: z.enum(PersonRole).nullable().optional(),
     selected: getBoolFromQuery.optional(),
     notAssigned: getBoolFromQuery.optional(),
-  })
-  .partial();
+  }),
+);
 
 export const SearchPersonSchema = z
   .object({

@@ -8,6 +8,7 @@ import { CountryResponseSchema } from './countries.schema.js';
 import { GenreResponseSchema } from './genres.schema.js';
 import { PersonResponseSchema } from './people.schema.js';
 import { StudioResponseSchema } from './studios.schema.js';
+import { buildListQueryParamsSchema } from '../helpers/build-list-query-params-schema.js';
 
 const DateStringSchema = z
   .string()
@@ -76,31 +77,29 @@ export const CreateFilmInputSchema = z.object({
   draft: z.boolean(),
 });
 
-export const GetFilmsListQuerySchema = z.object({
-  pageIndex: z.coerce.number().min(0).optional(),
-  startDate: z.string().optional(),
-  endDate: z.string().optional(),
-  year: z.coerce.number().optional(),
-  collectionId: z.coerce.number().optional(),
-  duration: z.coerce.number().optional(),
-  rating: z.coerce.number().optional(),
-  seasonsTotal: z.coerce.number().optional(),
-  episodesTotal: z.coerce.number().optional(),
-  personId: z.coerce.number().optional(),
-  awardId: z.coerce.number().optional(),
-  budget: z.coerce.number().optional(),
-  boxOffice: z.coerce.number().optional(),
-  type: z.enum(FilmType).optional(),
-  personRole: z.enum(PersonRole).optional(),
-  genreIds: getArrayFromQuery(z.coerce.number()).optional(),
-  studioIds: getArrayFromQuery(z.coerce.number()).optional(),
-  countryIds: getArrayFromQuery(z.coerce.number()).optional(),
-  q: z.string().optional().nullable(),
-  orderKey: z.string().optional(),
-  order: z.enum(['asc', 'desc']).optional(),
-  releasedThisDay: getBoolFromQuery.optional(),
-  runtimeRange: getArrayFromQuery(z.coerce.number()).optional(),
-});
+export const GetFilmsListQuerySchema = buildListQueryParamsSchema(
+  z.object({
+    startDate: z.string().optional(),
+    endDate: z.string().optional(),
+    year: z.coerce.number().optional(),
+    collectionId: z.coerce.number().optional(),
+    duration: z.coerce.number().optional(),
+    rating: z.coerce.number().optional(),
+    seasonsTotal: z.coerce.number().optional(),
+    episodesTotal: z.coerce.number().optional(),
+    personId: z.coerce.number().optional(),
+    awardId: z.coerce.number().optional(),
+    budget: z.coerce.number().optional(),
+    boxOffice: z.coerce.number().optional(),
+    type: z.enum(FilmType).optional(),
+    personRole: z.enum(PersonRole).optional(),
+    genreIds: getArrayFromQuery(z.coerce.number()).optional(),
+    studioIds: getArrayFromQuery(z.coerce.number()).optional(),
+    countryIds: getArrayFromQuery(z.coerce.number()).optional(),
+    releasedThisDay: getBoolFromQuery.optional(),
+    runtimeRange: getArrayFromQuery(z.coerce.number()).optional(),
+  }),
+);
 
 export const GetAdminListQuerySchema = GetFilmsListQuerySchema.extend({
   draftLevels: getArrayFromQuery(z.enum(DraftLevel)).optional(),

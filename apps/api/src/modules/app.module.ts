@@ -7,6 +7,8 @@ import { AuthService } from '~/modules/auth/auth.service.js';
 import { AwardsRepository } from '~/modules/awards/awards.repository.js';
 import { awardsRouter } from '~/modules/awards/awards.router.js';
 import { AwardsService } from '~/modules/awards/awards.service.js';
+import { BooksRepository } from '~/modules/books/books.repository.js';
+import { BooksService } from '~/modules/books/books.service.js';
 import { InMemoryCacheService } from '~/modules/cache/cache.service.js';
 import { CollectionEventsRepository } from '~/modules/collection-events/collection-events.repository.js';
 import { collectionEventsRouter } from '~/modules/collection-events/collection-events.router.js';
@@ -48,7 +50,8 @@ export const services = {
   awardsService: AwardsService,
   articlesRepository: ArticlesRepository,
   articlesService: ArticlesService,
-  inMemoryCacheService: InMemoryCacheService,
+  booksRepository: BooksRepository,
+  booksService: BooksService,
   collectionEventsRepository: CollectionEventsRepository,
   collectionEventsService: CollectionEventsService,
   collectionsRepository: CollectionsRepository,
@@ -62,6 +65,7 @@ export const services = {
   genresRepository: GenresRepository,
   genresService: GenresService,
   initialDataService: InitialDataService,
+  inMemoryCacheService: InMemoryCacheService,
   peopleRepository: PeopleRepository,
   peopleService: PeopleService,
   storageService: StorageService,

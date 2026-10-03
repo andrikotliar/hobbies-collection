@@ -41,34 +41,17 @@ import {
   genres,
   seriesExtensions,
   studios,
+  type Film,
   type FilmCollection,
 } from '~/database/schema.js';
-import type {
-  PgColumn,
-  PgInsertValue,
-  PgTableWithColumns,
-  PgTransaction,
-} from 'drizzle-orm/pg-core';
 import type { Timestamps } from '~/modules/films/types.js';
 import type { Deps } from '~/shared/types/deps.js';
 import { getFirstValue } from '~/shared/helpers/get-first-value.js';
 import { sqlSearchQuery } from '~/shared/helpers/sql-search-query.js';
 import { getLatestEntriesFilter } from '~/shared/helpers/get-latest-entries-filter.js';
 import { thisDateReleaseSql } from '~/shared/helpers/this-date-release-sql.js';
-
-type AnyTable = {
-  name: string;
-  columns: { filmId: PgColumn; [key: string]: any };
-  schema: undefined;
-  dialect: 'pg';
-};
-
-type UpdateRelationsParams<T extends PgTableWithColumns<AnyTable>, V extends PgInsertValue<T>> = {
-  filmId: number;
-  transaction: PgTransaction<any, any, any>;
-  table: T;
-  values: V[];
-};
+import { getDirectionFn } from '~/shared/helpers/get-direction-fn.js';
+import { updateTableRelations } from '~/shared/helpers/update-table-relations.js';
 
 type FilterLevel = 'public' | 'admin';
 
@@ -539,9 +522,9 @@ export class FilmsRepository {
         .returning({ id: films.id });
 
       if (genres) {
-        await this.updateFilmRelations({
+        await updateTableRelations({
           transaction,
-          filmId,
+          where: { filmId },
           table: filmsGenres,
           values: genres.map((genreId) => ({
             genreId,
@@ -559,9 +542,9 @@ export class FilmsRepository {
           }));
         });
 
-        await this.updateFilmRelations({
+        await updateTableRelations({
           transaction,
-          filmId,
+          where: { filmId },
           table: filmsPeople,
           values: values.flat(),
         });
@@ -576,18 +559,18 @@ export class FilmsRepository {
           }));
         });
 
-        await this.updateFilmRelations({
+        await updateTableRelations({
           transaction,
-          filmId,
+          where: { filmId },
           table: filmAwardNominations,
           values: values.flat(),
         });
       }
 
       if (collections) {
-        await this.updateFilmRelations({
+        await updateTableRelations({
           transaction,
-          filmId,
+          where: { filmId },
           table: filmsCollections,
           values: collections.map((collection) => ({
             collectionId: collection.collectionId,
@@ -598,9 +581,9 @@ export class FilmsRepository {
       }
 
       if (countries) {
-        await this.updateFilmRelations({
+        await updateTableRelations({
           transaction,
-          filmId,
+          where: { filmId },
           table: filmsCountries,
           values: countries.map((countryId) => ({
             countryId,
@@ -610,9 +593,9 @@ export class FilmsRepository {
       }
 
       if (studios) {
-        await this.updateFilmRelations({
+        await updateTableRelations({
           transaction,
-          filmId,
+          where: { filmId },
           table: filmsStudios,
           values: studios.map((studioId) => ({
             studioId,
@@ -622,9 +605,9 @@ export class FilmsRepository {
       }
 
       if (trailers) {
-        await this.updateFilmRelations({
+        await updateTableRelations({
           transaction,
-          filmId,
+          where: { filmId },
           table: filmTrailers,
           values: trailers.map((trailer) => ({
             ...trailer,
@@ -634,9 +617,9 @@ export class FilmsRepository {
       }
 
       if (seriesExtension) {
-        await this.updateFilmRelations({
+        await updateTableRelations({
           transaction,
-          filmId,
+          where: { filmId },
           table: seriesExtensions,
           values: [
             {
@@ -651,19 +634,6 @@ export class FilmsRepository {
         filmId: updatedFilm.id,
       };
     });
-  }
-
-  async updateFilmRelations<T extends PgTableWithColumns<AnyTable>, V extends PgInsertValue<T>>({
-    transaction,
-    filmId,
-    table,
-    values,
-  }: UpdateRelationsParams<T, V>) {
-    await transaction.delete(table).where(eq(table.filmId, filmId));
-
-    if (values.length) {
-      await transaction.insert(table).values(values);
-    }
   }
 
   getCompleteData(queries: GetCompleteDataListQuery) {
@@ -980,41 +950,25 @@ export class FilmsRepository {
     direction: SortingOrder = 'desc',
     queries?: PlainFilmFilters,
   ) {
-    const directions = {
-      asc,
-      desc,
-    };
+    const fn = getDirectionFn(direction);
 
-    const fn = directions[direction];
-
-    switch (key) {
-      case 'collectionOrder':
-        if (!queries?.collectionId) {
-          return fn(films.releaseDate);
-        }
-        return asc(
-          this.deps.db
-            .select({ order: filmsCollections.order })
-            .from(filmsCollections)
-            .where(
-              and(
-                eq(films.id, filmsCollections.filmId),
-                eq(filmsCollections.collectionId, queries.collectionId),
-              ),
-            ),
-        );
-      case 'title':
-        return fn(films.title);
-      case 'createdAt':
-        return fn(films.createdAt);
-      case 'releaseDate':
+    if (key === 'collectionOrder') {
+      if (!queries?.collectionId) {
         return fn(films.releaseDate);
-      case 'addedAt':
-        return fn(films.addedAt);
-      case 'boxOffice':
-        return fn(films.boxOffice);
-      default:
-        return desc(films.updatedAt);
+      }
+      return asc(
+        this.deps.db
+          .select({ order: filmsCollections.order })
+          .from(filmsCollections)
+          .where(
+            and(
+              eq(films.id, filmsCollections.filmId),
+              eq(filmsCollections.collectionId, queries.collectionId),
+            ),
+          ),
+      );
     }
+
+    return fn(films[key as keyof Film]);
   }
 }
