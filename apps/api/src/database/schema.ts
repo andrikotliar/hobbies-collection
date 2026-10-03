@@ -579,6 +579,7 @@ export const books = pgTable('books', {
   publicationYear: integer('publication_year').notNull(),
   pagesNumber: integer('pages_number').notNull(),
   rating: integer('rating').notNull().default(1),
+  imagePath: text('image_path'),
   createdAt: timestamp('created_at', { precision: 3, mode: 'string' }).defaultNow().notNull(),
   updatedAt: timestamp('updated_at', { precision: 3, mode: 'string' })
     .defaultNow()
@@ -687,6 +688,7 @@ export const boardGames = pgTable('board_games', {
   gamesPlayed: integer('games_played').default(0),
   releasedYear: integer('released_year').notNull(),
   rating: integer('rating').notNull().default(1),
+  imagePath: text('image_path'),
   createdAt: timestamp('created_at', { precision: 3, mode: 'string' }).defaultNow().notNull(),
   updatedAt: timestamp('updated_at', { precision: 3, mode: 'string' })
     .defaultNow()

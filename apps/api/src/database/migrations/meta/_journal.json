@@ -253,6 +253,13 @@
       "when": 1791023591230,
       "tag": "0036_add-books-and-board-games",
       "breakpoints": true
+    },
+    {
+      "idx": 37,
+      "version": "7",
+      "when": 1791026844122,
+      "tag": "0037_add-image-paths",
+      "breakpoints": true
     }
   ]
 }
