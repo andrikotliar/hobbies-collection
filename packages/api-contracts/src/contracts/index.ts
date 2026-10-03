@@ -12,10 +12,12 @@ import { peopleContract } from './people.contract.js';
 import { studiosContract } from './studios.contract.js';
 import { usersContracts } from './users.contract.js';
 import { booksContract } from './books.contract.js';
+import { boardGamesContract } from './board-games.contract.js';
 
 export const contracts = {
   auth: authContract,
   awards: awardsContract,
+  boardGames: boardGamesContract,
   books: booksContract,
   collectionEvents: collectionEventsContract,
   collections: collectionsContract,

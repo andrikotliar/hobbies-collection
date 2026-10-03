@@ -7,7 +7,11 @@ import { AuthService } from '~/modules/auth/auth.service.js';
 import { AwardsRepository } from '~/modules/awards/awards.repository.js';
 import { awardsRouter } from '~/modules/awards/awards.router.js';
 import { AwardsService } from '~/modules/awards/awards.service.js';
+import { BoardGamesRepository } from '~/modules/board-games/board-games.repository.js';
+import { boardGamesRouter } from '~/modules/board-games/board-games.router.js';
+import { BoardGamesService } from '~/modules/board-games/board-games.service.js';
 import { BooksRepository } from '~/modules/books/books.repository.js';
+import { booksRouter } from '~/modules/books/books.router.js';
 import { BooksService } from '~/modules/books/books.service.js';
 import { InMemoryCacheService } from '~/modules/cache/cache.service.js';
 import { CollectionEventsRepository } from '~/modules/collection-events/collection-events.repository.js';
@@ -50,6 +54,8 @@ export const services = {
   awardsService: AwardsService,
   articlesRepository: ArticlesRepository,
   articlesService: ArticlesService,
+  boardGamesRepository: BoardGamesRepository,
+  boardGamesService: BoardGamesService,
   booksRepository: BooksRepository,
   booksService: BooksService,
   collectionEventsRepository: CollectionEventsRepository,
@@ -81,6 +87,8 @@ export const routers = [
   articlesRouter,
   authRouter,
   awardsRouter,
+  boardGamesRouter,
+  booksRouter,
   collectionEventsRouter,
   collectionsRouter,
   countriesRouter,

@@ -219,6 +219,10 @@ export const booksCollectionsRelations = relations(booksCollections, ({ one }) =
   }),
 }));
 
+export const boardGamesRelations = relations(boardGames, ({ many }) => ({
+  creators: many(boardGamesCreators),
+}));
+
 export const boardGamesCreatorsRelations = relations(boardGamesCreators, ({ one }) => ({
   creator: one(people, {
     fields: [boardGamesCreators.creatorId],

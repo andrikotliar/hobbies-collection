@@ -2,8 +2,8 @@ export const PAGE_LIMITS = {
   default: 30,
   filmsList: 48,
   filmsSearch: 10,
-  hobbyItems: 30,
   booksList: 48,
+  boardGames: 48,
 };
 export const NEW_ITEM_ID = 'new';
 
