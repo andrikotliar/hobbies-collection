@@ -43,4 +43,3 @@ export * from './skeleton-block/skeleton-block';
 export * from './section-title/section-title';
 export * from './range-input/range-input';
 export * from './filter-provider/filter-provider';
-export * from './hobbies';

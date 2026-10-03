@@ -20,7 +20,6 @@ import { Route as ConsoleUserRouteRouteImport } from './routes/console/user/rout
 import { Route as ConsoleStudiosRouteRouteImport } from './routes/console/studios/route'
 import { Route as ConsoleSessionsRouteRouteImport } from './routes/console/sessions/route'
 import { Route as ConsolePeopleRouteRouteImport } from './routes/console/people/route'
-import { Route as ConsoleHobbiesRouteRouteImport } from './routes/console/hobbies/route'
 import { Route as ConsoleGenresRouteRouteImport } from './routes/console/genres/route'
 import { Route as ConsoleFilmsRouteRouteImport } from './routes/console/films/route'
 import { Route as ConsoleCountriesRouteRouteImport } from './routes/console/countries/route'
@@ -29,7 +28,6 @@ import { Route as ConsoleCollectionEventsRouteRouteImport } from './routes/conso
 import { Route as ConsoleAwardsRouteRouteImport } from './routes/console/awards/route'
 import { Route as ConsoleArticlesRouteRouteImport } from './routes/console/articles/route'
 import { Route as ConsoleRootIndexRouteImport } from './routes/console/_root/index'
-import { Route as ConsoleHobbiesIdRouteImport } from './routes/console/hobbies_/$id'
 import { Route as ConsoleFilmsIdRouteImport } from './routes/console/films_/$id'
 import { Route as ConsoleAwardsIdRouteImport } from './routes/console/awards_/$id'
 import { Route as ConsoleArticlesIdRouteImport } from './routes/console/articles_/$id'
@@ -89,11 +87,6 @@ const ConsolePeopleRouteRoute = ConsolePeopleRouteRouteImport.update({
   path: '/people',
   getParentRoute: () => ConsoleRouteRoute,
 } as any)
-const ConsoleHobbiesRouteRoute = ConsoleHobbiesRouteRouteImport.update({
-  id: '/hobbies',
-  path: '/hobbies',
-  getParentRoute: () => ConsoleRouteRoute,
-} as any)
 const ConsoleGenresRouteRoute = ConsoleGenresRouteRouteImport.update({
   id: '/genres',
   path: '/genres',
@@ -135,11 +128,6 @@ const ConsoleRootIndexRoute = ConsoleRootIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ConsoleRouteRoute,
 } as any)
-const ConsoleHobbiesIdRoute = ConsoleHobbiesIdRouteImport.update({
-  id: '/hobbies_/$id',
-  path: '/hobbies/$id',
-  getParentRoute: () => ConsoleRouteRoute,
-} as any)
 const ConsoleFilmsIdRoute = ConsoleFilmsIdRouteImport.update({
   id: '/films_/$id',
   path: '/films/$id',
@@ -169,7 +157,6 @@ export interface FileRoutesByFullPath {
   '/console/countries': typeof ConsoleCountriesRouteRoute
   '/console/films': typeof ConsoleFilmsRouteRoute
   '/console/genres': typeof ConsoleGenresRouteRoute
-  '/console/hobbies': typeof ConsoleHobbiesRouteRoute
   '/console/people': typeof ConsolePeopleRouteRoute
   '/console/sessions': typeof ConsoleSessionsRouteRoute
   '/console/studios': typeof ConsoleStudiosRouteRoute
@@ -179,7 +166,6 @@ export interface FileRoutesByFullPath {
   '/console/articles/$id': typeof ConsoleArticlesIdRoute
   '/console/awards/$id': typeof ConsoleAwardsIdRoute
   '/console/films/$id': typeof ConsoleFilmsIdRoute
-  '/console/hobbies/$id': typeof ConsoleHobbiesIdRoute
   '/console/': typeof ConsoleRootIndexRoute
 }
 export interface FileRoutesByTo {
@@ -194,7 +180,6 @@ export interface FileRoutesByTo {
   '/console/countries': typeof ConsoleCountriesRouteRoute
   '/console/films': typeof ConsoleFilmsRouteRoute
   '/console/genres': typeof ConsoleGenresRouteRoute
-  '/console/hobbies': typeof ConsoleHobbiesRouteRoute
   '/console/people': typeof ConsolePeopleRouteRoute
   '/console/sessions': typeof ConsoleSessionsRouteRoute
   '/console/studios': typeof ConsoleStudiosRouteRoute
@@ -204,7 +189,6 @@ export interface FileRoutesByTo {
   '/console/articles/$id': typeof ConsoleArticlesIdRoute
   '/console/awards/$id': typeof ConsoleAwardsIdRoute
   '/console/films/$id': typeof ConsoleFilmsIdRoute
-  '/console/hobbies/$id': typeof ConsoleHobbiesIdRoute
   '/console': typeof ConsoleRootIndexRoute
 }
 export interface FileRoutesById {
@@ -221,7 +205,6 @@ export interface FileRoutesById {
   '/console/countries': typeof ConsoleCountriesRouteRoute
   '/console/films': typeof ConsoleFilmsRouteRoute
   '/console/genres': typeof ConsoleGenresRouteRoute
-  '/console/hobbies': typeof ConsoleHobbiesRouteRoute
   '/console/people': typeof ConsolePeopleRouteRoute
   '/console/sessions': typeof ConsoleSessionsRouteRoute
   '/console/studios': typeof ConsoleStudiosRouteRoute
@@ -231,7 +214,6 @@ export interface FileRoutesById {
   '/console/articles_/$id': typeof ConsoleArticlesIdRoute
   '/console/awards_/$id': typeof ConsoleAwardsIdRoute
   '/console/films_/$id': typeof ConsoleFilmsIdRoute
-  '/console/hobbies_/$id': typeof ConsoleHobbiesIdRoute
   '/console/_root/': typeof ConsoleRootIndexRoute
 }
 export interface FileRouteTypes {
@@ -249,7 +231,6 @@ export interface FileRouteTypes {
     | '/console/countries'
     | '/console/films'
     | '/console/genres'
-    | '/console/hobbies'
     | '/console/people'
     | '/console/sessions'
     | '/console/studios'
@@ -259,7 +240,6 @@ export interface FileRouteTypes {
     | '/console/articles/$id'
     | '/console/awards/$id'
     | '/console/films/$id'
-    | '/console/hobbies/$id'
     | '/console/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -274,7 +254,6 @@ export interface FileRouteTypes {
     | '/console/countries'
     | '/console/films'
     | '/console/genres'
-    | '/console/hobbies'
     | '/console/people'
     | '/console/sessions'
     | '/console/studios'
@@ -284,7 +263,6 @@ export interface FileRouteTypes {
     | '/console/articles/$id'
     | '/console/awards/$id'
     | '/console/films/$id'
-    | '/console/hobbies/$id'
     | '/console'
   id:
     | '__root__'
@@ -300,7 +278,6 @@ export interface FileRouteTypes {
     | '/console/countries'
     | '/console/films'
     | '/console/genres'
-    | '/console/hobbies'
     | '/console/people'
     | '/console/sessions'
     | '/console/studios'
@@ -310,7 +287,6 @@ export interface FileRouteTypes {
     | '/console/articles_/$id'
     | '/console/awards_/$id'
     | '/console/films_/$id'
-    | '/console/hobbies_/$id'
     | '/console/_root/'
   fileRoutesById: FileRoutesById
 }
@@ -403,13 +379,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsolePeopleRouteRouteImport
       parentRoute: typeof ConsoleRouteRoute
     }
-    '/console/hobbies': {
-      id: '/console/hobbies'
-      path: '/hobbies'
-      fullPath: '/console/hobbies'
-      preLoaderRoute: typeof ConsoleHobbiesRouteRouteImport
-      parentRoute: typeof ConsoleRouteRoute
-    }
     '/console/genres': {
       id: '/console/genres'
       path: '/genres'
@@ -466,13 +435,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsoleRootIndexRouteImport
       parentRoute: typeof ConsoleRouteRoute
     }
-    '/console/hobbies_/$id': {
-      id: '/console/hobbies_/$id'
-      path: '/hobbies/$id'
-      fullPath: '/console/hobbies/$id'
-      preLoaderRoute: typeof ConsoleHobbiesIdRouteImport
-      parentRoute: typeof ConsoleRouteRoute
-    }
     '/console/films_/$id': {
       id: '/console/films_/$id'
       path: '/films/$id'
@@ -505,7 +467,6 @@ interface ConsoleRouteRouteChildren {
   ConsoleCountriesRouteRoute: typeof ConsoleCountriesRouteRoute
   ConsoleFilmsRouteRoute: typeof ConsoleFilmsRouteRoute
   ConsoleGenresRouteRoute: typeof ConsoleGenresRouteRoute
-  ConsoleHobbiesRouteRoute: typeof ConsoleHobbiesRouteRoute
   ConsolePeopleRouteRoute: typeof ConsolePeopleRouteRoute
   ConsoleSessionsRouteRoute: typeof ConsoleSessionsRouteRoute
   ConsoleStudiosRouteRoute: typeof ConsoleStudiosRouteRoute
@@ -513,7 +474,6 @@ interface ConsoleRouteRouteChildren {
   ConsoleArticlesIdRoute: typeof ConsoleArticlesIdRoute
   ConsoleAwardsIdRoute: typeof ConsoleAwardsIdRoute
   ConsoleFilmsIdRoute: typeof ConsoleFilmsIdRoute
-  ConsoleHobbiesIdRoute: typeof ConsoleHobbiesIdRoute
   ConsoleRootIndexRoute: typeof ConsoleRootIndexRoute
 }
 
@@ -525,7 +485,6 @@ const ConsoleRouteRouteChildren: ConsoleRouteRouteChildren = {
   ConsoleCountriesRouteRoute: ConsoleCountriesRouteRoute,
   ConsoleFilmsRouteRoute: ConsoleFilmsRouteRoute,
   ConsoleGenresRouteRoute: ConsoleGenresRouteRoute,
-  ConsoleHobbiesRouteRoute: ConsoleHobbiesRouteRoute,
   ConsolePeopleRouteRoute: ConsolePeopleRouteRoute,
   ConsoleSessionsRouteRoute: ConsoleSessionsRouteRoute,
   ConsoleStudiosRouteRoute: ConsoleStudiosRouteRoute,
@@ -533,7 +492,6 @@ const ConsoleRouteRouteChildren: ConsoleRouteRouteChildren = {
   ConsoleArticlesIdRoute: ConsoleArticlesIdRoute,
   ConsoleAwardsIdRoute: ConsoleAwardsIdRoute,
   ConsoleFilmsIdRoute: ConsoleFilmsIdRoute,
-  ConsoleHobbiesIdRoute: ConsoleHobbiesIdRoute,
   ConsoleRootIndexRoute: ConsoleRootIndexRoute,
 }
 

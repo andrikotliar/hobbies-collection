@@ -5,7 +5,6 @@ import {
   CalendarIcon,
   ClapperboardIcon,
   ClockIcon,
-  DicesIcon,
   KeyRoundIcon,
   LibraryIcon,
   MapIcon,
@@ -107,13 +106,6 @@ export const consoleMenuConfig: Record<string, MenuConfigItem> = {
     icon: <UserIcon />,
     color: 'colorBlueDark',
   },
-  hobbies: {
-    id: 'hobbies',
-    route: '/console/hobbies',
-    title: 'Hobbies',
-    icon: <DicesIcon />,
-    color: 'colorPurpleDark',
-  },
   sessions: {
     id: 'sessions',
     route: '/console/sessions',
@@ -146,7 +138,7 @@ export const consoleMenuGroups: ConsoleMenuGroup[] = [
   },
   {
     title: 'Content',
-    itemIds: ['collectionEvents', 'articles', 'hobbies'],
+    itemIds: ['collectionEvents', 'articles'],
   },
   {
     title: 'Account',

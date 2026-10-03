@@ -18,11 +18,3 @@ export const buildGetCollectionsListQueryOptions = (
     queryFn: () => api.collections.getList({ queryParams }),
   });
 };
-
-export const buildGetHobbyRelatedCollectionsQueryOptions = (hobbyId: string) => {
-  return queryOptions({
-    queryKey: queryKey('hobbies.getHobbiesByCollection', hobbyId),
-    queryFn: () => api.collections.getHobbyRelated({ params: { id: Number(hobbyId) } }),
-    staleTime: Infinity,
-  });
-};
