@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { Navigation } from '~/routes/_home/-components/films-section/components';
+import { Navigation } from '~/routes/films/_root/-components/films-section/components';
 import { ChartsGrid } from '~/routes/films/stats/-components/charts-grid/charts-grid';
 import { StatsLayout } from '~/routes/films/stats/-components/stats-layout/stats-layout';
 import { buildMetaTitle, buildGetFilmsStatsQueryOptions } from '~/shared';

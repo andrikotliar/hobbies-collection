@@ -28,7 +28,7 @@ export const RoleItem = ({ data }: RoleItemProps) => {
           <li key={person.id} className={styles.list_item}>
             <div className={clsx(!isActorRole && styles.link_wrapper)}>
               <RouterLink
-                to="/"
+                to="/films"
                 search={{
                   personRole: data.role,
                   personId: person.id,

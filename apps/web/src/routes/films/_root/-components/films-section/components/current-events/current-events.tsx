@@ -22,7 +22,7 @@ export const CurrentEvents = ({ data }: CurrentEventsProps) => {
   return (
     <div className={styles.events_track}>
       {shouldShowReset && (
-        <Link className={styles.all_films_link} to="/">
+        <Link className={styles.all_films_link} to="/films">
           <div className={styles.all_films_link_inner}>{data.total}</div>
           <div className={styles.all_films_link_title}>All films</div>
         </Link>

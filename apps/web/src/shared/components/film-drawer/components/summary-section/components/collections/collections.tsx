@@ -42,7 +42,7 @@ export const Collections = ({ list }: CollectionsProps) => {
     <div className={styles.collections}>
       {collectionGroups.chapters && (
         <Link
-          to="/"
+          to="/films"
           search={{ collectionId: collectionGroups.chapters.id }}
           className={clsx(styles.collection_link, styles.chapter_link)}
           key={collectionGroups.chapters.id}
@@ -53,7 +53,7 @@ export const Collections = ({ list }: CollectionsProps) => {
       )}
       {collectionGroups.collections.map((collection) => (
         <Link
-          to="/"
+          to="/films"
           search={{ collectionId: collection.id }}
           className={styles.collection_link}
           style={{ backgroundColor: getColorBaseOnFirstLetter(collection.title) }}

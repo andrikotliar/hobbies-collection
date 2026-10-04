@@ -23,7 +23,7 @@ export const Status = ({ title, message, imageSrc, isRecoverable = false }: Stat
             Reload
           </Button>
         ) : (
-          <Link to="/" className={styles.home_link} replace>
+          <Link to="/films" className={styles.home_link} replace>
             <HomeIcon />
             <span>Return to Home</span>
           </Link>

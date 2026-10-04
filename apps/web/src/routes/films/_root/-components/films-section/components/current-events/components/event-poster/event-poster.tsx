@@ -20,7 +20,7 @@ export const EventPoster = ({
 }: EventPosterProps) => {
   return (
     <Link
-      to="/"
+      to="/films"
       search={search}
       className={clsx(styles.event_banner_button, isSelected && styles.selected_event)}
     >

@@ -9,7 +9,7 @@ type RatingProps = {
 
 export const Rating = ({ value }: RatingProps) => {
   return (
-    <Link className={styles.rating} to="/" search={{ rating: value }}>
+    <Link className={styles.rating} to="/films" search={{ rating: value }}>
       {Array.from({ length: 3 }, (_, index) => (
         <StarIcon
           key={index}

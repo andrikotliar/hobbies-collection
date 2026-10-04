@@ -9,7 +9,7 @@ type AwardProps = {
 export const Award = ({ data }: AwardProps) => {
   return (
     <div className={styles.award}>
-      <Link className={styles.header} to="/" search={{ awardId: data.award.id }}>
+      <Link className={styles.header} to="/films" search={{ awardId: data.award.id }}>
         <div className={styles.title}>{data.award.title}</div>{' '}
         <div className={styles.stats}>
           Won <span className={styles.num}>{data.nominations.length}</span>{' '}
@@ -23,7 +23,10 @@ export const Award = ({ data }: AwardProps) => {
             {nomination.person && (
               <>
                 <span>—</span>
-                <RouterLink to="/" search={{ personId: nomination.person.id, personRole: 'ACTOR' }}>
+                <RouterLink
+                  to="/films"
+                  search={{ personId: nomination.person.id, personRole: 'ACTOR' }}
+                >
                   {nomination.person.name}
                 </RouterLink>
               </>

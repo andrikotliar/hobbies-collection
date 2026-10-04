@@ -17,7 +17,8 @@ const ALL_COLLECTIONS_OPTION: ListOption<number> = {
   label: 'All Collections',
 };
 
-export const FiltersSchema = GetFilmsListQuerySchema.extend({
+export const FiltersSchema = z.object({
+  ...GetFilmsListQuerySchema.shape,
   type: z.enum({ ...FilmType, all: 'all' }),
 });
 
