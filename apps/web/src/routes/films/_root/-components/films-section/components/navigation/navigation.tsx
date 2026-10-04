@@ -2,20 +2,24 @@ import { Link, useLocation } from '@tanstack/react-router';
 import styles from './navigation.module.css';
 import type { FileRoutesByTo } from '~/routeTree.gen';
 import clsx from 'clsx';
+import { ChartPieIcon, FilmIcon } from 'lucide-react';
 
 type NavItem = {
   to: keyof FileRoutesByTo;
   title: string;
+  icon: React.ReactNode;
 };
 
 const links: NavItem[] = [
   {
-    to: '/',
-    title: 'Films Collection',
+    to: '/films',
+    title: 'Collection',
+    icon: <FilmIcon />,
   },
   {
     to: '/films/stats',
-    title: 'Films Statistic',
+    title: 'Statistic',
+    icon: <ChartPieIcon />,
   },
 ];
 
@@ -30,7 +34,8 @@ export const Navigation = () => {
           key={link.to}
           className={clsx(styles.link, location.pathname === link.to && styles.link_active)}
         >
-          {link.title}
+          {link.icon}
+          <span>{link.title}</span>
         </Link>
       ))}
     </div>

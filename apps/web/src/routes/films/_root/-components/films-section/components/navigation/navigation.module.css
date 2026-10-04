@@ -1,22 +1,26 @@
 .wrapper {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
-  background-color: var(--color-white);
-  padding: 0 10px;
-  height: 41px;
   border-radius: var(--rounded-sm);
-  box-shadow: var(--shadow-sm);
   text-transform: uppercase;
   font-family: var(--font-condensed);
   width: fit-content;
 }
 
 .link {
-  padding: 5px 10px;
-  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: var(--color-blue-primary);
+  border-radius: var(--rounded-default);
   transition: background-color 300ms;
+  background-color: var(--color-white);
   text-align: center;
+  border: 2px solid var(--color-blue-primary);
+  height: 46px;
+  width: 200px;
 }
 
 .link:not(.link_active):hover {
