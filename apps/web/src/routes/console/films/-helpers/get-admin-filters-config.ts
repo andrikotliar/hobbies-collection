@@ -4,8 +4,10 @@ import {
   filterDefaultValues,
   FiltersSchema,
   getFiltersConfig,
-} from '~/routes/films/_root/-helpers';
-import type { api, ApiResponse, FilterItem } from '~/shared';
+  type api,
+  type ApiResponse,
+  type FilterItem,
+} from '~/shared';
 
 const AdminOnlyFiltersSchema = z.object({
   noDescription: z.boolean().nullable(),

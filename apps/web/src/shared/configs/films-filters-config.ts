@@ -5,7 +5,9 @@ import {
   type ListOption,
 } from '@hobbies-collection/shared';
 import { z } from 'zod';
-import { api, generateYearsSelectOptions, queryKey, type FilterItem } from '~/shared';
+import { generateYearsSelectOptions } from '~/shared/helpers';
+import { api, queryKey } from '~/shared/services';
+import type { FilterItem } from '~/shared/types';
 
 const ALL_OPTION: ListOption<string> = {
   value: 'all',

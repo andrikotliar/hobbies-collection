@@ -1,5 +1,5 @@
 import styles from './films-section.module.css';
-import { AdditionalInfoSection, CurrentEvents, Navigation } from './components/index.js';
+import { AdditionalInfoSection, CurrentEvents } from './components/index.js';
 import { getRouteApi } from '@tanstack/react-router';
 import {
   countObjectKeys,
@@ -10,14 +10,16 @@ import {
   type SortingParams,
   PageHeaderFilters,
   PageGrid,
+  PageTopNavigation,
+  filmsPagesTopNavConfig,
 } from '~/shared';
 import { useQuery } from '@tanstack/react-query';
 import type { ListOption } from '@hobbies-collection/shared';
-import { TrailerWindow } from '~/routes/films/_root/-components/films-section/components/trailer-window/trailer-window';
+import { TrailerWindow } from './components';
 import { useMemo, useState } from 'react';
-import { getYearValue } from '~/routes/films/_root/-helpers';
+import { getYearValue } from '../../-helpers';
 
-const routeApi = getRouteApi('/films/_root');
+const routeApi = getRouteApi('/films');
 
 const sortingFields: ListOption<string, { isNotSelectable?: boolean }>[] = [
   {
@@ -130,7 +132,7 @@ export const FilmsSection = () => {
   return (
     <div className={styles.films_section}>
       <div className={styles.header}>
-        <Navigation />
+        <PageTopNavigation links={filmsPagesTopNavConfig} />
         <PageHeaderFilters
           sortingFieldsConfig={sortingFields}
           onSort={handleSorting}

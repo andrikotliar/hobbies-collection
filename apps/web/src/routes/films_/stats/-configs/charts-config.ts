@@ -1,7 +1,7 @@
 import { defineChart } from '@tanstack/charts';
 import { geoShape } from '@tanstack/charts/geo';
 import { geoEqualEarth } from 'd3-geo';
-import { getWorldLand, getWorldSphere } from '~/routes/films/stats_/-helpers/get-country-atlas';
+import { getWorldLand, getWorldSphere } from '../-helpers';
 
 const projection = {
   type: geoEqualEarth,

@@ -18,3 +18,7 @@ export const router = createRouter({
   defaultPendingMinMs: 0,
   context: { queryClient },
 });
+
+const routesToPreload = [router.routesByPath['/films/$id']];
+
+void Promise.all(routesToPreload.map((route) => router.loadRouteChunk(route)));

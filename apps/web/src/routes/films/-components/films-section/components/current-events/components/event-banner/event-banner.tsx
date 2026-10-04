@@ -1,4 +1,4 @@
-import { EventPoster } from '~/routes/films/_root/-components/films-section/components/current-events/components/event-poster/event-poster';
+import { EventPoster } from '../event-poster/event-poster';
 import { getPluralWord, type api, type ApiResponse } from '~/shared';
 
 type EventBannerProps = {

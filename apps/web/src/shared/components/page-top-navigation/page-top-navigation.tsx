@@ -1,29 +1,19 @@
 import { Link, useLocation } from '@tanstack/react-router';
-import styles from './navigation.module.css';
+import styles from './page-top-navigation.module.css';
 import type { FileRoutesByTo } from '~/routeTree.gen';
 import clsx from 'clsx';
-import { ChartPieIcon, FilmIcon } from 'lucide-react';
 
-type NavItem = {
+export type PageTopNavigationNavItem = {
   to: keyof FileRoutesByTo;
   title: string;
   icon: React.ReactNode;
 };
 
-const links: NavItem[] = [
-  {
-    to: '/films',
-    title: 'Collection',
-    icon: <FilmIcon />,
-  },
-  {
-    to: '/films/stats',
-    title: 'Statistic',
-    icon: <ChartPieIcon />,
-  },
-];
+type PageTopNavigation = {
+  links: PageTopNavigationNavItem[];
+};
 
-export const Navigation = () => {
+export const PageTopNavigation = ({ links }: PageTopNavigation) => {
   const location = useLocation();
 
   return (

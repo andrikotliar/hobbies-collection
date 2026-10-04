@@ -10,13 +10,13 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as LoginRouteRouteImport } from './routes/login/route'
+import { Route as FilmsRouteRouteImport } from './routes/films/route'
 import { Route as ConsoleRouteRouteImport } from './routes/console/route'
 import { Route as BooksRouteRouteImport } from './routes/books/route'
 import { Route as BoardGamesRouteRouteImport } from './routes/board-games/route'
 import { Route as AboutRouteRouteImport } from './routes/about/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as FilmsStatsRouteRouteImport } from './routes/films/stats_/route'
-import { Route as FilmsRootRouteRouteImport } from './routes/films/_root/route'
+import { Route as FilmsStatsRouteRouteImport } from './routes/films_/stats/route'
 import { Route as FilmsIdRouteRouteImport } from './routes/films/$id/route'
 import { Route as ConsoleUserRouteRouteImport } from './routes/console/user/route'
 import { Route as ConsoleStudiosRouteRouteImport } from './routes/console/studios/route'
@@ -37,6 +37,11 @@ import { Route as ConsoleArticlesIdRouteImport } from './routes/console/articles
 const LoginRouteRoute = LoginRouteRouteImport.update({
   id: '/login',
   path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FilmsRouteRoute = FilmsRouteRouteImport.update({
+  id: '/films',
+  path: '/films',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ConsoleRouteRoute = ConsoleRouteRouteImport.update({
@@ -65,19 +70,14 @@ const IndexRoute = IndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const FilmsStatsRouteRoute = FilmsStatsRouteRouteImport.update({
-  id: '/films/stats_',
+  id: '/films_/stats',
   path: '/films/stats',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FilmsRootRouteRoute = FilmsRootRouteRouteImport.update({
-  id: '/films/_root',
-  path: '/films',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const FilmsIdRouteRoute = FilmsIdRouteRouteImport.update({
-  id: '/films/$id',
-  path: '/films/$id',
-  getParentRoute: () => rootRouteImport,
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => FilmsRouteRoute,
 } as any)
 const ConsoleUserRouteRoute = ConsoleUserRouteRouteImport.update({
   id: '/user',
@@ -162,6 +162,7 @@ export interface FileRoutesByFullPath {
   '/board-games': typeof BoardGamesRouteRoute
   '/books': typeof BooksRouteRoute
   '/console': typeof ConsoleRouteRouteWithChildren
+  '/films': typeof FilmsRouteRouteWithChildren
   '/login': typeof LoginRouteRoute
   '/console/articles': typeof ConsoleArticlesRouteRoute
   '/console/awards': typeof ConsoleAwardsRouteRoute
@@ -175,7 +176,6 @@ export interface FileRoutesByFullPath {
   '/console/studios': typeof ConsoleStudiosRouteRoute
   '/console/user': typeof ConsoleUserRouteRoute
   '/films/$id': typeof FilmsIdRouteRoute
-  '/films': typeof FilmsRootRouteRoute
   '/films/stats': typeof FilmsStatsRouteRoute
   '/console/articles/$id': typeof ConsoleArticlesIdRoute
   '/console/awards/$id': typeof ConsoleAwardsIdRoute
@@ -187,6 +187,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRouteRoute
   '/board-games': typeof BoardGamesRouteRoute
   '/books': typeof BooksRouteRoute
+  '/films': typeof FilmsRouteRouteWithChildren
   '/login': typeof LoginRouteRoute
   '/console/articles': typeof ConsoleArticlesRouteRoute
   '/console/awards': typeof ConsoleAwardsRouteRoute
@@ -200,7 +201,6 @@ export interface FileRoutesByTo {
   '/console/studios': typeof ConsoleStudiosRouteRoute
   '/console/user': typeof ConsoleUserRouteRoute
   '/films/$id': typeof FilmsIdRouteRoute
-  '/films': typeof FilmsRootRouteRoute
   '/films/stats': typeof FilmsStatsRouteRoute
   '/console/articles/$id': typeof ConsoleArticlesIdRoute
   '/console/awards/$id': typeof ConsoleAwardsIdRoute
@@ -214,6 +214,7 @@ export interface FileRoutesById {
   '/board-games': typeof BoardGamesRouteRoute
   '/books': typeof BooksRouteRoute
   '/console': typeof ConsoleRouteRouteWithChildren
+  '/films': typeof FilmsRouteRouteWithChildren
   '/login': typeof LoginRouteRoute
   '/console/articles': typeof ConsoleArticlesRouteRoute
   '/console/awards': typeof ConsoleAwardsRouteRoute
@@ -227,8 +228,7 @@ export interface FileRoutesById {
   '/console/studios': typeof ConsoleStudiosRouteRoute
   '/console/user': typeof ConsoleUserRouteRoute
   '/films/$id': typeof FilmsIdRouteRoute
-  '/films/_root': typeof FilmsRootRouteRoute
-  '/films/stats_': typeof FilmsStatsRouteRoute
+  '/films_/stats': typeof FilmsStatsRouteRoute
   '/console/articles_/$id': typeof ConsoleArticlesIdRoute
   '/console/awards_/$id': typeof ConsoleAwardsIdRoute
   '/console/films_/$id': typeof ConsoleFilmsIdRoute
@@ -242,6 +242,7 @@ export interface FileRouteTypes {
     | '/board-games'
     | '/books'
     | '/console'
+    | '/films'
     | '/login'
     | '/console/articles'
     | '/console/awards'
@@ -255,7 +256,6 @@ export interface FileRouteTypes {
     | '/console/studios'
     | '/console/user'
     | '/films/$id'
-    | '/films'
     | '/films/stats'
     | '/console/articles/$id'
     | '/console/awards/$id'
@@ -267,6 +267,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/board-games'
     | '/books'
+    | '/films'
     | '/login'
     | '/console/articles'
     | '/console/awards'
@@ -280,7 +281,6 @@ export interface FileRouteTypes {
     | '/console/studios'
     | '/console/user'
     | '/films/$id'
-    | '/films'
     | '/films/stats'
     | '/console/articles/$id'
     | '/console/awards/$id'
@@ -293,6 +293,7 @@ export interface FileRouteTypes {
     | '/board-games'
     | '/books'
     | '/console'
+    | '/films'
     | '/login'
     | '/console/articles'
     | '/console/awards'
@@ -306,8 +307,7 @@ export interface FileRouteTypes {
     | '/console/studios'
     | '/console/user'
     | '/films/$id'
-    | '/films/_root'
-    | '/films/stats_'
+    | '/films_/stats'
     | '/console/articles_/$id'
     | '/console/awards_/$id'
     | '/console/films_/$id'
@@ -320,9 +320,8 @@ export interface RootRouteChildren {
   BoardGamesRouteRoute: typeof BoardGamesRouteRoute
   BooksRouteRoute: typeof BooksRouteRoute
   ConsoleRouteRoute: typeof ConsoleRouteRouteWithChildren
+  FilmsRouteRoute: typeof FilmsRouteRouteWithChildren
   LoginRouteRoute: typeof LoginRouteRoute
-  FilmsIdRouteRoute: typeof FilmsIdRouteRoute
-  FilmsRootRouteRoute: typeof FilmsRootRouteRoute
   FilmsStatsRouteRoute: typeof FilmsStatsRouteRoute
 }
 
@@ -333,6 +332,13 @@ declare module '@tanstack/react-router' {
       path: '/login'
       fullPath: '/login'
       preLoaderRoute: typeof LoginRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/films': {
+      id: '/films'
+      path: '/films'
+      fullPath: '/films'
+      preLoaderRoute: typeof FilmsRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/console': {
@@ -370,26 +376,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/films/stats_': {
-      id: '/films/stats_'
+    '/films_/stats': {
+      id: '/films_/stats'
       path: '/films/stats'
       fullPath: '/films/stats'
       preLoaderRoute: typeof FilmsStatsRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/films/_root': {
-      id: '/films/_root'
-      path: '/films'
-      fullPath: '/films'
-      preLoaderRoute: typeof FilmsRootRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/films/$id': {
       id: '/films/$id'
-      path: '/films/$id'
+      path: '/$id'
       fullPath: '/films/$id'
       preLoaderRoute: typeof FilmsIdRouteRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof FilmsRouteRoute
     }
     '/console/user': {
       id: '/console/user'
@@ -539,15 +538,26 @@ const ConsoleRouteRouteWithChildren = ConsoleRouteRoute._addFileChildren(
   ConsoleRouteRouteChildren,
 )
 
+interface FilmsRouteRouteChildren {
+  FilmsIdRouteRoute: typeof FilmsIdRouteRoute
+}
+
+const FilmsRouteRouteChildren: FilmsRouteRouteChildren = {
+  FilmsIdRouteRoute: FilmsIdRouteRoute,
+}
+
+const FilmsRouteRouteWithChildren = FilmsRouteRoute._addFileChildren(
+  FilmsRouteRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRouteRoute: AboutRouteRoute,
   BoardGamesRouteRoute: BoardGamesRouteRoute,
   BooksRouteRoute: BooksRouteRoute,
   ConsoleRouteRoute: ConsoleRouteRouteWithChildren,
+  FilmsRouteRoute: FilmsRouteRouteWithChildren,
   LoginRouteRoute: LoginRouteRoute,
-  FilmsIdRouteRoute: FilmsIdRouteRoute,
-  FilmsRootRouteRoute: FilmsRootRouteRoute,
   FilmsStatsRouteRoute: FilmsStatsRouteRoute,
 }
 export const routeTree = rootRouteImport

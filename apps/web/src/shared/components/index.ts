@@ -46,3 +46,4 @@ export * from './filter-provider/filter-provider';
 export * from './page-header-filters/page-header-filters';
 export * from './page-grid/page-grid';
 export * from './page-layout/page-layout';
+export * from './page-top-navigation/page-top-navigation';

@@ -1,17 +1,14 @@
 import styles from './current-events.module.css';
 import { type api, type ApiResponse } from '~/shared';
 import { Link, useSearch } from '@tanstack/react-router';
-import {
-  EventBanner,
-  EventPoster,
-} from '~/routes/films/_root/-components/films-section/components/current-events/components';
+import { EventBanner, EventPoster } from './components';
 
 type CurrentEventsProps = {
   data?: ApiResponse<typeof api.films.getList>;
 };
 
 export const CurrentEvents = ({ data }: CurrentEventsProps) => {
-  const search = useSearch({ from: '/films/_root' });
+  const search = useSearch({ from: '/films' });
 
   if (!data || !data.events.length || !data.anniversaryImagePath) {
     return null;
