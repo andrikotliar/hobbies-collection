@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, Outlet } from '@tanstack/react-router';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { GetFilmsListQuerySchema } from '@hobbies-collection/shared';
 import {
@@ -105,6 +105,7 @@ function RootPageContainer() {
           config={filtersConfig}
         />
       </FiltersSidebar>
+      <Outlet />
     </PageLayout>
   );
 }

@@ -15,7 +15,7 @@ import { Route as BooksRouteRouteImport } from './routes/books/route'
 import { Route as BoardGamesRouteRouteImport } from './routes/board-games/route'
 import { Route as AboutRouteRouteImport } from './routes/about/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as FilmsStatsRouteRouteImport } from './routes/films/stats/route'
+import { Route as FilmsStatsRouteRouteImport } from './routes/films/stats_/route'
 import { Route as FilmsRootRouteRouteImport } from './routes/films/_root/route'
 import { Route as FilmsIdRouteRouteImport } from './routes/films/$id/route'
 import { Route as ConsoleUserRouteRouteImport } from './routes/console/user/route'
@@ -65,7 +65,7 @@ const IndexRoute = IndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const FilmsStatsRouteRoute = FilmsStatsRouteRouteImport.update({
-  id: '/films/stats',
+  id: '/films/stats_',
   path: '/films/stats',
   getParentRoute: () => rootRouteImport,
 } as any)
@@ -228,7 +228,7 @@ export interface FileRoutesById {
   '/console/user': typeof ConsoleUserRouteRoute
   '/films/$id': typeof FilmsIdRouteRoute
   '/films/_root': typeof FilmsRootRouteRoute
-  '/films/stats': typeof FilmsStatsRouteRoute
+  '/films/stats_': typeof FilmsStatsRouteRoute
   '/console/articles_/$id': typeof ConsoleArticlesIdRoute
   '/console/awards_/$id': typeof ConsoleAwardsIdRoute
   '/console/films_/$id': typeof ConsoleFilmsIdRoute
@@ -307,7 +307,7 @@ export interface FileRouteTypes {
     | '/console/user'
     | '/films/$id'
     | '/films/_root'
-    | '/films/stats'
+    | '/films/stats_'
     | '/console/articles_/$id'
     | '/console/awards_/$id'
     | '/console/films_/$id'
@@ -370,8 +370,8 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/films/stats': {
-      id: '/films/stats'
+    '/films/stats_': {
+      id: '/films/stats_'
       path: '/films/stats'
       fullPath: '/films/stats'
       preLoaderRoute: typeof FilmsStatsRouteRouteImport

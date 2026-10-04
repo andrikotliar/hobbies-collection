@@ -1,13 +1,13 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { Navigation } from '~/routes/films/_root/-components/films-section/components';
-import { ChartsGrid } from '~/routes/films/stats/-components/charts-grid/charts-grid';
-import { StatsLayout } from '~/routes/films/stats/-components/stats-layout/stats-layout';
+import { ChartsGrid } from '~/routes/films/stats_/-components/charts-grid/charts-grid';
+import { StatsLayout } from '~/routes/films/stats_/-components/stats-layout/stats-layout';
 import { buildMetaTitle, buildGetFilmsStatsQueryOptions } from '~/shared';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { DonutChart } from '~/shared/components/donut-chart/donut-chart';
 import { useMemo } from 'react';
 
-export const Route = createFileRoute('/films/stats')({
+export const Route = createFileRoute('/films/stats_')({
   component: RouteComponent,
   loader: async ({ context }) => {
     await context.queryClient.ensureQueryData(buildGetFilmsStatsQueryOptions());
