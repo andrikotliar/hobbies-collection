@@ -1,5 +1,5 @@
 import styles from './films-section.module.css';
-import { AdditionalInfoSection, CurrentEvents, Navigation } from './components';
+import { AdditionalInfoSection, CurrentEvents, Navigation } from './components/index.js';
 import { getRouteApi } from '@tanstack/react-router';
 import {
   countObjectKeys,
@@ -13,11 +13,11 @@ import {
 } from '~/shared';
 import { useQuery } from '@tanstack/react-query';
 import type { ListOption } from '@hobbies-collection/shared';
-import { TrailerWindow } from '~/routes/_home/-components/films-section/components/trailer-window/trailer-window';
+import { TrailerWindow } from '~/routes/films/_root/-components/films-section/components/trailer-window/trailer-window';
 import { useMemo, useState } from 'react';
-import { getYearValue } from '~/routes/_home/-helpers';
+import { getYearValue } from '~/routes/films/_root/-helpers';
 
-const routeApi = getRouteApi('/_home/');
+const routeApi = getRouteApi('/films/_root');
 
 const sortingFields: ListOption<string, { isNotSelectable?: boolean }>[] = [
   {
@@ -144,7 +144,7 @@ export const FilmsSection = () => {
       <CurrentEvents data={data} />
       <AdditionalInfoSection info={data?.additionalInfo} />
       <PageGrid
-        itemLinkTo="/"
+        itemLinkTo="/films/$id"
         data={mappedData}
         isFetching={isFetching}
         onUpcomingItemClick={(item) => setSelectedFilmId(item.id)}

@@ -4,14 +4,14 @@ import { Link, useSearch } from '@tanstack/react-router';
 import {
   EventBanner,
   EventPoster,
-} from '~/routes/_home/-components/films-section/components/current-events/components';
+} from '~/routes/films/_root/-components/films-section/components/current-events/components';
 
 type CurrentEventsProps = {
   data?: ApiResponse<typeof api.films.getList>;
 };
 
 export const CurrentEvents = ({ data }: CurrentEventsProps) => {
-  const search = useSearch({ from: '/_home/' });
+  const search = useSearch({ from: '/films/_root' });
 
   if (!data || !data.events.length || !data.anniversaryImagePath) {
     return null;

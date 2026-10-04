@@ -13,10 +13,14 @@ import {
   PageLayout,
   useSidebarVisibility,
 } from '~/shared';
-import { FilmsSection } from './-components';
-import { filterDefaultValues, FiltersSchema, getFiltersConfig } from '~/routes/_home/-helpers';
+import { FilmsSection } from './-components/index.js';
+import {
+  filterDefaultValues,
+  FiltersSchema,
+  getFiltersConfig,
+} from '~/routes/films/_root/-helpers';
 
-export const Route = createFileRoute('/_home/')({
+export const Route = createFileRoute('/films/_root')({
   validateSearch: (search) => {
     return GetFilmsListQuerySchema.parse(search);
   },

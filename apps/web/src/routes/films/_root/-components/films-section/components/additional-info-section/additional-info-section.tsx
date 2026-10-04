@@ -1,5 +1,5 @@
 import type { api, ApiResponse } from '~/shared';
-import { InfoBlock } from '../info-block/info-block';
+import { InfoBlock } from '../info-block/info-block.js';
 
 type FilmsSectionProps = {
   info?: ApiResponse<typeof api.films.getList>['additionalInfo'];
