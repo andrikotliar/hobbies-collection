@@ -78,9 +78,7 @@ const sortingFields: ListOption<string>[] = [
 ];
 
 function PageContainer() {
-  const searchParams = Route.useSearch({
-    select: ({ filmId: _, ...params }) => params,
-  });
+  const searchParams = Route.useSearch();
   const navigate = Route.useNavigate();
   const { data, isFetching } = useQuery(buildGetFilmsAdminListQueryOptions(searchParams));
   const { data: initialData, isFetching: isInitialDataFetching } = useSuspenseQuery(

@@ -1,4 +1,3 @@
-import { useQuery } from '@tanstack/react-query';
 import { Drawer } from '~/shared/components/drawer/drawer';
 import {
   Awards,
@@ -9,48 +8,28 @@ import {
   PageSkeleton,
   SummarySection,
 } from '~/shared/components/film-drawer/components';
-import { buildGetAdminFilmQueryOptions, buildGetFilmQueryOptions } from '~/shared/helpers';
-import { useLocation, useNavigate } from '@tanstack/react-router';
+import type { FilmResponse } from '@hobbies-collection/shared';
 
 type FilmDrawerProps = {
-  filmId: number;
+  data?: FilmResponse;
+  isLoading?: boolean;
+  onCloseNavigation: VoidFunction;
 };
 
-const getQueryOptions = (isConsole: boolean, filmId: number) => {
-  if (isConsole) {
-    return buildGetAdminFilmQueryOptions(filmId);
-  }
-
-  return buildGetFilmQueryOptions(filmId);
-};
-
-export const FilmDrawer = ({ filmId }: FilmDrawerProps) => {
-  const location = useLocation();
-  const { data: film, isLoading } = useQuery(
-    getQueryOptions(location.pathname.startsWith('/console'), filmId),
-  );
-  const navigate = useNavigate();
-
-  const hasExtendedData = film?.awards.length !== 0 || film.castAndCrew.length !== 0;
-
-  const closeDrawer = () => {
-    navigate({
-      to: location.pathname,
-      search: ({ filmId: _filmId, ...prev }) => prev,
-    });
-  };
+export const FilmDrawer = ({ data, isLoading = false, onCloseNavigation }: FilmDrawerProps) => {
+  const hasExtendedData = data?.awards.length !== 0 || data.castAndCrew.length !== 0;
 
   return (
-    <Drawer isOpen onClose={closeDrawer}>
+    <Drawer isOpen onClose={onCloseNavigation}>
       {isLoading && <PageSkeleton />}
 
-      {film && (
+      {data && (
         <FilmPageLayout>
-          <SummarySection film={film} hasExtendedData={hasExtendedData} />
+          <SummarySection film={data} hasExtendedData={hasExtendedData} />
           <ContentLayout>
-            {film.description && <Description value={film.description} />}
-            {film.castAndCrew.length !== 0 && <CastAndCrew data={film.castAndCrew} />}
-            {film.awards.length > 0 && <Awards data={film.awards} />}
+            {data.description && <Description value={data.description} />}
+            {data.castAndCrew.length !== 0 && <CastAndCrew data={data.castAndCrew} />}
+            {data.awards.length > 0 && <Awards data={data.awards} />}
           </ContentLayout>
         </FilmPageLayout>
       )}

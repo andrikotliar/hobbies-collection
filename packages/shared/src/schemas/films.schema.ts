@@ -381,3 +381,4 @@ export type FilmDraftResponse = z.infer<typeof FilmDraftInputResponse>;
 export type FilmDraftFilmIdParams = z.infer<typeof FilmDraftFilmIdParamsSchema>;
 export type GetAdminListQueryParams = z.infer<typeof GetAdminListQuerySchema>;
 export type FilmStatsResponse = z.infer<typeof FilmStatsResponseSchema>;
+export type FilmResponse = z.infer<typeof FilmResponseSchema>;

@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-router';
+import { Link, useLocation } from '@tanstack/react-router';
 import { GridItemsNotFound, GridSkeleton } from '~/shared/components/page-grid/components';
 import styles from './page-grid.module.css';
 import type { FileRoutesByTo } from '~/routeTree.gen';
@@ -27,9 +27,11 @@ const ItemComponent = <TData extends GenericItem>({
   itemLinkTo,
   children,
   onUpcomingItemClick,
+  search,
 }: Pick<PageGridProps<TData>, 'itemLinkTo' | 'onUpcomingItemClick'> & {
   item: TData;
   children?: React.ReactNode;
+  search?: Record<string, unknown>;
 }) => {
   if (item.upcoming && onUpcomingItemClick) {
     return (
@@ -40,7 +42,7 @@ const ItemComponent = <TData extends GenericItem>({
   }
 
   return (
-    <Link to={itemLinkTo} className={styles.grid_item} params={{ id: item.id }}>
+    <Link to={itemLinkTo} className={styles.grid_item} params={{ id: item.id }} search={search}>
       {children}
     </Link>
   );
@@ -51,6 +53,8 @@ export const PageGrid = <TData extends GenericItem>({
   isFetching,
   itemLinkTo,
 }: PageGridProps<TData>) => {
+  const location = useLocation();
+
   if (isFetching) {
     return <GridSkeleton />;
   }
@@ -62,7 +66,7 @@ export const PageGrid = <TData extends GenericItem>({
   return (
     <div className={styles.grid}>
       {data.map((item) => (
-        <ItemComponent itemLinkTo={itemLinkTo} item={item} key={item.id}>
+        <ItemComponent itemLinkTo={itemLinkTo} item={item} key={item.id} search={location.search}>
           <div className={styles.cover}>
             {item.sequenceNum && <div className={styles.counter}>{item.sequenceNum}</div>}
             {item.upcoming && <div className={styles.upcoming}>Upcoming</div>}
