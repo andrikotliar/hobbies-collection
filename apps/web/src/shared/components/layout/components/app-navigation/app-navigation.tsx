@@ -1,6 +1,6 @@
 import { useQueryClient } from '@tanstack/react-query';
 import styles from './app-navigation.module.css';
-import { Link, useLocation, useNavigate } from '@tanstack/react-router';
+import { Link, useLocation, useNavigate, type ParsedLocation } from '@tanstack/react-router';
 import clsx from 'clsx';
 import {
   BookIcon,
@@ -12,13 +12,15 @@ import {
 } from 'lucide-react';
 import { Logo } from '~/shared/components/logo/logo';
 import { api, queryKey } from '~/shared/services';
+import type { NavLink } from '~/shared/types';
 
-const navigationConfig = [
+const getNavigationConfig = (location: ParsedLocation): NavLink[] => [
   {
     id: 'films',
     icon: <ClapperboardIcon className={styles.navigation_item_icon} />,
     title: 'Films',
     path: '/films',
+    isActive: location.pathname.includes('films') && !location.pathname.includes('console'),
   },
   {
     id: 'books',
@@ -57,12 +59,12 @@ export const AppNavigation = () => {
         <div className={styles.desktop_logo}>
           <Logo size={40} />
         </div>
-        {navigationConfig.map((link) => (
+        {getNavigationConfig(location).map((link) => (
           <Link
             to={link.path}
             key={link.id}
             className={clsx(styles.navigation_item, {
-              [styles.navigation_item_active]: location.pathname === link.path,
+              [styles.navigation_item_active]: location.pathname === link.path || link.isActive,
             })}
           >
             {link.icon}

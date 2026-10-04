@@ -5,7 +5,7 @@ import {
   buildMetaTitle,
   buildGetFilmsStatsQueryOptions,
   PageTopNavigation,
-  filmsPagesTopNavConfig,
+  getFilmsPagesTopNavConfig,
 } from '~/shared';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { DonutChart } from '~/shared/components/donut-chart/donut-chart';
@@ -33,7 +33,7 @@ function RouteComponent() {
 
   return (
     <StatsLayout>
-      <PageTopNavigation links={filmsPagesTopNavConfig} />
+      <PageTopNavigation getLinks={getFilmsPagesTopNavConfig} />
       <ChartsGrid>
         {charts.map((category) => (
           <DonutChart

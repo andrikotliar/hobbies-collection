@@ -11,7 +11,7 @@ import {
   PageHeaderFilters,
   PageGrid,
   PageTopNavigation,
-  filmsPagesTopNavConfig,
+  getFilmsPagesTopNavConfig,
 } from '~/shared';
 import { useQuery } from '@tanstack/react-query';
 import type { ListOption } from '@hobbies-collection/shared';
@@ -132,7 +132,7 @@ export const FilmsSection = () => {
   return (
     <div className={styles.films_section}>
       <div className={styles.header}>
-        <PageTopNavigation links={filmsPagesTopNavConfig} />
+        <PageTopNavigation getLinks={getFilmsPagesTopNavConfig} />
         <PageHeaderFilters
           sortingFieldsConfig={sortingFields}
           onSort={handleSorting}
