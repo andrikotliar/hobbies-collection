@@ -28,7 +28,7 @@
   color: var(--color-white);
 }
 
-@media (width <= 380px) {
+@media (width <= 1200px) {
   .wrapper {
     width: 100%;
   }

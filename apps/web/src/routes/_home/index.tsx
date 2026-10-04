@@ -10,9 +10,10 @@ import {
   Filters,
   FiltersSidebar,
   filterValues,
+  PageLayout,
   useSidebarVisibility,
 } from '~/shared';
-import { FilmsSection, RootPageLayout } from './-components';
+import { FilmsSection } from './-components';
 import { filterDefaultValues, FiltersSchema, getFiltersConfig } from '~/routes/_home/-helpers';
 
 export const Route = createFileRoute('/_home/')({
@@ -81,7 +82,7 @@ function RootPageContainer() {
   const filtersCount = countObjectKeys(routeSearch, ['pageIndex', 'filmId']);
 
   return (
-    <RootPageLayout>
+    <PageLayout>
       <FilmsSection />
       <FiltersSidebar
         isLoading={isInitialDataLoading}
@@ -100,6 +101,6 @@ function RootPageContainer() {
           config={filtersConfig}
         />
       </FiltersSidebar>
-    </RootPageLayout>
+    </PageLayout>
   );
 }

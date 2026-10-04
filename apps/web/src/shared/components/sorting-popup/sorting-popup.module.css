@@ -1,3 +1,7 @@
+.sorting_root_wrapper {
+  flex-shrink: 0;
+}
+
 .sorting_popup_wrapper {
   display: flex;
   flex-direction: column;

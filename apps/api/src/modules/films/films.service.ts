@@ -83,7 +83,7 @@ export class FilmsService {
     const data = await this.deps.filmsRepository.findAndCount({
       ...queries,
       order: queries.order ?? 'desc',
-      orderKey: queries.collectionId ? 'collectionOrder' : queries.orderKey ?? 'releaseDate',
+      orderKey: queries.collectionId ? 'collectionOrder' : (queries.orderKey ?? 'releaseDate'),
       draftLevels: [DraftLevel.PUBLISHED, DraftLevel.UPCOMING],
     });
 
@@ -105,7 +105,7 @@ export class FilmsService {
     const events = await this.deps.collectionEventsService.findTodayEvents();
     const anniversary = await this.getAnniversaryFilm();
 
-    return {
+    const params = {
       list: mappedList,
       total: data.total,
       additionalInfo,
@@ -114,6 +114,31 @@ export class FilmsService {
       anniversaryImagePath: anniversary?.imagePath ?? null,
       allFilmsCount,
     };
+
+    if (queries.collectionId) {
+      const collectionParams = await this.deps.filmsRepository.getCollectionOrder(
+        queries.collectionId,
+      );
+
+      const values = new Map();
+
+      collectionParams.forEach((collection) => {
+        values.set(collection.filmId, collection.order);
+      });
+
+      const filmsListWithCollectionOrder = mappedList.map((film) => {
+        return {
+          ...film,
+          sequenceNum: values.get(film.id) ?? 0,
+        };
+      });
+
+      params.list = filmsListWithCollectionOrder.toSorted((a, b) => {
+        return a.sequenceNum - b.sequenceNum;
+      });
+    }
+
+    return params;
   }
 
   async getFilmDetails(id: number, level: 'admin' | 'public' = 'public') {

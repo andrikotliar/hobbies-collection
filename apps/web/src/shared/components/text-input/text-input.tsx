@@ -5,6 +5,7 @@ import { FieldLabel } from '../field-label/field-label';
 import { type FormError } from '~/shared';
 import type { RefCallBack } from 'react-hook-form';
 import { XIcon } from 'lucide-react';
+import { useRef } from 'react';
 
 export type TextInputProps = {
   type?: 'text' | 'number' | 'password';
@@ -23,15 +24,40 @@ export const TextInput = ({
   icon,
   ref,
   isClearable,
+  onChange,
   ...props
 }: TextInputProps) => {
+  const textInputRef = useRef<HTMLInputElement | null>(null);
+
+  const clearValue = () => {
+    if (typeof onChange === 'function') {
+      onChange({
+        target: {
+          value: '',
+        },
+      } as React.ChangeEvent<HTMLInputElement>);
+    }
+
+    if (typeof ref === 'object' && ref.current) {
+      ref.current.value = '';
+      return;
+    }
+
+    if (!textInputRef.current) {
+      return;
+    }
+
+    textInputRef.current.value = '';
+  };
+
   return (
     <label className={clsx(styles.input_wrapper, className)}>
       {label && <FieldLabel>{label}</FieldLabel>}
       <div className={styles.field_wrapper}>
         <input
-          ref={ref}
+          ref={ref ?? textInputRef}
           type={type}
+          onChange={onChange}
           className={clsx(styles.text_input, {
             [styles.with_icon]: icon !== undefined,
             [styles.with_clear_button]: isClearable,
@@ -40,7 +66,7 @@ export const TextInput = ({
         />
         <div className={styles.icons_bar}>
           {isClearable && (
-            <button className={clsx(styles.icon_wrapper, styles.clear_button)}>
+            <button className={clsx(styles.icon_wrapper, styles.clear_button)} onClick={clearValue}>
               <XIcon />
             </button>
           )}

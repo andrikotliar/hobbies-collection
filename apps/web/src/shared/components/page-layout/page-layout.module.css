@@ -1,4 +1,4 @@
-.root_page_layout {
+.page_layout {
   display: flex;
   gap: 20px;
   padding: 20px;
@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 785px) {
-  .root_page_layout {
+  .page_layout {
     min-height: var(--screen-height);
   }
 }

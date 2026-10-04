@@ -1,30 +1,21 @@
 import styles from './films-section.module.css';
-import {
-  AdditionalInfoSection,
-  CurrentEvents,
-  FilmsGrid,
-  FilmsGridSkeleton,
-  Navigation,
-} from './components';
+import { AdditionalInfoSection, CurrentEvents, Navigation } from './components';
 import { getRouteApi } from '@tanstack/react-router';
 import {
   countObjectKeys,
   buildGetFilmsListQueryOptions,
   Pagination,
-  SortingPopup,
-  TextInput,
   useDebouncedSearch,
   useSidebarVisibility,
   type SortingParams,
+  PageHeaderFilters,
+  PageGrid,
 } from '~/shared';
 import { useQuery } from '@tanstack/react-query';
-import type { ListOption, SortingOrder } from '@hobbies-collection/shared';
-import { FilterIcon, SearchIcon } from 'lucide-react';
-
-type SortingValues = {
-  order: SortingOrder;
-  orderKey: string;
-};
+import type { ListOption } from '@hobbies-collection/shared';
+import { TrailerWindow } from '~/routes/_home/-components/films-section/components/trailer-window/trailer-window';
+import { useMemo, useState } from 'react';
+import { getYearValue } from '~/routes/_home/-helpers';
 
 const routeApi = getRouteApi('/_home/');
 
@@ -61,6 +52,17 @@ export const FilmsSection = () => {
   const navigate = routeApi.useNavigate();
   const { data, isFetching } = useQuery(buildGetFilmsListQueryOptions(searchParams));
   const { toggleFilter } = useSidebarVisibility('/');
+  const [selectedFilmId, setSelectedFilmId] = useState<number | null>(null);
+
+  const mappedData = useMemo(() => {
+    if (!data) {
+      return [];
+    }
+    return data.list.map((film) => ({
+      ...film,
+      year: getYearValue(film),
+    }));
+  }, [data]);
 
   const handleSearch = useDebouncedSearch((value) => {
     if (!value.length) {
@@ -100,82 +102,61 @@ export const FilmsSection = () => {
     });
   };
 
-  const getSortingValues = (): SortingValues => {
+  const getSortingValues = () => {
     if (searchParams.collectionId) {
       return {
-        order: 'asc',
-        orderKey: 'collectionId',
+        order: 'asc' as const,
+        key: 'collectionId',
       };
     }
 
     if (searchParams.order && searchParams.orderKey) {
       return {
         order: searchParams.order,
-        orderKey: searchParams.orderKey,
+        key: searchParams.orderKey,
       };
     }
 
     return {
-      order: 'desc',
-      orderKey: 'releaseDate',
+      order: 'desc' as const,
+      key: 'releaseDate',
     };
   };
 
   const sortingValues = getSortingValues();
 
-  const countFilter = countObjectKeys(searchParams, ['pageIndex', 'order', 'orderKey']);
+  const filterCount = countObjectKeys(searchParams, ['pageIndex', 'order', 'orderKey']);
 
   return (
     <div className={styles.films_section}>
       <div className={styles.header}>
         <Navigation />
-        <div className={styles.controls}>
-          <TextInput
-            icon={<SearchIcon />}
-            placeholder="Search films"
-            className={styles.search}
-            onChange={handleSearch}
-            isClearable
-          />
-          <SortingPopup
-            fields={sortingFields}
-            onSorting={handleSorting}
-            defaultOrder={sortingValues.order}
-            defaultOrderKey={sortingValues.orderKey}
-            isDisabled={searchParams.collectionId !== undefined}
-            buttonWrapperClassName={styles.sorting}
-          />
-          <button className={styles.mobile_filter} onClick={toggleFilter}>
-            <FilterIcon />
-            <div className={styles.mobile_filter_count}>{countFilter}</div>
-          </button>
-        </div>
-      </div>
-      {data && (
-        <>
-          <CurrentEvents
-            events={data.events}
-            total={data.allFilmsCount}
-            anniversaryPoster={data.anniversaryImagePath}
-          />
-          <AdditionalInfoSection info={data.additionalInfo} />
-        </>
-      )}
-      {isFetching ? (
-        <FilmsGridSkeleton />
-      ) : (
-        <FilmsGrid films={data?.list ?? []} isCollection={!!searchParams.collectionId} />
-      )}
-      {data && data.total > 0 && (
-        <Pagination
-          total={data.total}
-          onPageChange={handlePageNavigation}
-          currentPageIndex={searchParams.pageIndex}
-          perPageCounter={data.pageLimit}
-          totalLabel="films"
-          wrapperClassName={styles.pagination_wrapper}
+        <PageHeaderFilters
+          sortingFieldsConfig={sortingFields}
+          onSort={handleSorting}
+          onSearch={handleSearch}
+          sortingValues={sortingValues}
+          isSortingDisabled={searchParams.collectionId !== undefined}
+          onToggleFilter={toggleFilter}
+          filterCount={filterCount}
         />
-      )}
+      </div>
+      <CurrentEvents data={data} />
+      <AdditionalInfoSection info={data?.additionalInfo} />
+      <PageGrid
+        itemLinkTo="/"
+        data={mappedData}
+        isFetching={isFetching}
+        onUpcomingItemClick={(item) => setSelectedFilmId(item.id)}
+      />
+      <Pagination
+        total={data?.total}
+        onPageChange={handlePageNavigation}
+        currentPageIndex={searchParams.pageIndex}
+        perPageCounter={data?.pageLimit}
+        totalLabel="films"
+      />
+      <TrailerWindow filmId={selectedFilmId} onClose={() => setSelectedFilmId(null)} />
     </div>
   );
 };

@@ -4,7 +4,7 @@ export const PAGE_LIMITS = {
   filmsSearch: 10,
   booksList: 48,
   boardGames: 48,
-};
+} as const;
 export const NEW_ITEM_ID = 'new';
 
 export const SANITIZE_CONFIG = {

@@ -53,17 +53,17 @@ export const List = <T extends DefaultListItem>({
 
   return (
     <div className={styles.list_wrapper}>
-      {sorting && (
-        <div className={styles.sorting}>
+      <div className={styles.list_filters}>
+        {typeof onSearch === 'function' && <ListSearch onSearch={onSearch} />}
+        {sorting && (
           <SortingPopup
             fields={sorting.fields}
             onSorting={sorting.apply}
             defaultOrderKey={location.search.orderKey ?? sorting.fields[0].value}
             defaultOrder={location.search.order ?? 'desc'}
           />
-        </div>
-      )}
-      {typeof onSearch === 'function' && <ListSearch onSearch={onSearch} />}
+        )}
+      </div>
       <div>
         {shouldShowHeader && (
           <div className={styles.list_header}>

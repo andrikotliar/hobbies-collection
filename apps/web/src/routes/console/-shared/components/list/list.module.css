@@ -14,6 +14,11 @@
   margin-bottom: -4px;
 }
 
+.list_filters {
+  display: flex;
+  gap: 10px;
+}
+
 .add_item_action {
   display: flex;
   align-items: center;

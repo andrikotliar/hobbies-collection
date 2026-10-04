@@ -7,15 +7,13 @@ import {
 } from '~/routes/_home/-components/films-section/components/current-events/components';
 
 type CurrentEventsProps = {
-  events: ApiResponse<typeof api.films.getList>['events'];
-  total: number;
-  anniversaryPoster: string | null;
+  data?: ApiResponse<typeof api.films.getList>;
 };
 
-export const CurrentEvents = ({ events, total, anniversaryPoster }: CurrentEventsProps) => {
+export const CurrentEvents = ({ data }: CurrentEventsProps) => {
   const search = useSearch({ from: '/_home/' });
 
-  if (!events.length && !anniversaryPoster) {
+  if (!data || !data.events.length || !data.anniversaryImagePath) {
     return null;
   }
 
@@ -25,19 +23,19 @@ export const CurrentEvents = ({ events, total, anniversaryPoster }: CurrentEvent
     <div className={styles.events_track}>
       {shouldShowReset && (
         <Link className={styles.all_films_link} to="/">
-          <div className={styles.all_films_link_inner}>{total}</div>
+          <div className={styles.all_films_link_inner}>{data.total}</div>
           <div className={styles.all_films_link_title}>All films</div>
         </Link>
       )}
-      {anniversaryPoster && (
+      {data.anniversaryImagePath && (
         <EventPoster
-          posterPath={anniversaryPoster}
+          posterPath={data.anniversaryImagePath}
           title="Anniversaries"
           search={{ releasedThisDay: true }}
           isSelected={search.releasedThisDay}
         />
       )}
-      {events.map((event) => (
+      {data.events.map((event) => (
         <EventBanner event={event} key={event.id} selectedEventId={search.collectionId} />
       ))}
     </div>

@@ -1,0 +1,13 @@
+.items_not_found {
+  color: var(--color-gray-dark);
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  border-radius: var(--rounded-default);
+  background-color: var(--color-gray-light);
+  flex-grow: 1;
+}

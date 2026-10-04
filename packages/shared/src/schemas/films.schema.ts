@@ -181,6 +181,7 @@ export const FilmsListResponseSchema = getListResponseSchema(
       upcoming: z.boolean(),
       inDays: z.number().nullable(),
       releasedYears: z.number().nullable(),
+      sequenceNum: z.number().optional(),
     }),
   ),
 ).extend({

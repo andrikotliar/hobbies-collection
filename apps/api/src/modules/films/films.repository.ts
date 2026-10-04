@@ -81,22 +81,42 @@ export class FilmsRepository {
 
   async findAndCount(queries: PlainFilmFilters, level: FilterLevel = 'public') {
     const { filters, drafts } = mapListFilters(queries, this.deps.db);
-    const sorting = this.mapSorting(queries.orderKey, queries.order, queries);
-
-    const list = await this.deps.db
-      .select()
-      .from(films)
-      .where(and(...filters, drafts))
-      .limit(PAGE_LIMITS.filmsList)
-      .offset(getSkipValue('filmsList', queries.pageIndex))
-      .orderBy(sorting, asc(films.id));
+    const sorting = this.mapSorting(queries.orderKey, queries.order);
 
     const total = await this.count([
       ...filters,
       level === 'admin' ? drafts : eq(films.draft, false),
     ]);
 
-    return { list, total };
+    const baseQuery = this.deps.db
+      .select({
+        id: films.id,
+        title: films.title,
+        imagePath: films.imagePath,
+        releaseDate: films.releaseDate,
+        draft: films.draft,
+      })
+      .from(films)
+      .where(and(...filters, drafts));
+
+    if (queries.collectionId) {
+      const list = await baseQuery;
+      return { total, list, type: 'unsorted' as const };
+    }
+
+    const list = await baseQuery
+      .limit(PAGE_LIMITS.filmsList)
+      .offset(getSkipValue('filmsList', queries.pageIndex))
+      .orderBy(sorting, asc(films.id));
+
+    return { list, total, type: 'sorted' as const };
+  }
+
+  getCollectionOrder(collectionId: number) {
+    return this.deps.db
+      .select({ filmId: filmsCollections.filmId, order: filmsCollections.order })
+      .from(filmsCollections)
+      .where(eq(filmsCollections.collectionId, collectionId));
   }
 
   findById(id: number, level: FilterLevel = 'public') {
@@ -945,30 +965,8 @@ export class FilmsRepository {
       .where(eq(filmsCollections.collectionId, collectionId));
   }
 
-  private mapSorting(
-    key: string = 'releaseDate',
-    direction: SortingOrder = 'desc',
-    queries?: PlainFilmFilters,
-  ) {
+  private mapSorting(key: string = 'releaseDate', direction: SortingOrder = 'desc') {
     const fn = getDirectionFn(direction);
-
-    if (key === 'collectionOrder') {
-      if (!queries?.collectionId) {
-        return fn(films.releaseDate);
-      }
-      return asc(
-        this.deps.db
-          .select({ order: filmsCollections.order })
-          .from(filmsCollections)
-          .where(
-            and(
-              eq(films.id, filmsCollections.filmId),
-              eq(filmsCollections.collectionId, queries.collectionId),
-            ),
-          ),
-      );
-    }
-
     return fn(films[key as keyof Film]);
   }
 }

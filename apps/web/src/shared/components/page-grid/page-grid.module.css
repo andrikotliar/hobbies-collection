@@ -5,7 +5,7 @@
   gap: 25px;
 }
 
-.film_link {
+.grid_item {
   position: relative;
   display: block;
   width: 100%;
@@ -35,7 +35,7 @@
   margin: 5px 0;
 }
 
-.film_link:not([aria-disabled='true']):hover .title {
+.grid_item:not([aria-disabled='true']):hover .title {
   color: var(--color-blue-primary);
 }
 
@@ -57,23 +57,6 @@
   text-transform: uppercase;
   padding: 5px;
   text-align: center;
-}
-
-.play_button {
-  color: var(--color-white);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-
-.play_button svg {
-  fill: var(--color-white);
 }
 
 .counter {

@@ -2,14 +2,14 @@ import styles from './pagination.module.css';
 import { useMemo } from 'react';
 import clsx from 'clsx';
 import { buildPagination } from '~/shared';
+import { PAGE_LIMITS } from '@hobbies-collection/shared';
 
 export type PaginationProps = {
   currentPageIndex?: number;
-  total: number;
+  total?: number;
   onPageChange: (pageIndex: number) => void;
-  perPageCounter: number;
+  perPageCounter?: number;
   totalLabel?: string;
-  wrapperClassName?: string;
 };
 
 type RangeParams = {
@@ -33,12 +33,11 @@ const getCurrentRangeEnd = ({ currentPageIndex, total, perPageCounter }: RangePa
 };
 
 export const Pagination = ({
-  total,
+  total = 1,
   onPageChange,
   currentPageIndex = 0,
-  perPageCounter,
+  perPageCounter = PAGE_LIMITS.default,
   totalLabel = 'items',
-  wrapperClassName,
 }: PaginationProps) => {
   const pagesCount = Math.ceil(total / perPageCounter);
   const currentRangeEnd = getCurrentRangeEnd({ total, currentPageIndex, perPageCounter });
@@ -52,8 +51,12 @@ export const Pagination = ({
     window.scrollTo(0, 0);
   };
 
+  if (pagesCount < 1) {
+    return null;
+  }
+
   return (
-    <div className={clsx(styles.pagination, wrapperClassName)}>
+    <div className={styles.pagination}>
       {pagesCount > 1 && (
         <div className={styles.pages}>
           {pages.map((page, index) => {
