@@ -5,11 +5,12 @@ import type { CollectionFormSchema } from '~/routes/console/collections/-schemas
 import { api, Form, SortableList, toaster } from '~/shared';
 import { AsyncSelect } from '~/shared/components/async-select/async-select';
 import styles from './films-select.module.css';
+import { TrashIcon } from 'lucide-react';
 
 export const FilmsSelect = () => {
   const { control } = useFormContext<z.infer<typeof CollectionFormSchema>>();
 
-  const { append, fields, move } = useFieldArray({ control, name: 'films' });
+  const { append, fields, move, remove } = useFieldArray({ control, name: 'films' });
 
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
@@ -47,9 +48,18 @@ export const FilmsSelect = () => {
       <Form.Section label="Films">
         <SortableList items={fields} onDragEnd={handleDragEnd}>
           <div className={styles.wrapper}>
-            {fields.map((film) => (
+            {fields.map((film, index) => (
               <SortableList.Item id={film.id} key={film.id}>
-                <div>{film.title}</div>
+                <div className={styles.item}>
+                  <div>{film.title}</div>
+                  <button
+                    className={styles.delete_button}
+                    onClick={() => remove(index)}
+                    type="button"
+                  >
+                    <TrashIcon size={18} />
+                  </button>
+                </div>
               </SortableList.Item>
             ))}
           </div>
