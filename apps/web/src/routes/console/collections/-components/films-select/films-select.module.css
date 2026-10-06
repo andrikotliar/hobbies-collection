@@ -10,3 +10,11 @@
   background-color: var(--color-white);
   padding: 5px 0;
 }
+
+.item {
+  display: flex;
+}
+
+.delete_button {
+  margin-left: auto;
+}
