@@ -1,0 +1,136 @@
+{
+  "id": 422,
+  "title": "Instant Family",
+  "releaseDate": "2018-11-16",
+  "type": "FILM",
+  "duration": 118,
+  "budget": 48000000,
+  "boxOffice": 120000000,
+  "synopsis": "Pitt and Ellie decide to adopt a child from the shelter. At the viewing, they are drawn to Lizzy, but they also have to take her little sister Lita and brother Juan. They have no idea what difficulties await them on the path to a complete family.",
+  "imagePath": "posters/instant_family.webp",
+  "genres": [
+    {
+      "title": "Comedy",
+      "id": 6
+    }
+  ],
+  "countries": [
+    {
+      "title": "USA",
+      "id": 1
+    }
+  ],
+  "studios": [
+    {
+      "title": "Paramount Pictures",
+      "id": 14
+    }
+  ],
+  "trailers": [
+    {
+      "url": "https://www.youtube.com/watch?v=IUfZq3DUd3Y&pp=ygUWaW5zdGFudCBmYW1pbHkgdHJhaWxlcg%3D%3D",
+      "order": 1,
+      "id": 422
+    }
+  ],
+  "awards": [],
+  "castAndCrew": [
+    {
+      "id": 3042,
+      "name": "Sean Anders",
+      "role": "DIRECTOR",
+      "details": null
+    },
+    {
+      "id": 3042,
+      "name": "Sean Anders",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 3043,
+      "name": "John Morris",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 3042,
+      "name": "Sean Anders",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3044,
+      "name": "Marc Evans",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3045,
+      "name": "Stephen Levinson",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3046,
+      "name": "John Morris",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3047,
+      "name": "Mark Wahlberg",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3048,
+      "name": "Michael Andrews",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 2929,
+      "name": "Brett Pawlak",
+      "role": "CAMERAMAN",
+      "details": null
+    },
+    {
+      "id": 3047,
+      "name": "Mark Wahlberg",
+      "role": "ACTOR",
+      "details": "Pete"
+    },
+    {
+      "id": 1005,
+      "name": "Rose Byrne",
+      "role": "ACTOR",
+      "details": "Ellie"
+    },
+    {
+      "id": 2593,
+      "name": "Isabela Merced",
+      "role": "ACTOR",
+      "details": "Lizzy"
+    },
+    {
+      "id": 3049,
+      "name": "Gustavo Escobar",
+      "role": "ACTOR",
+      "details": "Juan"
+    },
+    {
+      "id": 3050,
+      "name": "Julianna Gamiz",
+      "role": "ACTOR",
+      "details": "Lita"
+    },
+    {
+      "id": 3051,
+      "name": "Octavia Spencer",
+      "role": "ACTOR",
+      "details": "Karen"
+    }
+  ],
+  "collections": []
+}

@@ -1,0 +1,198 @@
+{
+  "id": 416,
+  "title": "Slow Horses",
+  "releaseDate": "2022-04-01",
+  "type": "SERIES",
+  "duration": 50,
+  "budget": 0,
+  "boxOffice": 0,
+  "synopsis": "Slow Horses is a division of British intelligence that includes misfits who had no place in MI5. Under the leadership of former MI5 agent Jackson Lamb, they handle paperwork but sometimes get involved in cases that could have an impact on the whole country.",
+  "imagePath": "posters/slow_horses.webp",
+  "genres": [
+    {
+      "title": "Comedy",
+      "id": 6
+    },
+    {
+      "title": "Crime",
+      "id": 7
+    },
+    {
+      "title": "Drama",
+      "id": 5
+    }
+  ],
+  "countries": [
+    {
+      "title": "USA",
+      "id": 1
+    },
+    {
+      "title": "UK",
+      "id": 2
+    }
+  ],
+  "studios": [
+    {
+      "title": "Apple TV+",
+      "id": 73
+    }
+  ],
+  "trailers": [
+    {
+      "url": "https://www.youtube.com/watch?v=0rOPA8VfVn8&pp=ygUcc2xvdyBob3JzZXMgc2Vhc29uIDIgdHJhaWxlcg%3D%3D",
+      "order": 2,
+      "id": 415
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=A9BCtrziWtg&pp=ygUcc2xvdyBob3JzZXMgc2Vhc29uIDUgdHJhaWxlcg%3D%3D",
+      "order": 5,
+      "id": 418
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=HLVg_D1cznE&pp=ygUcc2xvdyBob3JzZXMgc2Vhc29uIDMgdHJhaWxlcg%3D%3D",
+      "order": 3,
+      "id": 416
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=O9ZJChzPn0U&pp=ygUcc2xvdyBob3JzZXMgc2Vhc29uIDEgdHJhaWxlcg%3D%3D",
+      "order": 1,
+      "id": 414
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=xo27sE2fdvs&pp=ygUcc2xvdyBob3JzZXMgc2Vhc29uIDQgdHJhaWxlcg%3D%3D",
+      "order": 4,
+      "id": 417
+    }
+  ],
+  "awards": [
+    {
+      "id": 4,
+      "title": "BAFTA Award",
+      "nominations": [
+        {
+          "title": "Writer, Drama",
+          "id": 323
+        },
+        {
+          "title": "Editing, Fiction",
+          "id": 324
+        },
+        {
+          "title": "Sound, Fiction",
+          "id": 237
+        },
+        {
+          "title": "Best Director - Fiction",
+          "id": 325
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Emmy Awards",
+      "nominations": [
+        {
+          "title": "Outstanding Directing for a Drama Series",
+          "id": 326
+        },
+        {
+          "title": " Outstanding Writing for a Drama Series",
+          "id": 249
+        }
+      ]
+    }
+  ],
+  "castAndCrew": [
+    {
+      "id": 3006,
+      "name": "Will Smith (british write and comedian)",
+      "role": "CREATOR",
+      "details": null
+    },
+    {
+      "id": 1989,
+      "name": "Daniel Pemberton",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 3007,
+      "name": "Toydrum",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 395,
+      "name": "Gary Oldman",
+      "role": "ACTOR",
+      "details": "Jackson Lamb"
+    },
+    {
+      "id": 3008,
+      "name": "Jack Lowden",
+      "role": "ACTOR",
+      "details": " River Cartwright"
+    },
+    {
+      "id": 689,
+      "name": "Kristin Scott Thomas",
+      "role": "ACTOR",
+      "details": "Diana Taverner"
+    },
+    {
+      "id": 3009,
+      "name": "Saskia Reeves",
+      "role": "ACTOR",
+      "details": "Catherine Standish"
+    },
+    {
+      "id": 3010,
+      "name": "Christopher Chung",
+      "role": "ACTOR",
+      "details": "Roddy Ho"
+    },
+    {
+      "id": 3011,
+      "name": "Aimee-Ffion Edwards",
+      "role": "ACTOR",
+      "details": "Shirley Dander"
+    },
+    {
+      "id": 3012,
+      "name": "Rosalind Eleazar",
+      "role": "ACTOR",
+      "details": "Louisa Guy"
+    },
+    {
+      "id": 3013,
+      "name": "Kadiff Kirwan",
+      "role": "ACTOR",
+      "details": "Marcus Longridge"
+    },
+    {
+      "id": 3014,
+      "name": "Ruth Bradley",
+      "role": "ACTOR",
+      "details": "Emma Flyte"
+    },
+    {
+      "id": 609,
+      "name": "Jonathan Pryce",
+      "role": "ACTOR",
+      "details": "David Cartwright"
+    },
+    {
+      "id": 3015,
+      "name": "Chris Reilly",
+      "role": "ACTOR",
+      "details": "Nick Duffy"
+    }
+  ],
+  "collections": [],
+  "seriesExtension": {
+    "id": 83,
+    "episodesTotal": 30,
+    "seasonsTotal": 5
+  }
+}
