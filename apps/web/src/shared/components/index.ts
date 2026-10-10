@@ -35,7 +35,6 @@ export * from './centered-block/centered-block';
 export * from './scrollable-line/scrollable-line';
 export * from './error-screen/error-screen';
 export * from './page-loader/page-loader';
-export * from './filters/filters';
 export * from './filters-sidebar/filters-sidebar';
 export * from './page-title/page-title';
 export * from './drawer/drawer';

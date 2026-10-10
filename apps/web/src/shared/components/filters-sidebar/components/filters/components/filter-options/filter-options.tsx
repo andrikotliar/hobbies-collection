@@ -1,5 +1,5 @@
 import { Form, type FilterItem } from '~/shared';
-import { ComboSelect } from '~/shared/components/filters/components/combo-select/combo-select';
+import { ComboSelect } from '../combo-select/combo-select';
 
 type FilterOptionsProps<T extends Record<string, any>> = {
   filter: FilterItem<T>;

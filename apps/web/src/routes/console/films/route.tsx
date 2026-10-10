@@ -1,5 +1,4 @@
 import {
-  Filters,
   buildGetFilmsAdminListQueryOptions,
   buildGetInitialDataQueryOptions,
   useSidebarVisibility,
@@ -114,7 +113,7 @@ function PageContainer() {
     });
   };
 
-  const filterFilms: React.ComponentProps<typeof Filters>['onSubmit'] = (data) => {
+  const filterFilms: React.ComponentProps<typeof FiltersSidebar>['onSubmit'] = (data) => {
     const appliedFilters = filterValues(data);
 
     const searchParams = {
@@ -179,17 +178,14 @@ function PageContainer() {
           onToggle={toggleFilter}
           heightReducer="60px"
           topPositionMargin="80px"
-        >
-          <Filters
-            config={filtersConfig}
-            defaultValues={initialFilters}
-            resetValues={defaultAdminFilters}
-            onSubmit={filterFilms}
-            schema={AdminFiltersSchema}
-            filtersCount={filtersCount}
-            onReset={handleReset}
-          />
-        </FiltersSidebar>
+          config={filtersConfig}
+          defaultValues={initialFilters}
+          resetValues={defaultAdminFilters}
+          onSubmit={filterFilms}
+          schema={AdminFiltersSchema}
+          filtersCount={filtersCount}
+          onReset={handleReset}
+        />
         <List
           data={data}
           getDeleteMutationOptions={getDeleteMutationOptions}

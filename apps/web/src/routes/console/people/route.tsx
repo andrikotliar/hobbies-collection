@@ -2,7 +2,6 @@ import {
   api,
   buildMetaTitle,
   countObjectKeys,
-  Filters,
   FiltersSidebar,
   filterValues,
   getEmptyFormValues,
@@ -151,17 +150,14 @@ function RouteComponent() {
         onToggle={toggleFilter}
         heightReducer="60px"
         topPositionMargin="80px"
-      >
-        <Filters
-          defaultValues={initialFilters}
-          config={filtersConfig}
-          schema={GetPeopleListQuerySchema}
-          filtersCount={appliedFilters}
-          resetValues={defaultFilters}
-          onSubmit={filterPeople}
-          onReset={handleReset}
-        />
-      </FiltersSidebar>
+        defaultValues={initialFilters}
+        config={filtersConfig}
+        schema={GetPeopleListQuerySchema}
+        filtersCount={appliedFilters}
+        resetValues={defaultFilters}
+        onSubmit={filterPeople}
+        onReset={handleReset}
+      />
       <List
         data={data}
         titleKey="name"

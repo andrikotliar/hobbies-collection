@@ -7,7 +7,6 @@ import {
   buildGetFilmsListQueryOptions,
   buildGetInitialDataQueryOptions,
   countObjectKeys,
-  Filters,
   FiltersSidebar,
   filterValues,
   PageLayout,
@@ -56,7 +55,7 @@ function RootPageContainer() {
     return getFiltersConfig(initialData);
   }, [initialData]);
 
-  const submitFilter: React.ComponentProps<typeof Filters>['onSubmit'] = (data) => {
+  const submitFilter: React.ComponentProps<typeof FiltersSidebar>['onSubmit'] = (data) => {
     const filledOptions = filterValues(data);
     navigate({
       search: (prev) => ({
@@ -93,17 +92,14 @@ function RootPageContainer() {
         heightReducer="0px"
         isOpen={isFilterOpen}
         onToggle={toggleFilter}
-      >
-        <Filters
-          defaultValues={initialFilters}
-          resetValues={filterDefaultValues}
-          onSubmit={submitFilter}
-          schema={FiltersSchema}
-          onReset={handleReset}
-          filtersCount={filtersCount}
-          config={filtersConfig}
-        />
-      </FiltersSidebar>
+        defaultValues={initialFilters}
+        resetValues={filterDefaultValues}
+        onSubmit={submitFilter}
+        schema={FiltersSchema}
+        onReset={handleReset}
+        filtersCount={filtersCount}
+        config={filtersConfig}
+      />
       <Outlet />
     </PageLayout>
   );

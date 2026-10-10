@@ -1,27 +1,31 @@
 import styles from './filters-sidebar.module.css';
 import clsx from 'clsx';
+import type z from 'zod';
 import { Loader } from '~/shared/components/loader/loader';
 import { defineCssProperties } from '~/shared/helpers';
 import { XIcon } from 'lucide-react';
 import { BLOCKING_SCROLL_CLASS_NAME } from '~/shared/constants';
+import { Filters, type FiltersProps } from './components';
 
-type SidebarProps = {
+type SidebarProps<TDefaultValues extends Record<string, unknown>, TSchema extends z.ZodType> = {
   isOpen: boolean;
   onToggle: () => void;
   isLoading?: boolean;
   heightReducer?: `${string}px`;
   topPositionMargin?: `${string}px`;
-  children?: React.ReactNode;
-};
+} & FiltersProps<TDefaultValues, TSchema>;
 
-export const FiltersSidebar = ({
+export const FiltersSidebar = <
+  TDefaultValues extends Record<string, unknown>,
+  TSchema extends z.ZodType,
+>({
   isOpen,
   onToggle,
   isLoading = false,
   heightReducer = '0px',
   topPositionMargin = '0px',
-  children,
-}: SidebarProps) => {
+  ...props
+}: SidebarProps<TDefaultValues, TSchema>) => {
   if (isLoading) {
     return (
       <div className={styles.sidebar_content}>
@@ -41,7 +45,7 @@ export const FiltersSidebar = ({
         '--sidebar-top-position-margin': topPositionMargin,
       })}
     >
-      {children}
+      <Filters {...props} />
       <button onClick={onToggle} className={styles.close_icon_wrapper}>
         <XIcon />
       </button>
