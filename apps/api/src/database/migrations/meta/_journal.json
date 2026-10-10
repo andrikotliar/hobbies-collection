@@ -260,6 +260,13 @@
       "when": 1791026844122,
       "tag": "0037_add-image-paths",
       "breakpoints": true
+    },
+    {
+      "idx": 38,
+      "version": "7",
+      "when": 1791631962794,
+      "tag": "0038_add-book-reading-status-and-order",
+      "breakpoints": true
     }
   ]
 }

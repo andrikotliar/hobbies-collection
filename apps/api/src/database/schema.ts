@@ -3,6 +3,7 @@ import {
   type DeviceInfo,
   PersonRole,
   FilmType,
+  BookReadStatus,
 } from '@hobbies-collection/shared';
 import {
   pgTable,
@@ -26,6 +27,7 @@ import {
 export const collectionCategory = pgEnum('collection_category', CollectionCategory);
 export const personRole = pgEnum('person_role', PersonRole);
 export const filmType = pgEnum('title_type', FilmType);
+export const bookReadStatus = pgEnum('book_read_status', BookReadStatus);
 
 export const films = pgTable(
   'films',
@@ -580,6 +582,8 @@ export const books = pgTable('books', {
   pagesNumber: integer('pages_number').notNull(),
   rating: integer('rating').notNull().default(1),
   imagePath: text('image_path'),
+  status: bookReadStatus('status').notNull().default('PLANNED'),
+  readingOrder: numeric('reading_order', { mode: 'number' }).notNull(),
   createdAt: timestamp('created_at', { precision: 3, mode: 'string' }).defaultNow().notNull(),
   updatedAt: timestamp('updated_at', { precision: 3, mode: 'string' })
     .defaultNow()
