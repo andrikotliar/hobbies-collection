@@ -31,35 +31,42 @@ export const mapInnerId = <T extends Record<string, number>>(
   return entities.map((item) => item[key]);
 };
 
-export const mapAdminFilmDetails = (film: EditableFilm): CreateFilmInput => {
-  const groupedAwards = film.awards.reduce((groups, award) => {
-    if (!groups[award.awardId]) {
-      groups[award.awardId] = [];
-    }
+export const mapAdminFilmDetails = (film: EditableFilm, posterUrl: string): CreateFilmInput => {
+  const groupedAwards = film.awards.reduce(
+    (groups, award) => {
+      if (!groups[award.awardId]) {
+        groups[award.awardId] = [];
+      }
 
-    groups[award.awardId].push({
-      nominationId: award.nominationId,
-      actorId: award.actorId,
-    });
+      groups[award.awardId].push({
+        nominationId: award.nominationId,
+        actorId: award.actorId,
+      });
 
-    return groups;
-  }, {} as Record<number, CreateFilmInput['awards'][number]['nominations']>);
+      return groups;
+    },
+    {} as Record<number, CreateFilmInput['awards'][number]['nominations']>,
+  );
 
-  const groupedPeople = film.castAndCrew.reduce((groups, item) => {
-    if (!groups[item.role]) {
-      groups[item.role] = [];
-    }
+  const groupedPeople = film.castAndCrew.reduce(
+    (groups, item) => {
+      if (!groups[item.role]) {
+        groups[item.role] = [];
+      }
 
-    groups[item.role].push({
-      personId: item.personId,
-      details: item.details,
-    });
+      groups[item.role].push({
+        personId: item.personId,
+        details: item.details,
+      });
 
-    return groups;
-  }, {} as Record<Enum<typeof PersonRole>, CreateFilmInput['castAndCrew'][number]['people']>);
+      return groups;
+    },
+    {} as Record<Enum<typeof PersonRole>, CreateFilmInput['castAndCrew'][number]['people']>,
+  );
 
   return {
     ...film,
+    imagePath: film.imagePath ? `${posterUrl}${film.imagePath}` : null,
     genres: mapInnerId(film.genres, 'genreId'),
     countries: mapInnerId(film.countries, 'countryId'),
     studios: mapInnerId(film.studios, 'studioId'),

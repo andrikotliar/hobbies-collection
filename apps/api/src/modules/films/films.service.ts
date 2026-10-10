@@ -192,7 +192,7 @@ export class FilmsService {
   async getEditableFilm(id: number) {
     const film = await throwIfNotFound(this.deps.filmsRepository.getEditableFilm(id));
 
-    return mapAdminFilmDetails(film);
+    return mapAdminFilmDetails(film, this.basePostersUrl);
   }
 
   async createFilm(input: CreateFilmInput) {
