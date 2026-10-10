@@ -1,0 +1,116 @@
+{
+  "id": 419,
+  "title": "Train to Busan",
+  "releaseDate": "2016-07-20",
+  "type": "FILM",
+  "duration": 118,
+  "budget": 7000000,
+  "boxOffice": 94000000,
+  "synopsis": "Seok-woo finds himself at the epicenter of a zombie apocalypse with his daughter. Their only hope now is a train from Seoul to Busan, where the virus has likely not yet reached. But soon the train will be infected, and they will have to survive in close quarters filled with zombies.",
+  "imagePath": "posters/train_to_busan.webp",
+  "genres": [
+    {
+      "title": "Horror",
+      "id": 10
+    },
+    {
+      "title": "Disaster",
+      "id": 11
+    }
+  ],
+  "countries": [
+    {
+      "title": "South Korea",
+      "id": 33
+    }
+  ],
+  "studios": [
+    {
+      "title": "Next Entertainment World",
+      "id": 106
+    }
+  ],
+  "trailers": [
+    {
+      "url": "https://www.youtube.com/watch?v=1ovgxN2VWNc&pp=ygUWdHJhaW4gdG8gYnVzYW4gdHJhaWxlcg%3D%3D",
+      "order": 1,
+      "id": 419
+    }
+  ],
+  "awards": [],
+  "castAndCrew": [
+    {
+      "id": 3016,
+      "name": "Yeon Sang-ho",
+      "role": "DIRECTOR",
+      "details": null
+    },
+    {
+      "id": 3016,
+      "name": "Yeon Sang-ho",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 3017,
+      "name": "Lee Dong-Ha",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3018,
+      "name": "Jang Young-gyu",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 3019,
+      "name": "Lee Hyung-deok",
+      "role": "CAMERAMAN",
+      "details": null
+    },
+    {
+      "id": 3020,
+      "name": "Gong Yoo",
+      "role": "ACTOR",
+      "details": "Seok-woo"
+    },
+    {
+      "id": 3021,
+      "name": "Jung Yu-mi",
+      "role": "ACTOR",
+      "details": "Seong-kyeong"
+    },
+    {
+      "id": 3022,
+      "name": "Ma Dong-seok",
+      "role": "ACTOR",
+      "details": "Sang-hwa"
+    },
+    {
+      "id": 3023,
+      "name": "Kim Su-an",
+      "role": "ACTOR",
+      "details": "Soo-an"
+    },
+    {
+      "id": 3024,
+      "name": "Kim Eui-sung",
+      "role": "ACTOR",
+      "details": "Yon-suk"
+    },
+    {
+      "id": 3025,
+      "name": "Choi Woo-sik",
+      "role": "ACTOR",
+      "details": "Yong-guk"
+    },
+    {
+      "id": 3026,
+      "name": "Sohee",
+      "role": "ACTOR",
+      "details": "Jin-hee"
+    }
+  ],
+  "collections": []
+}

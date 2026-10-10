@@ -1,0 +1,203 @@
+{
+  "id": 415,
+  "title": "Soul",
+  "releaseDate": "2020-12-25",
+  "type": "ANIMATION",
+  "duration": 100,
+  "budget": 150000000,
+  "boxOffice": 121000000,
+  "synopsis": null,
+  "imagePath": "posters/soul.webp",
+  "genres": [
+    {
+      "title": "Adventures",
+      "id": 3
+    }
+  ],
+  "countries": [
+    {
+      "title": "USA",
+      "id": 1
+    },
+    {
+      "title": "Japan",
+      "id": 6
+    }
+  ],
+  "studios": [
+    {
+      "title": "Pixar Animation",
+      "id": 3
+    }
+  ],
+  "trailers": [
+    {
+      "url": "https://youtu.be/xOsLIiBStEs?si=5-ybDnlKsjul0MCi",
+      "order": 1,
+      "id": 413
+    }
+  ],
+  "awards": [
+    {
+      "id": 1,
+      "title": "Oscar Awards",
+      "nominations": [
+        {
+          "title": "Best Achievement in Music Written for Motion Pictures (Original Score)",
+          "id": 7
+        },
+        {
+          "title": "Best Animated Feature Film",
+          "id": 284
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Critics Choice Movie Awards",
+      "nominations": [
+        {
+          "title": "Best Score",
+          "id": 84
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "BAFTA Award",
+      "nominations": [
+        {
+          "title": "Best Animated Feature Film",
+          "id": 105
+        },
+        {
+          "title": "Original Score",
+          "id": 322
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Golden Globe Awards",
+      "nominations": [
+        {
+          "title": "Best Motion Picture - Animated",
+          "id": 217
+        },
+        {
+          "title": "Best Original Score - Motion Picture",
+          "id": 120
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Annie Awards",
+      "nominations": [
+        {
+          "title": "Best Animated Feature",
+          "id": 171
+        },
+        {
+          "title": "Outstanding Achievement for Animated Effects in an Animated Feature",
+          "id": 218
+        },
+        {
+          "title": "Outstanding Achievement for Character Animation in an Animated Feature",
+          "id": 219
+        },
+        {
+          "title": "Outstanding Achievement for Music in an Animated Feature",
+          "id": 222
+        },
+        {
+          "title": "Outstanding Achievement for Storyboarding in an Animated Feature",
+          "id": 270
+        },
+        {
+          "title": "Outstanding Achievement in Writing for an Animated Feature",
+          "id": 321
+        },
+        {
+          "title": "Outstanding Achievement for Editing in an Animated Feature",
+          "id": 225
+        }
+      ]
+    }
+  ],
+  "castAndCrew": [
+    {
+      "id": 1857,
+      "name": "Pete Docter",
+      "role": "DIRECTOR",
+      "details": null
+    },
+    {
+      "id": 1857,
+      "name": "Pete Docter",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 2971,
+      "name": "Mike Jones",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 3000,
+      "name": "Kemp Powers",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 3001,
+      "name": "Dana Murray",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 2732,
+      "name": "Trent Reznor",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 2733,
+      "name": "Atticus Ross",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 517,
+      "name": "Jamie Foxx",
+      "role": "ACTOR",
+      "details": "Joe"
+    },
+    {
+      "id": 3002,
+      "name": "Tina Fey",
+      "role": "ACTOR",
+      "details": "22"
+    },
+    {
+      "id": 3003,
+      "name": "Graham Norton",
+      "role": "ACTOR",
+      "details": "Moonwind"
+    },
+    {
+      "id": 3004,
+      "name": "Rachel House",
+      "role": "ACTOR",
+      "details": "Terry"
+    },
+    {
+      "id": 3005,
+      "name": "Phylicia Rashad",
+      "role": "ACTOR",
+      "details": "Libba"
+    }
+  ],
+  "collections": []
+}

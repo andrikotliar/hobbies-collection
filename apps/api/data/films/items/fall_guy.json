@@ -1,0 +1,120 @@
+{
+  "id": 424,
+  "title": "Fall Guy",
+  "releaseDate": "2024-05-03",
+  "type": "FILM",
+  "duration": 126,
+  "budget": 130000000,
+  "boxOffice": 181000000,
+  "synopsis": "Colt was a successful stuntman until he was injured while filming his beloved Jodie Moreno's movie. After that, his life changes dramatically.",
+  "imagePath": "posters/fall_guy.webp",
+  "genres": [
+    {
+      "title": "Romance",
+      "id": 8
+    },
+    {
+      "title": "Comedy",
+      "id": 6
+    },
+    {
+      "title": "Drama",
+      "id": 5
+    }
+  ],
+  "countries": [
+    {
+      "title": "USA",
+      "id": 1
+    },
+    {
+      "title": "Canada",
+      "id": 3
+    },
+    {
+      "title": "Australia",
+      "id": 12
+    }
+  ],
+  "studios": [
+    {
+      "title": "87North",
+      "id": 111
+    },
+    {
+      "title": "Australian Government",
+      "id": 112
+    }
+  ],
+  "trailers": [
+    {
+      "url": "https://www.youtube.com/watch?v=j7jPnwVGdZ8&pp=ygUQZmFsbCBndXkgdHJhaWxlctIHCQktDAGHKiGM7w%3D%3D",
+      "order": 1,
+      "id": 424
+    }
+  ],
+  "awards": [],
+  "castAndCrew": [
+    {
+      "id": 3052,
+      "name": "David Leitch",
+      "role": "DIRECTOR",
+      "details": null
+    },
+    {
+      "id": 1724,
+      "name": "Drew Pearce",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 3053,
+      "name": "Guymon Casady",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3052,
+      "name": "David Leitch",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3054,
+      "name": "Kelly McCormick",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3055,
+      "name": "Dominic Lewis",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 3056,
+      "name": "Jonathan Sela",
+      "role": "CAMERAMAN",
+      "details": null
+    },
+    {
+      "id": 3057,
+      "name": "Ryan Gosling",
+      "role": "ACTOR",
+      "details": "Colt Seavers"
+    },
+    {
+      "id": 341,
+      "name": "Emily Blunt",
+      "role": "ACTOR",
+      "details": "Jody Moreno"
+    },
+    {
+      "id": 3,
+      "name": "Aaron Taylor-Johnson",
+      "role": "ACTOR",
+      "details": "Tom Ryder"
+    }
+  ],
+  "collections": []
+}

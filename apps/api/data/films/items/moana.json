@@ -1,0 +1,111 @@
+{
+  "id": 426,
+  "title": "Moana",
+  "releaseDate": "2016-11-23",
+  "type": "ANIMATION",
+  "duration": 107,
+  "budget": 175000000,
+  "boxOffice": 643000000,
+  "synopsis": "",
+  "imagePath": "posters/moana.webp",
+  "genres": [
+    {
+      "title": "Adventures",
+      "id": 3
+    },
+    {
+      "title": "Fantasy",
+      "id": 2
+    }
+  ],
+  "countries": [
+    {
+      "title": "USA",
+      "id": 1
+    },
+    {
+      "title": "Japan",
+      "id": 6
+    }
+  ],
+  "studios": [
+    {
+      "title": "Walt Disney Pictures",
+      "id": 1
+    }
+  ],
+  "trailers": [
+    {
+      "url": "https://www.youtube.com/watch?v=LKFuXETZUsI&pp=ygUNbW9hbmEgdHJhaWxlcg%3D%3D",
+      "order": 1,
+      "id": 426
+    }
+  ],
+  "awards": [
+    {
+      "id": 7,
+      "title": "Annie Awards",
+      "nominations": [
+        {
+          "title": "Outstanding Achievement in Animated Effects in an Animated Production",
+          "id": 338
+        },
+        {
+          "title": "Outstanding Achievement in Voice Acting in an Animated Feature Production",
+          "id": 302
+        }
+      ]
+    }
+  ],
+  "castAndCrew": [
+    {
+      "id": 3062,
+      "name": "Ron Clements",
+      "role": "DIRECTOR",
+      "details": null
+    },
+    {
+      "id": 3063,
+      "name": "John Musker",
+      "role": "DIRECTOR",
+      "details": null
+    },
+    {
+      "id": 2388,
+      "name": "Jared Bush",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 3064,
+      "name": "Osnat Shurer",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 1968,
+      "name": "Mark Mancina",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 3061,
+      "name": "Auli'i Cravalho",
+      "role": "ACTOR",
+      "details": "Moana"
+    },
+    {
+      "id": 314,
+      "name": "Dwayne Johnson",
+      "role": "ACTOR",
+      "details": "Maui"
+    },
+    {
+      "id": 3004,
+      "name": "Rachel House",
+      "role": "ACTOR",
+      "details": "Gramma Tala"
+    }
+  ],
+  "collections": []
+}

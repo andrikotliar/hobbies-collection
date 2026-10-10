@@ -16,6 +16,10 @@
     "id": 7
   },
   {
+    "title": "87North",
+    "id": 111
+  },
+  {
     "title": "AMC Studios",
     "id": 72
   },
@@ -46,6 +50,10 @@
   {
     "title": "Atresmedia Cine",
     "id": 42
+  },
+  {
+    "title": "Australian Government",
+    "id": 112
   },
   {
     "title": "Avatar Studio",
@@ -110,13 +118,5 @@
   {
     "title": "DC Comics",
     "id": 89
-  },
-  {
-    "title": "DC Entertainment",
-    "id": 18
-  },
-  {
-    "title": "DC Films",
-    "id": 74
   }
 ]

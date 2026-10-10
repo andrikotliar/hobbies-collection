@@ -1,0 +1,129 @@
+{
+  "id": 420,
+  "title": "Godzilla Minus One",
+  "releaseDate": "2023-12-01",
+  "type": "FILM",
+  "duration": 124,
+  "budget": 15000000,
+  "boxOffice": 114000000,
+  "synopsis": null,
+  "imagePath": "posters/godzilla_minus_one.webp",
+  "genres": [
+    {
+      "title": "Action",
+      "id": 4
+    },
+    {
+      "title": "Disaster",
+      "id": 11
+    }
+  ],
+  "countries": [
+    {
+      "title": "Japan",
+      "id": 6
+    }
+  ],
+  "studios": [
+    {
+      "title": "Robot Communications",
+      "id": 107
+    },
+    {
+      "title": "Toho Studios",
+      "id": 108
+    }
+  ],
+  "trailers": [
+    {
+      "url": "https://www.youtube.com/watch?v=nAYKaslCXPc&pp=ygUaZ29kemlsbGEgbWludXMgb25lIHRyYWlsZXI%3D",
+      "order": 1,
+      "id": 420
+    }
+  ],
+  "awards": [
+    {
+      "id": 1,
+      "title": "Oscar Awards",
+      "nominations": [
+        {
+          "title": "Best Achievement in Visual Effects",
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Saturn Awards",
+      "nominations": [
+        {
+          "title": "Best International Film",
+          "id": 327
+        }
+      ]
+    }
+  ],
+  "castAndCrew": [
+    {
+      "id": 3027,
+      "name": "Takashi Yamazaki",
+      "role": "DIRECTOR",
+      "details": null
+    },
+    {
+      "id": 3028,
+      "name": "Takashi Yamazaki",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 3029,
+      "name": "Go Abe",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3030,
+      "name": "Kazuaki Kishida",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3031,
+      "name": "Keiichiro Moriya",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3032,
+      "name": "Kenji Yamada",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3033,
+      "name": "Naoki Sato",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 3034,
+      "name": "Kozo Shibasaki",
+      "role": "CAMERAMAN",
+      "details": null
+    },
+    {
+      "id": 3035,
+      "name": " Minami Hamabe",
+      "role": "ACTOR",
+      "details": "Noriko Oishi"
+    },
+    {
+      "id": 3036,
+      "name": "Ryuunosuke Kamiki",
+      "role": "ACTOR",
+      "details": "Koichi Shikishima"
+    }
+  ],
+  "collections": []
+}
