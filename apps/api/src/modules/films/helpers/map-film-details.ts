@@ -45,7 +45,10 @@ const mapNestedRelations = <T extends Record<string, unknown>>(values: T[], sele
   return values.map((item) => item[selector]);
 };
 
-export const mapFilmDetails = (film: ExtendedFilm): z.infer<typeof FilmResponseSchema> => {
+export const mapFilmDetails = (
+  film: ExtendedFilm,
+  postersUrl: string,
+): z.infer<typeof FilmResponseSchema> => {
   const castAndCrew = film.castAndCrew.reduce((result, { role, details, person }) => {
     if (!result[role]) {
       result[role] = { role, people: [] };
@@ -83,6 +86,7 @@ export const mapFilmDetails = (film: ExtendedFilm): z.infer<typeof FilmResponseS
 
   return {
     ...film,
+    imagePath: film.imagePath ? postersUrl + film.imagePath : null,
     budget: film.budget ? Number(film.budget) : null,
     boxOffice: film.boxOffice ? Number(film.boxOffice) : null,
     genres: mapNestedRelations(film.genres, 'genre'),

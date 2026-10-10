@@ -1,6 +1,6 @@
 import styles from './summary-section.module.css';
 import { useMemo } from 'react';
-import { defineCssProperties, getExternalImageUrl, type api, type ApiResponse } from '~/shared';
+import { defineCssProperties, type api, type ApiResponse } from '~/shared';
 import { Collections, Poster, Rating, SummaryBlock, TrailersButton, Title } from './components';
 import { getFilmSummaryConfig } from '../../helpers';
 import clsx from 'clsx';
@@ -15,13 +15,11 @@ export const SummarySection = ({ film, hasExtendedData }: SummarySectionProps) =
     return getFilmSummaryConfig(film);
   }, [film]);
 
-  const poster = getExternalImageUrl(film.imagePath);
-
   return (
     <div
       className={clsx(styles.summary_layout, hasExtendedData && styles.extended_data)}
       style={defineCssProperties({
-        '--bg-url': `url(${poster})`,
+        '--bg-url': `url(${film.imagePath})`,
       })}
     >
       <div className={styles.title_row}>
@@ -29,10 +27,10 @@ export const SummarySection = ({ film, hasExtendedData }: SummarySectionProps) =
         <Title>{film.title}</Title>
       </div>
 
-      <div className={clsx(styles.content, !poster && styles.content_no_poster)}>
-        {(poster || film.trailers.length > 0) && (
+      <div className={clsx(styles.content, !film.imagePath && styles.content_no_poster)}>
+        {(film.imagePath || film.trailers.length > 0) && (
           <div className={styles.left_column}>
-            {poster && <Poster image={poster} title={film.title} />}
+            {film.imagePath && <Poster image={film.imagePath} title={film.title} />}
             {film.trailers.length > 0 && <TrailersButton data={film.trailers} type={film.type} />}
           </div>
         )}

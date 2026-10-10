@@ -2,7 +2,6 @@ import { Link, useLocation } from '@tanstack/react-router';
 import { GridItemsNotFound, GridSkeleton } from '~/shared/components/page-grid/components';
 import styles from './page-grid.module.css';
 import type { FileRoutesByTo } from '~/routeTree.gen';
-import { getExternalImageUrl } from '~/shared/helpers';
 import { Image } from '~/shared/components/image/image';
 
 type GenericItem = {
@@ -70,7 +69,7 @@ export const PageGrid = <TData extends GenericItem>({
           <div className={styles.cover}>
             {item.sequenceNum && <div className={styles.counter}>{item.sequenceNum}</div>}
             {item.upcoming && <div className={styles.upcoming}>Upcoming</div>}
-            <Image src={getExternalImageUrl(item.imagePath)} alt={item.title} />
+            <Image src={item.imagePath} alt={item.title} />
           </div>
           <h3 className={styles.title}>{item.title}</h3>
           <p className={styles.year}>{item.year}</p>

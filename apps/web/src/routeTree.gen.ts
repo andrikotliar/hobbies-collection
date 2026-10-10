@@ -33,6 +33,7 @@ import { Route as ConsoleRootIndexRouteImport } from './routes/console/_root/ind
 import { Route as ConsoleFilmsIdRouteImport } from './routes/console/films_/$id'
 import { Route as ConsoleAwardsIdRouteImport } from './routes/console/awards_/$id'
 import { Route as ConsoleArticlesIdRouteImport } from './routes/console/articles_/$id'
+import { Route as ConsoleFilmsViewIdRouteImport } from './routes/console/films/view/$id'
 
 const LoginRouteRoute = LoginRouteRouteImport.update({
   id: '/login',
@@ -155,6 +156,11 @@ const ConsoleArticlesIdRoute = ConsoleArticlesIdRouteImport.update({
   path: '/articles/$id',
   getParentRoute: () => ConsoleRouteRoute,
 } as any)
+const ConsoleFilmsViewIdRoute = ConsoleFilmsViewIdRouteImport.update({
+  id: '/view/$id',
+  path: '/view/$id',
+  getParentRoute: () => ConsoleFilmsRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -169,7 +175,7 @@ export interface FileRoutesByFullPath {
   '/console/collection-events': typeof ConsoleCollectionEventsRouteRoute
   '/console/collections': typeof ConsoleCollectionsRouteRoute
   '/console/countries': typeof ConsoleCountriesRouteRoute
-  '/console/films': typeof ConsoleFilmsRouteRoute
+  '/console/films': typeof ConsoleFilmsRouteRouteWithChildren
   '/console/genres': typeof ConsoleGenresRouteRoute
   '/console/people': typeof ConsolePeopleRouteRoute
   '/console/sessions': typeof ConsoleSessionsRouteRoute
@@ -181,6 +187,7 @@ export interface FileRoutesByFullPath {
   '/console/awards/$id': typeof ConsoleAwardsIdRoute
   '/console/films/$id': typeof ConsoleFilmsIdRoute
   '/console/': typeof ConsoleRootIndexRoute
+  '/console/films/view/$id': typeof ConsoleFilmsViewIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -194,7 +201,7 @@ export interface FileRoutesByTo {
   '/console/collection-events': typeof ConsoleCollectionEventsRouteRoute
   '/console/collections': typeof ConsoleCollectionsRouteRoute
   '/console/countries': typeof ConsoleCountriesRouteRoute
-  '/console/films': typeof ConsoleFilmsRouteRoute
+  '/console/films': typeof ConsoleFilmsRouteRouteWithChildren
   '/console/genres': typeof ConsoleGenresRouteRoute
   '/console/people': typeof ConsolePeopleRouteRoute
   '/console/sessions': typeof ConsoleSessionsRouteRoute
@@ -206,6 +213,7 @@ export interface FileRoutesByTo {
   '/console/awards/$id': typeof ConsoleAwardsIdRoute
   '/console/films/$id': typeof ConsoleFilmsIdRoute
   '/console': typeof ConsoleRootIndexRoute
+  '/console/films/view/$id': typeof ConsoleFilmsViewIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -221,7 +229,7 @@ export interface FileRoutesById {
   '/console/collection-events': typeof ConsoleCollectionEventsRouteRoute
   '/console/collections': typeof ConsoleCollectionsRouteRoute
   '/console/countries': typeof ConsoleCountriesRouteRoute
-  '/console/films': typeof ConsoleFilmsRouteRoute
+  '/console/films': typeof ConsoleFilmsRouteRouteWithChildren
   '/console/genres': typeof ConsoleGenresRouteRoute
   '/console/people': typeof ConsolePeopleRouteRoute
   '/console/sessions': typeof ConsoleSessionsRouteRoute
@@ -233,6 +241,7 @@ export interface FileRoutesById {
   '/console/awards_/$id': typeof ConsoleAwardsIdRoute
   '/console/films_/$id': typeof ConsoleFilmsIdRoute
   '/console/_root/': typeof ConsoleRootIndexRoute
+  '/console/films/view/$id': typeof ConsoleFilmsViewIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -261,6 +270,7 @@ export interface FileRouteTypes {
     | '/console/awards/$id'
     | '/console/films/$id'
     | '/console/'
+    | '/console/films/view/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -286,6 +296,7 @@ export interface FileRouteTypes {
     | '/console/awards/$id'
     | '/console/films/$id'
     | '/console'
+    | '/console/films/view/$id'
   id:
     | '__root__'
     | '/'
@@ -312,6 +323,7 @@ export interface FileRouteTypes {
     | '/console/awards_/$id'
     | '/console/films_/$id'
     | '/console/_root/'
+    | '/console/films/view/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -495,8 +507,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsoleArticlesIdRouteImport
       parentRoute: typeof ConsoleRouteRoute
     }
+    '/console/films/view/$id': {
+      id: '/console/films/view/$id'
+      path: '/view/$id'
+      fullPath: '/console/films/view/$id'
+      preLoaderRoute: typeof ConsoleFilmsViewIdRouteImport
+      parentRoute: typeof ConsoleFilmsRouteRoute
+    }
   }
 }
+
+interface ConsoleFilmsRouteRouteChildren {
+  ConsoleFilmsViewIdRoute: typeof ConsoleFilmsViewIdRoute
+}
+
+const ConsoleFilmsRouteRouteChildren: ConsoleFilmsRouteRouteChildren = {
+  ConsoleFilmsViewIdRoute: ConsoleFilmsViewIdRoute,
+}
+
+const ConsoleFilmsRouteRouteWithChildren =
+  ConsoleFilmsRouteRoute._addFileChildren(ConsoleFilmsRouteRouteChildren)
 
 interface ConsoleRouteRouteChildren {
   ConsoleArticlesRouteRoute: typeof ConsoleArticlesRouteRoute
@@ -504,7 +534,7 @@ interface ConsoleRouteRouteChildren {
   ConsoleCollectionEventsRouteRoute: typeof ConsoleCollectionEventsRouteRoute
   ConsoleCollectionsRouteRoute: typeof ConsoleCollectionsRouteRoute
   ConsoleCountriesRouteRoute: typeof ConsoleCountriesRouteRoute
-  ConsoleFilmsRouteRoute: typeof ConsoleFilmsRouteRoute
+  ConsoleFilmsRouteRoute: typeof ConsoleFilmsRouteRouteWithChildren
   ConsoleGenresRouteRoute: typeof ConsoleGenresRouteRoute
   ConsolePeopleRouteRoute: typeof ConsolePeopleRouteRoute
   ConsoleSessionsRouteRoute: typeof ConsoleSessionsRouteRoute
@@ -522,7 +552,7 @@ const ConsoleRouteRouteChildren: ConsoleRouteRouteChildren = {
   ConsoleCollectionEventsRouteRoute: ConsoleCollectionEventsRouteRoute,
   ConsoleCollectionsRouteRoute: ConsoleCollectionsRouteRoute,
   ConsoleCountriesRouteRoute: ConsoleCountriesRouteRoute,
-  ConsoleFilmsRouteRoute: ConsoleFilmsRouteRoute,
+  ConsoleFilmsRouteRoute: ConsoleFilmsRouteRouteWithChildren,
   ConsoleGenresRouteRoute: ConsoleGenresRouteRoute,
   ConsolePeopleRouteRoute: ConsolePeopleRouteRoute,
   ConsoleSessionsRouteRoute: ConsoleSessionsRouteRoute,

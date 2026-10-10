@@ -31,6 +31,8 @@ type GenericOption = {
 const statBlocks = ['genres', 'collections', 'countries', 'studios', 'types'] as const;
 
 export class FilmsService {
+  private readonly basePostersUrl: string;
+
   constructor(
     private readonly deps: Deps<
       | 'filmsRepository'
@@ -44,11 +46,14 @@ export class FilmsService {
       | 'aiService'
       | 'usersService'
       | 'inMemoryCacheService'
+      | 'storageService'
     >,
   ) {
     deps.inMemoryCacheService.setDefaultValue('filmsCount', 0);
     deps.inMemoryCacheService.setDefaultValue('anniversary', { film: null, date: null });
     deps.inMemoryCacheService.setDefaultValue('statistic', null);
+
+    this.basePostersUrl = deps.storageService.getBaseStorageUrl();
   }
 
   private getAllFilmsCount() {
@@ -94,6 +99,7 @@ export class FilmsService {
 
     const mappedList = data.list.map((film) => ({
       ...film,
+      imagePath: film.imagePath ? this.basePostersUrl + film.imagePath : null,
       upcoming: film.draft,
       inDays: film.draft && film.releaseDate ? this.getDaysDiffFromToday(film.releaseDate) : null,
       releasedYears:
@@ -148,7 +154,7 @@ export class FilmsService {
       return null;
     }
 
-    const mappedFilm = mapFilmDetails(film);
+    const mappedFilm = mapFilmDetails(film, this.basePostersUrl);
 
     return mappedFilm;
   }
@@ -161,6 +167,7 @@ export class FilmsService {
 
     return films.map((film) => ({
       ...film,
+      imagePath: film.imagePath ? this.basePostersUrl + film.imagePath : null,
       genres: film.genres.map((g) => g.genre),
     }));
   }

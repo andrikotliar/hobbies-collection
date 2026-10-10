@@ -4,7 +4,6 @@ import { ScrollableLine } from '~/shared/components/scrollable-line/scrollable-l
 import { getVirtualChapterValue } from '~/shared/components/order-select/helpers';
 import { Image } from '~/shared/components/image/image';
 import clsx from 'clsx';
-import { getExternalImageUrl } from '~/shared/helpers';
 import type { MixedId } from '~/shared/types';
 
 type ListItem = {
@@ -73,10 +72,7 @@ export const OrderSelect = ({
                 </label>
               ) : (
                 <div className={styles.item}>
-                  <Image
-                    src={getExternalImageUrl(item.imagePath)}
-                    className={styles.poster_select_image}
-                  />
+                  <Image src={item.imagePath} className={styles.poster_select_image} />
                 </div>
               )}
               {!isCurrentFilmSelected && !isNextChapterSelected && (

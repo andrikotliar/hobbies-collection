@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './file-input.module.css';
 import { Trash2Icon, UploadIcon } from 'lucide-react';
 import { Button } from '~/shared/components/button/button';
-import { getExternalImageUrl, imagePaths, type FormError } from '~/shared';
+import { imagePaths, type FormError } from '~/shared';
 import { FieldError } from '~/shared/components/field-error/field-error';
 
 export type FileInputProps = {
@@ -51,7 +51,7 @@ export const FileInput = ({
 
   useEffect(() => {
     if (!imagePreview) {
-      setImagePreview(getExternalImageUrl(defaultValue));
+      setImagePreview(defaultValue);
     }
   }, [defaultValue]);
 

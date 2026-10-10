@@ -6,20 +6,25 @@ import type { Deps } from '~/shared/types/deps.js';
 
 export class StorageService {
   private s3Client: S3Client | null = null;
+  private readonly region: string;
+  private readonly bucket: string;
+  private readonly customEndpoint: string | undefined;
 
-  constructor(private readonly deps: Deps<'configService'>) {}
+  constructor(private readonly deps: Deps<'configService'>) {
+    this.region = deps.configService.getKey('AWS_REGION');
+    this.customEndpoint = deps.configService.getKey('S3_ENDPOINT');
+    this.bucket = deps.configService.getKey('S3_ASSETS_BUCKET');
+  }
 
   initClient() {
-    const endpoint = this.deps.configService.getKey('S3_ENDPOINT');
-
     const s3Client = new S3Client({
-      region: this.deps.configService.getKey('AWS_REGION'),
+      region: this.region,
       credentials: {
         accessKeyId: this.deps.configService.getKey('AWS_ACCESS_KEY_ID'),
         secretAccessKey: this.deps.configService.getKey('AWS_SECRET_ACCESS_KEY'),
       },
-      endpoint: endpoint ? endpoint : undefined,
-      forcePathStyle: !!endpoint,
+      endpoint: this.customEndpoint ? this.customEndpoint : undefined,
+      forcePathStyle: !!this.customEndpoint,
     });
     return s3Client;
   }
@@ -36,7 +41,7 @@ export class StorageService {
     const s3Client = this.getOrInitClient();
 
     const command = new PutObjectCommand({
-      Bucket: this.deps.configService.getKey('S3_ASSETS_BUCKET'),
+      Bucket: this.bucket,
       Key: payload.key,
       ContentType: payload.fileType,
     });
@@ -44,5 +49,13 @@ export class StorageService {
     const url = await getSignedUrl(s3Client, command, { expiresIn: 3600 });
 
     return url;
+  }
+
+  getBaseStorageUrl() {
+    if (this.customEndpoint) {
+      return `${this.customEndpoint}/${this.bucket}/`;
+    }
+
+    return `https://${this.bucket}.s3.${this.region}.amazonaws.com/`;
   }
 }

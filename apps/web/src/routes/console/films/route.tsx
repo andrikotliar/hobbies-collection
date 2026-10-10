@@ -11,7 +11,7 @@ import {
   queryKey,
   buildMetaTitle,
 } from '~/shared';
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, Outlet } from '@tanstack/react-router';
 import { GetAdminListQuerySchema, type ListOption } from '@hobbies-collection/shared';
 import { mutationOptions, useQuery, useSuspenseQuery } from '@tanstack/react-query';
 import { useCallback, useMemo } from 'react';
@@ -108,10 +108,9 @@ function PageContainer() {
 
   const handleViewFilm = (data: { id: number }) => {
     navigate({
-      search: (prev) => ({
-        ...prev,
-        filmId: data.id,
-      }),
+      to: '/console/films/view/$id',
+      params: { id: data.id.toString() },
+      search: (prev) => prev,
     });
   };
 
@@ -172,46 +171,49 @@ function PageContainer() {
   }, []);
 
   return (
-    <ContentWithSidebar>
-      <FiltersSidebar
-        isLoading={isInitialDataFetching}
-        isOpen={isFilterOpen}
-        onToggle={toggleFilter}
-        heightReducer="60px"
-        topPositionMargin="80px"
-      >
-        <Filters
-          config={filtersConfig}
-          defaultValues={initialFilters}
-          resetValues={defaultAdminFilters}
-          onSubmit={filterFilms}
-          schema={AdminFiltersSchema}
-          filtersCount={filtersCount}
-          onReset={handleReset}
+    <>
+      <ContentWithSidebar>
+        <FiltersSidebar
+          isLoading={isInitialDataFetching}
+          isOpen={isFilterOpen}
+          onToggle={toggleFilter}
+          heightReducer="60px"
+          topPositionMargin="80px"
+        >
+          <Filters
+            config={filtersConfig}
+            defaultValues={initialFilters}
+            resetValues={defaultAdminFilters}
+            onSubmit={filterFilms}
+            schema={AdminFiltersSchema}
+            filtersCount={filtersCount}
+            onReset={handleReset}
+          />
+        </FiltersSidebar>
+        <List
+          data={data}
+          getDeleteMutationOptions={getDeleteMutationOptions}
+          onEdit={handleEditFilm}
+          onView={handleViewFilm}
+          onSearch={handleSearch}
+          isFetching={isFetching}
+          onNavigateToForm="/console/films/$id"
+          createItemTitle="New film"
+          onPageChange={handlePageChange}
+          sorting={{
+            fields: sortingFields,
+            apply: handleApplySorting,
+          }}
+          additionalHandlers={[
+            {
+              id: 'quickEdit',
+              icon: <FormIcon />,
+              action: ({ id }) => handleOptionQuickForm({ id }),
+            },
+          ]}
         />
-      </FiltersSidebar>
-      <List
-        data={data}
-        getDeleteMutationOptions={getDeleteMutationOptions}
-        onEdit={handleEditFilm}
-        onView={handleViewFilm}
-        onSearch={handleSearch}
-        isFetching={isFetching}
-        onNavigateToForm="/console/films/$id"
-        createItemTitle="New film"
-        onPageChange={handlePageChange}
-        sorting={{
-          fields: sortingFields,
-          apply: handleApplySorting,
-        }}
-        additionalHandlers={[
-          {
-            id: 'quickEdit',
-            icon: <FormIcon />,
-            action: ({ id }) => handleOptionQuickForm({ id }),
-          },
-        ]}
-      />
-    </ContentWithSidebar>
+      </ContentWithSidebar>
+      <Outlet />
+    </>
   );
 }
