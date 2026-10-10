@@ -1,5 +1,4 @@
 import {
-  CollectionCategory,
   getSkipValue,
   PAGE_LIMITS,
   type CreateFilmDraftInput,
@@ -21,7 +20,6 @@ import {
   isNotNull,
   isNull,
   lt,
-  ne,
   notInArray,
   sql,
   type SQL,
@@ -849,21 +847,6 @@ export class FilmsRepository {
       .where(this.getPublicFilmsFilter())
       .groupBy(genres.id, genres.title)
       .orderBy(asc(genres.title));
-  }
-
-  aggregateFilmCollections() {
-    return this.deps.db
-      .select({
-        id: collections.id,
-        title: collections.title,
-        value: count(),
-      })
-      .from(filmsCollections)
-      .innerJoin(films, eq(films.id, filmsCollections.filmId))
-      .innerJoin(collections, eq(collections.id, filmsCollections.collectionId))
-      .where(this.getPublicFilmsFilter([ne(collections.category, CollectionCategory.CHAPTER)]))
-      .groupBy(collections.id, collections.title)
-      .orderBy(collections.title);
   }
 
   aggregateFilmCountries() {
