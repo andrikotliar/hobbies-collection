@@ -1,5 +1,5 @@
 import styles from './list.module.css';
-import { Pagination, SortingPopup, type SortingParams } from '~/shared';
+import { FilterButton, Pagination, SortingPopup, type SortingParams } from '~/shared';
 import { type DefaultListItem } from '~/routes/console/-shared';
 import type { FileRoutesByTo } from '~/routeTree.gen';
 import { Link, useLocation } from '@tanstack/react-router';
@@ -25,26 +25,30 @@ type SortingProps = {
 
 type ListProps<T extends DefaultListItem> = {
   data: ListData<T> | undefined;
-  getDeleteMutationOptions: GetDeleteMutationOptions;
   isFetching?: boolean;
   createItemTitle?: string;
-  onCreate?: VoidFunction;
-  onPageChange?: (pageIndex: number) => void;
-  onSearch?: (value: string) => void;
   onNavigateToForm?: keyof FileRoutesByTo;
   navigationParameter?: string;
   sorting?: SortingProps;
+  filterCount?: number;
+  getDeleteMutationOptions: GetDeleteMutationOptions;
+  onCreate?: VoidFunction;
+  onOpenMobileFilter?: VoidFunction;
+  onPageChange?: (pageIndex: number) => void;
+  onSearch?: (value: string) => void;
 } & Omit<ItemRowProps<T>, 'data' | 'onDelete'>;
 
 export const List = <T extends DefaultListItem>({
   data,
   isFetching = true,
-  onCreate,
   onNavigateToForm,
   createItemTitle = 'Create item',
+  sorting,
+  filterCount,
+  onCreate,
+  onOpenMobileFilter,
   onPageChange,
   onSearch,
-  sorting,
   ...props
 }: ListProps<T>) => {
   const location = useLocation();
@@ -62,6 +66,9 @@ export const List = <T extends DefaultListItem>({
             defaultOrderKey={location.search.orderKey ?? sorting.fields[0].value}
             defaultOrder={location.search.order ?? 'desc'}
           />
+        )}
+        {typeof onOpenMobileFilter === 'function' && (
+          <FilterButton onClick={onOpenMobileFilter} filterCount={filterCount} />
         )}
       </div>
       <div>

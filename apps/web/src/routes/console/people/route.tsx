@@ -7,7 +7,6 @@ import {
   getEmptyFormValues,
   buildGetPeopleAdminListQueryOptions,
   queryKey,
-  useSidebarVisibility,
   type FilterItem,
   type Input,
 } from '~/shared';
@@ -22,7 +21,7 @@ import {
 } from '@hobbies-collection/shared';
 import { mutationOptions, useQuery } from '@tanstack/react-query';
 import type { z } from 'zod';
-import { useCallback, useMemo } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 const personDefaultValues = getEmptyFormValues<Input<typeof api.people.create>>({
   name: '',
@@ -94,7 +93,7 @@ function RouteComponent() {
   const search = Route.useSearch();
   const navigate = Route.useNavigate();
   const { onOpen } = useFormModal();
-  const { isFilterOpen, toggleFilter, hideFilter } = useSidebarVisibility('/console/people');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const { data, isFetching } = useQuery(buildGetPeopleAdminListQueryOptions(search));
 
@@ -133,21 +132,21 @@ function RouteComponent() {
         ...appliedFilters,
       }),
     });
-    hideFilter();
+    setIsSidebarOpen(false);
   };
 
   const handleReset = () => {
     navigate({
       to: '/console/people',
     });
-    hideFilter();
+    setIsSidebarOpen(false);
   };
 
   return (
     <ContentWithSidebar>
       <FiltersSidebar
-        isOpen={isFilterOpen}
-        onToggle={toggleFilter}
+        isOpen={isSidebarOpen}
+        onToggle={setIsSidebarOpen}
         heightReducer="60px"
         topPositionMargin="80px"
         defaultValues={initialFilters}
@@ -165,6 +164,8 @@ function RouteComponent() {
         getDeleteMutationOptions={getDeleteMutationOptions}
         onEdit={onOpen}
         isFetching={isFetching}
+        filterCount={appliedFilters}
+        onOpenMobileFilter={() => setIsSidebarOpen(true)}
         onPageChange={handleChangePage}
         onCreate={() => onOpen(personDefaultValues)}
         createItemTitle="New crew or cast member"

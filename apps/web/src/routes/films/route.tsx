@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { createFileRoute, Outlet } from '@tanstack/react-router';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { GetFilmsListQuerySchema } from '@hobbies-collection/shared';
@@ -10,7 +10,6 @@ import {
   FiltersSidebar,
   filterValues,
   PageLayout,
-  useSidebarVisibility,
   filterDefaultValues,
   FiltersSchema,
   getFiltersConfig,
@@ -41,7 +40,7 @@ export const Route = createFileRoute('/films')({
 function RootPageContainer() {
   const routeSearch = Route.useSearch();
   const navigate = Route.useNavigate();
-  const { isFilterOpen, hideFilter, toggleFilter } = useSidebarVisibility('/');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const { data: initialData, isFetching: isInitialDataLoading } = useSuspenseQuery(
     buildGetInitialDataQueryOptions(),
@@ -64,14 +63,14 @@ function RootPageContainer() {
         pageIndex: 0,
       }),
     });
-    hideFilter();
+    setIsSidebarOpen(false);
   };
 
   const handleReset = () => {
     navigate({
       to: '/',
     });
-    hideFilter();
+    setIsSidebarOpen(false);
   };
 
   const initialFilters = useMemo(() => {
@@ -85,13 +84,13 @@ function RootPageContainer() {
 
   return (
     <PageLayout>
-      <FilmsSection />
+      <FilmsSection onToggleFilter={() => setIsSidebarOpen(true)} />
       <FiltersSidebar
         isLoading={isInitialDataLoading}
         topPositionMargin="20px"
         heightReducer="0px"
-        isOpen={isFilterOpen}
-        onToggle={toggleFilter}
+        isOpen={isSidebarOpen}
+        onToggle={setIsSidebarOpen}
         defaultValues={initialFilters}
         resetValues={filterDefaultValues}
         onSubmit={submitFilter}

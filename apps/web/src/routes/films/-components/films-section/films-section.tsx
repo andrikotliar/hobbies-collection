@@ -6,7 +6,6 @@ import {
   buildGetFilmsListQueryOptions,
   Pagination,
   useDebouncedSearch,
-  useSidebarVisibility,
   type SortingParams,
   PageHeaderFilters,
   PageGrid,
@@ -49,11 +48,14 @@ const sortingFields: ListOption<string, { isNotSelectable?: boolean }>[] = [
   },
 ];
 
-export const FilmsSection = () => {
+type FilmsSectionProps = {
+  onToggleFilter: VoidFunction;
+};
+
+export const FilmsSection = ({ onToggleFilter }: FilmsSectionProps) => {
   const searchParams = routeApi.useSearch();
   const navigate = routeApi.useNavigate();
   const { data, isFetching } = useQuery(buildGetFilmsListQueryOptions(searchParams));
-  const { toggleFilter } = useSidebarVisibility('/');
   const [selectedFilmId, setSelectedFilmId] = useState<number | null>(null);
 
   const mappedData = useMemo(() => {
@@ -139,7 +141,7 @@ export const FilmsSection = () => {
           onSearch={handleSearch}
           sortingValues={sortingValues}
           isSortingDisabled={searchParams.collectionId !== undefined}
-          onToggleFilter={toggleFilter}
+          onToggleFilter={onToggleFilter}
           filterCount={filterCount}
         />
       </div>

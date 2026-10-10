@@ -9,7 +9,7 @@ import { Filters, type FiltersProps } from './components';
 
 type SidebarProps<TDefaultValues extends Record<string, unknown>, TSchema extends z.ZodType> = {
   isOpen: boolean;
-  onToggle: () => void;
+  onToggle: React.Dispatch<React.SetStateAction<boolean>>;
   isLoading?: boolean;
   heightReducer?: `${string}px`;
   topPositionMargin?: `${string}px`;
@@ -46,7 +46,7 @@ export const FiltersSidebar = <
       })}
     >
       <Filters {...props} />
-      <button onClick={onToggle} className={styles.close_icon_wrapper}>
+      <button onClick={() => onToggle((isOpen) => !isOpen)} className={styles.close_icon_wrapper}>
         <XIcon />
       </button>
     </div>

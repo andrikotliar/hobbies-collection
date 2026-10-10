@@ -1,0 +1,28 @@
+.mobile_filter {
+  display: none;
+}
+
+@media (width <= 785px) {
+  .mobile_filter {
+    position: relative;
+    display: flex;
+    background-color: var(--color-white);
+    padding: 10px 20px;
+    border-radius: var(--rounded-default);
+    border: var(--border-default);
+    overflow: hidden;
+  }
+
+  .mobile_filter_count {
+    width: 20px;
+    height: 20px;
+    color: var(--color-white);
+    background-color: var(--color-orange-primary);
+    font-size: var(--text-xs);
+    border-bottom-left-radius: var(--rounded-default);
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
