@@ -1,10 +1,10 @@
 export const imagePaths = {
   errors: {
-    appError: '/images/errors/app-error.webp',
-    noInternetError: '/images/errors/no-internet.webp',
-    notFoundError: '/images/errors/not-found-error.webp',
-    serverError: '/images/errors/server-error.webp',
-    unknownError: '/images/errors/unknown-error.webp',
+    appError: '/images/errors/app-error_v2.webp',
+    noInternetError: '/images/errors/no-internet_v2.webp',
+    notFoundError: '/images/errors/not-found-error_v2.webp',
+    serverError: '/images/errors/server-error_v2.webp',
+    unknownError: '/images/errors/unknown-error_v2.webp',
   },
   placeholders: {
     imageNotFound: '/placeholders/image-not-found-placeholder_v2.webp',
