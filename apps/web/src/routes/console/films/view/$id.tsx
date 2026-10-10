@@ -5,6 +5,10 @@ import { FilmDrawer } from '~/shared/components/film-drawer/film-drawer';
 
 export const Route = createFileRoute('/console/films/view/$id')({
   component: RouteComponent,
+  staticData: {
+    title: 'Films',
+    backPath: '/console',
+  },
 });
 
 function RouteComponent() {
