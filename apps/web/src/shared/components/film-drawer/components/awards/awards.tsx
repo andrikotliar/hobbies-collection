@@ -13,7 +13,7 @@ export const Awards = ({ data }: AwardsProps) => {
     <div className={styles.awards}>
       <div className={styles.title}>Awards</div>
       {data.map((award) => (
-        <Award data={award} />
+        <Award data={award} key={award.award.id} />
       ))}
     </div>
   );

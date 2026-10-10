@@ -19,6 +19,9 @@ export const router = createRouter({
   context: { queryClient },
 });
 
-const routesToPreload = [router.routesByPath['/films/$id']];
+const routesToPreload = [
+  router.routesByPath['/films/$id'],
+  router.routesByPath['/console/films/view/$id'],
+];
 
 void Promise.all(routesToPreload.map((route) => router.loadRouteChunk(route)));
