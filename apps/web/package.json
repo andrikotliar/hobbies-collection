@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint . --quiet --ext .ts,.tsx"
+    "lint": "eslint . --quiet --ext .ts,.tsx",
+    "css:colors": "tsx scripts/extract-css-colors.ts"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
