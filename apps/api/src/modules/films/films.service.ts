@@ -215,7 +215,10 @@ export class FilmsService {
   async getFilmsByCollection(collectionId: number) {
     const films = await this.deps.filmsRepository.getByCollectionId(collectionId);
 
-    return films;
+    return films.map((film) => ({
+      ...film,
+      imagePath: this.deps.storageService.constructFullObjectPath(film.imagePath),
+    }));
   }
 
   private async populateAdditionalData(query: GetFilmsListQuery) {
