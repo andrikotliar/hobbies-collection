@@ -51,11 +51,21 @@ export class StorageService {
     return url;
   }
 
-  getBaseStorageUrl() {
+  private getBaseStorageUrl() {
     if (this.customEndpoint) {
       return `${this.customEndpoint}/${this.bucket}/`;
     }
 
     return `https://${this.bucket}.s3.${this.region}.amazonaws.com/`;
+  }
+
+  constructFullObjectPath(objectKey: string | null) {
+    if (!objectKey) {
+      return null;
+    }
+
+    const baseUrl = this.getBaseStorageUrl();
+
+    return `${baseUrl}${objectKey}`;
   }
 }

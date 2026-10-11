@@ -31,8 +31,6 @@ type GenericOption = {
 const statBlocks = ['genres', 'countries', 'studios', 'types'] as const;
 
 export class FilmsService {
-  private readonly basePostersUrl: string;
-
   constructor(
     private readonly deps: Deps<
       | 'filmsRepository'
@@ -52,8 +50,6 @@ export class FilmsService {
     deps.inMemoryCacheService.setDefaultValue('filmsCount', 0);
     deps.inMemoryCacheService.setDefaultValue('anniversary', { film: null, date: null });
     deps.inMemoryCacheService.setDefaultValue('statistic', null);
-
-    this.basePostersUrl = deps.storageService.getBaseStorageUrl();
   }
 
   private getAllFilmsCount() {
@@ -99,7 +95,7 @@ export class FilmsService {
 
     const mappedList = data.list.map((film) => ({
       ...film,
-      imagePath: film.imagePath ? this.basePostersUrl + film.imagePath : null,
+      imagePath: this.deps.storageService.constructFullObjectPath(film.imagePath),
       upcoming: film.draft,
       inDays: film.draft && film.releaseDate ? this.getDaysDiffFromToday(film.releaseDate) : null,
       releasedYears:
@@ -154,7 +150,10 @@ export class FilmsService {
       return null;
     }
 
-    const mappedFilm = mapFilmDetails(film, this.basePostersUrl);
+    const mappedFilm = mapFilmDetails(
+      film,
+      this.deps.storageService.constructFullObjectPath.bind(this.deps.storageService),
+    );
 
     return mappedFilm;
   }
@@ -167,7 +166,7 @@ export class FilmsService {
 
     return films.map((film) => ({
       ...film,
-      imagePath: film.imagePath ? this.basePostersUrl + film.imagePath : null,
+      imagePath: this.deps.storageService.constructFullObjectPath(film.imagePath),
       genres: film.genres.map((g) => g.genre),
     }));
   }
@@ -192,7 +191,10 @@ export class FilmsService {
   async getEditableFilm(id: number) {
     const film = await throwIfNotFound(this.deps.filmsRepository.getEditableFilm(id));
 
-    return mapAdminFilmDetails(film, this.basePostersUrl);
+    return mapAdminFilmDetails(
+      film,
+      this.deps.storageService.constructFullObjectPath.bind(this.deps.storageService),
+    );
   }
 
   async createFilm(input: CreateFilmInput) {

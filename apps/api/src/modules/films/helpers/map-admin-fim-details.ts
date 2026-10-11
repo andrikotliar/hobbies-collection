@@ -31,7 +31,10 @@ export const mapInnerId = <T extends Record<string, number>>(
   return entities.map((item) => item[key]);
 };
 
-export const mapAdminFilmDetails = (film: EditableFilm, posterUrl: string): CreateFilmInput => {
+export const mapAdminFilmDetails = (
+  film: EditableFilm,
+  constructUrl: (objectKey: string | null) => string | null,
+): CreateFilmInput => {
   const groupedAwards = film.awards.reduce(
     (groups, award) => {
       if (!groups[award.awardId]) {
@@ -66,7 +69,7 @@ export const mapAdminFilmDetails = (film: EditableFilm, posterUrl: string): Crea
 
   return {
     ...film,
-    imagePath: film.imagePath ? `${posterUrl}${film.imagePath}` : null,
+    imagePath: constructUrl(film.imagePath),
     genres: mapInnerId(film.genres, 'genreId'),
     countries: mapInnerId(film.countries, 'countryId'),
     studios: mapInnerId(film.studios, 'studioId'),
