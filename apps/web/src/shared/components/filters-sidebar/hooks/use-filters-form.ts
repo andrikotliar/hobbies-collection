@@ -1,36 +1,32 @@
-import type z from 'zod';
-import styles from './filters.module.css';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm, FormProvider, type DefaultValues } from 'react-hook-form';
-import { RefreshCcwIcon, SearchIcon } from 'lucide-react';
-import { type FilterItem, Button, TextInput, useDebouncedSearch } from '~/shared';
-import { FilterOptions } from './components';
 import { useEffect, useState } from 'react';
+import { useForm, type DefaultValues } from 'react-hook-form';
+import type z from 'zod';
+import { useDebouncedSearch } from '~/shared/hooks';
+import type { FilterItem } from '~/shared/types';
 
-export type FiltersProps<
-  TDefaultValues extends Record<string, unknown>,
-  TSchema extends z.ZodType,
-> = {
-  config: FilterItem<TDefaultValues>[];
+type Options<TDefaultValues extends Record<string, unknown>, TSchema extends z.ZodType> = {
   defaultValues: DefaultValues<TDefaultValues>;
   resetValues: TDefaultValues;
-  filtersCount: number;
+  config: FilterItem<TDefaultValues>[];
+  schema: TSchema;
   onSubmit: (data: TDefaultValues) => void;
   onReset?: () => void;
-  schema: TSchema;
 };
 
 const filterSearchIndex: Record<string, any[]> = {};
 
-export const Filters = <TDefaultValues extends Record<string, unknown>, TSchema extends z.ZodType>({
-  config,
+export const useFiltersForm = <
+  TDefaultValues extends Record<string, unknown>,
+  TSchema extends z.ZodType,
+>({
   defaultValues,
-  onSubmit,
-  onReset,
-  filtersCount,
+  config,
   schema,
   resetValues,
-}: FiltersProps<TDefaultValues, TSchema>) => {
+  onReset,
+  onSubmit,
+}: Options<TDefaultValues, TSchema>) => {
   const [filteredConfig, setFilteredConfig] = useState<FilterItem<TDefaultValues>[]>(config);
 
   const filtersForm = useForm<TDefaultValues>({
@@ -101,38 +97,12 @@ export const Filters = <TDefaultValues extends Record<string, unknown>, TSchema 
     setFilteredConfig(config);
   }, [config]);
 
-  return (
-    <FormProvider {...filtersForm}>
-      <div className={styles.search_wrapper}>
-        <TextInput
-          onChange={searchFilter}
-          icon={<SearchIcon />}
-          placeholder="Search filter or group"
-        />
-      </div>
-      <form onSubmit={filtersForm.handleSubmit(handleSubmit)} className={styles.filters}>
-        <div className={styles.filter_groups}>
-          {filteredConfig.length === 0 && <div>No config values found</div>}
-
-          {filteredConfig.map((filter) => {
-            if (filter.dependsOn && values[filter.dependsOn.filter] !== filter.dependsOn.value) {
-              return null;
-            }
-
-            return <FilterOptions filter={filter} key={filter.title} />;
-          })}
-        </div>
-        <div className={styles.controls}>
-          <Button icon={<SearchIcon />} type="submit">
-            Search
-          </Button>
-          {filtersCount > 0 && (
-            <Button onClick={resetForm} icon={<RefreshCcwIcon />} variant="secondary">
-              Reset
-            </Button>
-          )}
-        </div>
-      </form>
-    </FormProvider>
-  );
+  return {
+    filteredConfig,
+    values,
+    filtersForm,
+    resetForm,
+    handleSubmit,
+    searchFilter,
+  };
 };

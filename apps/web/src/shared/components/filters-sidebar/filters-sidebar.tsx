@@ -3,9 +3,14 @@ import clsx from 'clsx';
 import type z from 'zod';
 import { Loader } from '~/shared/components/loader/loader';
 import { defineCssProperties } from '~/shared/helpers';
-import { XIcon } from 'lucide-react';
+import { RefreshCcwIcon, SearchIcon, XIcon } from 'lucide-react';
 import { BLOCKING_SCROLL_CLASS_NAME } from '~/shared/constants';
-import { Filters, type FiltersProps } from './components';
+import { FilterOptions } from './components';
+import type { FilterItem } from '~/shared/types';
+import { FormProvider, type DefaultValues } from 'react-hook-form';
+import { TextInput } from '~/shared/components/text-input/text-input';
+import { Button } from '~/shared/components/button/button';
+import { useFiltersForm } from '~/shared/components/filters-sidebar/hooks';
 
 type SidebarProps<TDefaultValues extends Record<string, unknown>, TSchema extends z.ZodType> = {
   isOpen: boolean;
@@ -13,7 +18,14 @@ type SidebarProps<TDefaultValues extends Record<string, unknown>, TSchema extend
   isLoading?: boolean;
   heightReducer?: `${string}px`;
   topPositionMargin?: `${string}px`;
-} & FiltersProps<TDefaultValues, TSchema>;
+  config: FilterItem<TDefaultValues>[];
+  defaultValues: DefaultValues<TDefaultValues>;
+  resetValues: TDefaultValues;
+  filtersCount: number;
+  onSubmit: (data: TDefaultValues) => void;
+  onReset?: () => void;
+  schema: TSchema;
+};
 
 export const FiltersSidebar = <
   TDefaultValues extends Record<string, unknown>,
@@ -24,8 +36,17 @@ export const FiltersSidebar = <
   isLoading = false,
   heightReducer = '0px',
   topPositionMargin = '0px',
-  ...props
+  config,
+  defaultValues,
+  onSubmit,
+  onReset,
+  filtersCount,
+  schema,
+  resetValues,
 }: SidebarProps<TDefaultValues, TSchema>) => {
+  const { filtersForm, filteredConfig, values, searchFilter, handleSubmit, resetForm } =
+    useFiltersForm({ config, defaultValues, onSubmit, onReset, schema, resetValues });
+
   if (isLoading) {
     return (
       <div className={styles.sidebar_content}>
@@ -45,7 +66,38 @@ export const FiltersSidebar = <
         '--sidebar-top-position-margin': topPositionMargin,
       })}
     >
-      <Filters {...props} />
+      <FormProvider {...filtersForm}>
+        <div className={styles.search_wrapper}>
+          <TextInput
+            onChange={searchFilter}
+            icon={<SearchIcon />}
+            placeholder="Search filter or group"
+          />
+        </div>
+        <form onSubmit={filtersForm.handleSubmit(handleSubmit)} className={styles.filters}>
+          <div className={styles.filter_groups}>
+            {filteredConfig.length === 0 && <div>No config values found</div>}
+
+            {filteredConfig.map((filter) => {
+              if (filter.dependsOn && values[filter.dependsOn.filter] !== filter.dependsOn.value) {
+                return null;
+              }
+
+              return <FilterOptions filter={filter} key={filter.title} />;
+            })}
+          </div>
+          <div className={styles.controls}>
+            <Button icon={<SearchIcon />} type="submit">
+              Search
+            </Button>
+            {filtersCount > 0 && (
+              <Button onClick={resetForm} icon={<RefreshCcwIcon />} variant="secondary">
+                Reset
+              </Button>
+            )}
+          </div>
+        </form>
+      </FormProvider>
       <button onClick={() => onToggle((isOpen) => !isOpen)} className={styles.close_icon_wrapper}>
         <XIcon />
       </button>

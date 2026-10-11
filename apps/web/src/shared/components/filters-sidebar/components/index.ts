@@ -1,1 +1,2 @@
-export * from './filters/filters';
+export * from './combo-select/combo-select';
+export * from './filter-options/filter-options';
