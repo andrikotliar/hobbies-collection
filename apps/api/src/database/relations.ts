@@ -19,7 +19,6 @@ import {
   filmsPeople,
   users,
   usersSessions,
-  booksCollections,
   booksAuthors,
   books,
   booksGenres,
@@ -53,7 +52,6 @@ export const collectionEventsRelations = relations(collectionEvents, ({ one }) =
 export const collectionsRelations = relations(collections, ({ many }) => ({
   collectionEvents: many(collectionEvents),
   films: many(filmsCollections),
-  books: many(booksCollections),
 }));
 
 export const filmsCollectionsRelations = relations(filmsCollections, ({ one }) => ({
@@ -183,7 +181,6 @@ export const usersRelations = relations(users, ({ many }) => ({
 export const booksRelations = relations(books, ({ many }) => ({
   authors: many(booksAuthors),
   genres: many(booksGenres),
-  collections: many(booksCollections),
 }));
 
 export const booksAuthorsRelations = relations(booksAuthors, ({ one }) => ({
@@ -204,17 +201,6 @@ export const booksGenresRelations = relations(booksGenres, ({ one }) => ({
   }),
   book: one(books, {
     fields: [booksGenres.bookId],
-    references: [books.id],
-  }),
-}));
-
-export const booksCollectionsRelations = relations(booksCollections, ({ one }) => ({
-  collection: one(collections, {
-    fields: [booksCollections.collectionId],
-    references: [collections.id],
-  }),
-  book: one(books, {
-    fields: [booksCollections.bookId],
     references: [books.id],
   }),
 }));

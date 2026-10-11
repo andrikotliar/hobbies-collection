@@ -274,6 +274,20 @@
       "when": 1791651950711,
       "tag": "0039_make-book-fields-nullable",
       "breakpoints": true
+    },
+    {
+      "idx": 40,
+      "version": "7",
+      "when": 1791722221668,
+      "tag": "0040_remove-books-collections",
+      "breakpoints": true
+    },
+    {
+      "idx": 41,
+      "version": "7",
+      "when": 1791725766796,
+      "tag": "0041_make-series-order-default-1",
+      "breakpoints": true
     }
   ]
 }

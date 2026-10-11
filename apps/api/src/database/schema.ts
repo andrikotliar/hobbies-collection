@@ -584,6 +584,8 @@ export const books = pgTable('books', {
   imagePath: text('image_path'),
   status: bookReadStatus('status').notNull().default('PLANNED'),
   readingOrder: numeric('reading_order', { mode: 'number' }).notNull(),
+  firstBookId: integer('first_book_id'),
+  seriesOrder: integer('series_order').notNull().default(1),
   createdAt: timestamp('created_at', { precision: 3, mode: 'string' }).defaultNow().notNull(),
   updatedAt: timestamp('updated_at', { precision: 3, mode: 'string' })
     .defaultNow()
@@ -650,37 +652,6 @@ export const booksGenres = pgTable(
       foreignColumns: [genres.id],
     }).onDelete('cascade'),
     unique('book_genres_unique').on(table.bookId, table.genreId),
-  ],
-);
-
-export const booksCollections = pgTable(
-  'books_collections',
-  {
-    id: serial('id').primaryKey().notNull(),
-    bookId: integer('book_id')
-      .notNull()
-      .references(() => books.id),
-    collectionId: integer('collection_id')
-      .notNull()
-      .references(() => collections.id),
-    createdAt: timestamp('created_at', { precision: 3, mode: 'string' }).defaultNow().notNull(),
-    updatedAt: timestamp('updated_at', { precision: 3, mode: 'string' })
-      .defaultNow()
-      .$onUpdate(() => new Date().toISOString())
-      .notNull(),
-  },
-  (table) => [
-    foreignKey({
-      name: 'book_collections_book_id_fkey',
-      columns: [table.bookId],
-      foreignColumns: [books.id],
-    }).onDelete('cascade'),
-    foreignKey({
-      name: 'book_collections_collection_id_fkey',
-      columns: [table.collectionId],
-      foreignColumns: [collections.id],
-    }).onDelete('cascade'),
-    unique('book_collections_unique').on(table.bookId, table.collectionId),
   ],
 );
 
