@@ -267,6 +267,13 @@
       "when": 1791631962794,
       "tag": "0038_add-book-reading-status-and-order",
       "breakpoints": true
+    },
+    {
+      "idx": 39,
+      "version": "7",
+      "when": 1791651950711,
+      "tag": "0039_make-book-fields-nullable",
+      "breakpoints": true
     }
   ]
 }
