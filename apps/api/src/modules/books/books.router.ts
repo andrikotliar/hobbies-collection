@@ -41,4 +41,50 @@ export const booksRouter = createRouter(contracts.books, {
       return { data: { id: request.params.id } };
     },
   },
+  getAdminList: {
+    preHandler: [validateAuth],
+    handler: async ({ app, request }) => {
+      const data = await app.resolve('booksService').getAdminList(request.query);
+
+      return { data };
+    },
+  },
+
+  getEditableBook: {
+    preHandler: [validateAuth],
+    handler: async ({ app, request }) => {
+      const data = await app.resolve('booksService').getEditableBook(request.params.id);
+
+      return { data };
+    },
+  },
+
+  getReadingOrder: {
+    preHandler: [validateAuth],
+    handler: async ({ app, request }) => {
+      const data = await app.resolve('booksService').getNextBookOrderNumber(request.query.q);
+
+      return { data };
+    },
+  },
+
+  search: {
+    preHandler: [validateAuth],
+    handler: async ({ app, request }) => {
+      const data = await app
+        .resolve('booksService')
+        .search(request.query.q, request.query.selected);
+
+      return { data };
+    },
+  },
+
+  getSeries: {
+    preHandler: [validateAuth],
+    handler: async ({ app, request }) => {
+      const data = await app.resolve('booksService').getSeries(request.params.id);
+
+      return { data };
+    },
+  },
 });

@@ -46,6 +46,14 @@ export type SelectFilter<T extends Record<string, any>> = BaseFilter<T> & {
   options: ListOption[];
 };
 
+export type AsyncSelectFilter<T extends Record<string, any>> = BaseFilter<T> & {
+  type: 'search';
+  loader: AsyncSelectProps<ListOption>['optionsLoader'];
+  queryKey: string;
+  isMultiple?: boolean;
+  selected?: number[];
+};
+
 export type AsyncComboSelectFilter<T extends Record<string, any>> = BaseFilter<T> & {
   type: 'combo-select';
   dependency: {
@@ -88,4 +96,5 @@ export type FilterItem<T extends Record<string, any>> =
   | DateFilter<T>
   | RatingFilter<T>
   | NestedFilters<T>
-  | AsyncComboSelectFilter<T>;
+  | AsyncComboSelectFilter<T>
+  | AsyncSelectFilter<T>;

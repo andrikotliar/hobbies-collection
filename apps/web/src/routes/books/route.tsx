@@ -2,8 +2,8 @@ import { createFileRoute } from '@tanstack/react-router';
 import { buildGetBooksListQueryOptions, PageTitle } from '~/shared';
 
 export const Route = createFileRoute('/books')({
-  loader: async ({ context }) => {
-    await context.queryClient.ensureQueryData(buildGetBooksListQueryOptions());
+  loader: async ({ context, location }) => {
+    await context.queryClient.ensureQueryData(buildGetBooksListQueryOptions(location.search));
   },
   component: RouteComponent,
 });

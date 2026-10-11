@@ -1,10 +1,12 @@
 import { type MenuConfigItem } from '../types';
 import {
+  BookIcon,
   BuildingIcon,
   CalendarClockIcon,
   CalendarIcon,
   ClapperboardIcon,
   ClockIcon,
+  Dice3Icon,
   KeyRoundIcon,
   LibraryIcon,
   MapIcon,
@@ -47,6 +49,27 @@ export const consoleMenuConfig: Record<string, MenuConfigItem> = {
     },
     icon: <ClockIcon />,
     color: 'colorBrownLight',
+  },
+  books: {
+    id: 'books',
+    route: '/console/books',
+    title: 'Books',
+    icon: <BookIcon />,
+    color: 'colorGrayExtraDark',
+  },
+  plannedBooks: {
+    id: 'planned-books',
+    route: '/console/books',
+    title: 'Planned Books',
+    icon: <CalendarClockIcon />,
+    color: 'colorBlueGreenPrimary',
+  },
+  boardGames: {
+    id: 'board-games',
+    route: '/console/board-games',
+    title: 'Board Games',
+    icon: <Dice3Icon />,
+    color: 'colorBrownWood',
   },
   collectionEvents: {
     id: 'collection-events',
@@ -131,6 +154,10 @@ export const consoleMenuGroups: ConsoleMenuGroup[] = [
   {
     title: 'Films',
     itemIds: ['films', 'pendingFilms', 'upcomingFilms'],
+  },
+  {
+    title: 'Other hobbies',
+    itemIds: ['books', 'plannedBooks', 'boardGames'],
   },
   {
     title: 'Base info',

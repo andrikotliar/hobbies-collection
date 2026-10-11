@@ -4,3 +4,4 @@ export * from './person-role-to-title';
 export * from './image-paths';
 export * from './films-filters-config';
 export * from './films-pages-top-nav-config';
+export * from './books-filters-config';

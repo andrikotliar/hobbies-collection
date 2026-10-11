@@ -28,6 +28,7 @@ export const colors = {
   "colorRedLight": "var(--color-red-light)",
   "colorRedExtraLight": "var(--color-red-extra-light)",
   "colorBrownLight": "var(--color-brown-light)",
+  "colorBrownWood": "var(--color-brown-wood)",
   "colorPurplePrimary": "var(--color-purple-primary)",
   "colorPurpleLight": "var(--color-purple-light)",
   "colorPurpleDark": "var(--color-purple-dark)"

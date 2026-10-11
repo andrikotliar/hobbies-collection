@@ -5,7 +5,7 @@ type Value = {
   id: number;
 };
 
-export const getListOptions = (values: (Value | string)[]): ListOption<unknown>[] => {
+export const getListOptions = (values: (Value | string)[]): ListOption<number | string>[] => {
   return values.map((value) => {
     if (typeof value === 'string') {
       return {

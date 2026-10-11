@@ -65,6 +65,19 @@ export const FilterOptions = <T extends Record<string, any>>({ filter }: FilterO
         </Form.Group>
       );
 
+    case 'search': {
+      return (
+        <Form.Group title={filter.title}>
+          <Form.AsyncSelect
+            name={filter.id}
+            optionsLoader={filter.loader}
+            queryKeyParams={{ key: filter.queryKey, values: filter.selected }}
+            isMulti={filter.isMultiple}
+          />
+        </Form.Group>
+      );
+    }
+
     default:
       return null;
   }

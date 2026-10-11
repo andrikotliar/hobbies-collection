@@ -27,10 +27,14 @@ import { Route as ConsoleFilmsRouteRouteImport } from './routes/console/films/ro
 import { Route as ConsoleCountriesRouteRouteImport } from './routes/console/countries/route'
 import { Route as ConsoleCollectionsRouteRouteImport } from './routes/console/collections/route'
 import { Route as ConsoleCollectionEventsRouteRouteImport } from './routes/console/collection-events/route'
+import { Route as ConsoleBooksRouteRouteImport } from './routes/console/books/route'
+import { Route as ConsoleBoardGamesRouteRouteImport } from './routes/console/board-games/route'
 import { Route as ConsoleAwardsRouteRouteImport } from './routes/console/awards/route'
 import { Route as ConsoleArticlesRouteRouteImport } from './routes/console/articles/route'
 import { Route as ConsoleRootIndexRouteImport } from './routes/console/_root/index'
 import { Route as ConsoleFilmsIdRouteImport } from './routes/console/films_/$id'
+import { Route as ConsoleBooksIdRouteImport } from './routes/console/books/$id'
+import { Route as ConsoleBoardGamesIdRouteImport } from './routes/console/board-games/$id'
 import { Route as ConsoleAwardsIdRouteImport } from './routes/console/awards_/$id'
 import { Route as ConsoleArticlesIdRouteImport } from './routes/console/articles_/$id'
 import { Route as ConsoleFilmsViewIdRouteImport } from './routes/console/films/view/$id'
@@ -126,6 +130,16 @@ const ConsoleCollectionEventsRouteRoute =
     path: '/collection-events',
     getParentRoute: () => ConsoleRouteRoute,
   } as any)
+const ConsoleBooksRouteRoute = ConsoleBooksRouteRouteImport.update({
+  id: '/books',
+  path: '/books',
+  getParentRoute: () => ConsoleRouteRoute,
+} as any)
+const ConsoleBoardGamesRouteRoute = ConsoleBoardGamesRouteRouteImport.update({
+  id: '/board-games',
+  path: '/board-games',
+  getParentRoute: () => ConsoleRouteRoute,
+} as any)
 const ConsoleAwardsRouteRoute = ConsoleAwardsRouteRouteImport.update({
   id: '/awards',
   path: '/awards',
@@ -145,6 +159,16 @@ const ConsoleFilmsIdRoute = ConsoleFilmsIdRouteImport.update({
   id: '/films_/$id',
   path: '/films/$id',
   getParentRoute: () => ConsoleRouteRoute,
+} as any)
+const ConsoleBooksIdRoute = ConsoleBooksIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => ConsoleBooksRouteRoute,
+} as any)
+const ConsoleBoardGamesIdRoute = ConsoleBoardGamesIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => ConsoleBoardGamesRouteRoute,
 } as any)
 const ConsoleAwardsIdRoute = ConsoleAwardsIdRouteImport.update({
   id: '/awards_/$id',
@@ -172,6 +196,8 @@ export interface FileRoutesByFullPath {
   '/login': typeof LoginRouteRoute
   '/console/articles': typeof ConsoleArticlesRouteRoute
   '/console/awards': typeof ConsoleAwardsRouteRoute
+  '/console/board-games': typeof ConsoleBoardGamesRouteRouteWithChildren
+  '/console/books': typeof ConsoleBooksRouteRouteWithChildren
   '/console/collection-events': typeof ConsoleCollectionEventsRouteRoute
   '/console/collections': typeof ConsoleCollectionsRouteRoute
   '/console/countries': typeof ConsoleCountriesRouteRoute
@@ -185,6 +211,8 @@ export interface FileRoutesByFullPath {
   '/films/$id': typeof FilmsIdRoute
   '/console/articles/$id': typeof ConsoleArticlesIdRoute
   '/console/awards/$id': typeof ConsoleAwardsIdRoute
+  '/console/board-games/$id': typeof ConsoleBoardGamesIdRoute
+  '/console/books/$id': typeof ConsoleBooksIdRoute
   '/console/films/$id': typeof ConsoleFilmsIdRoute
   '/console/': typeof ConsoleRootIndexRoute
   '/console/films/view/$id': typeof ConsoleFilmsViewIdRoute
@@ -198,6 +226,8 @@ export interface FileRoutesByTo {
   '/login': typeof LoginRouteRoute
   '/console/articles': typeof ConsoleArticlesRouteRoute
   '/console/awards': typeof ConsoleAwardsRouteRoute
+  '/console/board-games': typeof ConsoleBoardGamesRouteRouteWithChildren
+  '/console/books': typeof ConsoleBooksRouteRouteWithChildren
   '/console/collection-events': typeof ConsoleCollectionEventsRouteRoute
   '/console/collections': typeof ConsoleCollectionsRouteRoute
   '/console/countries': typeof ConsoleCountriesRouteRoute
@@ -211,6 +241,8 @@ export interface FileRoutesByTo {
   '/films/$id': typeof FilmsIdRoute
   '/console/articles/$id': typeof ConsoleArticlesIdRoute
   '/console/awards/$id': typeof ConsoleAwardsIdRoute
+  '/console/board-games/$id': typeof ConsoleBoardGamesIdRoute
+  '/console/books/$id': typeof ConsoleBooksIdRoute
   '/console/films/$id': typeof ConsoleFilmsIdRoute
   '/console': typeof ConsoleRootIndexRoute
   '/console/films/view/$id': typeof ConsoleFilmsViewIdRoute
@@ -226,6 +258,8 @@ export interface FileRoutesById {
   '/login': typeof LoginRouteRoute
   '/console/articles': typeof ConsoleArticlesRouteRoute
   '/console/awards': typeof ConsoleAwardsRouteRoute
+  '/console/board-games': typeof ConsoleBoardGamesRouteRouteWithChildren
+  '/console/books': typeof ConsoleBooksRouteRouteWithChildren
   '/console/collection-events': typeof ConsoleCollectionEventsRouteRoute
   '/console/collections': typeof ConsoleCollectionsRouteRoute
   '/console/countries': typeof ConsoleCountriesRouteRoute
@@ -239,6 +273,8 @@ export interface FileRoutesById {
   '/films/$id': typeof FilmsIdRoute
   '/console/articles_/$id': typeof ConsoleArticlesIdRoute
   '/console/awards_/$id': typeof ConsoleAwardsIdRoute
+  '/console/board-games/$id': typeof ConsoleBoardGamesIdRoute
+  '/console/books/$id': typeof ConsoleBooksIdRoute
   '/console/films_/$id': typeof ConsoleFilmsIdRoute
   '/console/_root/': typeof ConsoleRootIndexRoute
   '/console/films/view/$id': typeof ConsoleFilmsViewIdRoute
@@ -255,6 +291,8 @@ export interface FileRouteTypes {
     | '/login'
     | '/console/articles'
     | '/console/awards'
+    | '/console/board-games'
+    | '/console/books'
     | '/console/collection-events'
     | '/console/collections'
     | '/console/countries'
@@ -268,6 +306,8 @@ export interface FileRouteTypes {
     | '/films/$id'
     | '/console/articles/$id'
     | '/console/awards/$id'
+    | '/console/board-games/$id'
+    | '/console/books/$id'
     | '/console/films/$id'
     | '/console/'
     | '/console/films/view/$id'
@@ -281,6 +321,8 @@ export interface FileRouteTypes {
     | '/login'
     | '/console/articles'
     | '/console/awards'
+    | '/console/board-games'
+    | '/console/books'
     | '/console/collection-events'
     | '/console/collections'
     | '/console/countries'
@@ -294,6 +336,8 @@ export interface FileRouteTypes {
     | '/films/$id'
     | '/console/articles/$id'
     | '/console/awards/$id'
+    | '/console/board-games/$id'
+    | '/console/books/$id'
     | '/console/films/$id'
     | '/console'
     | '/console/films/view/$id'
@@ -308,6 +352,8 @@ export interface FileRouteTypes {
     | '/login'
     | '/console/articles'
     | '/console/awards'
+    | '/console/board-games'
+    | '/console/books'
     | '/console/collection-events'
     | '/console/collections'
     | '/console/countries'
@@ -321,6 +367,8 @@ export interface FileRouteTypes {
     | '/films/$id'
     | '/console/articles_/$id'
     | '/console/awards_/$id'
+    | '/console/board-games/$id'
+    | '/console/books/$id'
     | '/console/films_/$id'
     | '/console/_root/'
     | '/console/films/view/$id'
@@ -465,6 +513,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsoleCollectionEventsRouteRouteImport
       parentRoute: typeof ConsoleRouteRoute
     }
+    '/console/books': {
+      id: '/console/books'
+      path: '/books'
+      fullPath: '/console/books'
+      preLoaderRoute: typeof ConsoleBooksRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
+    '/console/board-games': {
+      id: '/console/board-games'
+      path: '/board-games'
+      fullPath: '/console/board-games'
+      preLoaderRoute: typeof ConsoleBoardGamesRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/awards': {
       id: '/console/awards'
       path: '/awards'
@@ -493,6 +555,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsoleFilmsIdRouteImport
       parentRoute: typeof ConsoleRouteRoute
     }
+    '/console/books/$id': {
+      id: '/console/books/$id'
+      path: '/$id'
+      fullPath: '/console/books/$id'
+      preLoaderRoute: typeof ConsoleBooksIdRouteImport
+      parentRoute: typeof ConsoleBooksRouteRoute
+    }
+    '/console/board-games/$id': {
+      id: '/console/board-games/$id'
+      path: '/$id'
+      fullPath: '/console/board-games/$id'
+      preLoaderRoute: typeof ConsoleBoardGamesIdRouteImport
+      parentRoute: typeof ConsoleBoardGamesRouteRoute
+    }
     '/console/awards_/$id': {
       id: '/console/awards_/$id'
       path: '/awards/$id'
@@ -517,6 +593,31 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface ConsoleBoardGamesRouteRouteChildren {
+  ConsoleBoardGamesIdRoute: typeof ConsoleBoardGamesIdRoute
+}
+
+const ConsoleBoardGamesRouteRouteChildren: ConsoleBoardGamesRouteRouteChildren =
+  {
+    ConsoleBoardGamesIdRoute: ConsoleBoardGamesIdRoute,
+  }
+
+const ConsoleBoardGamesRouteRouteWithChildren =
+  ConsoleBoardGamesRouteRoute._addFileChildren(
+    ConsoleBoardGamesRouteRouteChildren,
+  )
+
+interface ConsoleBooksRouteRouteChildren {
+  ConsoleBooksIdRoute: typeof ConsoleBooksIdRoute
+}
+
+const ConsoleBooksRouteRouteChildren: ConsoleBooksRouteRouteChildren = {
+  ConsoleBooksIdRoute: ConsoleBooksIdRoute,
+}
+
+const ConsoleBooksRouteRouteWithChildren =
+  ConsoleBooksRouteRoute._addFileChildren(ConsoleBooksRouteRouteChildren)
+
 interface ConsoleFilmsRouteRouteChildren {
   ConsoleFilmsViewIdRoute: typeof ConsoleFilmsViewIdRoute
 }
@@ -531,6 +632,8 @@ const ConsoleFilmsRouteRouteWithChildren =
 interface ConsoleRouteRouteChildren {
   ConsoleArticlesRouteRoute: typeof ConsoleArticlesRouteRoute
   ConsoleAwardsRouteRoute: typeof ConsoleAwardsRouteRoute
+  ConsoleBoardGamesRouteRoute: typeof ConsoleBoardGamesRouteRouteWithChildren
+  ConsoleBooksRouteRoute: typeof ConsoleBooksRouteRouteWithChildren
   ConsoleCollectionEventsRouteRoute: typeof ConsoleCollectionEventsRouteRoute
   ConsoleCollectionsRouteRoute: typeof ConsoleCollectionsRouteRoute
   ConsoleCountriesRouteRoute: typeof ConsoleCountriesRouteRoute
@@ -549,6 +652,8 @@ interface ConsoleRouteRouteChildren {
 const ConsoleRouteRouteChildren: ConsoleRouteRouteChildren = {
   ConsoleArticlesRouteRoute: ConsoleArticlesRouteRoute,
   ConsoleAwardsRouteRoute: ConsoleAwardsRouteRoute,
+  ConsoleBoardGamesRouteRoute: ConsoleBoardGamesRouteRouteWithChildren,
+  ConsoleBooksRouteRoute: ConsoleBooksRouteRouteWithChildren,
   ConsoleCollectionEventsRouteRoute: ConsoleCollectionEventsRouteRoute,
   ConsoleCollectionsRouteRoute: ConsoleCollectionsRouteRoute,
   ConsoleCountriesRouteRoute: ConsoleCountriesRouteRoute,

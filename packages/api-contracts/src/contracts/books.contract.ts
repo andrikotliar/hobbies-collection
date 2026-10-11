@@ -1,11 +1,16 @@
 import {
   BookInputSchema,
+  BooksSearchQueryParamsSchema,
+  BooksSearchResponseSchema,
   BookResponseSchema,
+  BooksAdminListQueryParamsSchema,
+  BooksAdminListResponseSchema,
   BookSchema,
   BooksListQueryParamsSchema,
   BooksListResponseSchema,
   BookUpdateSchema,
   IdParamSchema,
+  BooksSeriesResponseSchema,
 } from '@hobbies-collection/shared';
 import { createContract } from '../helpers/define-contracts.js';
 
@@ -18,12 +23,28 @@ export const booksContract = {
       response: BooksListResponseSchema,
     },
   }),
+  getAdminList: createContract({
+    url: '/books/admin',
+    method: 'GET',
+    schema: {
+      querystring: BooksAdminListQueryParamsSchema,
+      response: BooksAdminListResponseSchema,
+    },
+  }),
   getBook: createContract({
     url: '/books/:id',
     method: 'GET',
     schema: {
       params: IdParamSchema,
       response: BookResponseSchema,
+    },
+  }),
+  getEditableBook: createContract({
+    url: '/books/admin/:id',
+    method: 'GET',
+    schema: {
+      params: IdParamSchema,
+      response: BookInputSchema,
     },
   }),
   createBook: createContract({
@@ -49,6 +70,30 @@ export const booksContract = {
     schema: {
       params: IdParamSchema,
       response: IdParamSchema,
+    },
+  }),
+  getReadingOrder: createContract({
+    url: '/books/order',
+    method: 'GET',
+    schema: {
+      querystring: BooksSearchQueryParamsSchema,
+      response: BooksSearchResponseSchema,
+    },
+  }),
+  search: createContract({
+    url: '/books/search',
+    method: 'GET',
+    schema: {
+      querystring: BooksSearchQueryParamsSchema,
+      response: BooksSearchResponseSchema,
+    },
+  }),
+  getSeries: createContract({
+    url: '/books/series/:id',
+    method: 'GET',
+    schema: {
+      params: IdParamSchema,
+      response: BooksSeriesResponseSchema,
     },
   }),
 };

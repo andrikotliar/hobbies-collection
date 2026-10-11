@@ -3,7 +3,7 @@ import { api, queryKey } from '~/shared/services';
 
 export const buildGetBoardGamesListQueryOptions = () => {
   return queryOptions({
-    queryKey: [queryKey('boardGames.getGamesList')],
+    queryKey: queryKey('boardGames.getGamesList'),
     queryFn: () => api.boardGames.getGamesList({ queryParams: {} }),
   });
 };
