@@ -36,7 +36,7 @@ export const HobbyItemForm = ({ values }: HobbyItemFormProps) => {
     mutationFn: async (input: z.infer<typeof HobbyItemFormSchema>) => {
       const { id: hobbyItemId, ...data } = input;
       const currentRoute = matches.at(-1);
-      const loaderData = currentRoute?.loaderData as Record<string, string | number>;
+      const loaderData = currentRoute?.loaderData as Record<string, any>;
       const pageTitle = loaderData.title;
 
       const imagePath = await uploadImage({
