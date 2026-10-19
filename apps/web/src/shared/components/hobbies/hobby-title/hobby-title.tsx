@@ -1,4 +1,4 @@
-import { getExternalImageUrl, PageTitle, Image, getPluralWord } from '~/shared';
+import { PageTitle, getPluralWord } from '~/shared';
 import styles from './hobby-title.module.css';
 
 type HobbyTitleProps = {
@@ -7,13 +7,10 @@ type HobbyTitleProps = {
   total: number;
 };
 
-export const HobbyTitle = ({ children, imagePath, total = 0 }: HobbyTitleProps) => {
+export const HobbyTitle = ({ children, total = 0 }: HobbyTitleProps) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.row}>
-        <div className={styles.image}>
-          <Image src={getExternalImageUrl(imagePath)} />
-        </div>
         <div>
           <PageTitle>{children}</PageTitle>
           <div>

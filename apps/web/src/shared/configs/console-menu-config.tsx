@@ -9,7 +9,6 @@ import {
   KeyRoundIcon,
   LibraryIcon,
   MapIcon,
-  NewspaperIcon,
   TrophyIcon,
   UserCogIcon,
   UserIcon,
@@ -85,13 +84,6 @@ export const consoleMenuConfig: Record<string, MenuConfigItem> = {
     icon: <VideotapeIcon />,
     color: 'colorPurplePrimary',
   },
-  articles: {
-    id: 'articles',
-    route: '/console/articles',
-    title: 'Articles',
-    icon: <NewspaperIcon />,
-    color: 'colorGreenDark',
-  },
   studios: {
     id: 'studios',
     route: '/console/studios',
@@ -146,7 +138,7 @@ export const consoleMenuGroups: ConsoleMenuGroup[] = [
   },
   {
     title: 'Content',
-    itemIds: ['collectionEvents', 'articles', 'hobbies'],
+    itemIds: ['collectionEvents', 'hobbies'],
   },
   {
     title: 'Account',
