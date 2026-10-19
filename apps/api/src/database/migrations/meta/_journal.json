@@ -239,6 +239,13 @@
       "when": 1789919020073,
       "tag": "0035_rename-image-columns-to-image-path",
       "breakpoints": true
+    },
+    {
+      "idx": 36,
+      "version": "7",
+      "when": 1792432634780,
+      "tag": "0036_add-origin-film-id-and-seq-num",
+      "breakpoints": true
     }
   ]
 }

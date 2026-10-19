@@ -46,6 +46,8 @@ export const films = pgTable(
       .notNull(),
     deletedAt: timestamp('deleted_at', { precision: 3, mode: 'string' }),
     synopsis: text(),
+    originFilmId: integer('origin_film_id'),
+    sequenceNumber: numeric('sequence_number', { mode: 'number' }).notNull().default(1),
     draft: boolean().notNull().default(false),
   },
   (table) => [

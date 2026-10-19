@@ -13,7 +13,10 @@ import type {
 import type { Timestamps } from '~/modules/films/types.js';
 import { getTypedKeys } from '~/shared/helpers/get-typed-keys.js';
 
-type EditableFilm = Omit<Film, Timestamps | 'addedAt' | 'id'> & {
+type EditableFilm = Omit<
+  Film,
+  Timestamps | 'addedAt' | 'id' | 'originFilmId' | 'sequenceNumber'
+> & {
   collections: Pick<FilmCollection, 'collectionId' | 'order'>[];
   genres: Pick<FilmGenre, 'genreId'>[];
   countries: Pick<FilmCountry, 'countryId'>[];
@@ -32,31 +35,37 @@ export const mapInnerId = <T extends Record<string, number>>(
 };
 
 export const mapAdminFilmDetails = (film: EditableFilm): CreateFilmInput => {
-  const groupedAwards = film.awards.reduce((groups, award) => {
-    if (!groups[award.awardId]) {
-      groups[award.awardId] = [];
-    }
+  const groupedAwards = film.awards.reduce(
+    (groups, award) => {
+      if (!groups[award.awardId]) {
+        groups[award.awardId] = [];
+      }
 
-    groups[award.awardId].push({
-      nominationId: award.nominationId,
-      actorId: award.actorId,
-    });
+      groups[award.awardId].push({
+        nominationId: award.nominationId,
+        actorId: award.actorId,
+      });
 
-    return groups;
-  }, {} as Record<number, CreateFilmInput['awards'][number]['nominations']>);
+      return groups;
+    },
+    {} as Record<number, CreateFilmInput['awards'][number]['nominations']>,
+  );
 
-  const groupedPeople = film.castAndCrew.reduce((groups, item) => {
-    if (!groups[item.role]) {
-      groups[item.role] = [];
-    }
+  const groupedPeople = film.castAndCrew.reduce(
+    (groups, item) => {
+      if (!groups[item.role]) {
+        groups[item.role] = [];
+      }
 
-    groups[item.role].push({
-      personId: item.personId,
-      details: item.details,
-    });
+      groups[item.role].push({
+        personId: item.personId,
+        details: item.details,
+      });
 
-    return groups;
-  }, {} as Record<Enum<typeof PersonRole>, CreateFilmInput['castAndCrew'][number]['people']>);
+      return groups;
+    },
+    {} as Record<Enum<typeof PersonRole>, CreateFilmInput['castAndCrew'][number]['people']>,
+  );
 
   return {
     ...film,
