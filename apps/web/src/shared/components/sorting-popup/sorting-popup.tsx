@@ -61,14 +61,11 @@ export const SortingPopup = ({
         <Button
           onClick={handleToggle}
           ref={sortingPopupButton}
-          variant="ghost"
+          variant="light"
           icon={selectedData.order === 'asc' ? <ArrowDownAZIcon /> : <ArrowUpAZIcon />}
           fitWidth
-          size="small"
           isDisabled={isDisabled}
-        >
-          <div className={styles.button_content}>{selectedData.label}</div>
-        </Button>
+        />
       </div>
       <PopupMenu
         isOpen={isOpen}

@@ -6,7 +6,6 @@ import {
   BuildingIcon,
   CalendarIcon,
   ClockIcon,
-  FileTextIcon,
   GlobeIcon,
   HandCoinsIcon,
   StarIcon,
@@ -59,12 +58,6 @@ const skeletonSummaryConfig: SummaryConfig[] = [
     title: 'Box Office',
     icon: <HandCoinsIcon />,
     content: <SkeletonBlock width="100%" height="41px" />,
-  },
-  {
-    id: 'synopsis',
-    title: 'Synopsis',
-    icon: <FileTextIcon />,
-    content: <SkeletonBlock width="100%" height="60px" />,
   },
 ];
 
