@@ -8,6 +8,7 @@ import {
 } from './components';
 import { getRouteApi } from '@tanstack/react-router';
 import {
+  Button,
   countObjectKeys,
   getFilmsListQueryOptions,
   Pagination,
@@ -145,10 +146,11 @@ export const FilmsSection = () => {
             isDisabled={searchParams.collectionId !== undefined}
             buttonWrapperClassName={styles.sorting}
           />
-          <button className={styles.mobile_filter} onClick={toggleFilter}>
-            <FilterIcon />
-            <div className={styles.mobile_filter_count}>{countFilter}</div>
-          </button>
+          <div className={styles.mobile_filter}>
+            <Button variant="light" onClick={toggleFilter} icon={<FilterIcon />}>
+              <div className={styles.mobile_filter_count}>{countFilter}</div>
+            </Button>
+          </div>
         </div>
       </div>
       {data && (

@@ -28,7 +28,7 @@ type GenericOption = {
   updatedAt: string;
 };
 
-const statBlocks = ['genres', 'collections', 'countries', 'studios', 'types'] as const;
+const statBlocks = ['genres', 'countries', 'studios', 'types'] as const;
 
 export class FilmsService {
   constructor(
@@ -83,7 +83,7 @@ export class FilmsService {
     const data = await this.deps.filmsRepository.findAndCount({
       ...queries,
       order: queries.order ?? 'desc',
-      orderKey: queries.collectionId ? 'collectionOrder' : queries.orderKey ?? 'releaseDate',
+      orderKey: queries.collectionId ? 'collectionOrder' : (queries.orderKey ?? 'releaseDate'),
       draftLevels: [DraftLevel.PUBLISHED, DraftLevel.UPCOMING],
     });
 
@@ -324,16 +324,24 @@ export class FilmsService {
     return this.deps.filmsRepository.getTrailersByFilmId(id);
   }
 
+  private getMostUsedValues<T extends { value: number }>(values: T[]): T[] {
+    return values.toSorted((a, b) => b.value - a.value).slice(0, 10);
+  }
+
   private async aggregate(key: (typeof statBlocks)[number]) {
     switch (key) {
-      case 'collections':
-        return await this.deps.filmsRepository.aggregateFilmCollections();
-      case 'genres':
-        return await this.deps.filmsRepository.aggregateFilmGenres();
-      case 'countries':
-        return await this.deps.filmsRepository.aggregateFilmCountries();
-      case 'studios':
-        return await this.deps.filmsRepository.aggregateFilmStudios();
+      case 'genres': {
+        const genres = await this.deps.filmsRepository.aggregateFilmGenres();
+        return this.getMostUsedValues(genres);
+      }
+      case 'countries': {
+        const countries = await this.deps.filmsRepository.aggregateFilmCountries();
+        return this.getMostUsedValues(countries);
+      }
+      case 'studios': {
+        const studios = await this.deps.filmsRepository.aggregateFilmStudios();
+        return this.getMostUsedValues(studios);
+      }
       case 'types':
         return (await this.deps.filmsRepository.aggregateFilmTypes()).map((item) => ({
           ...item,
@@ -355,7 +363,6 @@ export class FilmsService {
     const result: FilmStatsResponse['stats'] = {
       types: [],
       countries: [],
-      collections: [],
       studios: [],
       genres: [],
     };

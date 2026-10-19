@@ -4,7 +4,6 @@ import {
   Awards,
   CastAndCrew,
   ContentLayout,
-  Description,
   FilmPageLayout,
   PageSkeleton,
   SummarySection,
@@ -48,7 +47,6 @@ export const FilmDrawer = ({ filmId }: FilmDrawerProps) => {
         <FilmPageLayout>
           <SummarySection film={film} hasExtendedData={hasExtendedData} />
           <ContentLayout>
-            {film.synopsis && <Description value={film.synopsis} />}
             {film.castAndCrew.length !== 0 && <CastAndCrew data={film.castAndCrew} />}
             {film.awards.length > 0 && <Awards data={film.awards} />}
           </ContentLayout>
