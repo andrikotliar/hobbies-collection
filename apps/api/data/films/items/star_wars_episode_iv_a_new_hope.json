@@ -244,11 +244,5 @@
       "details": "Darth Vader"
     }
   ],
-  "collections": [
-    {
-      "id": 22,
-      "title": "Star Wars Universe",
-      "order": 8
-    }
-  ]
+  "sequenceNumber": 8
 }

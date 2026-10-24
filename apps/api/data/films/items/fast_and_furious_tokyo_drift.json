@@ -101,11 +101,5 @@
       "details": "Takashi"
     }
   ],
-  "collections": [
-    {
-      "id": 62,
-      "title": "Fast and Furious",
-      "order": 6
-    }
-  ]
+  "sequenceNumber": 6
 }

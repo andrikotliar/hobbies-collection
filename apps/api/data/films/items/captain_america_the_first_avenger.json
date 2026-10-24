@@ -141,11 +141,5 @@
       "details": "Dr. Arnim Zola"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

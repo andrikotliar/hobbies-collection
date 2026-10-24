@@ -129,11 +129,5 @@
       "details": "Maria Hill"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 11
-    }
-  ]
+  "sequenceNumber": 11
 }

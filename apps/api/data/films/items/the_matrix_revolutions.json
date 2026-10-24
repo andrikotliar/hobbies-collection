@@ -123,11 +123,5 @@
       "details": "Oracle"
     }
   ],
-  "collections": [
-    {
-      "id": 72,
-      "title": "The Matrix",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

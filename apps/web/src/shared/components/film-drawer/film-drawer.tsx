@@ -40,7 +40,7 @@ export const FilmDrawer = ({ filmId }: FilmDrawerProps) => {
   };
 
   return (
-    <Drawer isOpen onClose={closeDrawer}>
+    <Drawer isOpen onClose={closeDrawer} maxWidth={940}>
       {isLoading && <PageSkeleton />}
 
       {film && (

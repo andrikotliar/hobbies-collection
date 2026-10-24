@@ -205,11 +205,5 @@
       "details": "DeSaad"
     }
   ],
-  "collections": [
-    {
-      "id": 11,
-      "title": "DC Extended Universe",
-      "order": 5
-    }
-  ]
+  "sequenceNumber": 5
 }

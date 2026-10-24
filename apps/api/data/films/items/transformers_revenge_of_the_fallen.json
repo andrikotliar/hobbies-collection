@@ -159,11 +159,5 @@
       "details": "Fallen"
     }
   ],
-  "collections": [
-    {
-      "id": 84,
-      "title": "Transformers",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

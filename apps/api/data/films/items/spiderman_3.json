@@ -159,11 +159,5 @@
       "details": "Dr. Curt Connors"
     }
   ],
-  "collections": [
-    {
-      "id": 80,
-      "title": "Raimi's Spider-Man",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

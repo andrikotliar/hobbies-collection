@@ -131,11 +131,5 @@
       "details": "Brenda"
     }
   ],
-  "collections": [
-    {
-      "id": 73,
-      "title": "The Maze Runner",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

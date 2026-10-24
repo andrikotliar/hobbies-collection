@@ -22,8 +22,6 @@ import {
   FilmStatsResponseSchema,
   FilmsByCollectionResponseSchema,
   DeleteFilmDrafts,
-  GetFilmByCollectionNameSchema,
-  GetFilmByCollectionNameResponse,
 } from '@hobbies-collection/shared';
 import { z } from 'zod';
 import { createContract } from '../helpers/index.js';
@@ -189,14 +187,6 @@ export const filmsContract = {
     schema: {
       params: FilmDraftFilmIdParamsSchema,
       response: DeleteFilmDrafts,
-    },
-  }),
-  getFilmByCollectionName: createContract({
-    method: 'GET',
-    url: '/films/collection',
-    schema: {
-      querystring: GetFilmByCollectionNameSchema,
-      response: GetFilmByCollectionNameResponse,
     },
   }),
 };

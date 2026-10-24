@@ -109,11 +109,5 @@
       "details": "Lola"
     }
   ],
-  "collections": [
-    {
-      "id": 58,
-      "title": "District 13",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

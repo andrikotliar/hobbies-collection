@@ -222,11 +222,5 @@
       "details": "Scarecrow"
     }
   ],
-  "collections": [
-    {
-      "id": 61,
-      "title": "The Dark Knight",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

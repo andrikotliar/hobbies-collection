@@ -212,11 +212,5 @@
       "details": "Lo'ak"
     }
   ],
-  "collections": [
-    {
-      "id": 31,
-      "title": "Avatar Universe",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

@@ -261,7 +261,6 @@ export class FilmsService {
     const studios = await this.deps.studiosService.getBaseDataList({});
     const awards = await this.deps.awardsService.getAwardsWithNominations();
     const people = await this.deps.peopleService.getAll();
-    const collections = await this.deps.collectionsService.getChapterRelatedCollections();
 
     return {
       list: mapCompleteDataList(films),
@@ -275,7 +274,6 @@ export class FilmsService {
           id: person.id,
           name: person.name,
         })),
-        collections: this.getValidatedOptions(collections, queries.newestOnly),
         awards: this.getValidatedOptions(awards, queries.newestOnly).map((award) => ({
           id: award.id,
           title: award.title,
@@ -388,10 +386,6 @@ export class FilmsService {
 
   unlinkCollection(collectionId: number) {
     return this.deps.filmsRepository.unlinkCollection(collectionId);
-  }
-
-  getFilmByCollectionName(title: string) {
-    return throwIfNotFound(this.deps.filmsRepository.getFilmByCollectionTitleAndDay(title));
   }
 
   private getValidatedOptions<T extends { updatedAt: string }>(

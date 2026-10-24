@@ -147,11 +147,5 @@
       "details": "Xenophilius Lovegood"
     }
   ],
-  "collections": [
-    {
-      "id": 2,
-      "title": "Harry Potter Universe",
-      "order": 7
-    }
-  ]
+  "sequenceNumber": 7
 }

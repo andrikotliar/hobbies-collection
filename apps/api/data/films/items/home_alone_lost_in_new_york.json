@@ -95,11 +95,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 89,
-      "title": "The Home Alone",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

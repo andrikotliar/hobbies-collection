@@ -118,11 +118,5 @@
       "details": "Biff Tannen / Griff Tannen"
     }
   ],
-  "collections": [
-    {
-      "id": 59,
-      "title": "Back to the Future",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

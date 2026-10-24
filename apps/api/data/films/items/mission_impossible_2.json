@@ -150,11 +150,5 @@
       "details": "Dr. Nekhorvich"
     }
   ],
-  "collections": [
-    {
-      "id": 75,
-      "title": "Mission: Impossible",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

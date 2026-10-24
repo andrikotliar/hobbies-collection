@@ -107,11 +107,5 @@
       "details": "Gramma Tala"
     }
   ],
-  "collections": [
-    {
-      "id": 106,
-      "title": "Moana",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

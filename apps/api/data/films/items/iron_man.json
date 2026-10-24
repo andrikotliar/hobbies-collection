@@ -166,11 +166,5 @@
       "details": "Agent Coulson"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 4
-    }
-  ]
+  "sequenceNumber": 4
 }

@@ -16,7 +16,6 @@ import { CommonListQuerySchema } from '@hobbies-collection/shared';
 
 const collectionFormDefaultValues = getEmptyFormValues<Input<typeof api.collections.create>>({
   title: '',
-  category: 'GENERAL',
   films: [],
 });
 

@@ -43,7 +43,9 @@ export const SummarySection = ({ film, hasExtendedData }: SummarySectionProps) =
               {item.content}
             </SummaryBlock>
           ))}
-          {film.collections.length > 0 && <Collections list={film.collections} />}
+          {(film.collections.length > 0 || film.chaptersRefId) && (
+            <Collections list={film.collections} chaptersRefId={film.chaptersRefId} />
+          )}
         </div>
       </div>
     </div>

@@ -17,7 +17,7 @@ type Film = ApiResponse<typeof api.films.getList>['list'][number];
 
 type FilmsGridProps = {
   films: ApiResponse<typeof api.films.getList>['list'];
-  isCollection: boolean;
+  shouldShowCounter: boolean;
 };
 
 const getYearValue = (film: Film) => {
@@ -32,7 +32,7 @@ const getYearValue = (film: Film) => {
   return getYearFromDate(film.releaseDate);
 };
 
-export const FilmsGrid = ({ films, isCollection }: FilmsGridProps) => {
+export const FilmsGrid = ({ films, shouldShowCounter }: FilmsGridProps) => {
   const [selectedFilmId, setSelectedFilmId] = useState<number | null>(null);
 
   if (!films.length) {
@@ -41,7 +41,7 @@ export const FilmsGrid = ({ films, isCollection }: FilmsGridProps) => {
 
   return (
     <div className={styles.grid}>
-      {films.map((film, index) => (
+      {films.map((film) => (
         <Link
           to="/"
           className={styles.film_link}
@@ -53,7 +53,7 @@ export const FilmsGrid = ({ films, isCollection }: FilmsGridProps) => {
           })}
         >
           <div className={styles.cover}>
-            {isCollection && <div className={styles.counter}>{index + 1}</div>}
+            {shouldShowCounter && <div className={styles.counter}>{film.sequenceNumber}</div>}
             {film.upcoming && <div className={styles.upcoming}>Upcoming</div>}
             <Image src={getExternalImageUrl(film.imagePath)} alt={film.title} />
             {film.upcoming && (

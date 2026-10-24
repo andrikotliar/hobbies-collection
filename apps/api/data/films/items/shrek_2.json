@@ -159,11 +159,5 @@
       "details": "Fairy Godmother"
     }
   ],
-  "collections": [
-    {
-      "id": 79,
-      "title": "Shrek",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

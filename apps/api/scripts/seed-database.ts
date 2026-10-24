@@ -2,11 +2,9 @@ import type { CompleteDataResponse, CompleteDataListItem } from '@hobbies-collec
 import { database } from '~/plugins/database.plugin.js';
 import {
   awards,
-  collections,
   countries,
   filmAwardNominations,
   films,
-  filmsCollections,
   filmsCountries,
   filmsGenres,
   filmsPeople,
@@ -52,10 +50,6 @@ const seedFilms = async () => {
       data: baseData.people,
       table: people,
     },
-    {
-      data: baseData.collections,
-      table: collections,
-    },
   ];
 
   await database.transaction(async (tr) => {
@@ -89,7 +83,6 @@ const seedFilms = async () => {
         trailers,
         castAndCrew,
         awards,
-        collections,
         ...filmDetails
       } = film;
 
@@ -160,16 +153,6 @@ const seedFilms = async () => {
         }
       }
 
-      if (collections.length) {
-        await tr.insert(filmsCollections).values(
-          collections.map((collection) => ({
-            filmId,
-            collectionId: collection.id,
-            order: collection.order,
-          })),
-        );
-      }
-
       if (castAndCrew) {
         for (const person of castAndCrew) {
           await tr.insert(filmsPeople).values({
@@ -188,7 +171,6 @@ const seedFilms = async () => {
     await getMaxIdAndRestartAutoIncrement(tr, countries, 'countries');
     await getMaxIdAndRestartAutoIncrement(tr, studios, 'studios');
     await getMaxIdAndRestartAutoIncrement(tr, people, 'people');
-    await getMaxIdAndRestartAutoIncrement(tr, collections, 'collections');
     await getMaxIdAndRestartAutoIncrement(tr, films, 'films');
   });
 

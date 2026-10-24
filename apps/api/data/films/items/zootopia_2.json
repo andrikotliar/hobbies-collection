@@ -107,11 +107,5 @@
       "details": "Milton Lunxley"
     }
   ],
-  "collections": [
-    {
-      "id": 87,
-      "title": "Zootopia",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

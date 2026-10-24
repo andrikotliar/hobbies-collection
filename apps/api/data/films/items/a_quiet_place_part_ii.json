@@ -125,11 +125,5 @@
       "details": "Man on Island"
     }
   ],
-  "collections": [
-    {
-      "id": 78,
-      "title": "The Quiet Place",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

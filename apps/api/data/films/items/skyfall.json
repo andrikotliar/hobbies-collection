@@ -170,11 +170,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 103,
-      "title": "007",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

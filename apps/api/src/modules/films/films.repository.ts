@@ -43,11 +43,11 @@ import {
   studios,
   type FilmCollection,
 } from '~/database/schema.js';
-import type {
-  PgColumn,
-  PgInsertValue,
-  PgTableWithColumns,
-  PgTransaction,
+import {
+  type PgColumn,
+  type PgInsertValue,
+  type PgTableWithColumns,
+  type PgTransaction,
 } from 'drizzle-orm/pg-core';
 import type { Timestamps } from '~/modules/films/types.js';
 import type { Deps } from '~/shared/types/deps.js';
@@ -98,7 +98,7 @@ export class FilmsRepository {
 
   async findAndCount(queries: PlainFilmFilters, level: FilterLevel = 'public') {
     const { filters, drafts } = mapListFilters(queries, this.deps.db);
-    const sorting = this.mapSorting(queries.orderKey, queries.order, queries);
+    const sorting = this.mapSorting(queries.orderKey, queries.order);
 
     const list = await this.deps.db
       .select()
@@ -136,7 +136,18 @@ export class FilmsRepository {
         rating: true,
         type: true,
         synopsis: true,
+        originFilmId: true,
       },
+      extras: (table, { sql }) => ({
+        hasChapters: sql<boolean>`
+          ${table.originFilmId} IS NOT NULL
+          OR EXISTS (
+            SELECT 1
+            FROM ${films}
+            WHERE ${films.originFilmId} = ${table.id}
+          )
+        `.as('hasChapters'),
+      }),
       with: {
         genres: {
           with: {
@@ -421,10 +432,9 @@ export class FilmsRepository {
       }
 
       if (collections.length) {
-        const values = collections.map((collection) => ({
-          collectionId: collection.collectionId,
+        const values = collections.map((collectionId) => ({
+          collectionId,
           filmId,
-          order: collection.order,
         }));
 
         await tr.insert(filmsCollections).values(values);
@@ -480,7 +490,6 @@ export class FilmsRepository {
         collections: {
           columns: {
             collectionId: true,
-            order: true,
           },
         },
         castAndCrew: {
@@ -589,10 +598,9 @@ export class FilmsRepository {
           transaction,
           filmId,
           table: filmsCollections,
-          values: collections.map((collection) => ({
-            collectionId: collection.collectionId,
+          values: collections.map((collectionId) => ({
+            collectionId,
             filmId,
-            order: collection.order,
           })),
         });
       }
@@ -686,6 +694,8 @@ export class FilmsRepository {
         boxOffice: true,
         type: true,
         imagePath: true,
+        sequenceNumber: true,
+        originFilmId: true,
       },
       with: {
         countries: {
@@ -762,20 +772,6 @@ export class FilmsRepository {
             order: true,
           },
         },
-        collections: {
-          columns: {
-            order: true,
-          },
-          with: {
-            collection: {
-              columns: {
-                title: true,
-                id: true,
-                category: true,
-              },
-            },
-          },
-        },
       },
     });
   }
@@ -818,32 +814,6 @@ export class FilmsRepository {
 
   deleteAllDraftsOfFilm(filmId: string) {
     return this.deps.db.delete(filmsDrafts).where(eq(filmsDrafts.filmId, filmId));
-  }
-
-  getFilmByCollectionTitleAndDay(title: string) {
-    const now = new Date();
-    const dayOfMonth = now.getDate();
-    const digit = Math.abs(dayOfMonth) % 10;
-    const orderValue = digit === 0 ? 10 : digit;
-
-    return getFirstValue(
-      this.deps.db
-        .select({
-          id: films.id,
-          title: films.title,
-          imagePath: films.imagePath,
-          order: filmsCollections.order,
-        })
-        .from(films)
-        .innerJoin(
-          filmsCollections,
-          and(eq(filmsCollections.filmId, films.id), eq(filmsCollections.order, orderValue)),
-        )
-        .innerJoin(
-          collections,
-          and(eq(collections.id, filmsCollections.collectionId), eq(collections.title, title)),
-        ),
-    );
   }
 
   aggregateFilmGenres() {
@@ -928,14 +898,13 @@ export class FilmsRepository {
         id: films.id,
         title: films.title,
         imagePath: films.imagePath,
-        order: filmsCollections.order,
       })
       .from(films)
       .innerJoin(
         filmsCollections,
         and(eq(films.id, filmsCollections.filmId), eq(filmsCollections.collectionId, collectionId)),
       )
-      .orderBy(asc(filmsCollections.order));
+      .orderBy(desc(filmsCollections.createdAt));
   }
 
   async getAnniversaries() {
@@ -975,11 +944,7 @@ export class FilmsRepository {
       .where(eq(filmsCollections.collectionId, collectionId));
   }
 
-  private mapSorting(
-    key: string = 'releaseDate',
-    direction: SortingOrder = 'desc',
-    queries?: PlainFilmFilters,
-  ) {
+  private mapSorting(key: string = 'releaseDate', direction: SortingOrder = 'desc') {
     const directions = {
       asc,
       desc,
@@ -988,21 +953,8 @@ export class FilmsRepository {
     const fn = directions[direction];
 
     switch (key) {
-      case 'collectionOrder':
-        if (!queries?.collectionId) {
-          return fn(films.releaseDate);
-        }
-        return asc(
-          this.deps.db
-            .select({ order: filmsCollections.order })
-            .from(filmsCollections)
-            .where(
-              and(
-                eq(films.id, filmsCollections.filmId),
-                eq(filmsCollections.collectionId, queries.collectionId),
-              ),
-            ),
-        );
+      case 'originFilmId':
+        return asc(films.sequenceNumber);
       case 'title':
         return fn(films.title);
       case 'createdAt':

@@ -4,7 +4,6 @@ import {
   Form,
   api,
   getFilmsByCollectionQueryOptions,
-  getInitialDataQueryOptions,
   mutateEntity,
   queryKey,
 } from '~/shared';
@@ -17,7 +16,6 @@ import { FilmsSelect } from '~/routes/console/collections/-components/films-sele
 type CollectionFormProps = FormComponentProps<z.infer<typeof CollectionFormSchema>>;
 
 export const CollectionForm = ({ values }: CollectionFormProps) => {
-  const { data } = useQuery(getInitialDataQueryOptions());
   const { onClose } = useFormModal();
   const { data: films = [] } = useQuery(getFilmsByCollectionQueryOptions(values.id));
 
@@ -27,6 +25,7 @@ export const CollectionForm = ({ values }: CollectionFormProps) => {
       invalidateQueries: [
         { queryKey: queryKey('collections.getList') },
         { queryKey: queryKey('initialData.get') },
+        { queryKey: queryKey('films.getByCollection') },
       ],
     },
   });
@@ -50,12 +49,6 @@ export const CollectionForm = ({ values }: CollectionFormProps) => {
       isLoading={isPending}
     >
       <Form.TextInput type="text" name="title" label="Title" />
-      <Form.Select
-        label="Category"
-        options={data?.options.collectionCategories ?? []}
-        name="category"
-        isSearchable={false}
-      />
       <Form.TextArea label="Description" name="description" />
       <FilmsSelect />
     </Form>

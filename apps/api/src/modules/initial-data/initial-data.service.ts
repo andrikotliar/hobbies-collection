@@ -1,5 +1,5 @@
 import { convertEnumValuesToOption, type InitialDataResponse } from '@hobbies-collection/shared';
-import { collectionCategory, personRole, titleType } from '~/database/schema.js';
+import { personRole, titleType } from '~/database/schema.js';
 import type { Deps } from '~/shared/types/deps.js';
 
 export class InitialDataService {
@@ -18,7 +18,7 @@ export class InitialDataService {
 
   async getOptions(): Promise<InitialDataResponse> {
     const [collections, genres, countries, studios, awards, selectedPeople] = await Promise.all([
-      this.deps.collectionsService.getListOptions(),
+      this.deps.collectionsService.getAllCollections(),
       this.deps.genresService.getListOptions(),
       this.deps.countriesService.getListOptions(),
       this.deps.studiosService.getListOptions(),
@@ -28,7 +28,6 @@ export class InitialDataService {
 
     const types = convertEnumValuesToOption(titleType.enumValues);
     const roles = convertEnumValuesToOption(personRole.enumValues);
-    const collectionCategories = convertEnumValuesToOption(collectionCategory.enumValues);
 
     return {
       options: {
@@ -39,7 +38,6 @@ export class InitialDataService {
         types,
         roles,
         awards,
-        collectionCategories,
         selectedPeople,
       },
     };

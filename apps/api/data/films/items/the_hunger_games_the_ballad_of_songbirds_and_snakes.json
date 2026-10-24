@@ -99,11 +99,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 65,
-      "title": "The Hunger Games",
-      "order": 0.5
-    }
-  ]
+  "sequenceNumber": 0.5
 }
