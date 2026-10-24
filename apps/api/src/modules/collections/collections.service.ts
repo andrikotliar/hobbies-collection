@@ -35,7 +35,6 @@ export class CollectionsService {
       await this.deps.filmsService.linkCollectionToFilms(
         input.films.map((film) => ({
           filmId: film.filmId,
-          order: film.order,
           collectionId: collection.id,
         })),
       );
@@ -58,7 +57,6 @@ export class CollectionsService {
         await this.deps.filmsService.linkCollectionToFilms(
           input.films.map((film) => ({
             filmId: film.filmId,
-            order: film.order,
             collectionId: collection.id,
           })),
         );

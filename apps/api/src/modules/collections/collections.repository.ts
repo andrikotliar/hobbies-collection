@@ -5,7 +5,7 @@ import {
   type CreateCollectionInput,
   type UpdateCollectionInput,
 } from '@hobbies-collection/shared';
-import { and, asc, eq, type SQL, exists } from 'drizzle-orm';
+import { and, asc, desc, eq, type SQL, exists } from 'drizzle-orm';
 import { collections, hobbyItems, hobbyItemsCollections } from '~/database/schema.js';
 import { getCount } from '~/shared/helpers/get-count.js';
 import { getFirstValue } from '~/shared/helpers/get-first-value.js';
@@ -38,7 +38,7 @@ export class CollectionsRepository {
       })
       .from(collections)
       .where(and(...filters))
-      .orderBy(asc(collections.title))
+      .orderBy(desc(collections.updatedAt))
       .limit(PAGE_LIMITS.default)
       .offset(getSkipValue('default', queries.pageIndex));
 
