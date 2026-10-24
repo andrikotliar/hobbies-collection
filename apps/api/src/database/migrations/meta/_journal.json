@@ -243,8 +243,8 @@
     {
       "idx": 36,
       "version": "7",
-      "when": 1792432634780,
-      "tag": "0036_add-origin-film-id-and-seq-num",
+      "when": 1792432995099,
+      "tag": "0036_remove-articles-table",
       "breakpoints": true
     }
   ]

@@ -1,7 +1,4 @@
 import { AiService } from '~/modules/ai/ai.service.js';
-import { ArticlesRepository } from '~/modules/articles/articles.repository.js';
-import { articlesRouter } from '~/modules/articles/articles.router.js';
-import { ArticlesService } from '~/modules/articles/articles.service.js';
 import { authRouter } from '~/modules/auth/auth.router.js';
 import { AuthService } from '~/modules/auth/auth.service.js';
 import { AwardsRepository } from '~/modules/awards/awards.repository.js';
@@ -49,8 +46,6 @@ export const services = {
   authService: AuthService,
   awardsRepository: AwardsRepository,
   awardsService: AwardsService,
-  articlesRepository: ArticlesRepository,
-  articlesService: ArticlesService,
   inMemoryCacheService: InMemoryCacheService,
   collectionEventsRepository: CollectionEventsRepository,
   collectionEventsService: CollectionEventsService,
@@ -79,7 +74,6 @@ export const services = {
 };
 
 export const routers = [
-  articlesRouter,
   authRouter,
   awardsRouter,
   collectionEventsRouter,

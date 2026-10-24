@@ -1,17 +1,12 @@
 [
   {
-    "title": "007",
+    "title": "Agent 007",
     "id": 103,
-    "category": "CHAPTER"
+    "category": "CINEMATIC_UNIVERSE"
   },
   {
-    "title": "Alien",
-    "id": 56,
-    "category": "CHAPTER"
-  },
-  {
-    "title": "Avatar Universe",
-    "id": 31,
+    "title": "Avatar: The Master of Four Elements",
+    "id": 69,
     "category": "CINEMATIC_UNIVERSE"
   },
   {
@@ -25,19 +20,19 @@
     "category": "CINEMATIC_UNIVERSE"
   },
   {
+    "title": "DC Universe",
+    "id": 45,
+    "category": "CINEMATIC_UNIVERSE"
+  },
+  {
     "title": "District 13",
     "id": 58,
     "category": "CHAPTER"
   },
   {
-    "title": "Dune Books Series",
-    "id": 104,
-    "category": "CHAPTER"
-  },
-  {
     "title": "Fast and Furious",
     "id": 62,
-    "category": "CHAPTER"
+    "category": "CINEMATIC_UNIVERSE"
   },
   {
     "title": "Game of Thrones",
@@ -105,14 +100,24 @@
     "category": "CHAPTER"
   },
   {
+    "title": "Moana",
+    "id": 106,
+    "category": "CHAPTER"
+  },
+  {
+    "title": "Na'vi",
+    "id": 31,
+    "category": "CINEMATIC_UNIVERSE"
+  },
+  {
     "title": "Pirates of the Carribean",
     "id": 77,
     "category": "CHAPTER"
   },
   {
-    "title": "Predator",
-    "id": 90,
-    "category": "CHAPTER"
+    "title": "Predator and Alien",
+    "id": 56,
+    "category": "CINEMATIC_UNIVERSE"
   },
   {
     "title": "Raimi's Spider-Man",
@@ -128,6 +133,11 @@
     "title": "Spider-Man Multiverse",
     "id": 102,
     "category": "CHAPTER"
+  },
+  {
+    "title": "Spider-verse",
+    "id": 101,
+    "category": "CINEMATIC_UNIVERSE"
   },
   {
     "title": "Star Trek",
@@ -180,11 +190,6 @@
     "category": "CHAPTER"
   },
   {
-    "title": "The Legend of Aang",
-    "id": 69,
-    "category": "CHAPTER"
-  },
-  {
     "title": "The Librarian",
     "id": 70,
     "category": "CHAPTER"
@@ -232,7 +237,7 @@
   {
     "title": "X-Men",
     "id": 86,
-    "category": "CHAPTER"
+    "category": "CINEMATIC_UNIVERSE"
   },
   {
     "title": "Zootopia",

@@ -345,7 +345,7 @@ export const FilmTrailersResponseSchema = z.object({
   ),
 });
 
-const StatsEnum = z.enum(['genres', 'countries', 'collections', 'studios', 'types']);
+const StatsEnum = z.enum(['genres', 'countries', 'studios', 'types']);
 
 export const FilmStatsResponseSchema = z.object({
   stats: z.record(StatsEnum, z.array(z.object({ title: z.string(), value: z.number() }))),

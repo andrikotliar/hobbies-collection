@@ -1,9 +1,0 @@
-.layout {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: var(--color-white);
-  width: 100%;
-  min-height: 100vh;
-}

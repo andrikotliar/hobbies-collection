@@ -9,7 +9,6 @@ export * from './genres.schema.js';
 export * from './id.schema.js';
 export * from './initial-data.schema.js';
 export * from './list-options.schema.js';
-export * from './articles.schema.js';
 export * from './people.schema.js';
 export * from './studios.schema.js';
 export * from './users.schema.js';

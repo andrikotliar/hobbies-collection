@@ -1,68 +1,9 @@
 {
-  "id": "13efc09c-3e20-4ebc-94bf-3a84a4a742d8",
+  "id": "c49e8c84-0cf0-4afe-9b83-f9bf79f52497",
   "prevId": "52602db6-52ff-431d-a617-bdbf10fa6e33",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
-    "public.articles": {
-      "name": "articles",
-      "schema": "",
-      "columns": {
-        "id": {
-          "name": "id",
-          "type": "serial",
-          "primaryKey": true,
-          "notNull": true
-        },
-        "title": {
-          "name": "title",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "content": {
-          "name": "content",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "slug": {
-          "name": "slug",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "timestamp(3)",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "now()"
-        },
-        "updated_at": {
-          "name": "updated_at",
-          "type": "timestamp(3)",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "now()"
-        }
-      },
-      "indexes": {},
-      "foreignKeys": {},
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {
-        "articles_slug_unique": {
-          "name": "articles_slug_unique",
-          "nullsNotDistinct": false,
-          "columns": [
-            "slug"
-          ]
-        }
-      },
-      "policies": {},
-      "checkConstraints": {},
-      "isRLSEnabled": false
-    },
     "public.awards": {
       "name": "awards",
       "schema": "",
@@ -671,19 +612,6 @@
           "type": "text",
           "primaryKey": false,
           "notNull": false
-        },
-        "origin_film_id": {
-          "name": "origin_film_id",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "sequence_number": {
-          "name": "sequence_number",
-          "type": "numeric",
-          "primaryKey": false,
-          "notNull": true,
-          "default": 1
         },
         "draft": {
           "name": "draft",
