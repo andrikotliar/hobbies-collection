@@ -4,7 +4,6 @@ import { filterDefaultValues, FiltersSchema, getFiltersConfig } from '~/routes/_
 import type { api, ApiResponse, FilterItem } from '~/shared';
 
 const AdminOnlyFiltersSchema = z.object({
-  noDescription: z.boolean().nullable(),
   draftLevels: z.array(z.enum(DraftLevel)),
   noCrewOrCast: z.boolean().nullable(),
   noBoxOffice: z.boolean().nullable(),
@@ -22,7 +21,6 @@ type AdminOnlyFilterValues = z.infer<typeof AdminOnlyFiltersSchema>;
 
 export const defaultAdminFilters: AdminFilterValues = {
   ...filterDefaultValues,
-  noDescription: false,
   noBoxOffice: false,
   noTrailers: false,
   noCrewOrCast: false,
@@ -44,14 +42,10 @@ export const getAdminFiltersConfig = (
       inputType: 'checkbox',
     },
     {
-      id: 'noDescription',
+      id: 'noBoxOffice',
       title: 'Content',
       type: 'boolean',
       options: [
-        {
-          id: 'noDescription',
-          label: 'Missing description',
-        },
         {
           id: 'noBoxOffice',
           label: 'Missing box office',
