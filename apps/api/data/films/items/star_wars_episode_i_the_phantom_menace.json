@@ -166,11 +166,5 @@
       "details": "Darth Maul"
     }
   ],
-  "collections": [
-    {
-      "id": 22,
-      "title": "Star Wars Universe",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

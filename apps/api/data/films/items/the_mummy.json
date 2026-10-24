@@ -136,11 +136,5 @@
       "details": "Dr. Terrence Bey"
     }
   ],
-  "collections": [
-    {
-      "id": 76,
-      "title": "The Mummy",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

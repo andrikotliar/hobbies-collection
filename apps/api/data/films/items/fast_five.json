@@ -143,11 +143,5 @@
       "details": "Elena"
     }
   ],
-  "collections": [
-    {
-      "id": 62,
-      "title": "Fast and Furious",
-      "order": 4
-    }
-  ]
+  "sequenceNumber": 4
 }

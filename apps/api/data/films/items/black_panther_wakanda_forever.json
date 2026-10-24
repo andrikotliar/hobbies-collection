@@ -148,11 +148,5 @@
       "details": "Riri"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 33.0625
-    }
-  ]
+  "sequenceNumber": 33.0625
 }

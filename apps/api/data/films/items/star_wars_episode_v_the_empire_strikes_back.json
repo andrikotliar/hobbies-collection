@@ -172,11 +172,5 @@
       "details": "Boba Fett"
     }
   ],
-  "collections": [
-    {
-      "id": 22,
-      "title": "Star Wars Universe",
-      "order": 9
-    }
-  ]
+  "sequenceNumber": 9
 }

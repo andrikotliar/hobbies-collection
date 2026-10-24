@@ -136,11 +136,5 @@
       "details": "Jennifer Parker"
     }
   ],
-  "collections": [
-    {
-      "id": 59,
-      "title": "Back to the Future",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

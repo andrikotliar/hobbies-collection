@@ -125,11 +125,5 @@
       "details": "Han"
     }
   ],
-  "collections": [
-    {
-      "id": 62,
-      "title": "Fast and Furious",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

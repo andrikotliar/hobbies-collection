@@ -196,16 +196,10 @@
       "details": "Suki"
     }
   ],
-  "collections": [
-    {
-      "id": 69,
-      "title": "The Legend of Aang",
-      "order": 1
-    }
-  ],
   "seriesExtension": {
     "id": 2,
     "episodesTotal": 61,
     "seasonsTotal": 3
-  }
+  },
+  "sequenceNumber": 1
 }

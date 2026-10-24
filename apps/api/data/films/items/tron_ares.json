@@ -150,11 +150,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 91,
-      "title": "Tron",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

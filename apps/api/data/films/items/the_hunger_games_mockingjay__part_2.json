@@ -184,11 +184,5 @@
       "details": "President Alma Coin"
     }
   ],
-  "collections": [
-    {
-      "id": 65,
-      "title": "The Hunger Games",
-      "order": 4
-    }
-  ]
+  "sequenceNumber": 4
 }

@@ -137,11 +137,5 @@
       "details": "Maurice"
     }
   ],
-  "collections": [
-    {
-      "id": 71,
-      "title": "Madagascar",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

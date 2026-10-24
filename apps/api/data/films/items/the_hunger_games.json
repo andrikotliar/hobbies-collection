@@ -176,11 +176,5 @@
       "details": "President Coriolanus Snow"
     }
   ],
-  "collections": [
-    {
-      "id": 65,
-      "title": "The Hunger Games",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

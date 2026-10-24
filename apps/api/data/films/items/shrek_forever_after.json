@@ -111,11 +111,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 79,
-      "title": "Shrek",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

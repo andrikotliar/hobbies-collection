@@ -162,11 +162,5 @@
       "details": "Rubeus Hagrid"
     }
   ],
-  "collections": [
-    {
-      "id": 2,
-      "title": "Harry Potter Universe",
-      "order": 8
-    }
-  ]
+  "sequenceNumber": 8
 }

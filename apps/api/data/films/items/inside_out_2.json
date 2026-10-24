@@ -171,11 +171,5 @@
       "details": "Pouchy"
     }
   ],
-  "collections": [
-    {
-      "id": 97,
-      "title": "Inside Out",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

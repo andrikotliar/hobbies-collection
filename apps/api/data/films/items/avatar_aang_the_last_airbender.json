@@ -129,11 +129,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 69,
-      "title": "The Legend of Aang",
-      "order": 1.5
-    }
-  ]
+  "sequenceNumber": 1.5
 }

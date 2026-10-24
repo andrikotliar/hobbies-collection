@@ -202,11 +202,5 @@
       "details": "Starscream"
     }
   ],
-  "collections": [
-    {
-      "id": 84,
-      "title": "Transformers",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

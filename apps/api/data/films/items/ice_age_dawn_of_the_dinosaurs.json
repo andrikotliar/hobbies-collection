@@ -147,11 +147,5 @@
       "details": "Scratte"
     }
   ],
-  "collections": [
-    {
-      "id": 66,
-      "title": "Ice Age",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

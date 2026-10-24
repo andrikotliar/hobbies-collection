@@ -153,11 +153,5 @@
       "details": "Sallah"
     }
   ],
-  "collections": [
-    {
-      "id": 67,
-      "title": "Indiana Jones",
-      "order": 5
-    }
-  ]
+  "sequenceNumber": 5
 }

@@ -428,16 +428,10 @@
       "details": "Tormund Giantsbane"
     }
   ],
-  "collections": [
-    {
-      "id": 50,
-      "title": "Game of Thrones",
-      "order": 2
-    }
-  ],
   "seriesExtension": {
     "id": 5,
     "episodesTotal": 73,
     "seasonsTotal": 8
-  }
+  },
+  "sequenceNumber": 2
 }

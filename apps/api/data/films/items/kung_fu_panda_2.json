@@ -118,11 +118,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 92,
-      "title": "Kung Fu Panda",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

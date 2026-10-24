@@ -129,11 +129,5 @@
       "details": "Kate Connor"
     }
   ],
-  "collections": [
-    {
-      "id": 83,
-      "title": "Terminator",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

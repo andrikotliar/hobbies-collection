@@ -162,11 +162,5 @@
       "details": "Ava Paige"
     }
   ],
-  "collections": [
-    {
-      "id": 73,
-      "title": "The Maze Runner",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

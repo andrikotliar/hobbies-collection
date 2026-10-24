@@ -131,11 +131,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 22,
-      "title": "Star Wars Universe",
-      "order": 11.5
-    }
-  ]
+  "sequenceNumber": 11.5
 }

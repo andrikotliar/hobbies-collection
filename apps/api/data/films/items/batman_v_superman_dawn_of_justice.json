@@ -147,11 +147,5 @@
       "details": "Diana Prince / Wonder Woman"
     }
   ],
-  "collections": [
-    {
-      "id": 11,
-      "title": "DC Extended Universe",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

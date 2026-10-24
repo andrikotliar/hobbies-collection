@@ -107,11 +107,5 @@
       "details": "Tej"
     }
   ],
-  "collections": [
-    {
-      "id": 62,
-      "title": "Fast and Furious",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

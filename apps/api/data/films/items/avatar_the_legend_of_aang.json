@@ -195,16 +195,10 @@
       "details": "Suki"
     }
   ],
-  "collections": [
-    {
-      "id": 69,
-      "title": "Avatar: The Master of Four Elements",
-      "order": 1
-    }
-  ],
   "seriesExtension": {
     "id": 2,
     "episodesTotal": 61,
     "seasonsTotal": 3
-  }
+  },
+  "sequenceNumber": 1
 }

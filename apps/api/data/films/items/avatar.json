@@ -268,11 +268,5 @@
       "details": "Mo'at"
     }
   ],
-  "collections": [
-    {
-      "id": 31,
-      "title": "Avatar Universe",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }
