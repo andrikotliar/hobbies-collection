@@ -24,7 +24,6 @@ export const FilmsSelect = () => {
             }
             prepend({
               filmId: value,
-              order: 0.1,
               title: option?.label ?? '',
             });
           }}

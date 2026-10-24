@@ -58,7 +58,7 @@ export const CollectionEventForm = ({ values }: CollectionEventFormProps) => {
         name="titleFilmId"
         optionsLoader={api.films.getOptions}
         label="Title film"
-        queryKeyParams={{ key: 'collectionEventFilmId' }}
+        queryKeyParams={{ key: 'collectionEventFilmId', values: [values.titleFilmId] }}
       />
       <Form.TextInput name="yearFrom" label="First event occurrence year" placeholder="E.g. 2020" />
     </Form>

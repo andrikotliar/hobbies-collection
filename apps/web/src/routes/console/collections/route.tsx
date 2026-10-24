@@ -69,6 +69,7 @@ function PageContainer() {
       search: (prev) => ({
         ...prev,
         q: value,
+        pageIndex: 0,
       }),
     });
   }, []);

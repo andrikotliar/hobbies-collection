@@ -7,7 +7,6 @@ export const CreateCollectionInputSchema = z.object({
   films: z.array(
     z.object({
       filmId: z.number(),
-      order: z.number().min(0.1, 'Order is required'),
       title: z.string(),
     }),
   ),
