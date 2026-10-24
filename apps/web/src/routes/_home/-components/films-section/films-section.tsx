@@ -102,10 +102,10 @@ export const FilmsSection = () => {
   };
 
   const getSortingValues = (): SortingValues => {
-    if (searchParams.collectionId) {
+    if (searchParams.originFilmId) {
       return {
         order: 'asc',
-        orderKey: 'collectionId',
+        orderKey: 'sequenceNumber',
       };
     }
 
@@ -141,7 +141,7 @@ export const FilmsSection = () => {
           <SortingPopup
             fields={sortingFields}
             onSorting={handleSorting}
-            defaultOrder={searchParams.orderKey === 'sequenceNumber' ? 'asc' : sortingValues.order}
+            defaultOrder={sortingValues.order}
             defaultOrderKey={sortingValues.orderKey}
             isDisabled={searchParams.orderKey === 'sequenceNumber'}
             buttonWrapperClassName={styles.sorting}

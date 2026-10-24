@@ -1,0 +1,1 @@
+ALTER TABLE "films_collections" ALTER COLUMN "order" DROP NOT NULL;

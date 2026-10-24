@@ -3,7 +3,6 @@ export * from './awards/get-award-query-options';
 export * from './awards/get-nominations-by-award-query-options';
 export * from './awards/get-awards-base-data-list-query-options';
 export * from './collection-events/get-collection-events-query-options';
-export * from './collections/get-all-collection-options-query-options';
 export * from './collections/get-collections-list-query-options';
 export * from './collections/get-hobby-related-collections-query-options';
 export * from './countries/get-countries-list-query-options';

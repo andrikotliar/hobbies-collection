@@ -26,14 +26,7 @@ export const CreateFilmInputSchema = z.object({
   genres: z.array(z.number()),
   studios: z.array(z.number()),
   countries: z.array(z.number()),
-  collections: z.array(
-    z.object({
-      collectionId: z.number(),
-      order: z.number().min(0.1, {
-        error: 'Order is required for the collection',
-      }),
-    }),
-  ),
+  collections: z.array(z.number()),
   duration: z.coerce.number(),
   releaseDate: DateStringSchema.nullable(),
   budget: z.coerce.number().max(900_000_000),

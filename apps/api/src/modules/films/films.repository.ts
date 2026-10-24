@@ -432,10 +432,9 @@ export class FilmsRepository {
       }
 
       if (collections.length) {
-        const values = collections.map((collection) => ({
-          collectionId: collection.collectionId,
+        const values = collections.map((collectionId) => ({
+          collectionId,
           filmId,
-          order: collection.order,
         }));
 
         await tr.insert(filmsCollections).values(values);
@@ -600,10 +599,9 @@ export class FilmsRepository {
           transaction,
           filmId,
           table: filmsCollections,
-          values: collections.map((collection) => ({
-            collectionId: collection.collectionId,
+          values: collections.map((collectionId) => ({
+            collectionId,
             filmId,
-            order: collection.order,
           })),
         });
       }
