@@ -934,7 +934,7 @@ export class FilmsRepository {
         filmsCollections,
         and(eq(films.id, filmsCollections.filmId), eq(filmsCollections.collectionId, collectionId)),
       )
-      .orderBy(asc(filmsCollections.order));
+      .orderBy(desc(filmsCollections.createdAt));
   }
 
   async getAnniversaries() {

@@ -25,6 +25,7 @@ export const CollectionForm = ({ values }: CollectionFormProps) => {
       invalidateQueries: [
         { queryKey: queryKey('collections.getList') },
         { queryKey: queryKey('initialData.get') },
+        { queryKey: queryKey('films.getByCollection') },
       ],
     },
   });
