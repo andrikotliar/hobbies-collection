@@ -6,7 +6,6 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "Geralt of Rivia is a representative of the vanishing species of mutants known as Witchers. Their job is to eliminate various monsters that threaten humanity. Geralt travels the land in search of work, gradually learning about his destiny, which is to become the powerful girl Ciri.",
   "poster": "posters/witcher.webp",
   "genres": [
     {
@@ -132,7 +131,6 @@
       "details": "Vilgefortz"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 18,
     "episodesTotal": 16,

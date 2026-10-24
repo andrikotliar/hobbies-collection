@@ -39,23 +39,14 @@ export const UpdateUserPasswordInputSchema = z.object({
     ),
 });
 
-export const UpdateUserTranslationPreferencesSchema = z.object({
-  from: z.string().min(1),
-  fromValidation: z.string().optional(),
-  to: z.string().min(1),
-  toValidation: z.string().optional(),
-});
-
 export const UserDataResponseSchema = z.object({
   id: z.number(),
   username: z.string(),
-  translationPreferences: UpdateUserTranslationPreferencesSchema.nullable(),
 });
 
 export const UpdateUserSchema = z
   .object({
     password: UpdateUserPasswordInputSchema,
-    translation: UpdateUserTranslationPreferencesSchema,
   })
   .partial();
 

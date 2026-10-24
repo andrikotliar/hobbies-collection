@@ -6,7 +6,6 @@
   "duration": 163,
   "budget": 250000000,
   "boxOffice": 774000000,
-  "synopsis": null,
   "poster": "posters/no_time_to_die",
   "genres": [
     {
@@ -175,6 +174,5 @@
       "role": "ACTOR",
       "details": "Q"
     }
-  ],
-  "collections": []
+  ]
 }

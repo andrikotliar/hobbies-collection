@@ -6,7 +6,6 @@
   "duration": 158,
   "budget": 200000000,
   "boxOffice": 770000000,
-  "synopsis": "Jackson Curtis, a limousine driver who dreams of becoming a writer, is forced to find his ex-wife, children, and her new husband to save them from the impending apocalypse threatening the world. They learn that humanity is building ships to help survive the end of the world and gradually make their way to them, hoping to reach the last hope of mankind.",
   "poster": "posters/twenty_twelve.webp",
   "genres": [
     {
@@ -140,6 +139,5 @@
       "role": "ACTOR",
       "details": "President Thomas Wilson"
     }
-  ],
-  "collections": []
+  ]
 }

@@ -6,7 +6,6 @@
   "duration": 109,
   "budget": 30000000,
   "boxOffice": 1000000,
-  "synopsis": "Most of the animals on Earth have mutated into giant monsters. The survivors have to hide in underground bunkers. Joel has separated from his beloved Amy and they live in different bunkers. They continue to communicate via radio. One day, Joel decides to venture through the dangerous world to reach his beloved.",
   "poster": "posters/love_and_monsters.webp",
   "genres": [
     {
@@ -142,6 +141,5 @@
       "role": "ACTOR",
       "details": "Rocko"
     }
-  ],
-  "collections": []
+  ]
 }

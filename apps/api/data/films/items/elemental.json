@@ -6,7 +6,6 @@
   "duration": 101,
   "budget": 200000000,
   "boxOffice": 496000000,
-  "synopsis": "The world is filled with representatives of the four elements: fire, water, earth, and air. In the great city, they all live in harmony with one another. A family of fire people moves here to start a new life. They open a candy store for the fire people. Later, they have a daughter named Ember. Her father constantly tells her how he wants her to inherit his business, so Ember tries her best not to disappoint him. But everything goes awry when the water inspector Wade discovers violations in the store's operation and wants to report to the authorities, which threatens to lead to its closure. Ember wants to convince them not to do that, but instead, she is given the task of stopping a water leak in the city center. She and Wade begin to search for a solution to the problem, which gradually starts to change her life.",
   "poster": "posters/elemental.webp",
   "genres": [
     {
@@ -124,6 +123,5 @@
       "role": "ACTOR",
       "details": "Brook"
     }
-  ],
-  "collections": []
+  ]
 }

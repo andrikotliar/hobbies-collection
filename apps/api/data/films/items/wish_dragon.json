@@ -6,7 +6,6 @@
   "duration": 98,
   "budget": 0,
   "boxOffice": 21000000,
-  "synopsis": "In a bustling city, a young man named Din discovers a magical dragon that grants wishes. As Din seeks to reconnect with his childhood friend Lina, he learns that true happiness doesn’t come from wishes, but from friendship and understanding. Together, they navigate challenges, revealing the importance of valuing what truly matters.",
   "poster": "posters/wish_dragon",
   "genres": [
     {
@@ -98,6 +97,5 @@
       "role": "COMPOSER",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

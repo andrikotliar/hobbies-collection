@@ -6,7 +6,6 @@
   "duration": 83,
   "budget": 3000000,
   "boxOffice": 1000000,
-  "synopsis": null,
   "poster": "posters/ghost_in_the_shell",
   "genres": [
     {
@@ -116,6 +115,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

@@ -6,7 +6,6 @@
   "duration": 155,
   "budget": 165000000,
   "boxOffice": 398000000,
-  "synopsis": "The Atreides family, under the emperor's orders, must take control of the desert planet Arrakis, where the rare melange necessary for interplanetary travel is harvested. The Atreides move to Arrakis, but soon they are attacked by the Harkonnens, supported by the emperor's army. Paul Atreides and his mother Jessica manage to escape and come across the local people, the Fremen, who are capable of surviving in the harsh conditions of the planet. Paul is accepted and taught everything the Fremen know, as they believe he is the Lisan al-Gaib, the chosen one who will lead the Fremen into the future.",
   "poster": "posters/dune.webp",
   "genres": [
     {
@@ -190,6 +189,5 @@
       "role": "ACTOR",
       "details": "Dr. Wellington Yueh"
     }
-  ],
-  "collections": []
+  ]
 }

@@ -6,7 +6,6 @@
   "duration": 104,
   "budget": 75000000,
   "boxOffice": 129000000,
-  "synopsis": "Cybertron has been destroyed, the Transformers without a core are hard at work in the mines to extract the Energon necessary for life. Two ancient friends, Orion Pax and D-16, dream that they will be able to rise to the level of warriors seeking the lost Matrix of Leadership that can restore life to the planet. But a shocking truth about the surface and the death of the Primes awaits them.",
   "imagePath": "posters/transformers_one.webp",
   "genres": [
     {
@@ -151,6 +150,5 @@
       "role": "ACTOR",
       "details": "Sentinel Prime"
     }
-  ],
-  "collections": []
+  ]
 }

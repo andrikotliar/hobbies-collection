@@ -6,7 +6,6 @@
   "duration": 49,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "Ten thousand people live in a multi-storey bunker underground. No one knows what happened to the planet, but it is impossible to live outside the bunker. No one knows who built the bunker and when it will be safe on the surface. The sheriff of the bunker decides on his own accord to leave the bunker, which is the right of every resident, but it is a one-way path. He leaves a note asking to appoint Juliette—an engineer from the lower levels who has long cared for the functioning of the central generator that provides light to the entire bunker. The judicial department and the IT department oppose her position, but the mayor appoints her anyway. Soon, someone poisons the mayor, and the deputy sheriff is killed. Juliette will be forced to uncover the mystery of their murders, gradually getting closer to the truth that is hidden from the residents of the bunker.",
   "poster": "posters/silo.webp",
   "genres": [
     {
@@ -144,7 +143,6 @@
       "details": "Solo"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 79,
     "episodesTotal": 36,

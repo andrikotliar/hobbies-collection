@@ -6,7 +6,6 @@
   "duration": 142,
   "budget": 55000000,
   "boxOffice": 678000000,
-  "synopsis": "Throughout Forest's childhood, his peers bully him because he is different from others in his character. A notable feature of Forest is his fast running. Growing up, he faces various life challenges, during which he will experience war and become the owner of a shrimp factory.",
   "poster": "posters/forrest_gump",
   "genres": [
     {
@@ -179,6 +178,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

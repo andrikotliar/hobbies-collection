@@ -6,7 +6,6 @@
   "duration": 92,
   "budget": 130000000,
   "boxOffice": 632000000,
-  "synopsis": "Po is a panda who is passionate about kung fu and the magnificent Furious Five and dreams of mastering it. Master Shifu is looking for a candidate to become the Dragon Warrior, so he organizes a showcase where the Furious Five must demonstrate their abilities before the great master Oogway, who in turn will make a selection. Po accidentally stumbles upon the ceremony, and Oogway chooses him for this role. Po is a big panda and very clumsy. Shifu and the Furious Five are not pleased with this decision, as Po does not know kung fu at all. Soon, the strength of the Dragon Warrior will be needed to protect their village, as Shifu's former student, Tai Lung, seeks revenge for not receiving the title of Dragon Warrior.",
   "poster": "posters/kungfu_panda.webp",
   "genres": [
     {
@@ -187,6 +186,5 @@
       "role": "ACTOR",
       "details": "Mr. Ping"
     }
-  ],
-  "collections": []
+  ]
 }

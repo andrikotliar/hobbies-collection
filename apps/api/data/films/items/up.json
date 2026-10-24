@@ -6,7 +6,6 @@
   "duration": 96,
   "budget": 175000000,
   "boxOffice": 735000000,
-  "synopsis": "Carl Fredricksen wants to fulfill an old dream that he didn't manage to realize with his late wife - to embark on a unique journey. He ties a large number of balloons to his house, allowing him to lift his home into the air. By coincidence, a young scout named Russell finds himself on his porch, and now he has to go on an adventure with the grumpy Carl to an island filled with mythical creatures.",
   "poster": "posters/up",
   "genres": [
     {
@@ -167,6 +166,5 @@
       "role": "COMPOSER",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

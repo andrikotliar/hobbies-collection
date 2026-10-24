@@ -6,7 +6,6 @@
   "duration": 161,
   "budget": 90000000,
   "boxOffice": 394000000,
-  "synopsis": "Rick Dalton was a famous Hollywood actor who started to lose his prominence, taking fewer leading and prominent roles. Rick is searching for new opportunities while his best friend and stunt double Cliff Booth gets into various troubles.",
   "poster": "posters/once_upon_a_time_in_hollywood_",
   "genres": [
     {
@@ -183,6 +182,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

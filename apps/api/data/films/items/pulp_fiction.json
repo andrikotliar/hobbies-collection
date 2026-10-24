@@ -6,7 +6,6 @@
   "duration": 154,
   "budget": 8000000,
   "boxOffice": 214000000,
-  "synopsis": "Vincent Vega, Jules Winnfield, Mia Wallace, Butch, Marsellus Wallace, Pumpkin, Honey Bunny - all of them are representatives of the criminal world with their own stories, beliefs, and goals. The paths of some of them will intersect in the most unexpected situations.",
   "poster": "posters/pulp_fiction",
   "genres": [
     {
@@ -171,6 +170,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

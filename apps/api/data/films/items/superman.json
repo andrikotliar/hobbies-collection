@@ -6,7 +6,6 @@
   "duration": 127,
   "budget": 225000000,
   "boxOffice": 618000000,
-  "synopsis": "Clark Kent, also known as Superman, has long protected Earth from various threats. But not everyone considers him a hero, especially after he intervened in the war between Boravia and Jangapur. Billionaire Lex Luthor, who was involved in this war, particularly hates him, and now he is looking for ways to get rid of Superman and turn people against him.",
   "poster": "posters/superman",
   "genres": [
     {
@@ -114,6 +113,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

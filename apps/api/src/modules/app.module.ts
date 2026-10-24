@@ -1,4 +1,3 @@
-import { AiService } from '~/modules/ai/ai.service.js';
 import { authRouter } from '~/modules/auth/auth.router.js';
 import { AuthService } from '~/modules/auth/auth.service.js';
 import { AwardsRepository } from '~/modules/awards/awards.repository.js';
@@ -42,7 +41,6 @@ import { usersRouter } from '~/modules/users/users.router.js';
 import { UsersService } from '~/modules/users/users.service.js';
 
 export const services = {
-  aiService: AiService,
   authService: AuthService,
   awardsRepository: AwardsRepository,
   awardsService: AwardsService,

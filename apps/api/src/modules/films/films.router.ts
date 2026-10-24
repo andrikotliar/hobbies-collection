@@ -1,7 +1,6 @@
 import { contracts } from '@hobbies-collection/contracts';
 import { NotFoundException } from '~/shared/exceptions/not-found.js';
 import { createRouter } from '~/shared/helpers/create-router.js';
-import { getRequestUser } from '~/shared/helpers/get-request-user.js';
 import { validateAuth } from '~/shared/pre-handlers/validate-auth.js';
 import { validateGetSignature } from '~/shared/pre-handlers/validate-get-signature.js';
 
@@ -123,19 +122,6 @@ export const filmsRouter = createRouter(contracts.films, {
       const data = await app.resolve('filmsService').deleteFilm(request.params.id);
 
       return { data };
-    },
-  },
-
-  translateDescription: {
-    preHandler: [validateAuth],
-    handler: async ({ request, app }) => {
-      const user = getRequestUser(request);
-
-      const translatedText = await app
-        .resolve('filmsService')
-        .translateDescription(user.id, request.body);
-
-      return { data: { translatedText } };
     },
   },
 

@@ -86,17 +86,7 @@ export class UsersService {
       await this.updatePassword(user, data.password);
     }
 
-    if (data.translation) {
-      await this.deps.usersRepository.update(user.id, {
-        translationPreferences: data.translation,
-      });
-    }
-
     return { id: user.id };
-  }
-
-  getUserTranslationPreferences(userId: number) {
-    return throwIfNotFound(this.deps.usersRepository.getTranslationPreferences(userId));
   }
 
   getDisplayData(userId: number) {

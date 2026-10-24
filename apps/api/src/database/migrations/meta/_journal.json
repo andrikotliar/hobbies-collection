@@ -260,6 +260,13 @@
       "when": 1792856888098,
       "tag": "0038_make-order-column-nullable",
       "breakpoints": true
+    },
+    {
+      "idx": 39,
+      "version": "7",
+      "when": 1792863020593,
+      "tag": "0039_remove-deprecated-columns",
+      "breakpoints": true
     }
   ]
 }

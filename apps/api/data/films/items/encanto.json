@@ -6,7 +6,6 @@
   "duration": 102,
   "budget": 50000000,
   "boxOffice": 261000000,
-  "synopsis": "In a vibrant Colombian village, Mirabel stands out as the only member of the magical Madrigal family without a special gift. When the magic that blesses her family begins to fade, she embarks on a quest to save it. Along the way, she uncovers her family's secrets and learns the importance of acceptance and love.",
   "poster": "posters/encanto",
   "genres": [
     {
@@ -157,6 +156,5 @@
       "role": "COMPOSER",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

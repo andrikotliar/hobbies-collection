@@ -6,7 +6,6 @@
   "duration": 40,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "Piltover is divided into a rich upper city and the lower city, where two sisters, Vi and Powder, grew up. They survive by stealing various things from above. One such raid ends with part of the team perishing, and Vi and Powder find themselves separated for many years. Vi ends up in prison and becomes an assistant to Caitlyn, who wants to investigate crimes in the lower city, while Powder becomes Jinx and the right hand of the current leader of the lower city, Silco, who is waging his games against the upper city.",
   "poster": "posters/arcane.webp",
   "genres": [
     {
@@ -139,7 +138,6 @@
       "details": "Ekko"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 1,
     "episodesTotal": 9,

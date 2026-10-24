@@ -1,5 +1,4 @@
 import {
-  CollectionCategory,
   getSkipValue,
   PAGE_LIMITS,
   type CreateFilmDraftInput,
@@ -21,7 +20,6 @@ import {
   isNotNull,
   isNull,
   lt,
-  ne,
   notInArray,
   sql,
   type SQL,
@@ -135,7 +133,6 @@ export class FilmsRepository {
         boxOffice: true,
         rating: true,
         type: true,
-        synopsis: true,
         originFilmId: true,
       },
       extras: (table, { sql }) => ({
@@ -227,7 +224,6 @@ export class FilmsRepository {
               columns: {
                 id: true,
                 title: true,
-                category: true,
               },
             },
           },
@@ -468,7 +464,6 @@ export class FilmsRepository {
         releaseDate: true,
         budget: true,
         boxOffice: true,
-        synopsis: true,
         draft: true,
       },
       with: {
@@ -689,7 +684,6 @@ export class FilmsRepository {
         title: true,
         releaseDate: true,
         duration: true,
-        synopsis: true,
         budget: true,
         boxOffice: true,
         type: true,
@@ -841,7 +835,7 @@ export class FilmsRepository {
       .from(filmsCollections)
       .innerJoin(films, eq(films.id, filmsCollections.filmId))
       .innerJoin(collections, eq(collections.id, filmsCollections.collectionId))
-      .where(this.getPublicFilmsFilter([ne(collections.category, CollectionCategory.CHAPTER)]))
+      .where(this.getPublicFilmsFilter())
       .groupBy(collections.id, collections.title)
       .orderBy(collections.title);
   }
@@ -954,6 +948,8 @@ export class FilmsRepository {
 
     switch (key) {
       case 'originFilmId':
+        return asc(films.sequenceNumber);
+      case 'sequenceNumber':
         return asc(films.sequenceNumber);
       case 'title':
         return fn(films.title);

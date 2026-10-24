@@ -1,10 +1,6 @@
-import {
-  UpdateUserPasswordInputSchema,
-  UpdateUserTranslationPreferencesSchema,
-} from '@hobbies-collection/shared';
-import { useMutation, useSuspenseQuery } from '@tanstack/react-query';
+import { UpdateUserPasswordInputSchema } from '@hobbies-collection/shared';
+import { useMutation } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
-import { useMemo } from 'react';
 import z from 'zod';
 import {
   Form,
@@ -21,10 +17,6 @@ const UserFormSchema = z
   .object({
     actualPassword: z.string(),
     newPassword: z.string(),
-    from: z.string(),
-    to: z.string(),
-    fromValidation: z.string(),
-    toValidation: z.string(),
   })
   .partial()
   .superRefine((data, ctx) => {
@@ -37,24 +29,9 @@ const UserFormSchema = z
         }
       }
     }
-
-    if (data.from || data.to) {
-      const result = UpdateUserTranslationPreferencesSchema.safeParse(data);
-
-      if (!result.success) {
-        for (const issue of result.error.issues) {
-          ctx.addIssue(issue as any);
-        }
-      }
-    }
   });
 
 type UserFormValues = z.infer<typeof UserFormSchema>;
-
-const defaultValues: UserFormValues = {
-  from: 'English',
-  to: 'English',
-};
 
 export const Route = createFileRoute('/console/user')({
   component: RouteComponent,
@@ -62,39 +39,29 @@ export const Route = createFileRoute('/console/user')({
     await queryClient.ensureQueryData(getUserDataQueryOptions());
   },
   staticData: {
-    title: 'User Preferences',
+    title: 'User',
     backPath: '/console',
   },
   head: () => ({
     meta: [
       {
-        title: 'User Preferences - Films Collection',
+        title: 'User - Films Collection',
       },
     ],
   }),
 });
 
 function RouteComponent() {
-  const { data } = useSuspenseQuery(getUserDataQueryOptions());
-
   const { mutateAsync, isPending } = useMutation({
     mutationFn: (values: UserFormValues) => {
       const input: Input<typeof api.users.update> = {};
 
-      const { actualPassword, newPassword, from, to, ...translationPref } = values;
+      const { actualPassword, newPassword } = values;
 
       if (actualPassword && newPassword) {
         input.password = {
           actualPassword,
           newPassword,
-        };
-      }
-
-      if (from && to) {
-        input.translation = {
-          ...translationPref,
-          from,
-          to,
         };
       }
 
@@ -112,28 +79,9 @@ function RouteComponent() {
     },
   });
 
-  const loadedDefaultValues = useMemo(() => {
-    const values: UserFormValues = {
-      ...defaultValues,
-      ...data.translationPreferences,
-    };
-
-    return values;
-  }, [data]);
-
   return (
     <Panel>
-      <Form
-        schema={UserFormSchema}
-        defaultValues={loadedDefaultValues}
-        onSubmit={mutateAsync}
-        isLoading={isPending}
-      >
-        <SectionTitle>Translation</SectionTitle>
-        <Form.TextInput name="from" label="From language" />
-        <Form.TextInput name="fromValidation" label="Validation pattern" />
-        <Form.TextInput name="to" label="To language" />
-        <Form.TextInput name="toValidation" label="Validation pattern" />
+      <Form schema={UserFormSchema} onSubmit={mutateAsync} isLoading={isPending}>
         <SectionTitle>Password</SectionTitle>
         <Form.PasswordInput label="Actual password" name="actualPassword" />
         <Form.PasswordInput label="New password" name="newPassword" />

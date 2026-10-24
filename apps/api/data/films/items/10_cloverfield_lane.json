@@ -6,7 +6,6 @@
   "duration": 103,
   "budget": 15000000,
   "boxOffice": 110000000,
-  "synopsis": "One day, an invasion by unknown forces begins on Earth. Michelle and her friends find refuge in Howard's hideout. At first, it seems that they are very lucky, but it soon becomes clear that Howard is insane and wants only Michelle to keep him company. Now she has to find a way to escape this trap.",
   "poster": "posters/10_cloverfield_lane",
   "genres": [
     {
@@ -117,6 +116,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

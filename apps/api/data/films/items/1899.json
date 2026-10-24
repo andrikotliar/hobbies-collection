@@ -6,7 +6,6 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "In 1899, the steamboat \"Cerberus\" is heading from London to New York. They discover the ship \"Prometheus\" of the same model that disappeared a few months ago. On board is the only survivor - a mute boy. The captain has a secret order to destroy this ship, but gradually mystical events begin to unfold on his own ship.",
   "poster": "posters/1899",
   "genres": [
     {
@@ -85,7 +84,6 @@
       "details": null
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 77,
     "episodesTotal": 8,

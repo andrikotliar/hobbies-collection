@@ -6,7 +6,6 @@
   "duration": 122,
   "budget": 170000000,
   "boxOffice": 400000000,
-  "synopsis": null,
   "poster": "posters/alita.webp",
   "genres": [
     {
@@ -124,6 +123,5 @@
       "role": "ACTOR",
       "details": "Hugo"
     }
-  ],
-  "collections": []
+  ]
 }

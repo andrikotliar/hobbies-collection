@@ -6,7 +6,6 @@
   "duration": 50,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "Slow Horses is a division of British intelligence that includes misfits who had no place in MI5. Under the leadership of former MI5 agent Jackson Lamb, they handle paperwork but sometimes get involved in cases that could have an impact on the whole country.",
   "imagePath": "posters/slow_horses.webp",
   "genres": [
     {
@@ -189,7 +188,6 @@
       "details": "Nick Duffy"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 83,
     "episodesTotal": 30,

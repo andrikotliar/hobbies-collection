@@ -6,7 +6,6 @@
   "duration": 92,
   "budget": 150000000,
   "boxOffice": 624000000,
-  "synopsis": "John Hancock is a bulletproof man with superhuman strength and the ability to fly. He doesn't know who he is or where he comes from, and why he has these powers. He tries to help people, but he does it so clumsily that it often leads to destruction in the city. Everything changes when he saves promoter Ray from a collision with a train. Ray offers to help with Hancock's image and gradually changes his life, but everything falls apart when Hancock learns that Ray's wife, Mary, is another person with the same abilities as him and that they were once a couple.",
   "poster": "posters/hancock.webp",
   "genres": [
     {
@@ -118,6 +117,5 @@
       "role": "ACTOR",
       "details": "Kenneth \"Red\" Parker"
     }
-  ],
-  "collections": []
+  ]
 }

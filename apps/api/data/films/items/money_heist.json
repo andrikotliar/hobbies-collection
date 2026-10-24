@@ -6,7 +6,6 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "A brilliant strategist known as the Professor gathers a team of various thieves with the necessary skills to rob the royal mint of Spain. Each member of the team chooses names based on city names, so the team includes Tokyo, Berlin, Rio, Denver, and Helsinki. They infiltrate the mint in broad daylight wearing masks and take hostages. From this moment begins the complex process of executing their plan; they plan to print money and secretly transport it out of the mint. The building is surrounded by the police, and the operation is led by Raquel Murillo. A race against time begins - who will execute their plan first - the Professor or the police.",
   "poster": "posters/money_heist.webp",
   "genres": [
     {
@@ -206,7 +205,6 @@
       "details": "Moscú"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 20,
     "episodesTotal": 41,

@@ -6,7 +6,6 @@
   "duration": 120,
   "budget": 40000000,
   "boxOffice": 225000000,
-  "synopsis": "The story of the creation of the legendary social network Facebook by Harvard student and programmer Mark Zuckerberg. We will learn how Mark came up with this idea, how he interacted with his best friend and first investor Eduardo Saverin, and what it led to.",
   "poster": "posters/the_social_network",
   "genres": [
     {
@@ -155,6 +154,5 @@
       "role": "ACTOR",
       "details": "Sean Parker"
     }
-  ],
-  "collections": []
+  ]
 }
