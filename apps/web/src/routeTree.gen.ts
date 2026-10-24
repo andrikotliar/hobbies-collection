@@ -8,244 +8,254 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root';
-import { Route as LoginRouteRouteImport } from './routes/login/route';
-import { Route as FilmsRouteRouteImport } from './routes/films/route';
-import { Route as ConsoleRouteRouteImport } from './routes/console/route';
-import { Route as BooksRouteRouteImport } from './routes/books/route';
-import { Route as BoardGamesRouteRouteImport } from './routes/board-games/route';
-import { Route as IndexRouteImport } from './routes/index';
-import { Route as FilmsIdRouteImport } from './routes/films/$id';
-import { Route as FilmsStatsRouteRouteImport } from './routes/films_/stats/route';
-import { Route as ConsoleUserRouteRouteImport } from './routes/console/user/route';
-import { Route as ConsoleStudiosRouteRouteImport } from './routes/console/studios/route';
-import { Route as ConsoleSessionsRouteRouteImport } from './routes/console/sessions/route';
-import { Route as ConsolePeopleRouteRouteImport } from './routes/console/people/route';
-import { Route as ConsoleGenresRouteRouteImport } from './routes/console/genres/route';
-import { Route as ConsoleFilmsRouteRouteImport } from './routes/console/films/route';
-import { Route as ConsoleCountriesRouteRouteImport } from './routes/console/countries/route';
-import { Route as ConsoleCollectionsRouteRouteImport } from './routes/console/collections/route';
-import { Route as ConsoleCollectionEventsRouteRouteImport } from './routes/console/collection-events/route';
-import { Route as ConsoleBooksRouteRouteImport } from './routes/console/books/route';
-import { Route as ConsoleBoardGamesRouteRouteImport } from './routes/console/board-games/route';
-import { Route as ConsoleAwardsRouteRouteImport } from './routes/console/awards/route';
-import { Route as ConsoleRootIndexRouteImport } from './routes/console/_root/index';
-import { Route as ConsoleFilmsIdRouteImport } from './routes/console/films_/$id';
-import { Route as ConsoleBooksIdRouteImport } from './routes/console/books/$id';
-import { Route as ConsoleBoardGamesIdRouteImport } from './routes/console/board-games/$id';
-import { Route as ConsoleAwardsIdRouteImport } from './routes/console/awards_/$id';
-import { Route as ConsoleFilmsViewIdRouteImport } from './routes/console/films/view/$id';
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as LoginRouteRouteImport } from './routes/login/route'
+import { Route as FilmsRouteRouteImport } from './routes/films/route'
+import { Route as ConsoleRouteRouteImport } from './routes/console/route'
+import { Route as BooksRouteRouteImport } from './routes/books/route'
+import { Route as BoardGamesRouteRouteImport } from './routes/board-games/route'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as FilmsIdRouteImport } from './routes/films/$id'
+import { Route as FilmsStatsRouteRouteImport } from './routes/films_/stats/route'
+import { Route as ConsoleUserRouteRouteImport } from './routes/console/user/route'
+import { Route as ConsoleStudiosRouteRouteImport } from './routes/console/studios/route'
+import { Route as ConsoleSessionsRouteRouteImport } from './routes/console/sessions/route'
+import { Route as ConsolePeopleRouteRouteImport } from './routes/console/people/route'
+import { Route as ConsoleGenresRouteRouteImport } from './routes/console/genres/route'
+import { Route as ConsoleFilmsRouteRouteImport } from './routes/console/films/route'
+import { Route as ConsoleCountriesRouteRouteImport } from './routes/console/countries/route'
+import { Route as ConsoleCollectionsRouteRouteImport } from './routes/console/collections/route'
+import { Route as ConsoleCollectionEventsRouteRouteImport } from './routes/console/collection-events/route'
+import { Route as ConsoleBooksRouteRouteImport } from './routes/console/books/route'
+import { Route as ConsoleBoardGamesRouteRouteImport } from './routes/console/board-games/route'
+import { Route as ConsoleAwardsRouteRouteImport } from './routes/console/awards/route'
+import { Route as ConsoleRootIndexRouteImport } from './routes/console/_root/index'
+import { Route as ConsoleFilmsIdRouteImport } from './routes/console/films_/$id'
+import { Route as ConsoleBooksIdRouteImport } from './routes/console/books/$id'
+import { Route as ConsoleBoardGamesIdRouteImport } from './routes/console/board-games/$id'
+import { Route as ConsoleAwardsIdRouteImport } from './routes/console/awards_/$id'
+import { Route as ConsoleFilmsViewIdRouteImport } from './routes/console/films/view/$id'
 
 const LoginRouteRoute = LoginRouteRouteImport.update({
   id: '/login',
   path: '/login',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const FilmsRouteRoute = FilmsRouteRouteImport.update({
   id: '/films',
   path: '/films',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const ConsoleRouteRoute = ConsoleRouteRouteImport.update({
   id: '/console',
   path: '/console',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const BooksRouteRoute = BooksRouteRouteImport.update({
   id: '/books',
   path: '/books',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const BoardGamesRouteRoute = BoardGamesRouteRouteImport.update({
   id: '/board-games',
   path: '/board-games',
   getParentRoute: () => rootRouteImport,
-} as any);
-const HomeIndexRoute = HomeIndexRouteImport.update({
-  id: '/_home/',
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const FilmsIdRoute = FilmsIdRouteImport.update({
   id: '/$id',
   path: '/$id',
   getParentRoute: () => FilmsRouteRoute,
-} as any);
+} as any)
 const FilmsStatsRouteRoute = FilmsStatsRouteRouteImport.update({
   id: '/films_/stats',
   path: '/films/stats',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const ConsoleUserRouteRoute = ConsoleUserRouteRouteImport.update({
   id: '/user',
   path: '/user',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
 const ConsoleStudiosRouteRoute = ConsoleStudiosRouteRouteImport.update({
   id: '/studios',
   path: '/studios',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
 const ConsoleSessionsRouteRoute = ConsoleSessionsRouteRouteImport.update({
   id: '/sessions',
   path: '/sessions',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
 const ConsolePeopleRouteRoute = ConsolePeopleRouteRouteImport.update({
   id: '/people',
   path: '/people',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
 const ConsoleGenresRouteRoute = ConsoleGenresRouteRouteImport.update({
   id: '/genres',
   path: '/genres',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
 const ConsoleFilmsRouteRoute = ConsoleFilmsRouteRouteImport.update({
   id: '/films',
   path: '/films',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
 const ConsoleCountriesRouteRoute = ConsoleCountriesRouteRouteImport.update({
   id: '/countries',
   path: '/countries',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
 const ConsoleCollectionsRouteRoute = ConsoleCollectionsRouteRouteImport.update({
   id: '/collections',
   path: '/collections',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
-const ConsoleCollectionEventsRouteRoute = ConsoleCollectionEventsRouteRouteImport.update({
-  id: '/collection-events',
-  path: '/collection-events',
-  getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
+const ConsoleCollectionEventsRouteRoute =
+  ConsoleCollectionEventsRouteRouteImport.update({
+    id: '/collection-events',
+    path: '/collection-events',
+    getParentRoute: () => ConsoleRouteRoute,
+  } as any)
 const ConsoleBooksRouteRoute = ConsoleBooksRouteRouteImport.update({
   id: '/books',
   path: '/books',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
 const ConsoleBoardGamesRouteRoute = ConsoleBoardGamesRouteRouteImport.update({
   id: '/board-games',
   path: '/board-games',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
 const ConsoleAwardsRouteRoute = ConsoleAwardsRouteRouteImport.update({
   id: '/awards',
   path: '/awards',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
 const ConsoleRootIndexRoute = ConsoleRootIndexRouteImport.update({
   id: '/_root/',
   path: '/',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
 const ConsoleFilmsIdRoute = ConsoleFilmsIdRouteImport.update({
   id: '/films_/$id',
   path: '/films/$id',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
 const ConsoleBooksIdRoute = ConsoleBooksIdRouteImport.update({
   id: '/$id',
   path: '/$id',
   getParentRoute: () => ConsoleBooksRouteRoute,
-} as any);
+} as any)
 const ConsoleBoardGamesIdRoute = ConsoleBoardGamesIdRouteImport.update({
   id: '/$id',
   path: '/$id',
   getParentRoute: () => ConsoleBoardGamesRouteRoute,
-} as any);
+} as any)
 const ConsoleAwardsIdRoute = ConsoleAwardsIdRouteImport.update({
   id: '/awards_/$id',
   path: '/awards/$id',
   getParentRoute: () => ConsoleRouteRoute,
-} as any);
+} as any)
+const ConsoleFilmsViewIdRoute = ConsoleFilmsViewIdRouteImport.update({
+  id: '/view/$id',
+  path: '/view/$id',
+  getParentRoute: () => ConsoleFilmsRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
-  '/board-games': typeof BoardGamesRouteRoute;
-  '/books': typeof BooksRouteRoute;
-  '/console': typeof ConsoleRouteRouteWithChildren;
-  '/films': typeof FilmsRouteRouteWithChildren;
-  '/login': typeof LoginRouteRoute;
-  '/console/awards': typeof ConsoleAwardsRouteRoute;
-  '/console/board-games': typeof ConsoleBoardGamesRouteRouteWithChildren;
-  '/console/books': typeof ConsoleBooksRouteRouteWithChildren;
-  '/console/collection-events': typeof ConsoleCollectionEventsRouteRoute;
-  '/console/collections': typeof ConsoleCollectionsRouteRoute;
-  '/console/countries': typeof ConsoleCountriesRouteRoute;
-  '/console/films': typeof ConsoleFilmsRouteRouteWithChildren;
-  '/console/genres': typeof ConsoleGenresRouteRoute;
-  '/console/people': typeof ConsolePeopleRouteRoute;
-  '/console/sessions': typeof ConsoleSessionsRouteRoute;
-  '/console/studios': typeof ConsoleStudiosRouteRoute;
-  '/console/user': typeof ConsoleUserRouteRoute;
-  '/films/stats': typeof FilmsStatsRouteRoute;
-  '/': typeof HomeIndexRoute;
-  '/console/awards/$id': typeof ConsoleAwardsIdRoute;
-  '/console/board-games/$id': typeof ConsoleBoardGamesIdRoute;
-  '/console/books/$id': typeof ConsoleBooksIdRoute;
-  '/console/films/$id': typeof ConsoleFilmsIdRoute;
-  '/console/': typeof ConsoleRootIndexRoute;
-  '/console/films/view/$id': typeof ConsoleFilmsViewIdRoute;
+  '/': typeof IndexRoute
+  '/board-games': typeof BoardGamesRouteRoute
+  '/books': typeof BooksRouteRoute
+  '/console': typeof ConsoleRouteRouteWithChildren
+  '/films': typeof FilmsRouteRouteWithChildren
+  '/login': typeof LoginRouteRoute
+  '/console/awards': typeof ConsoleAwardsRouteRoute
+  '/console/board-games': typeof ConsoleBoardGamesRouteRouteWithChildren
+  '/console/books': typeof ConsoleBooksRouteRouteWithChildren
+  '/console/collection-events': typeof ConsoleCollectionEventsRouteRoute
+  '/console/collections': typeof ConsoleCollectionsRouteRoute
+  '/console/countries': typeof ConsoleCountriesRouteRoute
+  '/console/films': typeof ConsoleFilmsRouteRouteWithChildren
+  '/console/genres': typeof ConsoleGenresRouteRoute
+  '/console/people': typeof ConsolePeopleRouteRoute
+  '/console/sessions': typeof ConsoleSessionsRouteRoute
+  '/console/studios': typeof ConsoleStudiosRouteRoute
+  '/console/user': typeof ConsoleUserRouteRoute
+  '/films/stats': typeof FilmsStatsRouteRoute
+  '/films/$id': typeof FilmsIdRoute
+  '/console/awards/$id': typeof ConsoleAwardsIdRoute
+  '/console/board-games/$id': typeof ConsoleBoardGamesIdRoute
+  '/console/books/$id': typeof ConsoleBooksIdRoute
+  '/console/films/$id': typeof ConsoleFilmsIdRoute
+  '/console/': typeof ConsoleRootIndexRoute
+  '/console/films/view/$id': typeof ConsoleFilmsViewIdRoute
 }
 export interface FileRoutesByTo {
-  '/board-games': typeof BoardGamesRouteRoute;
-  '/books': typeof BooksRouteRoute;
-  '/films': typeof FilmsRouteRouteWithChildren;
-  '/login': typeof LoginRouteRoute;
-  '/console/awards': typeof ConsoleAwardsRouteRoute;
-  '/console/board-games': typeof ConsoleBoardGamesRouteRouteWithChildren;
-  '/console/books': typeof ConsoleBooksRouteRouteWithChildren;
-  '/console/collection-events': typeof ConsoleCollectionEventsRouteRoute;
-  '/console/collections': typeof ConsoleCollectionsRouteRoute;
-  '/console/countries': typeof ConsoleCountriesRouteRoute;
-  '/console/films': typeof ConsoleFilmsRouteRouteWithChildren;
-  '/console/genres': typeof ConsoleGenresRouteRoute;
-  '/console/people': typeof ConsolePeopleRouteRoute;
-  '/console/sessions': typeof ConsoleSessionsRouteRoute;
-  '/console/studios': typeof ConsoleStudiosRouteRoute;
-  '/console/user': typeof ConsoleUserRouteRoute;
-  '/films/stats': typeof FilmsStatsRouteRoute;
-  '/': typeof HomeIndexRoute;
-  '/console/awards/$id': typeof ConsoleAwardsIdRoute;
-  '/console/board-games/$id': typeof ConsoleBoardGamesIdRoute;
-  '/console/books/$id': typeof ConsoleBooksIdRoute;
-  '/console/films/$id': typeof ConsoleFilmsIdRoute;
-  '/console': typeof ConsoleRootIndexRoute;
-  '/console/films/view/$id': typeof ConsoleFilmsViewIdRoute;
+  '/': typeof IndexRoute
+  '/board-games': typeof BoardGamesRouteRoute
+  '/books': typeof BooksRouteRoute
+  '/films': typeof FilmsRouteRouteWithChildren
+  '/login': typeof LoginRouteRoute
+  '/console/awards': typeof ConsoleAwardsRouteRoute
+  '/console/board-games': typeof ConsoleBoardGamesRouteRouteWithChildren
+  '/console/books': typeof ConsoleBooksRouteRouteWithChildren
+  '/console/collection-events': typeof ConsoleCollectionEventsRouteRoute
+  '/console/collections': typeof ConsoleCollectionsRouteRoute
+  '/console/countries': typeof ConsoleCountriesRouteRoute
+  '/console/films': typeof ConsoleFilmsRouteRouteWithChildren
+  '/console/genres': typeof ConsoleGenresRouteRoute
+  '/console/people': typeof ConsolePeopleRouteRoute
+  '/console/sessions': typeof ConsoleSessionsRouteRoute
+  '/console/studios': typeof ConsoleStudiosRouteRoute
+  '/console/user': typeof ConsoleUserRouteRoute
+  '/films/stats': typeof FilmsStatsRouteRoute
+  '/films/$id': typeof FilmsIdRoute
+  '/console/awards/$id': typeof ConsoleAwardsIdRoute
+  '/console/board-games/$id': typeof ConsoleBoardGamesIdRoute
+  '/console/books/$id': typeof ConsoleBooksIdRoute
+  '/console/films/$id': typeof ConsoleFilmsIdRoute
+  '/console': typeof ConsoleRootIndexRoute
+  '/console/films/view/$id': typeof ConsoleFilmsViewIdRoute
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport;
-  '/board-games': typeof BoardGamesRouteRoute;
-  '/books': typeof BooksRouteRoute;
-  '/console': typeof ConsoleRouteRouteWithChildren;
-  '/films': typeof FilmsRouteRouteWithChildren;
-  '/login': typeof LoginRouteRoute;
-  '/console/awards': typeof ConsoleAwardsRouteRoute;
-  '/console/board-games': typeof ConsoleBoardGamesRouteRouteWithChildren;
-  '/console/books': typeof ConsoleBooksRouteRouteWithChildren;
-  '/console/collection-events': typeof ConsoleCollectionEventsRouteRoute;
-  '/console/collections': typeof ConsoleCollectionsRouteRoute;
-  '/console/countries': typeof ConsoleCountriesRouteRoute;
-  '/console/films': typeof ConsoleFilmsRouteRouteWithChildren;
-  '/console/genres': typeof ConsoleGenresRouteRoute;
-  '/console/people': typeof ConsolePeopleRouteRoute;
-  '/console/sessions': typeof ConsoleSessionsRouteRoute;
-  '/console/studios': typeof ConsoleStudiosRouteRoute;
-  '/console/user': typeof ConsoleUserRouteRoute;
-  '/films/stats': typeof FilmsStatsRouteRoute;
-  '/_home/': typeof HomeIndexRoute;
-  '/console/awards_/$id': typeof ConsoleAwardsIdRoute;
-  '/console/board-games/$id': typeof ConsoleBoardGamesIdRoute;
-  '/console/books/$id': typeof ConsoleBooksIdRoute;
-  '/console/films_/$id': typeof ConsoleFilmsIdRoute;
-  '/console/_root/': typeof ConsoleRootIndexRoute;
-  '/console/films/view/$id': typeof ConsoleFilmsViewIdRoute;
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/board-games': typeof BoardGamesRouteRoute
+  '/books': typeof BooksRouteRoute
+  '/console': typeof ConsoleRouteRouteWithChildren
+  '/films': typeof FilmsRouteRouteWithChildren
+  '/login': typeof LoginRouteRoute
+  '/console/awards': typeof ConsoleAwardsRouteRoute
+  '/console/board-games': typeof ConsoleBoardGamesRouteRouteWithChildren
+  '/console/books': typeof ConsoleBooksRouteRouteWithChildren
+  '/console/collection-events': typeof ConsoleCollectionEventsRouteRoute
+  '/console/collections': typeof ConsoleCollectionsRouteRoute
+  '/console/countries': typeof ConsoleCountriesRouteRoute
+  '/console/films': typeof ConsoleFilmsRouteRouteWithChildren
+  '/console/genres': typeof ConsoleGenresRouteRoute
+  '/console/people': typeof ConsolePeopleRouteRoute
+  '/console/sessions': typeof ConsoleSessionsRouteRoute
+  '/console/studios': typeof ConsoleStudiosRouteRoute
+  '/console/user': typeof ConsoleUserRouteRoute
+  '/films_/stats': typeof FilmsStatsRouteRoute
+  '/films/$id': typeof FilmsIdRoute
+  '/console/awards_/$id': typeof ConsoleAwardsIdRoute
+  '/console/board-games/$id': typeof ConsoleBoardGamesIdRoute
+  '/console/books/$id': typeof ConsoleBooksIdRoute
+  '/console/films_/$id': typeof ConsoleFilmsIdRoute
+  '/console/_root/': typeof ConsoleRootIndexRoute
+  '/console/films/view/$id': typeof ConsoleFilmsViewIdRoute
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath;
+  fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
+    | '/'
     | '/board-games'
     | '/books'
     | '/console'
@@ -264,15 +274,16 @@ export interface FileRouteTypes {
     | '/console/studios'
     | '/console/user'
     | '/films/stats'
-    | '/'
+    | '/films/$id'
     | '/console/awards/$id'
     | '/console/board-games/$id'
     | '/console/books/$id'
     | '/console/films/$id'
     | '/console/'
-    | '/console/films/view/$id';
-  fileRoutesByTo: FileRoutesByTo;
+    | '/console/films/view/$id'
+  fileRoutesByTo: FileRoutesByTo
   to:
+    | '/'
     | '/board-games'
     | '/books'
     | '/films'
@@ -290,15 +301,16 @@ export interface FileRouteTypes {
     | '/console/studios'
     | '/console/user'
     | '/films/stats'
-    | '/'
+    | '/films/$id'
     | '/console/awards/$id'
     | '/console/board-games/$id'
     | '/console/books/$id'
     | '/console/films/$id'
     | '/console'
-    | '/console/films/view/$id';
+    | '/console/films/view/$id'
   id:
     | '__root__'
+    | '/'
     | '/board-games'
     | '/books'
     | '/console'
@@ -316,257 +328,265 @@ export interface FileRouteTypes {
     | '/console/sessions'
     | '/console/studios'
     | '/console/user'
-    | '/films/stats'
-    | '/_home/'
+    | '/films_/stats'
+    | '/films/$id'
     | '/console/awards_/$id'
     | '/console/board-games/$id'
     | '/console/books/$id'
     | '/console/films_/$id'
     | '/console/_root/'
-    | '/console/films/view/$id';
-  fileRoutesById: FileRoutesById;
+    | '/console/films/view/$id'
+  fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  BoardGamesRouteRoute: typeof BoardGamesRouteRoute;
-  BooksRouteRoute: typeof BooksRouteRoute;
-  ConsoleRouteRoute: typeof ConsoleRouteRouteWithChildren;
-  FilmsRouteRoute: typeof FilmsRouteRouteWithChildren;
-  LoginRouteRoute: typeof LoginRouteRoute;
-  FilmsStatsRouteRoute: typeof FilmsStatsRouteRoute;
+  IndexRoute: typeof IndexRoute
+  BoardGamesRouteRoute: typeof BoardGamesRouteRoute
+  BooksRouteRoute: typeof BooksRouteRoute
+  ConsoleRouteRoute: typeof ConsoleRouteRouteWithChildren
+  FilmsRouteRoute: typeof FilmsRouteRouteWithChildren
+  LoginRouteRoute: typeof LoginRouteRoute
+  FilmsStatsRouteRoute: typeof FilmsStatsRouteRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
     '/login': {
-      id: '/login';
-      path: '/login';
-      fullPath: '/login';
-      preLoaderRoute: typeof LoginRouteRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/films': {
-      id: '/films';
-      path: '/films';
-      fullPath: '/films';
-      preLoaderRoute: typeof FilmsRouteRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/films'
+      path: '/films'
+      fullPath: '/films'
+      preLoaderRoute: typeof FilmsRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/console': {
-      id: '/console';
-      path: '/console';
-      fullPath: '/console';
-      preLoaderRoute: typeof ConsoleRouteRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/console'
+      path: '/console'
+      fullPath: '/console'
+      preLoaderRoute: typeof ConsoleRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/books': {
-      id: '/books';
-      path: '/books';
-      fullPath: '/books';
-      preLoaderRoute: typeof BooksRouteRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/books'
+      path: '/books'
+      fullPath: '/books'
+      preLoaderRoute: typeof BooksRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/board-games': {
-      id: '/board-games';
-      path: '/board-games';
-      fullPath: '/board-games';
-      preLoaderRoute: typeof BoardGamesRouteRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    '/_home/': {
-      id: '/_home/';
-      path: '/';
-      fullPath: '/';
-      preLoaderRoute: typeof IndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/board-games'
+      path: '/board-games'
+      fullPath: '/board-games'
+      preLoaderRoute: typeof BoardGamesRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/films/$id': {
-      id: '/films/$id';
-      path: '/$id';
-      fullPath: '/films/$id';
-      preLoaderRoute: typeof FilmsIdRouteImport;
-      parentRoute: typeof FilmsRouteRoute;
-    };
+      id: '/films/$id'
+      path: '/$id'
+      fullPath: '/films/$id'
+      preLoaderRoute: typeof FilmsIdRouteImport
+      parentRoute: typeof FilmsRouteRoute
+    }
     '/films_/stats': {
-      id: '/films_/stats';
-      path: '/films/stats';
-      fullPath: '/films/stats';
-      preLoaderRoute: typeof FilmsStatsRouteRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/films_/stats'
+      path: '/films/stats'
+      fullPath: '/films/stats'
+      preLoaderRoute: typeof FilmsStatsRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/console/user': {
-      id: '/console/user';
-      path: '/user';
-      fullPath: '/console/user';
-      preLoaderRoute: typeof ConsoleUserRouteRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/user'
+      path: '/user'
+      fullPath: '/console/user'
+      preLoaderRoute: typeof ConsoleUserRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/studios': {
-      id: '/console/studios';
-      path: '/studios';
-      fullPath: '/console/studios';
-      preLoaderRoute: typeof ConsoleStudiosRouteRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/studios'
+      path: '/studios'
+      fullPath: '/console/studios'
+      preLoaderRoute: typeof ConsoleStudiosRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/sessions': {
-      id: '/console/sessions';
-      path: '/sessions';
-      fullPath: '/console/sessions';
-      preLoaderRoute: typeof ConsoleSessionsRouteRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/sessions'
+      path: '/sessions'
+      fullPath: '/console/sessions'
+      preLoaderRoute: typeof ConsoleSessionsRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/people': {
-      id: '/console/people';
-      path: '/people';
-      fullPath: '/console/people';
-      preLoaderRoute: typeof ConsolePeopleRouteRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/people'
+      path: '/people'
+      fullPath: '/console/people'
+      preLoaderRoute: typeof ConsolePeopleRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/genres': {
-      id: '/console/genres';
-      path: '/genres';
-      fullPath: '/console/genres';
-      preLoaderRoute: typeof ConsoleGenresRouteRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/genres'
+      path: '/genres'
+      fullPath: '/console/genres'
+      preLoaderRoute: typeof ConsoleGenresRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/films': {
-      id: '/console/films';
-      path: '/films';
-      fullPath: '/console/films';
-      preLoaderRoute: typeof ConsoleFilmsRouteRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/films'
+      path: '/films'
+      fullPath: '/console/films'
+      preLoaderRoute: typeof ConsoleFilmsRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/countries': {
-      id: '/console/countries';
-      path: '/countries';
-      fullPath: '/console/countries';
-      preLoaderRoute: typeof ConsoleCountriesRouteRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/countries'
+      path: '/countries'
+      fullPath: '/console/countries'
+      preLoaderRoute: typeof ConsoleCountriesRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/collections': {
-      id: '/console/collections';
-      path: '/collections';
-      fullPath: '/console/collections';
-      preLoaderRoute: typeof ConsoleCollectionsRouteRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/collections'
+      path: '/collections'
+      fullPath: '/console/collections'
+      preLoaderRoute: typeof ConsoleCollectionsRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/collection-events': {
-      id: '/console/collection-events';
-      path: '/collection-events';
-      fullPath: '/console/collection-events';
-      preLoaderRoute: typeof ConsoleCollectionEventsRouteRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/collection-events'
+      path: '/collection-events'
+      fullPath: '/console/collection-events'
+      preLoaderRoute: typeof ConsoleCollectionEventsRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/books': {
-      id: '/console/books';
-      path: '/books';
-      fullPath: '/console/books';
-      preLoaderRoute: typeof ConsoleBooksRouteRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/books'
+      path: '/books'
+      fullPath: '/console/books'
+      preLoaderRoute: typeof ConsoleBooksRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/board-games': {
-      id: '/console/board-games';
-      path: '/board-games';
-      fullPath: '/console/board-games';
-      preLoaderRoute: typeof ConsoleBoardGamesRouteRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/board-games'
+      path: '/board-games'
+      fullPath: '/console/board-games'
+      preLoaderRoute: typeof ConsoleBoardGamesRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/awards': {
-      id: '/console/awards';
-      path: '/awards';
-      fullPath: '/console/awards';
-      preLoaderRoute: typeof ConsoleAwardsRouteRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/awards'
+      path: '/awards'
+      fullPath: '/console/awards'
+      preLoaderRoute: typeof ConsoleAwardsRouteRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/_root/': {
-      id: '/console/_root/';
-      path: '/';
-      fullPath: '/console/';
-      preLoaderRoute: typeof ConsoleRootIndexRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/_root/'
+      path: '/'
+      fullPath: '/console/'
+      preLoaderRoute: typeof ConsoleRootIndexRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/films_/$id': {
-      id: '/console/films_/$id';
-      path: '/films/$id';
-      fullPath: '/console/films/$id';
-      preLoaderRoute: typeof ConsoleFilmsIdRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/films_/$id'
+      path: '/films/$id'
+      fullPath: '/console/films/$id'
+      preLoaderRoute: typeof ConsoleFilmsIdRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
     '/console/books/$id': {
-      id: '/console/books/$id';
-      path: '/$id';
-      fullPath: '/console/books/$id';
-      preLoaderRoute: typeof ConsoleBooksIdRouteImport;
-      parentRoute: typeof ConsoleBooksRouteRoute;
-    };
+      id: '/console/books/$id'
+      path: '/$id'
+      fullPath: '/console/books/$id'
+      preLoaderRoute: typeof ConsoleBooksIdRouteImport
+      parentRoute: typeof ConsoleBooksRouteRoute
+    }
     '/console/board-games/$id': {
-      id: '/console/board-games/$id';
-      path: '/$id';
-      fullPath: '/console/board-games/$id';
-      preLoaderRoute: typeof ConsoleBoardGamesIdRouteImport;
-      parentRoute: typeof ConsoleBoardGamesRouteRoute;
-    };
+      id: '/console/board-games/$id'
+      path: '/$id'
+      fullPath: '/console/board-games/$id'
+      preLoaderRoute: typeof ConsoleBoardGamesIdRouteImport
+      parentRoute: typeof ConsoleBoardGamesRouteRoute
+    }
     '/console/awards_/$id': {
-      id: '/console/awards_/$id';
-      path: '/awards/$id';
-      fullPath: '/console/awards/$id';
-      preLoaderRoute: typeof ConsoleAwardsIdRouteImport;
-      parentRoute: typeof ConsoleRouteRoute;
-    };
+      id: '/console/awards_/$id'
+      path: '/awards/$id'
+      fullPath: '/console/awards/$id'
+      preLoaderRoute: typeof ConsoleAwardsIdRouteImport
+      parentRoute: typeof ConsoleRouteRoute
+    }
+    '/console/films/view/$id': {
+      id: '/console/films/view/$id'
+      path: '/view/$id'
+      fullPath: '/console/films/view/$id'
+      preLoaderRoute: typeof ConsoleFilmsViewIdRouteImport
+      parentRoute: typeof ConsoleFilmsRouteRoute
+    }
   }
 }
 
 interface ConsoleBoardGamesRouteRouteChildren {
-  ConsoleBoardGamesIdRoute: typeof ConsoleBoardGamesIdRoute;
+  ConsoleBoardGamesIdRoute: typeof ConsoleBoardGamesIdRoute
 }
 
-const ConsoleBoardGamesRouteRouteChildren: ConsoleBoardGamesRouteRouteChildren = {
-  ConsoleBoardGamesIdRoute: ConsoleBoardGamesIdRoute,
-};
+const ConsoleBoardGamesRouteRouteChildren: ConsoleBoardGamesRouteRouteChildren =
+  {
+    ConsoleBoardGamesIdRoute: ConsoleBoardGamesIdRoute,
+  }
 
-const ConsoleBoardGamesRouteRouteWithChildren = ConsoleBoardGamesRouteRoute._addFileChildren(
-  ConsoleBoardGamesRouteRouteChildren,
-);
+const ConsoleBoardGamesRouteRouteWithChildren =
+  ConsoleBoardGamesRouteRoute._addFileChildren(
+    ConsoleBoardGamesRouteRouteChildren,
+  )
 
 interface ConsoleBooksRouteRouteChildren {
-  ConsoleBooksIdRoute: typeof ConsoleBooksIdRoute;
+  ConsoleBooksIdRoute: typeof ConsoleBooksIdRoute
 }
 
 const ConsoleBooksRouteRouteChildren: ConsoleBooksRouteRouteChildren = {
   ConsoleBooksIdRoute: ConsoleBooksIdRoute,
-};
+}
 
-const ConsoleBooksRouteRouteWithChildren = ConsoleBooksRouteRoute._addFileChildren(
-  ConsoleBooksRouteRouteChildren,
-);
+const ConsoleBooksRouteRouteWithChildren =
+  ConsoleBooksRouteRoute._addFileChildren(ConsoleBooksRouteRouteChildren)
 
 interface ConsoleFilmsRouteRouteChildren {
-  ConsoleFilmsViewIdRoute: typeof ConsoleFilmsViewIdRoute;
+  ConsoleFilmsViewIdRoute: typeof ConsoleFilmsViewIdRoute
 }
 
 const ConsoleFilmsRouteRouteChildren: ConsoleFilmsRouteRouteChildren = {
   ConsoleFilmsViewIdRoute: ConsoleFilmsViewIdRoute,
-};
+}
 
-const ConsoleFilmsRouteRouteWithChildren = ConsoleFilmsRouteRoute._addFileChildren(
-  ConsoleFilmsRouteRouteChildren,
-);
+const ConsoleFilmsRouteRouteWithChildren =
+  ConsoleFilmsRouteRoute._addFileChildren(ConsoleFilmsRouteRouteChildren)
 
 interface ConsoleRouteRouteChildren {
-  ConsoleAwardsRouteRoute: typeof ConsoleAwardsRouteRoute;
-  ConsoleBoardGamesRouteRoute: typeof ConsoleBoardGamesRouteRouteWithChildren;
-  ConsoleBooksRouteRoute: typeof ConsoleBooksRouteRouteWithChildren;
-  ConsoleCollectionEventsRouteRoute: typeof ConsoleCollectionEventsRouteRoute;
-  ConsoleCollectionsRouteRoute: typeof ConsoleCollectionsRouteRoute;
-  ConsoleCountriesRouteRoute: typeof ConsoleCountriesRouteRoute;
-  ConsoleFilmsRouteRoute: typeof ConsoleFilmsRouteRouteWithChildren;
-  ConsoleGenresRouteRoute: typeof ConsoleGenresRouteRoute;
-  ConsolePeopleRouteRoute: typeof ConsolePeopleRouteRoute;
-  ConsoleSessionsRouteRoute: typeof ConsoleSessionsRouteRoute;
-  ConsoleStudiosRouteRoute: typeof ConsoleStudiosRouteRoute;
-  ConsoleUserRouteRoute: typeof ConsoleUserRouteRoute;
-  ConsoleAwardsIdRoute: typeof ConsoleAwardsIdRoute;
-  ConsoleFilmsIdRoute: typeof ConsoleFilmsIdRoute;
-  ConsoleRootIndexRoute: typeof ConsoleRootIndexRoute;
+  ConsoleAwardsRouteRoute: typeof ConsoleAwardsRouteRoute
+  ConsoleBoardGamesRouteRoute: typeof ConsoleBoardGamesRouteRouteWithChildren
+  ConsoleBooksRouteRoute: typeof ConsoleBooksRouteRouteWithChildren
+  ConsoleCollectionEventsRouteRoute: typeof ConsoleCollectionEventsRouteRoute
+  ConsoleCollectionsRouteRoute: typeof ConsoleCollectionsRouteRoute
+  ConsoleCountriesRouteRoute: typeof ConsoleCountriesRouteRoute
+  ConsoleFilmsRouteRoute: typeof ConsoleFilmsRouteRouteWithChildren
+  ConsoleGenresRouteRoute: typeof ConsoleGenresRouteRoute
+  ConsolePeopleRouteRoute: typeof ConsolePeopleRouteRoute
+  ConsoleSessionsRouteRoute: typeof ConsoleSessionsRouteRoute
+  ConsoleStudiosRouteRoute: typeof ConsoleStudiosRouteRoute
+  ConsoleUserRouteRoute: typeof ConsoleUserRouteRoute
+  ConsoleAwardsIdRoute: typeof ConsoleAwardsIdRoute
+  ConsoleFilmsIdRoute: typeof ConsoleFilmsIdRoute
+  ConsoleRootIndexRoute: typeof ConsoleRootIndexRoute
 }
 
 const ConsoleRouteRouteChildren: ConsoleRouteRouteChildren = {
@@ -585,28 +605,33 @@ const ConsoleRouteRouteChildren: ConsoleRouteRouteChildren = {
   ConsoleAwardsIdRoute: ConsoleAwardsIdRoute,
   ConsoleFilmsIdRoute: ConsoleFilmsIdRoute,
   ConsoleRootIndexRoute: ConsoleRootIndexRoute,
-};
+}
 
-const ConsoleRouteRouteWithChildren = ConsoleRouteRoute._addFileChildren(ConsoleRouteRouteChildren);
+const ConsoleRouteRouteWithChildren = ConsoleRouteRoute._addFileChildren(
+  ConsoleRouteRouteChildren,
+)
 
 interface FilmsRouteRouteChildren {
-  FilmsIdRoute: typeof FilmsIdRoute;
+  FilmsIdRoute: typeof FilmsIdRoute
 }
 
 const FilmsRouteRouteChildren: FilmsRouteRouteChildren = {
   FilmsIdRoute: FilmsIdRoute,
-};
+}
 
-const FilmsRouteRouteWithChildren = FilmsRouteRoute._addFileChildren(FilmsRouteRouteChildren);
+const FilmsRouteRouteWithChildren = FilmsRouteRoute._addFileChildren(
+  FilmsRouteRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
   BoardGamesRouteRoute: BoardGamesRouteRoute,
   BooksRouteRoute: BooksRouteRoute,
   ConsoleRouteRoute: ConsoleRouteRouteWithChildren,
   FilmsRouteRoute: FilmsRouteRouteWithChildren,
   LoginRouteRoute: LoginRouteRoute,
   FilmsStatsRouteRoute: FilmsStatsRouteRoute,
-};
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>();
+  ._addFileTypes<FileRouteTypes>()
