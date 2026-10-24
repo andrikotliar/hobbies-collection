@@ -2,7 +2,6 @@ import type { CompleteDataResponse, CompleteDataListItem } from '@hobbies-collec
 import { database } from '~/plugins/database.plugin.js';
 import {
   awards,
-  collections,
   countries,
   filmAwardNominations,
   films,
@@ -172,7 +171,6 @@ const seedFilms = async () => {
     await getMaxIdAndRestartAutoIncrement(tr, countries, 'countries');
     await getMaxIdAndRestartAutoIncrement(tr, studios, 'studios');
     await getMaxIdAndRestartAutoIncrement(tr, people, 'people');
-    await getMaxIdAndRestartAutoIncrement(tr, collections, 'collections');
     await getMaxIdAndRestartAutoIncrement(tr, films, 'films');
   });
 
