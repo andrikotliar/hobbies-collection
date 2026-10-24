@@ -1,18 +1,12 @@
 import {
-  CollectionCategory,
   getSkipValue,
   PAGE_LIMITS,
-  type CollectionListQueryParams,
+  type CommonListQueryParams,
   type CreateCollectionInput,
   type UpdateCollectionInput,
 } from '@hobbies-collection/shared';
-import { and, asc, count, eq, ne, inArray, type SQL, exists } from 'drizzle-orm';
-import {
-  collections,
-  filmsCollections,
-  hobbyItems,
-  hobbyItemsCollections,
-} from '~/database/schema.js';
+import { and, asc, eq, type SQL, exists } from 'drizzle-orm';
+import { collections, hobbyItems, hobbyItemsCollections } from '~/database/schema.js';
 import { getCount } from '~/shared/helpers/get-count.js';
 import { getFirstValue } from '~/shared/helpers/get-first-value.js';
 import { mapCommonFilters } from '~/shared/helpers/map-common-filters.js';
@@ -30,34 +24,21 @@ export class CollectionsRepository {
       .select({
         id: collections.id,
         title: collections.title,
-        category: collections.category,
       })
       .from(collections)
+      .where(eq(collections.category, 'GENERAL'))
       .orderBy(asc(collections.title));
   }
 
-  getCollectionOptions() {
-    return this.deps.db
-      .select({
-        id: collections.id,
-        title: collections.title,
-        category: collections.category,
-      })
-      .from(collections)
-      .where(ne(collections.category, 'CHAPTER'))
-      .orderBy(asc(collections.title));
-  }
-
-  async getList(queries: CollectionListQueryParams) {
+  async getList(queries: CommonListQueryParams) {
     const filters = mapCommonFilters(queries, collections);
     const list = await this.deps.db
       .select({
         id: collections.id,
         title: collections.title,
-        category: collections.category,
       })
       .from(collections)
-      .where(and(...filters))
+      .where(and(...filters, eq(collections.category, 'GENERAL')))
       .orderBy(asc(collections.title))
       .limit(PAGE_LIMITS.default)
       .offset(getSkipValue('default', queries.pageIndex));
@@ -65,24 +46,6 @@ export class CollectionsRepository {
     const total = await this.count(filters);
 
     return { list, total };
-  }
-
-  getChapterRelatedCollections() {
-    return this.deps.db
-      .select({
-        id: collections.id,
-        title: collections.title,
-        category: collections.category,
-        updatedAt: collections.updatedAt,
-      })
-      .from(collections)
-      .where(
-        inArray(collections.category, [
-          CollectionCategory.CHAPTER,
-          CollectionCategory.CINEMATIC_UNIVERSE,
-        ]),
-      )
-      .orderBy(asc(collections.title));
   }
 
   count(filters?: SQL[]) {
@@ -105,17 +68,6 @@ export class CollectionsRepository {
       .returning();
 
     return collection;
-  }
-
-  async countFilmsByCollection(collectionId: number) {
-    const [result] = await this.deps.db
-      .select({
-        count: count(),
-      })
-      .from(filmsCollections)
-      .where(eq(filmsCollections.collectionId, collectionId));
-
-    return result.count;
   }
 
   async getHobbyRelatedCollections(hobbyId: number) {

@@ -43,11 +43,11 @@ import {
   studios,
   type FilmCollection,
 } from '~/database/schema.js';
-import type {
-  PgColumn,
-  PgInsertValue,
-  PgTableWithColumns,
-  PgTransaction,
+import {
+  type PgColumn,
+  type PgInsertValue,
+  type PgTableWithColumns,
+  type PgTransaction,
 } from 'drizzle-orm/pg-core';
 import type { Timestamps } from '~/modules/films/types.js';
 import type { Deps } from '~/shared/types/deps.js';
@@ -98,7 +98,7 @@ export class FilmsRepository {
 
   async findAndCount(queries: PlainFilmFilters, level: FilterLevel = 'public') {
     const { filters, drafts } = mapListFilters(queries, this.deps.db);
-    const sorting = this.mapSorting(queries.orderKey, queries.order, queries);
+    const sorting = this.mapSorting(queries.orderKey, queries.order);
 
     const list = await this.deps.db
       .select()
@@ -136,7 +136,18 @@ export class FilmsRepository {
         rating: true,
         type: true,
         synopsis: true,
+        originFilmId: true,
       },
+      extras: (table, { sql }) => ({
+        hasChapters: sql<boolean>`
+          ${table.originFilmId} IS NOT NULL
+          OR EXISTS (
+            SELECT 1
+            FROM ${films}
+            WHERE ${films.originFilmId} = ${table.id}
+          )
+        `.as('hasChapters'),
+      }),
       with: {
         genres: {
           with: {
@@ -686,6 +697,8 @@ export class FilmsRepository {
         boxOffice: true,
         type: true,
         imagePath: true,
+        sequenceNumber: true,
+        originFilmId: true,
       },
       with: {
         countries: {
@@ -771,7 +784,6 @@ export class FilmsRepository {
               columns: {
                 title: true,
                 id: true,
-                category: true,
               },
             },
           },
@@ -975,11 +987,7 @@ export class FilmsRepository {
       .where(eq(filmsCollections.collectionId, collectionId));
   }
 
-  private mapSorting(
-    key: string = 'releaseDate',
-    direction: SortingOrder = 'desc',
-    queries?: PlainFilmFilters,
-  ) {
+  private mapSorting(key: string = 'releaseDate', direction: SortingOrder = 'desc') {
     const directions = {
       asc,
       desc,
@@ -988,21 +996,8 @@ export class FilmsRepository {
     const fn = directions[direction];
 
     switch (key) {
-      case 'collectionOrder':
-        if (!queries?.collectionId) {
-          return fn(films.releaseDate);
-        }
-        return asc(
-          this.deps.db
-            .select({ order: filmsCollections.order })
-            .from(filmsCollections)
-            .where(
-              and(
-                eq(films.id, filmsCollections.filmId),
-                eq(filmsCollections.collectionId, queries.collectionId),
-              ),
-            ),
-        );
+      case 'originFilmId':
+        return asc(films.sequenceNumber);
       case 'title':
         return fn(films.title);
       case 'createdAt':

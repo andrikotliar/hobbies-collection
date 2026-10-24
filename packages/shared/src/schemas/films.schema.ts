@@ -141,10 +141,11 @@ export const FilmResponseSchema = z.object({
   releaseDate: z.string().nullable(),
   budget: z.coerce.number().nullable(),
   boxOffice: z.coerce.number().nullable(),
+  chaptersRefId: z.number().nullable(),
   genres: z.array(GenreResponseSchema.omit({ createdAt: true, updatedAt: true })),
   studios: z.array(StudioResponseSchema.omit({ createdAt: true, updatedAt: true })),
   countries: z.array(CountryResponseSchema.omit({ createdAt: true, updatedAt: true })),
-  collections: z.array(CollectionResponseSchema.pick({ id: true, title: true, category: true })),
+  collections: z.array(CollectionResponseSchema.pick({ id: true, title: true })),
   trailers: z.array(TrailerSchema),
   awards: z.array(
     z.object({
@@ -183,6 +184,7 @@ export const FilmsListResponseSchema = getListResponseSchema(
       upcoming: z.boolean(),
       inDays: z.number().nullable(),
       releasedYears: z.number().nullable(),
+      sequenceNumber: z.number(),
     }),
   ),
 ).extend({
@@ -261,6 +263,8 @@ export const CompleteDataListItemSchema = z.object({
     synopsis: true,
     imagePath: true,
   }).shape,
+  originFilmId: z.number().nullable(),
+  sequenceNumber: z.number(),
   genres: z.array(GenreResponseSchema.pick({ title: true, id: true })),
   countries: z.array(CountryResponseSchema.pick({ title: true, id: true })),
   studios: z.array(StudioResponseSchema.pick({ title: true, id: true })),
@@ -280,13 +284,6 @@ export const CompleteDataListItemSchema = z.object({
       details: z.string().nullable(),
     }),
   ),
-  collections: z.array(
-    z.object({
-      id: z.number(),
-      title: z.string(),
-      order: z.number(),
-    }),
-  ),
   seriesExtension: z
     .object({
       id: z.number(),
@@ -303,7 +300,6 @@ export const CompleteDataResponseSchema = z.object({
     countries: z.array(CountryResponseSchema.pick({ title: true, id: true })),
     studios: z.array(StudioResponseSchema.pick({ title: true, id: true })),
     people: z.array(PersonResponseSchema.pick({ name: true, id: true })),
-    collections: z.array(CollectionResponseSchema.pick({ title: true, id: true, category: true })),
     awards: z.array(
       z.object({
         ...AwardResponseSchema.pick({ id: true, title: true }).shape,

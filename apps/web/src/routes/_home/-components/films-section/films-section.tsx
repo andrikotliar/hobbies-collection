@@ -51,8 +51,8 @@ const sortingFields: ListOption<string, { isNotSelectable?: boolean }>[] = [
     value: 'boxOffice',
   },
   {
-    label: 'Collection order',
-    value: 'collectionId',
+    label: 'Sequence Number',
+    value: 'sequenceNumber',
     isNotSelectable: true,
   },
 ];
@@ -141,9 +141,9 @@ export const FilmsSection = () => {
           <SortingPopup
             fields={sortingFields}
             onSorting={handleSorting}
-            defaultOrder={sortingValues.order}
+            defaultOrder={searchParams.orderKey === 'sequenceNumber' ? 'asc' : sortingValues.order}
             defaultOrderKey={sortingValues.orderKey}
-            isDisabled={searchParams.collectionId !== undefined}
+            isDisabled={searchParams.orderKey === 'sequenceNumber'}
             buttonWrapperClassName={styles.sorting}
           />
           <div className={styles.mobile_filter}>
@@ -166,7 +166,10 @@ export const FilmsSection = () => {
       {isFetching ? (
         <FilmsGridSkeleton />
       ) : (
-        <FilmsGrid films={data?.list ?? []} isCollection={!!searchParams.collectionId} />
+        <FilmsGrid
+          films={data?.list ?? []}
+          shouldShowCounter={searchParams.orderKey === 'sequenceNumber'}
+        />
       )}
       {data && data.total > 0 && (
         <Pagination

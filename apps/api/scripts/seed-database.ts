@@ -6,7 +6,6 @@ import {
   countries,
   filmAwardNominations,
   films,
-  filmsCollections,
   filmsCountries,
   filmsGenres,
   filmsPeople,
@@ -52,10 +51,6 @@ const seedFilms = async () => {
       data: baseData.people,
       table: people,
     },
-    {
-      data: baseData.collections,
-      table: collections,
-    },
   ];
 
   await database.transaction(async (tr) => {
@@ -89,7 +84,6 @@ const seedFilms = async () => {
         trailers,
         castAndCrew,
         awards,
-        collections,
         ...filmDetails
       } = film;
 
@@ -158,16 +152,6 @@ const seedFilms = async () => {
             })),
           );
         }
-      }
-
-      if (collections.length) {
-        await tr.insert(filmsCollections).values(
-          collections.map((collection) => ({
-            filmId,
-            collectionId: collection.id,
-            order: collection.order,
-          })),
-        );
       }
 
       if (castAndCrew) {

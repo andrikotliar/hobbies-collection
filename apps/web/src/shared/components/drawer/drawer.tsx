@@ -4,13 +4,14 @@ import { XIcon } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import { BLOCKING_SCROLL_CLASS_NAME } from '~/shared/constants';
 import { useDrawer } from '~/shared/hooks';
-
-type Size = 'narrow' | 'wide';
 type Position = 'left' | 'right';
 
 type DrawerProps = {
   children: React.ReactNode;
-  size?: Size;
+  /**
+   * @default 1080
+   */
+  maxWidth?: number;
   isOpen: boolean;
   position?: Position;
   onClose: VoidFunction;
@@ -19,7 +20,7 @@ type DrawerProps = {
 
 export const Drawer = ({
   children,
-  size = 'wide',
+  maxWidth = 1080,
   isOpen,
   onClose,
   position = 'right',
@@ -41,12 +42,7 @@ export const Drawer = ({
 
   return createPortal(
     <div
-      className={clsx(
-        styles.drawer_wrapper,
-        styles[position],
-        styles[size],
-        BLOCKING_SCROLL_CLASS_NAME,
-      )}
+      className={clsx(styles.drawer_wrapper, styles[position], BLOCKING_SCROLL_CLASS_NAME)}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
@@ -55,6 +51,7 @@ export const Drawer = ({
       onTouchEnd={handleMouseUp}
       onTouchMove={handleTouchMove}
       ref={drawerRef}
+      style={{ maxWidth }}
     >
       <div className={styles.close_button_holder}>
         <button className={styles.close_button} onClick={handleClose}>

@@ -29,18 +29,8 @@
   background-color: var(--color-white);
   border-bottom-left-radius: 10px;
   margin-left: auto;
-  width: var(--drawer-close-button-size);
-  height: var(--drawer-close-button-size);
-}
-
-.wide {
-  --drawer-max-width: 1080px;
-  --drawer-close-button-size: 40px;
-}
-
-.narrow {
-  --drawer-max-width: 320px;
-  --drawer-close-button-size: 24px;
+  width: 30px;
+  height: 30px;
 }
 
 .close_button_holder {

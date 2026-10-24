@@ -10,7 +10,6 @@ export const InitialDataResponseSchema = z.object({
     types: buildListOptionSchema(z.string()),
     roles: buildListOptionSchema(z.string()),
     awards: buildListOptionSchema(z.coerce.number()),
-    collectionCategories: buildListOptionSchema(z.string()),
     selectedPeople: buildListOptionSchema(z.coerce.number()),
   }),
 });

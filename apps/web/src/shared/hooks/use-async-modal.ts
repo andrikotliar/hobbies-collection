@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 type AsyncModalParams<D, R> = {
   data: D;
-  resolve: (category: R) => void;
+  resolve: (value: R) => void;
 };
 
 export const useAsyncModal = <D, R>() => {

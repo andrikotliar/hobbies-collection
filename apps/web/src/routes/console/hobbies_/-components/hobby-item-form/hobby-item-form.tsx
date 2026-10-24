@@ -1,19 +1,12 @@
-import { CollectionCategory, type ListOption } from '@hobbies-collection/shared';
-import { useMutation, useSuspenseQuery } from '@tanstack/react-query';
+import { type ListOption } from '@hobbies-collection/shared';
+import { useMutation } from '@tanstack/react-query';
 import { useMatches, useParams } from '@tanstack/react-router';
 import type z from 'zod';
-import {
-  CollectionsSelect,
-  DescriptionEditor,
-  getFormTitle,
-  useFormModal,
-} from '~/routes/console/-shared';
+import { DescriptionEditor, getFormTitle, useFormModal } from '~/routes/console/-shared';
 import { HobbyItemFormSchema } from '~/routes/console/hobbies_/-schemas/hobby-item-schema';
 import {
   api,
   Form,
-  getAllCollectionOptionsQueryOptions,
-  getHobbyItemsByCollectionQueryOptions,
   getObjectsDiff,
   isNewItem,
   queryKey,
@@ -25,7 +18,6 @@ import {
 type HobbyItemFormProps = FormComponentProps<z.infer<typeof HobbyItemFormSchema>>;
 
 export const HobbyItemForm = ({ values }: HobbyItemFormProps) => {
-  const { data: collectionOptions } = useSuspenseQuery(getAllCollectionOptionsQueryOptions());
   const { id: hobbyId } = useParams({ from: '/console/hobbies_/$id' });
 
   const { onClose } = useFormModal();
@@ -117,12 +109,6 @@ export const HobbyItemForm = ({ values }: HobbyItemFormProps) => {
       <DescriptionEditor name="description" label="Description" />
       <Form.TextInput type="number" name="releaseYear" label="Release year" />
       <Form.FileInput name="imagePath" label="Image" />
-      <CollectionsSelect
-        options={collectionOptions}
-        getCurrentCollection={getHobbyItemsByCollectionQueryOptions}
-        defaultCategory={CollectionCategory.CHAPTER}
-        currentItemId={values.id}
-      />
       <Form.AsyncSelect
         label="Authors"
         isMulti

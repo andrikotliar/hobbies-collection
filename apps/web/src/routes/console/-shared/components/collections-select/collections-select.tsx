@@ -1,28 +1,11 @@
-import {
-  CollectionCategory,
-  convertEnumValuesToOption,
-  enumValues,
-  type Enum,
-  type ListOption,
-} from '@hobbies-collection/shared';
+import { type ListOption } from '@hobbies-collection/shared';
 import { useMutation } from '@tanstack/react-query';
 import { useFieldArray, useFormContext } from 'react-hook-form';
 import { ItemOrderSelect, type DataParams, type ItemOrderSelectProps } from './components';
-import {
-  api,
-  FieldError,
-  FieldLabel,
-  Form,
-  Modal,
-  queryKey,
-  Select,
-  useAsyncModal,
-  type MixedId,
-} from '~/shared';
+import { api, FieldError, Form, queryKey, type MixedId } from '~/shared';
 
 type CollectionsSelectProps<T extends DataParams> = {
   options: ListOption<number>[];
-  defaultCategory?: Enum<typeof CollectionCategory>;
   getCurrentCollection: (collectionId: MixedId) => ItemOrderSelectProps<T>['queryOptions'];
   currentItemId: MixedId;
 };
@@ -39,18 +22,11 @@ const defaultCollection = {
   order: 0,
 };
 
-const collectionCategoryOptions = convertEnumValuesToOption(enumValues(CollectionCategory));
-
 export const CollectionsSelect = <T extends DataParams>({
   options,
-  defaultCategory,
   getCurrentCollection,
   currentItemId,
 }: CollectionsSelectProps<T>) => {
-  const { params, isAsyncModalOpen, openAsyncModal, closeAsyncModal } = useAsyncModal<
-    string,
-    Enum<typeof CollectionCategory>
-  >();
   const { control, formState, watch } = useFormContext<FormValueSlice>();
 
   const { fields, append, remove } = useFieldArray({
@@ -66,12 +42,9 @@ export const CollectionsSelect = <T extends DataParams>({
         throw new Error('Collection title cannot be empty');
       }
 
-      const category = defaultCategory ?? (await openAsyncModal(title));
-
       const result = await api.collections.create({
         input: {
           title,
-          category,
           films: [],
         },
       });
@@ -124,18 +97,6 @@ export const CollectionsSelect = <T extends DataParams>({
           </Form.ArrayFieldWrapper>
         ))}
       </Form.ArrayWrapper>
-      <Modal isOpen={isAsyncModalOpen} onClose={closeAsyncModal} isAllowedClickOutside={false}>
-        {params && (
-          <Modal.Content flex>
-            <FieldLabel>Category for collection: {params.data}</FieldLabel>
-            <Select
-              options={collectionCategoryOptions}
-              onSelect={params.resolve}
-              isSearchable={false}
-            />
-          </Modal.Content>
-        )}
-      </Modal>
     </Form.Section>
   );
 };
