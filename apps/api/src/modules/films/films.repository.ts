@@ -955,6 +955,8 @@ export class FilmsRepository {
     switch (key) {
       case 'originFilmId':
         return asc(films.sequenceNumber);
+      case 'sequenceNumber':
+        return asc(films.sequenceNumber);
       case 'title':
         return fn(films.title);
       case 'createdAt':

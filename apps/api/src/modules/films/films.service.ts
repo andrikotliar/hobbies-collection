@@ -92,10 +92,11 @@ export class FilmsService {
 
     const todayCode = this.getDateCode(new Date());
 
-    const mappedList = data.list.map((film) => ({
+    const mappedList = data.list.map((film, index) => ({
       ...film,
       upcoming: film.draft,
       inDays: film.draft && film.releaseDate ? this.getDaysDiffFromToday(film.releaseDate) : null,
+      sequenceNumber: index + 1,
       releasedYears:
         film.releaseDate && todayCode === this.getDateCode(new Date(film.releaseDate))
           ? this.countReleasedYear(film.releaseDate)
