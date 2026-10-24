@@ -52,3 +52,4 @@ export const UpdateUserSchema = z
 
 export type DeviceInfo = z.infer<typeof DeviceInfoSchema>;
 export type UserSessionResponse = z.infer<typeof UserSessionSchema>;
+export type UpdateUserInput = z.infer<typeof UpdateUserSchema>;

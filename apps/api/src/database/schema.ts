@@ -125,7 +125,6 @@ export const filmsCollections = pgTable(
     id: serial().primaryKey().notNull(),
     filmId: integer('film_id').notNull(),
     collectionId: integer('collection_id').notNull(),
-    order: numeric('order', { mode: 'number' }),
     createdAt: timestamp('created_at', { precision: 3, mode: 'string' }).defaultNow().notNull(),
     updatedAt: timestamp('updated_at', { precision: 3, mode: 'string' })
       .defaultNow()
