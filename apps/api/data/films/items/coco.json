@@ -6,8 +6,7 @@
   "duration": 104,
   "budget": 175000000,
   "boxOffice": 823000000,
-  "synopsis": "In a vibrant Mexican village, a young boy named Miguel dreams of becoming a musician despite his family's ban on music. Accidentally transported to the Land of the Dead, he meets his ancestors, including the charming trickster Hector. Together, they uncover family secrets and celebrate the importance of remembering loved ones.",
-  "imagePath": "posters/coco",
+  "poster": "posters/coco",
   "genres": [
     {
       "title": "Adventures",
@@ -225,6 +224,5 @@
       "role": "COMPOSER",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

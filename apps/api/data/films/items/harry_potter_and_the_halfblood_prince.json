@@ -6,8 +6,7 @@
   "duration": 153,
   "budget": 250000000,
   "boxOffice": 934000000,
-  "synopsis": "Dumbledore returns to school former Potions teacher Horace Slughorn to find out what magic he told Tom Riddle many years ago. He tasks Harry with persuading him to share this information. Meanwhile, Harry accidentally receives a Potions book from the mysterious Half-Blood Prince. The book helps him improve his knowledge in Potions class, and he receives a bottle of luck from Slughorn. Later, this allows Harry to learn from Horace about Horcruxes. Objects in which a part of a person's soul can be hidden, making them practically immortal. This is what Voldemort did many years ago. Now they will have to find out where all the Horcruxes are, but in the meantime, there is a plot to assassinate Dumbledore by the Death Eaters, and Draco Malfoy is to carry out the task.",
-  "imagePath": "posters/harry_potter_6.webp",
+  "poster": "posters/harry_potter_6.webp",
   "genres": [
     {
       "title": "Fantasy",

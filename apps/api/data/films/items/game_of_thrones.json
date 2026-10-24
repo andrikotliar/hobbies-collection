@@ -6,8 +6,7 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "Westeros is a vast kingdom with many Great Houses, ruled by whoever sits on the Iron Throne. It once belonged to the Targaryen family, the only House that can control dragons. Now the throne is held by the Baratheons, who have managed to bring peace to Westeros. But many other houses covet the throne, while the last of the Targaryens, Daenerys, who was sold to Drogo, receives three eggs as a gift. When the dragons hatch, she wants to journey to Westeros to reclaim power for the Targaryens. Meanwhile, danger approaches from the North in the form of the White Walkers, getting ever closer to the walls of Westeros.",
-  "imagePath": "posters/got.webp",
+  "poster": "posters/got.webp",
   "genres": [
     {
       "title": "Adventures",

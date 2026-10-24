@@ -6,8 +6,7 @@
   "duration": 162,
   "budget": 237000000,
   "boxOffice": 2900000000,
-  "synopsis": "At the end of the 21st century, humanity has exhausted most of Earth's resources and began mining minerals on the moon of the planet Polyphemus - Pandora in the Alpha Centauri system. The biggest problem they face is the indigenous people - the Na'vi, three-meter tall blue humanoids, especially the Omaticaya clan, which lives on a significant deposit of a critically important mineral - unobtanium. Humanity creates Avatars - artificially grown Na'vi into which they can transfer consciousness. This way, they try to establish contact with the locals. However, due to their close connection with Pandora's nature, they refuse the benefits that humanity offers them. Enter Jake Sully - a former Marine in a wheelchair, under the command of Colonel Miles Quaritch. He will be an Avatar operator, but unlike Grace Augustine's team, he is not a scientist and knows little about Pandora. This allows him to integrate into the life of the Omaticaya clan, where Neytiri, the chief's daughter, is to teach him the clan's laws and traditions. Soon, Jake begins to understand who the real problem on this planet is and becomes increasingly attached to Neytiri and life in the clan. This will soon lead to war between humans and the Na'vi.",
-  "imagePath": "posters/avatar.webp",
+  "poster": "posters/avatar.webp",
   "genres": [
     {
       "title": "Sci-Fi",

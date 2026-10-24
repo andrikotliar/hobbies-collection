@@ -6,8 +6,7 @@
   "duration": 97,
   "budget": 180000000,
   "boxOffice": 533000000,
-  "synopsis": "After the complete pollution of the Earth with garbage, humanity abandoned the planet and set off into unexplored space on a ship. Special cleaning robots were supposed to clean the planet, but decades went by, and only one robot of the Wall-E model remained. He continued to work every day. His only friend was a small cockroach, and he had a hobby of collecting interesting things he found in the trash and then storing them in the cargo hold of a giant machine where he sheltered from dust storms and waited out the night. One day, a spaceship landed on Earth, bringing with it probe robots to search for signs of life’s restoration. One of them, Eve, accidentally encountered Wall-E, and a spark ignited between them. Wall-E showed her his hiding place and then showed her a living plant. After that, everything changed radically. She took the plant to a special compartment and shut down. Wall-E tried to bring her back, and eventually he had to follow her onto the ship and venture into unexplored space.",
-  "imagePath": "posters/wall_e.webp",
+  "poster": "posters/wall_e.webp",
   "genres": [
     {
       "title": "Sci-Fi",
@@ -161,6 +160,5 @@
       "role": "ACTOR",
       "details": "Shelby Forthright"
     }
-  ],
-  "collections": []
+  ]
 }

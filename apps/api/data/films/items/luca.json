@@ -6,8 +6,7 @@
   "duration": 95,
   "budget": 0,
   "boxOffice": 51000000,
-  "synopsis": "Luca is a boy from the underwater world who is very curious about life on the surface. When he comes onto land, he takes on a fully human appearance. On land, he meets another boy named Alberto. Together, they make their way to the city where they befriend a girl named Giulia. She invites them to join her team to help her win a contest taking place in the city. Meanwhile, Luca's parents have already started searching for him.",
-  "imagePath": "posters/luca",
+  "poster": "posters/luca",
   "genres": [
     {
       "title": "Adventures",
@@ -128,6 +127,5 @@
       "role": "ACTOR",
       "details": "Lorenzo Paguro"
     }
-  ],
-  "collections": []
+  ]
 }

@@ -1,11 +1,10 @@
 import type z from 'zod';
-import { useMutation, useQuery, useSuspenseQuery } from '@tanstack/react-query';
+import { useMutation, useSuspenseQuery } from '@tanstack/react-query';
 import {
   api,
   Form,
   buildGetInitialDataQueryOptions,
   getObjectsDiff,
-  buildGetUserDataQueryOptions,
   isNewItem,
   Panel,
   queryKey,
@@ -24,7 +23,6 @@ import { useState } from 'react';
 import type { FilmDraftResponse } from '@hobbies-collection/shared';
 import { useNavigate, useSearch } from '@tanstack/react-router';
 import { FilmFormSchema } from '~/routes/console/films_/-components/film-form/-schemas';
-import { validateLanguage, DescriptionEditor } from '~/routes/console/-shared';
 
 type FilmFormProps = {
   values: z.infer<typeof FilmFormSchema>;
@@ -37,15 +35,12 @@ type CreateNewEntityInput = {
 
 export const FilmForm = ({ values }: FilmFormProps) => {
   const { data: initialOptions } = useSuspenseQuery(buildGetInitialDataQueryOptions());
-  const { data: user } = useQuery(buildGetUserDataQueryOptions());
   const [selectedDraft, setSelectedDraft] = useState<FilmDraftResponse | null>(null);
   const navigate = useNavigate();
   const searchParams = useSearch({ from: '/console/films_/$id' });
 
   const { isPending, mutateAsync: handleSubmit } = useMutation({
     mutationFn: async (data: z.infer<typeof FilmFormSchema>) => {
-      validateLanguage(data.synopsis, user);
-
       const imagePath = await uploadImage({
         image: data.imagePath,
         title: data.title,
@@ -203,7 +198,6 @@ export const FilmForm = ({ values }: FilmFormProps) => {
         <Form.TextInput name="duration" type="number" label="Runtime (min)" min="0" />
         <MoneyInput name="budget" label="Budget" />
         <MoneyInput name="boxOffice" label="Box Office" />
-        <DescriptionEditor name="description" label="Description" />
         <AwardsSelect awardOptions={initialOptions.options.awards} />
         <CastAndCrewSelect positionOptions={initialOptions.options.roles} />
         <Form.Checkbox name="draft" label="Draft" type="checkbox" />

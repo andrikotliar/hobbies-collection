@@ -1,4 +1,4 @@
-import { CollectionCategory, type FilmResponseSchema } from '@hobbies-collection/shared';
+import { type FilmResponseSchema } from '@hobbies-collection/shared';
 import type z from 'zod';
 import type {
   Award,
@@ -26,7 +26,7 @@ type ExtendedFilm = Omit<Film, 'draft' | 'addedAt' | 'sequenceNumber' | Timestam
   genres: Array<{ genre: PickBaseData<Genre> }>;
   studios: Array<{ studio: PickBaseData<Studio> }>;
   countries: Array<{ country: PickBaseData<Country> }>;
-  collections: Array<{ collection: Pick<Collection, 'id' | 'title' | 'category'> }>;
+  collections: Array<{ collection: Pick<Collection, 'id' | 'title'> }>;
   castAndCrew: Array<
     Pick<FilmPerson, 'role' | 'details'> & {
       person: Pick<Person, 'id' | 'name'>;
@@ -82,7 +82,6 @@ export const mapFilmDetails = (
   const collections = film.collections.map(({ collection }) => ({
     id: collection.id,
     title: collection.title,
-    category: collection.category,
   }));
 
   return {
@@ -93,9 +92,7 @@ export const mapFilmDetails = (
     genres: mapNestedRelations(film.genres, 'genre'),
     countries: mapNestedRelations(film.countries, 'country'),
     studios: mapNestedRelations(film.studios, 'studio'),
-    collections: collections.filter(
-      (collection) => collection.category === CollectionCategory.GENERAL,
-    ),
+    collections,
     castAndCrew: sortGroupedPeople(castAndCrew),
     awards: Object.values(awards),
     seriesExtension: nullable(film.seriesExtensions[0]),

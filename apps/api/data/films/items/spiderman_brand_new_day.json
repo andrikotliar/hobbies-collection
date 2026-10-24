@@ -6,8 +6,7 @@
   "duration": 145,
   "budget": 225000000,
   "boxOffice": 2330000000,
-  "synopsis": "After Doctor Strange's spell, Peter tries to live his life alone. He diligently plays the role of Spider-Man, becoming a folk hero. From time to time, he follows the lives of Michelle and Ned on social media. Occasionally, he interferes with Frank Castle, known as Punisher, in his role as a hero. But everything radically changes when a mysterious criminal appears in the city, capable of seizing people's consciousness and searching for something in the Department that deals with people with superpowers. Problems escalate when Peter's spider mutation begins to change.",
-  "imagePath": "posters/spiderman_brand_new_day",
+  "poster": "posters/spiderman_brand_new_day",
   "genres": [
     {
       "title": "Sci-Fi",

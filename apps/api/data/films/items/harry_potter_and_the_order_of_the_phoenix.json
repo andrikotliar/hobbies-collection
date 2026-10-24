@@ -6,8 +6,7 @@
   "duration": 138,
   "budget": 150000000,
   "boxOffice": 940000000,
-  "synopsis": "Voldemort has returned and is preparing a conspiracy against the Ministry of Magic. But the Ministry rejects the idea that the Dark Lord has truly returned, and to silence Harry, Dumbledore, and everyone involved, appoints Dolores Umbridge as the supervisor at Hogwarts. She establishes strict rules and bans the use of defensive magic in the school. The Order of the Phoenix—a team of many outstanding wizards—gathers their strength to prepare for the Dark Lord's invasion, and Harry will have to teach the students magic on his own to prepare them as best as possible for the upcoming confrontation with the Death Eaters.",
-  "imagePath": "posters/harry_potter_5.webp",
+  "poster": "posters/harry_potter_5.webp",
   "genres": [
     {
       "title": "Fantasy",

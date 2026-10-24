@@ -6,8 +6,7 @@
   "duration": 126,
   "budget": 415000000,
   "boxOffice": 955000000,
-  "synopsis": "Doctor Strange tries to protect a girl from another dimension - America Chavez, who can travel between dimensions from Wanda. The Scarlet Witch plans to use her help to reach the dimension where her children Tommy and Billy exist and take Wanda's place from that dimension.",
-  "imagePath": "posters/doctor_strange_in_the_multiverse_of_madness",
+  "poster": "posters/doctor_strange_in_the_multiverse_of_madness",
   "genres": [
     {
       "title": "Fantasy",

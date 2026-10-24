@@ -6,8 +6,7 @@
   "duration": 137,
   "budget": 94000000,
   "boxOffice": 521000000,
-  "synopsis": "The war with the machines continues in the future. After the failure of the first mission, Skynet sends a newer version of the Terminator made of liquid metal - the T-1000 this time, to eliminate young John Connor. A reprogrammed T-800, the same one that once came for Sarah, is sent to protect him by John himself. Now John wants to use his new protector to rescue his mother from the psychiatric hospital where she ended up after talking about the future war with the machines. Despite this, Sarah managed to teach John a lot and often said that he must become a leader. With the help of the T-800, they succeed in rescuing Sarah, and she comes up with a plan to save the future before Skynet strikes. But the T-1000 will not stop until it achieves its goal.",
-  "imagePath": "posters/terminator_2.webp",
+  "poster": "posters/terminator_2.webp",
   "genres": [
     {
       "title": "Sci-Fi",

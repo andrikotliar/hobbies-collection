@@ -6,8 +6,7 @@
   "duration": 115,
   "budget": 120000000,
   "boxOffice": 347000000,
-  "synopsis": "In the distant future, everyone uses robots to assist them at work and home. Only one police officer, Del Spooner, does not trust robots and has a paranoid feeling that they seek to harm humans. One day, his acquaintance, Dr. Alfred Lanning, who had been working on robot development, ends his life by suicide. He gives Del a strange message that does not provide a clear understanding of why he did it. Soon, he and Susan Calvin, a robot psychologist, encounter a new-generation robot that attempted to escape. He calls himself Sonny and behaves differently from other robots, showing signs of consciousness. Along with him, Del will try to decipher Lanning's message.",
-  "imagePath": "posters/i_robot.webp",
+  "poster": "posters/i_robot.webp",
   "genres": [
     {
       "title": "Sci-Fi",
@@ -130,6 +129,5 @@
       "role": "ACTOR",
       "details": "V.I.K.I."
     }
-  ],
-  "collections": []
+  ]
 }

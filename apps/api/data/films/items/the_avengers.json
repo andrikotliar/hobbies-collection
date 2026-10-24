@@ -6,8 +6,7 @@
   "duration": 143,
   "budget": 220000000,
   "boxOffice": 1520000000,
-  "synopsis": "Loki arrives on Earth with a scepter that can control people's minds. He breaks into S.H.I.E.L.D.'s vault to steal the Tesseract and bring the Chitauri army to Earth with its help. S.H.I.E.L.D. fails to protect the Tesseract, and Loki takes Clint Barton and Professor Selvig along with it. Nick Fury decides to use the Avengers Initiative to stop Loki. The essence of the project is to assemble an elite team of outstanding Earth heroes: Steve Rogers, known as Captain America, Tony Stark in Iron Man armor, and Black Widow Natasha Romanoff. They also call upon Bruce Banner to involve him in the search for the stolen Tesseract and, if necessary, to utilize his monster alter ego, Hulk. Thor joins the team to help stop his brother Loki. However, these very different individuals will have to work hard to become a true team.",
-  "imagePath": "posters/avengers_1.webp",
+  "poster": "posters/avengers_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

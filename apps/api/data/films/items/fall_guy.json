@@ -6,7 +6,6 @@
   "duration": 126,
   "budget": 130000000,
   "boxOffice": 181000000,
-  "synopsis": "Colt was a successful stuntman until he was injured while filming his beloved Jodie Moreno's movie. After that, his life changes dramatically.",
   "imagePath": "posters/fall_guy.webp",
   "genres": [
     {
@@ -115,6 +114,5 @@
       "role": "ACTOR",
       "details": "Tom Ryder"
     }
-  ],
-  "collections": []
+  ]
 }

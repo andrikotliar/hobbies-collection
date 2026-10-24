@@ -6,8 +6,7 @@
   "duration": 201,
   "budget": 94000000,
   "boxOffice": 1120000000,
-  "synopsis": "Frodo and Sam are getting closer to Mordor. To give them a chance to pass unnoticed, Aragorn, the king of Gondor, gathers an army and marches to the main entrance to Mordor to distract the gaze of the All-Seeing Eye.",
-  "imagePath": "posters/middle_earth_6.webp",
+  "poster": "posters/middle_earth_6.webp",
   "genres": [
     {
       "title": "Fantasy",

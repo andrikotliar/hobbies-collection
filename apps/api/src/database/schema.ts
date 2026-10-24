@@ -1,10 +1,4 @@
-import {
-  CollectionCategory,
-  type DeviceInfo,
-  PersonRole,
-  FilmType,
-  BookReadStatus,
-} from '@hobbies-collection/shared';
+import { type DeviceInfo, PersonRole, FilmType, BookReadStatus } from '@hobbies-collection/shared';
 import {
   pgTable,
   index,
@@ -24,7 +18,6 @@ import {
   unique,
 } from 'drizzle-orm/pg-core';
 
-export const collectionCategory = pgEnum('collection_category', CollectionCategory);
 export const personRole = pgEnum('person_role', PersonRole);
 export const filmType = pgEnum('title_type', FilmType);
 export const bookReadStatus = pgEnum('book_read_status', BookReadStatus);
@@ -48,7 +41,6 @@ export const films = pgTable(
       .$onUpdate(() => new Date().toISOString())
       .notNull(),
     deletedAt: timestamp('deleted_at', { precision: 3, mode: 'string' }),
-    synopsis: text(),
     originFilmId: integer('origin_film_id'),
     sequenceNumber: numeric('sequence_number', { mode: 'number' }).notNull().default(1),
     draft: boolean().notNull().default(false),
@@ -81,7 +73,6 @@ export const collections = pgTable(
     id: serial().primaryKey().notNull(),
     title: text().notNull(),
     description: text(),
-    category: collectionCategory().default('GENERAL').notNull(),
     createdAt: timestamp('created_at', { precision: 3, mode: 'string' }).defaultNow().notNull(),
     updatedAt: timestamp('updated_at', { precision: 3, mode: 'string' })
       .defaultNow()
@@ -136,7 +127,6 @@ export const filmsCollections = pgTable(
     id: serial().primaryKey().notNull(),
     filmId: integer('film_id').notNull(),
     collectionId: integer('collection_id').notNull(),
-    order: numeric('order', { mode: 'number' }),
     createdAt: timestamp('created_at', { precision: 3, mode: 'string' }).defaultNow().notNull(),
     updatedAt: timestamp('updated_at', { precision: 3, mode: 'string' })
       .defaultNow()
@@ -465,7 +455,6 @@ export const users = pgTable(
     id: serial().primaryKey().notNull(),
     username: text().notNull(),
     password: text().notNull(),
-    translationPreferences: jsonb().$type<{ from: string; to: string }>(),
     createdAt: timestamp('created_at', { precision: 3, mode: 'string' }).defaultNow().notNull(),
     updatedAt: timestamp('updated_at', { precision: 3, mode: 'string' })
       .notNull()

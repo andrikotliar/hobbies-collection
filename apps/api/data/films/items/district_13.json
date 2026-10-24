@@ -6,8 +6,7 @@
   "duration": 86,
   "budget": 14000000,
   "boxOffice": 12000000,
-  "synopsis": "Police officer Damien Thomason is sent to the thirteenth district of France. This area is enclosed by high walls due to a high crime rate. Thomason's task is to find a stolen missile that has been set up in the area and is planned to be launched at the civilian population. Damien teams up with a local parkour athlete, Leito, who dreams of making his district better. However, the closer they get to their goal, the more it becomes clear that the situation with the stolen missile is not as transparent as it seems.",
-  "imagePath": "posters/d13_1.webp",
+  "poster": "posters/d13_1.webp",
   "genres": [
     {
       "title": "Action",

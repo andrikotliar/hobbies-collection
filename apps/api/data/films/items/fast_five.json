@@ -6,8 +6,7 @@
   "duration": 130,
   "budget": 125000000,
   "boxOffice": 626000000,
-  "synopsis": "Bryan and Letty have been hiding since they helped Dominic escape from imprisonment. After some time, they arrive in Rio de Janeiro, where they are supposed to meet Dominic. Meanwhile, an old family friend of the Torettos, Vince, offers them a job to steal cars. Dominic joins the mission as well. However, things don't go as planned. It turns out that the cars were being transported by American FBI agents, and one of the cars that Letty took contained a computer with information about the money belonging to local drug lord Reyes. His thugs begin hunting them down. To make matters worse, Agent Hobbs arrives in Rio to apprehend Dominic. Then Dom and Bryan come up with a plan to rob Reyes, with the money from which they can disappear. To do this, they gather a team of old friends, including Roman Pearce, Han, Tej, and Gisele.",
-  "imagePath": "posters/fast_and_furious_5.webp",
+  "poster": "posters/fast_and_furious_5.webp",
   "genres": [
     {
       "title": "Action",

@@ -6,8 +6,7 @@
   "duration": 103,
   "budget": 80000000,
   "boxOffice": 233000000,
-  "synopsis": "One day, a messenger named Klaatu arrives on Earth and addresses humanity. He is a representative of a union of planets that saves habitable planets, as there are very few in the universe. Humanity must change its attitude towards their planet, otherwise it will be destroyed to preserve Earth. Authorities from different parts of the world oppose Klaatu, and only Regina Jackson wants to remedy the situation.",
-  "imagePath": "posters/day_the_earth_stood_still.webp",
+  "poster": "posters/day_the_earth_stood_still.webp",
   "genres": [
     {
       "title": "Sci-Fi",
@@ -117,6 +116,5 @@
       "role": "ACTOR",
       "details": "Jacob Benson"
     }
-  ],
-  "collections": []
+  ]
 }

@@ -6,8 +6,7 @@
   "duration": 136,
   "budget": 115000000,
   "boxOffice": 1020000000,
-  "synopsis": "The planet Naboo is under siege by the Trade Federation. The Republican Senate sends two Jedi - Qui-Gon Jinn and Obi-Wan Kenobi - to negotiate with them. But by the order of the Sith Lord, the Federation disrupts the negotiations and attacks Naboo with their droids. The Jedi manage to rescue Queen Amidala from the planet so she can speak in the Senate. However, their ship needs repairs, so they land on the desert planet Tatooine, where there are many traders. They find a place to buy spare parts, but Republican credits are not accepted here. Then they meet a boy they had encountered - Anakin Skywalker. He can participate in races that offer a cash prize. This could help them get off Tatooine. But they do not yet suspect that the Sith Lord has sent his apprentice Darth Maul to destroy them.",
-  "imagePath": "posters/star_wars_episode_I.webp",
+  "poster": "posters/star_wars_episode_I.webp",
   "genres": [
     {
       "title": "Space Opera",

@@ -6,8 +6,7 @@
   "duration": 117,
   "budget": 11000000,
   "boxOffice": 106000000,
-  "synopsis": "The crew of the Nostromo receives a distress signal from an unknown planet. After landing, they find no one alive, but an unknown creature attacks one of the crew members and takes over his face. They bring him back to their ship to try to remove the creature, but soon a being known as the Alien is born from the infected body. It grows at an incredible rate and all it wants is to eat. Now the crew is forced to survive on their own ship. Among them are warrant officer Ellen Ripley and the android Ash, who seems to have his own plans for the creature.",
-  "imagePath": "posters/alien_1.webp",
+  "poster": "posters/alien_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

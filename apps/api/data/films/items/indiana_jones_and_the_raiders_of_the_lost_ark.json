@@ -6,8 +6,7 @@
   "duration": 115,
   "budget": 18000000,
   "boxOffice": 390000000,
-  "synopsis": "In 1936, adventurous archaeologist Indiana Jones races against Nazi agents to find the Ark of the Covenant, a powerful biblical artifact. Journeying from jungles to ancient temples, he faces deadly traps and enemies, relying on his wits and courage. With the fate of the world at stake, Indy must outsmart those who seek the Ark's power for evil.",
-  "imagePath": "posters/indiana_jones_1.webp",
+  "poster": "posters/indiana_jones_1.webp",
   "genres": [
     {
       "title": "Adventures",

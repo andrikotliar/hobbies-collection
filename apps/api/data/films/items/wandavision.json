@@ -6,8 +6,7 @@
   "duration": 39,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "After Vision's death, Wanda falls into despair and inadvertently releases all her magical power, creating a protective barrier around a small town, taking the entire town captive. She creates a copy of Vision, and later two children. Now she is happy in her made-up world. But people from outside are trying to find a way to stop this and calm Wanda, while an ancient witch, Agatha, locked inside, devises her plan to steal Wanda's powers.",
-  "imagePath": "posters/wandavision.webp",
+  "poster": "posters/wandavision.webp",
   "genres": [
     {
       "title": "Action",

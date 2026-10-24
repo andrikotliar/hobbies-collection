@@ -6,8 +6,7 @@
   "duration": 194,
   "budget": 200000000,
   "boxOffice": 2260000000,
-  "synopsis": "Jack Dawson boards the new ship Titanic, where he begins a romance with the married lady Rose. However, the cruise will soon end in disaster, as the Titanic heads towards an iceberg that it can no longer avoid. All passengers will have to endure many trials to survive.",
-  "imagePath": "posters/titanic.webp",
+  "poster": "posters/titanic.webp",
   "genres": [
     {
       "title": "Drama",
@@ -191,6 +190,5 @@
       "role": "ACTOR",
       "details": "Old Rose"
     }
-  ],
-  "collections": []
+  ]
 }

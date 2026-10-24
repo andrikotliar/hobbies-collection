@@ -6,8 +6,7 @@
   "duration": 198,
   "budget": 400000000,
   "boxOffice": 1500000000,
-  "synopsis": "Quaritch in Avatar's body remains focused on his mission to eliminate Jake Sully. He allies with the warlike Mangkwan clan in exchange for firearms. This clan once followed the way of Eywa, and after the catastrophe that destroyed their home, and Eywa did not respond to their prayers, the Mangkwan decided to follow their own laws under the leadership of the former Tsahik Varang. Problems escalate when Kiri, with the help of her connection to Eywa, gives her human friend Spider the ability to breathe on Pandora without an oxygen mask. In addition to hunting for Jake, a hunt for Spider begins, as such an ability could significantly enhance humanity's effectiveness on Pandora and pose a great threat to the Na'vi. Jake will have to become Toruk Makto again to unite forces against the enemy.",
-  "imagePath": "posters/avatar_3.webp",
+  "poster": "posters/avatar_3.webp",
   "genres": [
     {
       "title": "Sci-Fi",

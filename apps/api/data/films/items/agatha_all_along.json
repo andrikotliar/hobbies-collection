@@ -6,8 +6,7 @@
   "duration": 40,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "In \"Agatha All Along,\" set in a retro-inspired town, Agatha Harkness uncovers a hidden world of magic and intrigue. As secrets from her past resurface, she grapples with her dual identity while uniting a diverse group of misfits. Together, they face looming dark forces that threaten their idyllic lives.",
-  "imagePath": "posters/agatha_all_along",
+  "poster": "posters/agatha_all_along",
   "genres": [
     {
       "title": "Fantasy",

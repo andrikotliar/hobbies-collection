@@ -101,13 +101,6 @@ export class FilmsRepository {
     return { list, total, type: 'sorted' as const };
   }
 
-  getCollectionOrder(collectionId: number) {
-    return this.deps.db
-      .select({ filmId: filmsCollections.filmId, order: filmsCollections.order })
-      .from(filmsCollections)
-      .where(eq(filmsCollections.collectionId, collectionId));
-  }
-
   findById(id: number, level: FilterLevel = 'public') {
     const where = [eq(films.id, id), isNull(films.deletedAt)];
 
@@ -127,7 +120,6 @@ export class FilmsRepository {
         boxOffice: true,
         rating: true,
         type: true,
-        synopsis: true,
         originFilmId: true,
       },
       extras: (table, { sql }) => ({
@@ -219,7 +211,6 @@ export class FilmsRepository {
               columns: {
                 id: true,
                 title: true,
-                category: true,
               },
             },
           },
@@ -460,7 +451,6 @@ export class FilmsRepository {
         releaseDate: true,
         budget: true,
         boxOffice: true,
-        synopsis: true,
         draft: true,
       },
       with: {
@@ -668,7 +658,6 @@ export class FilmsRepository {
         title: true,
         releaseDate: true,
         duration: true,
-        synopsis: true,
         budget: true,
         boxOffice: true,
         type: true,
@@ -913,6 +902,8 @@ export class FilmsRepository {
 
     switch (key) {
       case 'originFilmId':
+        return asc(films.sequenceNumber);
+      case 'sequenceNumber':
         return asc(films.sequenceNumber);
       case 'title':
         return fn(films.title);

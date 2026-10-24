@@ -6,8 +6,7 @@
   "duration": 116,
   "budget": 120000000,
   "boxOffice": 462000000,
-  "synopsis": "In this world, there live intelligent cars that have eyes on their windshields and mouths above their bumpers. Lightning McQueen, a famous young racer, dreams of winning the Piston Cup and getting sponsorship from the most desired brand, Dinoco. However, in the last race, no winner was declared, and the final race is set to take place in California. McQueen sets off immediately in the trailer of his transporter, Mack. He makes Mack drive all night, and Mack gradually begins to fall asleep right in the middle of the road, which causes the trailer to open and McQueen falls out. Waking up, he realizes he is lost and takes a wrong road in hopes of catching up with Mack. He ends up in the town of Radiator Springs, where, while fleeing from a police car, he hits a statue, destroying the road. The local car, Sally, along with Mayor Hudson, decides that he must fix the road. Thus, McQueen becomes stuck in this town, makes friends with a tow truck named Mater, gets to know Sally better, and learns that Doc Hudson was once a racing legend. All these discoveries gradually change McQueen's outlook on life.",
-  "imagePath": "posters/cars",
+  "poster": "posters/cars",
   "genres": [
     {
       "title": "Adventures",
@@ -157,6 +156,5 @@
       "role": "ACTOR",
       "details": "Mater"
     }
-  ],
-  "collections": []
+  ]
 }

@@ -6,8 +6,7 @@
   "duration": 130,
   "budget": 250000000,
   "boxOffice": 1340000000,
-  "synopsis": "Harry learns that he accidentally became the last Horcrux of Voldemort on the day he attacked his parents, from Severus Snape before his death. Now he must go to Voldemort for a fight in which he will surely die, but will be able to destroy the last Horcrux, which will ultimately weaken the Dark Lord and help Hogwarts end the war.",
-  "imagePath": "posters/harry_potter_8.webp",
+  "poster": "posters/harry_potter_8.webp",
   "genres": [
     {
       "title": "Fantasy",

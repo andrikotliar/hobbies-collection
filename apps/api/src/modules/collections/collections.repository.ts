@@ -26,7 +26,6 @@ export class CollectionsRepository {
         title: collections.title,
       })
       .from(collections)
-      .where(eq(collections.category, 'GENERAL'))
       .orderBy(asc(collections.title));
   }
 
@@ -38,7 +37,7 @@ export class CollectionsRepository {
         title: collections.title,
       })
       .from(collections)
-      .where(and(...filters, eq(collections.category, 'GENERAL')))
+      .where(and(...filters))
       .orderBy(asc(collections.title))
       .limit(PAGE_LIMITS.default)
       .offset(getSkipValue('default', queries.pageIndex));

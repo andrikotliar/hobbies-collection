@@ -6,8 +6,7 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "Beth Harmon is an orphan who ends up in a shelter after her mother’s suicide. In the basement with the janitor, she learns to play chess, which becomes her purpose in life. She is adopted, and Beth finds herself in an exemplary family, which allows her to participate in official chess tournaments. Her uniqueness is that she can visualize the chessboard and possible moves and their consequences. At first, she is not taken seriously because she is a woman, but gradually she climbs higher and higher in the rankings, becoming a formidable opponent even for experienced players.",
-  "imagePath": "posters/queens_gambit.webp",
+  "poster": "posters/queens_gambit.webp",
   "genres": [
     {
       "title": "Drama",
@@ -136,7 +135,6 @@
       "details": "Young Beth Harmon"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 16,
     "episodesTotal": 7,

@@ -6,8 +6,7 @@
   "duration": 110,
   "budget": 110000000,
   "boxOffice": 228000000,
-  "synopsis": "Johnny Blaze makes a deal with the devil, after which he, alongside evil, transforms into a flaming skeleton known as the Ghost Rider. His task is to find Bekharta, who has rebelled against his father Mephistopheles, and stop him. In the process, Johnny must acclimate to his new life and wants to find a way to rid himself of this curse.",
-  "imagePath": "posters/ghost_rider.webp",
+  "poster": "posters/ghost_rider.webp",
   "genres": [
     {
       "title": "Supernatural",
@@ -146,6 +145,5 @@
       "role": "ACTOR",
       "details": "Caretaker"
     }
-  ],
-  "collections": []
+  ]
 }

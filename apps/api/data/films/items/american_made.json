@@ -6,8 +6,7 @@
   "duration": 115,
   "budget": 50000000,
   "boxOffice": 135000000,
-  "synopsis": null,
-  "imagePath": "posters/american_made.webp",
+  "poster": "posters/american_made.webp",
   "genres": [
     {
       "title": "Comedy",
@@ -148,6 +147,5 @@
       "role": "ACTOR",
       "details": "Jorge Ochoa"
     }
-  ],
-  "collections": []
+  ]
 }

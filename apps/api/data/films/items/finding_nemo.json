@@ -6,8 +6,7 @@
   "duration": 100,
   "budget": 94000000,
   "boxOffice": 940000000,
-  "synopsis": "Nemo, the last egg that survived after a predator attacked Marlin and his beloved's home. Marlin also survived and after Nemo was born, he is overly protective and doesn’t let him do anything. One day, Nemo, to prove that he is capable of more, swims too close to a fishing boat and gets caught in nets. Marlin sets out to find Nemo, on the way he will meet many strange sea inhabitants who, in one way or another, will help him in his search, especially Dory, who, although she forgets everything right after she says it, accompanies him throughout the journey.",
-  "imagePath": "posters/finding_nemo.webp",
+  "poster": "posters/finding_nemo.webp",
   "genres": [
     {
       "title": "Adventures",
@@ -201,6 +200,5 @@
       "role": "ACTOR",
       "details": "Bruce"
     }
-  ],
-  "collections": []
+  ]
 }

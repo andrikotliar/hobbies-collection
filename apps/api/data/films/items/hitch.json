@@ -6,8 +6,7 @@
   "duration": 118,
   "budget": 70000000,
   "boxOffice": 368000000,
-  "synopsis": "Hitch makes a living by teaching other guys the art of seduction. He works with a guy named Albert to help him express himself and earn Allegra's love. Meanwhile, he himself is having relationship problems and is trying to fix things with Sarah.",
-  "imagePath": "posters/hitch.webp",
+  "poster": "posters/hitch.webp",
   "genres": [
     {
       "title": "Romance",
@@ -129,6 +128,5 @@
       "role": "ACTOR",
       "details": "Casey"
     }
-  ],
-  "collections": []
+  ]
 }

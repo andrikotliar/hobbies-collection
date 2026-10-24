@@ -6,8 +6,7 @@
   "duration": 108,
   "budget": 150000000,
   "boxOffice": 1600000000,
-  "synopsis": "Judy and Nick continue to work as partners in the police, but they often mess up assignments because Judy is always getting into trouble. This leads her into a situation involving a snake infiltrating Zootopia. The presence of reptiles is forbidden in the city. At first, she tries to catch it as a criminal, but the more she learns about the city's past, the more she realizes that it's not so simple with the expulsion of reptiles and the return of the snake.",
-  "imagePath": "posters/zootopia_2.webp",
+  "poster": "posters/zootopia_2.webp",
   "genres": [
     {
       "title": "Adventures",

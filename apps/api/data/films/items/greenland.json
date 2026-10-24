@@ -6,8 +6,7 @@
   "duration": 119,
   "budget": 35000000,
   "boxOffice": 52000000,
-  "synopsis": "John Garriti is a renowned architect who receives a notification that his family has been chosen for evacuation to a shelter. Soon, a meteorite begins to fall on Earth, and there is only one possible place to seek refuge - a bunker in Greenland. The chosen ones are gathered onto planes to this location, but his wife and son Nathan are removed from the plane when it's discovered that Nathan has a chronic respiratory illness; only those in perfect health can go to the bunker. John is then forced to search for his missing family, and after reuniting, he looks for ways to reach the bunker on his own.",
-  "imagePath": "posters/greenland.webp",
+  "poster": "posters/greenland.webp",
   "genres": [
     {
       "title": "Drama",
@@ -126,6 +125,5 @@
       "role": "ACTOR",
       "details": "Judy Vento"
     }
-  ],
-  "collections": []
+  ]
 }

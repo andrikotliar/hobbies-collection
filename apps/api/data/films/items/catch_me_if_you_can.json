@@ -6,8 +6,7 @@
   "duration": 141,
   "budget": 52000000,
   "boxOffice": 352000000,
-  "synopsis": "Frank Abagnale has made a living since his teenage years by pretending to be someone he is not. He will manage to be a doctor, an airplane pilot, and a bunch of other professions. This will go on for quite a long time until Carl Hanratty takes on his pursuit.",
-  "imagePath": "posters/catch_me_if_you_can",
+  "poster": "posters/catch_me_if_you_can",
   "genres": [
     {
       "title": "Adventures",
@@ -129,6 +128,5 @@
       "role": "ACTOR",
       "details": " Brenda Strong"
     }
-  ],
-  "collections": []
+  ]
 }

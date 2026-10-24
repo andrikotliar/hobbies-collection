@@ -32,7 +32,6 @@ export const CreateFilmInputSchema = z.object({
   releaseDate: DateStringSchema.nullable(),
   budget: z.coerce.number().max(900_000_000),
   boxOffice: z.coerce.number().max(4_000_000_000),
-  description: z.string().nullable(),
   castAndCrew: z.array(
     z.object({
       role: z.enum(PersonRole),
@@ -97,7 +96,6 @@ export const GetFilmsListQuerySchema = buildListQueryParamsSchema(
 
 export const GetAdminListQuerySchema = GetFilmsListQuerySchema.extend({
   draftLevels: getArrayFromQuery(z.enum(DraftLevel)).optional(),
-  noDescription: getBoolFromQuery,
   noCrewOrCast: getBoolFromQuery,
   noBoxOffice: getBoolFromQuery,
   noTrailers: getBoolFromQuery,
@@ -128,7 +126,6 @@ export const FilmResponseSchema = z.object({
   imagePath: z.string().nullable(),
   type: z.enum(FilmType),
   duration: z.coerce.number(),
-  description: z.string().nullable(),
   rating: z.coerce.number(),
   releaseDate: z.string().nullable(),
   budget: z.coerce.number().nullable(),
@@ -252,7 +249,6 @@ export const CompleteDataListItemSchema = z.object({
     duration: true,
     budget: true,
     boxOffice: true,
-    description: true,
     imagePath: true,
   }).shape,
   originFilmId: z.number().nullable(),
@@ -299,14 +295,6 @@ export const CompleteDataResponseSchema = z.object({
       }),
     ),
   }),
-});
-
-export const TranslateDescriptionInputSchema = z.object({
-  text: z.string(),
-});
-
-export const TranslateDescriptionResponseSchema = z.object({
-  translatedText: z.string(),
 });
 
 export const CreateFilmDraftInputSchema = z.object({
@@ -356,7 +344,6 @@ export type CreateFilmInput = z.infer<typeof CreateFilmInputSchema>;
 export type UpdateFilmInput = z.infer<typeof UpdateFilmInputSchema>;
 export type CompleteDataListItem = z.infer<typeof CompleteDataListItemSchema>;
 export type CompleteDataResponse = z.infer<typeof CompleteDataResponseSchema>;
-export type TranslateDescriptionInput = z.infer<typeof TranslateDescriptionInputSchema>;
 export type CreateFilmDraftInput = z.infer<typeof CreateFilmDraftInputSchema>;
 export type FilmDraftResponse = z.infer<typeof FilmDraftInputResponse>;
 export type FilmDraftFilmIdParams = z.infer<typeof FilmDraftFilmIdParamsSchema>;

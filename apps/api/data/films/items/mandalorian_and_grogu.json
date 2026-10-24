@@ -6,8 +6,7 @@
   "duration": 132,
   "budget": 165000000,
   "boxOffice": 345000000,
-  "synopsis": "The Mandalorian and his partner Grogu are working for the New Republic, completing various tasks to capture Imperial commanders. He receives a mission to find one of the commanders whose face is unknown, but the Hutt twins can provide information about him in exchange for the return of their nephew, Ratta the Hutt, who is supposedly captive on the planet Shakari.",
-  "imagePath": "posters/mandalorian_and_grogu",
+  "poster": "posters/mandalorian_and_grogu",
   "genres": [
     {
       "title": "Fantasy",

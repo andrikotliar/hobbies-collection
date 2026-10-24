@@ -6,8 +6,7 @@
   "duration": 169,
   "budget": 165000000,
   "boxOffice": 677000000,
-  "synopsis": "Life on Earth is becoming increasingly difficult; constant dust storms, almost no edible crops survive, and fields are destroyed by frequent fires. At this time, a black hole appears in orbit around Jupiter, leading to distant planets that may be potentially habitable. Three astronauts are sent there, but the signal back does not return. Professor Brand tries to solve the equation that will allow transporting a large number of people on spaceships through this \"portal,\" and a team of researchers is set to depart for three planets, explore them, and prepare them for settlement. In case the equation cannot be solved, the ship will be equipped with embryos to establish a new colony of humanity. Cooper embarks on this journey, despite having to leave his daughter Murph and son Tom, in hopes of saving humanity and the future of his children.",
-  "imagePath": "posters/interstellar.webp",
+  "poster": "posters/interstellar.webp",
   "genres": [
     {
       "title": "Sci-Fi",
@@ -185,6 +184,5 @@
       "role": "ACTOR",
       "details": "Tom"
     }
-  ],
-  "collections": []
+  ]
 }

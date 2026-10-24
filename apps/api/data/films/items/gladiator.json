@@ -6,8 +6,7 @@
   "duration": 155,
   "budget": 103000000,
   "boxOffice": 465000000,
-  "synopsis": "Maximus faithfully served his king until the king was betrayed by his own heir, Commodus. By Commodus's order, Maximus was to be executed, but he survived, and when he returned home, his family was also killed. He wanted revenge, but he was enslaved. Eventually, he was sold and became a gladiator, which brought him closer to revenge.",
-  "imagePath": "posters/gladiator",
+  "poster": "posters/gladiator",
   "genres": [
     {
       "title": "Drama",
@@ -203,6 +202,5 @@
       "role": "ACTOR",
       "details": "Marcus Aurelius"
     }
-  ],
-  "collections": []
+  ]
 }

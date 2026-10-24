@@ -6,8 +6,7 @@
   "duration": 108,
   "budget": 100000000,
   "boxOffice": 384000000,
-  "synopsis": "In emperor penguins, there is a tradition that they choose a partner through song. This is how two penguins, Memphis and Norma, meet. They have a son, Mumble, who unfortunately cannot sing. This makes him an outcast among his kind; he tries to express his feelings through dance, but he is not understood, and the elders consider it wrong. Mumble spends his entire childhood alone, exploring the surrounding environment. He meets other species of penguins and learns about the technique from humans, which penguins consider something extraterrestrial. Gradually, hunger begins, and the elders believe it is the Great Gwin's punishment, blaming Mumble for violating penguin laws. Mumble is convinced that strange extraterrestrials can help solve their problem and sets off alone in search of them.",
-  "imagePath": "posters/happy_feet.webp",
+  "poster": "posters/happy_feet.webp",
   "genres": [
     {
       "title": "Musical",
@@ -165,6 +164,5 @@
       "role": "ACTOR",
       "details": "Lovelace"
     }
-  ],
-  "collections": []
+  ]
 }

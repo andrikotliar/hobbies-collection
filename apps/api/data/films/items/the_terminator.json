@@ -6,8 +6,7 @@
   "duration": 107,
   "budget": 6400000,
   "boxOffice": 40000000,
-  "synopsis": "In the late 90s, the artificial intelligence Skynet gains full control over humanity's nuclear arsenal and delivers a devastating blow. The survivors wage war against the machines, with John Connor as the leader of the resistance - humanity's last hope. Skynet sends a killer robot, the Terminator T-800, back in time to eliminate John's mother, Sarah Connor, long before the future leader is born. But John manages to send his close friend, Kyle Reese, to protect her. Now everything depends on who reaches Sarah first.",
-  "imagePath": "posters/terminator_1.webp",
+  "poster": "posters/terminator_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

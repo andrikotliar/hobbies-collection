@@ -6,8 +6,7 @@
   "duration": 112,
   "budget": 60000000,
   "boxOffice": 51000000,
-  "synopsis": "Scott Pilgrim falls in love with an eccentric girl named Ramona Flowers. She agrees to date him, but Scott must defeat her seven exes. Each of them increasingly stronger than the previous boss. But for love, Scott is ready to face every challenge.",
-  "imagePath": "posters/scott_pilgrim_vs_the_world",
+  "poster": "posters/scott_pilgrim_vs_the_world",
   "genres": [
     {
       "title": "Comedy",
@@ -154,6 +153,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

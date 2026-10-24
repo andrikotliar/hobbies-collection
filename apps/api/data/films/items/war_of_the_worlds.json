@@ -6,8 +6,7 @@
   "duration": 116,
   "budget": 132000000,
   "boxOffice": 604000000,
-  "synopsis": "Ray lives his ordinary life, he is divorced and works as a crane operator. One regular day, he returns home from work and finds his ex-wife Marie-Anne there; she has brought their children, Rachel and Robbie, which he of course forgot about. They are supposed to stay with him for a few days while she and her new husband visit her parents. Ordinary days go by until one evening powerful lightning strikes the same places around the world. After that, giant three-legged alien machines start emerging from underground. They begin incinerating people around them. Ray grabs Rachel and Robbie, and they start fleeing the city. Now they must keep moving forward to survive and avoid being burned or captured by the invaders.",
-  "imagePath": "posters/war_of_the_worlds.webp",
+  "poster": "posters/war_of_the_worlds.webp",
   "genres": [
     {
       "title": "Action",
@@ -141,6 +140,5 @@
       "role": "ACTOR",
       "details": "Harlan Ogilvy"
     }
-  ],
-  "collections": []
+  ]
 }

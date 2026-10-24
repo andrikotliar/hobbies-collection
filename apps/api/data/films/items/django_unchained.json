@@ -6,8 +6,7 @@
   "duration": 165,
   "budget": 100000000,
   "boxOffice": 426000000,
-  "synopsis": "Django becomes free from slavery and now his goal is to reach Calvin J. Candie to free his wife from slavery, with the help of the aristocrat Dr. King Schultz, who has his own objectives in this story.",
-  "imagePath": "posters/django_unchained",
+  "poster": "posters/django_unchained",
   "genres": [
     {
       "title": "Drama",
@@ -173,6 +172,5 @@
       "role": "ACTOR",
       "details": " Stephen"
     }
-  ],
-  "collections": []
+  ]
 }

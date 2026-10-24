@@ -6,8 +6,7 @@
   "duration": 100,
   "budget": 65000000,
   "boxOffice": 0,
-  "synopsis": "In the 1700s, a skilled Comanche warrior named Naru discovers a deadly alien predator hunting her people. As she fights to protect her tribe, she must rely on her instincts and cunning. Through a series of intense confrontations, Naru proves her strength and resilience against an unimaginable foe.",
-  "imagePath": "posters/prey",
+  "poster": "posters/prey",
   "genres": [
     {
       "title": "Action",

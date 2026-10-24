@@ -6,8 +6,7 @@
   "duration": 104,
   "budget": 85000000,
   "boxOffice": 158000000,
-  "synopsis": "Sean Boswell lives with his mother in the USA and often gets into various troubles. He has been expelled from schools several times. The last straw is a dangerous street race that Sean organized. His mother decides to send him to his father in Tokyo. In Japan, he starts making new friends and has eyes for Neela, the girlfriend of a local mafia boss, Takashi. This leads him to a yakuza gang under the leadership of Han, and he begins to learn Tokyo drifting to compete with local racers and earn his place in the sun.",
-  "imagePath": "posters/fast_and_furious_3.webp",
+  "poster": "posters/fast_and_furious_3.webp",
   "genres": [
     {
       "title": "Action",

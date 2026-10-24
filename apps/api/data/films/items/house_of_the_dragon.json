@@ -6,8 +6,7 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "The story of the conflict between Rhaenyra Targaryen and Alicent Hightower over the Iron Throne after the death of Viserys Targaryen. Alicent seized the throne after convincing everyone that on his deathbed, Viserys chose her eldest son as his successor. Rhaenyra was supposed to inherit the throne and is now gathering supporters to reclaim her rightful throne with the help of her dragons.",
-  "imagePath": "posters/house_of_the_dragon.webp",
+  "poster": "posters/house_of_the_dragon.webp",
   "genres": [
     {
       "title": "Fantasy",

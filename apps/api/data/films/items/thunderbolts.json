@@ -6,8 +6,7 @@
   "duration": 127,
   "budget": 180000000,
   "boxOffice": 382000000,
-  "synopsis": "Black Widow Elena Belova, John Walker, and Ava Star find themselves in one place, directed there by Valentina Allegra de Fontaine with the goal of getting rid of all of them together. They manage to escape from the secret laboratory, where they also take along the test subject Robert Reynolds. They join forces with Bucky Barnes and Alexei Shostakov to bring Valentina to justice and finally get rid of her. But Valentina has her own plans for Robert, who has unique powers.",
-  "imagePath": "posters/thunderbolts",
+  "poster": "posters/thunderbolts",
   "genres": [
     {
       "title": "Action",

@@ -6,8 +6,7 @@
   "duration": 108,
   "budget": 40000000,
   "boxOffice": 332000000,
-  "synopsis": "Emmet, along with Marty, travels to the future to help Marty's future children with problems. But Biff from the future sees their time machine and travels back to the past to give himself a sports almanac. This drastically changes the past, and Marty and Emmet return to an alternate version of the past. Now they need to figure out a way to fix everything.",
-  "imagePath": "posters/back_to_the_future_2.webp",
+  "poster": "posters/back_to_the_future_2.webp",
   "genres": [
     {
       "title": "Sci-Fi",

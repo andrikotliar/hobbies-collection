@@ -6,8 +6,7 @@
   "duration": 118,
   "budget": 40000000,
   "boxOffice": 245000000,
-  "synopsis": "Emmet travels back to the Wild West. He enjoys life there and leaves the time machine hidden until Marty can find it and return to his time from the past. For this, a letter was lying at the post office that was supposed to be given to him. Marty stumbles upon Emmet's grave, which indicates the date of death shortly after the date when he wrote the letter. Marty decides to go back in time to try to save his friend.",
-  "imagePath": "posters/back_to_the_future_3.webp",
+  "poster": "posters/back_to_the_future_3.webp",
   "genres": [
     {
       "title": "Sci-Fi",

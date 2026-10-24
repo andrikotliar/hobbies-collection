@@ -6,8 +6,7 @@
   "duration": 115,
   "budget": 200000000,
   "boxOffice": 522000000,
-  "synopsis": "On Earth-828, four astronauts gain superpowers due to cosmic radiation and become known as the Fantastic Four. Scientist Reed Richards can stretch like rubber, Sue Storm can become invisible and create energy fields, Ben Grimm has turned into a rock man, and Johnny Storm can ignite and fly. They are the defenders of Planet Earth. One day, the Silver Surfer arrives on Earth—a messenger of Galactus, a powerful being that devours planets. He informs the people of Earth about Galactus's imminent arrival. The Four set off to negotiate with Galactus. He demands Sue's unborn child, which she has been carrying for several months. Galactus senses power within the unborn child and wants to make him his successor. The Four refuse and flee back to Earth. Now they have very little time to figure out how to avert disaster.",
-  "imagePath": "posters/the_fantastic_four_first_steps",
+  "poster": "posters/the_fantastic_four_first_steps",
   "genres": [
     {
       "title": "Action",

@@ -6,8 +6,7 @@
   "duration": 96,
   "budget": 80000000,
   "boxOffice": 124000000,
-  "synopsis": "Alexander Hardeghen is an inventor trying to save his beloved from death using a time machine he has created. But each time she dies under different circumstances. Realizing he cannot outplay fate, he ventures into the distant future to seek answers. He finds himself in an apocalyptic future, leading to a malfunction of the time machine, and Alexander ends up thousands of years ahead, where humanity survives in the trees because mutants hunt them on the ground. Alexander will have to discover what this future conceals and find his new happiness.",
-  "imagePath": "posters/time_machine.webp",
+  "poster": "posters/time_machine.webp",
   "genres": [
     {
       "title": "Sci-Fi",
@@ -106,6 +105,5 @@
       "role": "ACTOR",
       "details": "Vox"
     }
-  ],
-  "collections": []
+  ]
 }

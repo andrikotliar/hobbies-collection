@@ -6,8 +6,7 @@
   "duration": 147,
   "budget": 250000000,
   "boxOffice": 1150000000,
-  "synopsis": null,
-  "imagePath": "posters/captain_america_3.webp",
+  "poster": "posters/captain_america_3.webp",
   "genres": [
     {
       "title": "Sci-Fi",

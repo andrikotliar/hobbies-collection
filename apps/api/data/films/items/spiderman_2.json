@@ -6,8 +6,7 @@
   "duration": 127,
   "budget": 200000000,
   "boxOffice": 789000000,
-  "synopsis": "Peter's friend, Gary Osborn, introduces him to a famous scientist, Otto Octavius. Otto is currently working on creating a mini-version of the Sun, using four mechanical tentacles with artificial intelligence. Peter is at the presentation of his creation, but the demonstration goes out of control as a fiery sphere starts to absorb everything around. Peter then puts on a suit and destroys the device, while Otto is injured and ends up in the hospital. There, attempts are made to remove the mechanical tentacles from him, but the limiter on their intelligence is broken, and now they can think independently and even control Otto's behavior. Octavius decides to finish building his device by any means and begins to attack the city. Meanwhile, Peter starts to feel problems with his powers, losing understanding of who he is—Peter Parker or Spider-Man. These doubts leave him powerless, and he decides to finally live a normal life until he realizes that he is truly needed by the city.",
-  "imagePath": "posters/raimi_spider_man_2.webp",
+  "poster": "posters/raimi_spider_man_2.webp",
   "genres": [
     {
       "title": "Sci-Fi",

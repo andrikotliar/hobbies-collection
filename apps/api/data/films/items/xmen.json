@@ -6,8 +6,7 @@
   "duration": 104,
   "budget": 75000000,
   "boxOffice": 296000000,
-  "synopsis": "In the world, there are people who have gained extraordinary abilities due to gene mutations. Mutants are despised in society, so the telepath Professor Charles Xavier creates a school for the gifted, where mutants can live ordinary lives in peace. But his old friend, who can control metal - Erik Lensherr, known as Magneto, hates humans and gathers his team of mutants to transform all humans into mutants with the help of the mutant Rogue. Logan, known as Wolverine, arrives at Xavier’s school. He can regenerate infinitely and has adamantium claws that extend from his hands. He and a few other students set out to find Magneto to stop his plan.",
-  "imagePath": "posters/x_men_1.webp",
+  "poster": "posters/x_men_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

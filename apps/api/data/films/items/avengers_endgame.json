@@ -6,8 +6,7 @@
   "duration": 181,
   "budget": 356000000,
   "boxOffice": 2730000000,
-  "synopsis": "After the Avengers lost the battle with Thanos, half of all living beings in the Universe were wiped out. The remaining Avengers find Thanos on another planet hoping to take the Infinity Gauntlet. But when they arrive, they discover that he has destroyed the Infinity Stones. For a long time, people try to adjust to their new lives. One day, Stephen Lang arrives at the Avengers headquarters, where only Natasha Romanoff and Steve Rogers remain. He has waited out Thanos's snap in the quantum realm, and for him, only a few minutes have passed, not 5 years like for everyone else. He proposes to use this technology to travel back in time, find all the stones, and bring back the vanished people. The team persuades Tony Stark to develop time travel technology, and now Steve Rogers, Tony Stark, Natasha Romanoff, Clint Barton, Stephen Lang, Rhodey Rhodes, Rocket, Thor, and Nebula travel back in time to different points to gather all the stones and undo Thanos.",
-  "imagePath": "posters/avengers_4.webp",
+  "poster": "posters/avengers_4.webp",
   "genres": [
     {
       "title": "Sci-Fi",

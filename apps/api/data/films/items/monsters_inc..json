@@ -6,8 +6,7 @@
   "duration": 92,
   "budget": 115000000,
   "boxOffice": 580000000,
-  "synopsis": "Mike and Sulley are two monsters who work for the Monsters, Inc. Corporation, which extracts energy from the screams of children in other dimensions. They pass through special doors to enter and must scare a human child. Monsters are forbidden from touching children, as they believe it could threaten their lives. Sulley's task is to scare, while Mike's is to manage the doors. One day, a little girl slips through the door and starts following Sulley. The friends try to find a way to return the child and gradually begin to realize that the company's leader and his henchman Randall are plotting something very terrible against humanity to increase energy production.",
-  "imagePath": "posters/monsters_inc.webp",
+  "poster": "posters/monsters_inc.webp",
   "genres": [
     {
       "title": "Adventures",
@@ -127,6 +126,5 @@
       "role": "ACTOR",
       "details": "Celia"
     }
-  ],
-  "collections": []
+  ]
 }

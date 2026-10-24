@@ -6,8 +6,7 @@
   "duration": 120,
   "budget": 40000000,
   "boxOffice": 109000000,
-  "synopsis": "Robert Angier and Alfred Borden are magicians who have long been rivals, especially after Alfred accidentally caused the death of Robert's beloved during one of the performances. Each of them does everything to create a perfect show on the edge of reality. Meanwhile, Robert is building his plan for revenge against Alfred.",
-  "imagePath": "posters/the_prestige",
+  "poster": "posters/the_prestige",
   "genres": [
     {
       "title": "Drama",
@@ -106,6 +105,5 @@
       "role": "ACTOR",
       "details": "Olivia Wenscombe"
     }
-  ],
-  "collections": []
+  ]
 }

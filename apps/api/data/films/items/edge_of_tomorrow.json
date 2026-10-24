@@ -6,8 +6,7 @@
   "duration": 113,
   "budget": 178000000,
   "boxOffice": 370000000,
-  "synopsis": "Cage is a war journalist who accidentally ends up on the front lines where a war is being fought against alien invaders. He dies, but before that, he is splattered with the blood of one of the aliens. Now he is stuck in one day, and every time he dies, the day resets. Not knowing what to do, he goes to elite fighter Rita Rytovska, hoping to convince her that he can restart the day. But it turns out she once had such an ability, and with her help, they can reach the main alien and destroy him.",
-  "imagePath": "posters/edge_of_tomorow.webp",
+  "poster": "posters/edge_of_tomorow.webp",
   "genres": [
     {
       "title": "Sci-Fi",
@@ -181,6 +180,5 @@
       "role": "ACTOR",
       "details": "Takeda"
     }
-  ],
-  "collections": []
+  ]
 }

@@ -6,7 +6,6 @@
   "duration": 100,
   "budget": 150000000,
   "boxOffice": 121000000,
-  "synopsis": null,
   "imagePath": "posters/soul.webp",
   "genres": [
     {
@@ -198,6 +197,5 @@
       "role": "ACTOR",
       "details": "Libba"
     }
-  ],
-  "collections": []
+  ]
 }

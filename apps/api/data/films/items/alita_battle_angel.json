@@ -6,8 +6,7 @@
   "duration": 122,
   "budget": 170000000,
   "boxOffice": 400000000,
-  "synopsis": null,
-  "imagePath": "posters/alita.webp",
+  "poster": "posters/alita.webp",
   "genres": [
     {
       "title": "Cyberpunk",
@@ -124,6 +123,5 @@
       "role": "ACTOR",
       "details": "Hugo"
     }
-  ],
-  "collections": []
+  ]
 }

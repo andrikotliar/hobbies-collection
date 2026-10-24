@@ -6,8 +6,7 @@
   "duration": 139,
   "budget": 40,
   "boxOffice": 180,
-  "synopsis": "Desmond Doss, a young religious lad, aspires to participate in World War II like his brother, to benefit society. For a long time, he is not accepted due to his physical condition, but he volunteers as a medic, even though he lacks that specialization. However, Desmond refuses to take up arms due to his beliefs. He is disliked in the military and called a burden that could harm his team. Nevertheless, because he is the son of the honorary soldier Tom Doss, he is taken to the front. He ends up in Japan, where the military is trying to break through the Japanese defenses to end the war. From the very first days, Doss proves that he is worthy of being alongside his comrades even without a weapon in his hands.",
-  "imagePath": "posters/hacksaw_ridge_.webp",
+  "poster": "posters/hacksaw_ridge_.webp",
   "genres": [
     {
       "title": "Drama",
@@ -179,6 +178,5 @@
       "role": "ACTOR",
       "details": "Captain Glover"
     }
-  ],
-  "collections": []
+  ]
 }

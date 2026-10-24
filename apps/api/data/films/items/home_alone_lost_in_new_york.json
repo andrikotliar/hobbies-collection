@@ -6,8 +6,7 @@
   "duration": 120,
   "budget": 28000000,
   "boxOffice": 359000000,
-  "synopsis": "The McCallisters are planning a new Christmas trip and are trying not to forget Kevin this year. But due to the rush and distractions, Kevin boards the wrong flight and finds himself alone in New York. There, he decides to celebrate the holiday his way, uses his father's credit card, and checks into one of the best hotels. Soon, Kevin's vacation goes awry when he encounters Marv and Harry, who have escaped from prison and are planning to rob a toy store right on Christmas.",
-  "imagePath": "posters/home_alone_lost_in_new_york",
+  "poster": "posters/home_alone_lost_in_new_york",
   "genres": [
     {
       "title": "Comedy",

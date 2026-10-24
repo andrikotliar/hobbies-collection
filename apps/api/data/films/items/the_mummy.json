@@ -6,8 +6,7 @@
   "duration": 125,
   "budget": 80000000,
   "boxOffice": 416000000,
-  "synopsis": "After the excavation of an ancient tomb, the Book of the Dead was found. Evelyn Carnahan, an archaeologist, read this book, which awakened the mummy Imhotep. Now his goal is to restore his body and, with his boundless power, conquer the world. Evelyn, along with her brother Jonathan and Rick O'Connell, who was drawn into the treasure hunt, will be forced to find ways to stop the ancient evil.",
-  "imagePath": "posters/mummy_1.webp",
+  "poster": "posters/mummy_1.webp",
   "genres": [
     {
       "title": "Fantasy",

@@ -6,8 +6,7 @@
   "duration": 106,
   "budget": 14000000,
   "boxOffice": 14000000,
-  "synopsis": "A few years have passed since Damien promised to change District 13 and destroy the walls. But the walls still stand. Leïto is trying to destroy them on his own. However, very soon, a new threat will arise before the district. The authorities plan to destroy the district, while the military secretly plan to not warn the population. Leïto will have to gather the heads of all the criminal gangs in the district to save the civilians.",
-  "imagePath": "posters/d13_2.webp",
+  "poster": "posters/d13_2.webp",
   "genres": [
     {
       "title": "Action",

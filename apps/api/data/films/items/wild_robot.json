@@ -6,8 +6,7 @@
   "duration": 102,
   "budget": 78000000,
   "boxOffice": 334000000,
-  "synopsis": "A plane with helper robots crashes in the forest. The only surviving robot is Roz. She can't contact headquarters and now has to find a new task for herself. She tries to communicate with the forest inhabitants, but the animals are rather afraid of her and do not seek interaction. Then she finds an orphaned duckling that has lost its home and family due to the plane crash. She decides to take care of it, which becomes her new task.",
-  "imagePath": "posters/wild_robot.webp",
+  "poster": "posters/wild_robot.webp",
   "genres": [
     {
       "title": "Adventures",
@@ -177,6 +176,5 @@
       "role": "ACTOR",
       "details": "Pinktail"
     }
-  ],
-  "collections": []
+  ]
 }

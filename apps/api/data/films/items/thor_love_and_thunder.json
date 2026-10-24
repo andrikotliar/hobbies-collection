@@ -6,8 +6,7 @@
   "duration": 118,
   "budget": 250000000,
   "boxOffice": 761000000,
-  "synopsis": null,
-  "imagePath": "posters/thor_love_and_thunder",
+  "poster": "posters/thor_love_and_thunder",
   "genres": [
     {
       "title": "Comedy",

@@ -6,8 +6,7 @@
   "duration": 93,
   "budget": 150000000,
   "boxOffice": 920000000,
-  "synopsis": "Shrek and Fiona finish their honeymoon and return to the swamp. Soon, Fiona's parents' messengers appear, wanting to meet her chosen one and invite them to the Kingdom of Far Far Away. Shrek is against this, as he understands that her parents will not be thrilled that she remains an ogre. However, Fiona convinces him, and together with Donkey, they set off on a journey to the Kingdom of Far Far Away. Fiona's parents are, of course, shocked, and in addition, her Godmother appears, whose son was supposed to marry Fiona. Fiona and Shrek's relationship will face great challenges in which they learn more about her parents' past and how strong their love is.",
-  "imagePath": "posters/shrek_2.webp",
+  "poster": "posters/shrek_2.webp",
   "genres": [
     {
       "title": "Adventures",

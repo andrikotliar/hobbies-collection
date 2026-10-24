@@ -6,8 +6,7 @@
   "duration": 98,
   "budget": 90000000,
   "boxOffice": 589000000,
-  "synopsis": "Police officer James encounters an extremely fast criminal with strange ages. The criminal warns of His approach. Agent Kay approaches James and explains that aliens are hidden in the world and they are everywhere. Kay invites James to join their team. He agrees and goes to the Men in Black. This is a secret organization that regulates the presence of extraterrestrials on Earth. All agents have only code names, and their data has been erased. Thus, James becomes Agent Jay and will soon be involved in the investigation of the appearance of a hostile alien - Bug, whom the criminal warned about.",
-  "imagePath": "posters/mib_1.webp",
+  "poster": "posters/mib_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

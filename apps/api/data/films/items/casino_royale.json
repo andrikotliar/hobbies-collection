@@ -6,8 +6,7 @@
   "duration": 144,
   "budget": 150000000,
   "boxOffice": 616000000,
-  "synopsis": null,
-  "imagePath": "posters/casino_royale.webp",
+  "poster": "posters/casino_royale.webp",
   "genres": [
     {
       "title": "Action",
@@ -140,6 +139,5 @@
       "role": "ACTOR",
       "details": "Rene Mathis"
     }
-  ],
-  "collections": []
+  ]
 }

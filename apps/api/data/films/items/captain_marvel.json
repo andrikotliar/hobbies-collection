@@ -6,8 +6,7 @@
   "duration": 124,
   "budget": 152000000,
   "boxOffice": 1130000000,
-  "synopsis": null,
-  "imagePath": "posters/captain_marvel.webp",
+  "poster": "posters/captain_marvel.webp",
   "genres": [
     {
       "title": "Sci-Fi",

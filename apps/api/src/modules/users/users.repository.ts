@@ -95,22 +95,12 @@ export class UsersRepository {
     return this.deps.db.delete(usersSessions).where(eq(usersSessions.id, id));
   }
 
-  getTranslationPreferences(userId: number) {
-    return getFirstValue(
-      this.deps.db
-        .select({ translationPreferences: users.translationPreferences })
-        .from(users)
-        .where(eq(users.id, userId)),
-    );
-  }
-
   getDisplayData(userId: number) {
     return getFirstValue(
       this.deps.db
         .select({
           id: users.id,
           username: users.username,
-          translationPreferences: users.translationPreferences,
         })
         .from(users)
         .where(eq(users.id, userId)),

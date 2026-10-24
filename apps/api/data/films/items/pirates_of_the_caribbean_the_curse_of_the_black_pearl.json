@@ -6,8 +6,7 @@
   "duration": 143,
   "budget": 140000000,
   "boxOffice": 654000000,
-  "synopsis": "Pirates from the mystical ship Black Pearl, commanded by Captain Barbossa, attack Port Royal to find the last medallion from Cortés' treasure. The treasures are cursed, and the entire crew becomes undead under the moonlight. They want to lift the curse. To do this, the pirates kidnap the governor's daughter, Elizabeth Swann, who possesses the last medallion. They mistakenly believe she is a descendant of Bill Turner, whose blood is needed to lift the curse. The real descendant, William Turner, sets out after them to rescue Elizabeth, whom he loves. A pirate named Jack Sparrow joins the search for the Black Pearl. He was once the captain of this ship until he was betrayed by Barbossa and marooned on a deserted island. Now his goal is to reclaim his ship.",
-  "imagePath": "posters/pirates_1.webp",
+  "poster": "posters/pirates_1.webp",
   "genres": [
     {
       "title": "Fantasy",

@@ -6,8 +6,7 @@
   "duration": 106,
   "budget": 105000000,
   "boxOffice": 184000000,
-  "synopsis": "Dek is different from other members of his race. He is smaller and weaker. His own people try to eliminate him as a weak link. His brother saves him from death, and Dek leaves the planet. He plans to go hunting for one of the most dangerous creatures in the galaxy. Upon arrival, he finds a damaged android, Tia, who says she can help him find the beast if he helps her reach her base for repairs. He agrees, and they begin to navigate through the dangerous jungle, trying to survive together.",
-  "imagePath": "posters/predator_badlands",
+  "poster": "posters/predator_badlands",
   "genres": [
     {
       "title": "Action",

@@ -6,8 +6,7 @@
   "duration": 0,
   "budget": 20000000,
   "boxOffice": 73000000,
-  "synopsis": "Joel meets an attractive but somewhat strange girl named Clementine. He falls in love with her, but one day she disappears, and it turns out she has erased all her memories of him. He gets angry and wishes to go through the same procedure. But the more of his memories disappear, the more he begins to understand how important they were to him.",
-  "imagePath": "posters/eternal_sunshine_of_the_spotless_mind",
+  "poster": "posters/eternal_sunshine_of_the_spotless_mind",
   "genres": [
     {
       "title": "Romance",
@@ -145,6 +144,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

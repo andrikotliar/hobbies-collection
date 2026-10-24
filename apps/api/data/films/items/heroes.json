@@ -6,8 +6,7 @@
   "duration": 45,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "Some people around the world are beginning to discover extraordinary abilities within themselves. Some can fly, some can predict the future, and others can travel through space and time. Mohinder Suresh, an Indian scientist, wants to uncover the secret of these abilities and study unique individuals. Isaac predicts that one of them is destined to destroy the world, and now it is necessary to find out who this will be and how to prevent it. An organization is also hunting for these unique individuals, wanting to bring them under their control, with their agent being a well-known businessman, Nathan Petrell, whose brother, Peter Petrelli, gains the ability to fly and wants to prove that his brother also has special powers.",
-  "imagePath": "posters/heroes.webp",
+  "poster": "posters/heroes.webp",
   "genres": [
     {
       "title": "Sci-Fi",
@@ -577,7 +576,6 @@
       "details": "Daniel Linderman"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 7,
     "episodesTotal": 77,

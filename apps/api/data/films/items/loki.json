@@ -6,8 +6,7 @@
   "duration": 50,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "During Steve Rogers and Tony Stark's attempt to seize the Tesseract from the past in New York in 2012, a variant of Loki steals it and disappears. He is quickly pursued by TVA soldiers, an organization that controls the creation of deviations from the Sacred Timeline. They eliminate any newly created timelines. Loki has just created one by escaping custody. He is brought to the TVA where they intend to prune him, but Agent Mobius convinces the leadership that he can help catch another dangerous variant—a female version of Loki from another universe, who calls herself Sylvie, and wants to destroy the TVA so that other timelines can exist. Loki joins the TVA and gradually begins to understand that the TVA is hiding many secrets.",
-  "imagePath": "posters/loki.webp",
+  "poster": "posters/loki.webp",
   "genres": [
     {
       "title": "Adventures",

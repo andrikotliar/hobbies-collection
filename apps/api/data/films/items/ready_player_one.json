@@ -6,8 +6,7 @@
   "duration": 140,
   "budget": 175000000,
   "boxOffice": 582000000,
-  "synopsis": "The developer Halliday created a mega-popular game with a virtual world. Before his death, he left three Easter eggs in the game, and according to the condition, whoever finds them all will gain control over the company that develops the game. Players from around the world set out in search of the Easter eggs. Among them is a boy from the slums, Wade, known in the game as Parzival. He is one of the best players and a huge fan of Halliday. He, along with his friends, must outpace Sorrento, who wants to take over the company and drastically change the game by flooding it with endless advertisements.",
-  "imagePath": "posters/ready_player_one.webp",
+  "poster": "posters/ready_player_one.webp",
   "genres": [
     {
       "title": "Sci-Fi",
@@ -157,6 +156,5 @@
       "role": "ACTOR",
       "details": "F'Nale Zandor"
     }
-  ],
-  "collections": []
+  ]
 }

@@ -6,8 +6,7 @@
   "duration": 178,
   "budget": 93000000,
   "boxOffice": 871000000,
-  "synopsis": "Once there was the Ring of Power, which belonged to Sauron. With it, he could rule all, but he was defeated, and over time the ring was lost until it was found by the hobbit Bilbo Baggins. A long time has passed since those events, and clouds began to gather over Mordor, which could mean Sauron's imminent return. The only way to stop him is to destroy the Ring of Power. The wizard Gandalf visits Bilbo to learn about the ring, but Bilbo hands the ring over to his nephew Frodo. Soon, this burden becomes Frodo's; he must deliver it to the Elven king Elrond, where the council decides that the ring must be taken to Mordor and destroyed. No one is ready to take this burden upon themselves, and then Frodo volunteers to do it. Other warriors volunteer to accompany him, forming the Fellowship of the Ring. Now Frodo faces a dangerous journey to the mountain in Mordor where the ring was created.",
-  "imagePath": "posters/middle_earth_4.webp",
+  "poster": "posters/middle_earth_4.webp",
   "genres": [
     {
       "title": "Fantasy",

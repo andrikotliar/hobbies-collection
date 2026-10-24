@@ -6,8 +6,7 @@
   "duration": 137,
   "budget": 160000000,
   "boxOffice": 658000000,
-  "synopsis": "Katniss, Peeta, Gale, and the other soldiers advance through the Capitol with the goal of reaching Snow and his followers. Katniss has one goal - to kill Snow and finally take her revenge. But gradually she begins to realize that the new leader of the uprising, Alma Coin, is weaving her own intrigues and is no better than Snow, so she will have to be decisive in this battle for survival.",
-  "imagePath": "posters/hunger_games_4.webp",
+  "poster": "posters/hunger_games_4.webp",
   "genres": [
     {
       "title": "Sci-Fi",

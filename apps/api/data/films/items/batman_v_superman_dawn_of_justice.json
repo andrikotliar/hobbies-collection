@@ -6,8 +6,7 @@
   "duration": 151,
   "budget": 250000000,
   "boxOffice": 874000000,
-  "synopsis": "After the battle between Superman and Zod, Metropolis was heavily damaged. During this fight, billionaire Bruce Wayne was in the city and witnessed numerous casualties from the battle. Under the guise of his alter ego Batman, the night's protector, he decides to stand against Superman, viewing him as a threat to the world.",
-  "imagePath": "posters/batman_v_superman.webp",
+  "poster": "posters/batman_v_superman.webp",
   "genres": [
     {
       "title": "Action",

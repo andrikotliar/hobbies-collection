@@ -6,8 +6,7 @@
   "duration": 142,
   "budget": 108000000,
   "boxOffice": 630000000,
-  "synopsis": "During the expedition to Mars, the team encounters an extremely powerful storm and has to abort the mission and leave Mars. One biologist, Mark Watney, is separated from the team when they are about to reach the rocket. Due to the severe storm and damage to Watney's suit, they have to leave him behind. Mark survives and is left alone on Mars. He will have to find a way to survive until the next expedition to Mars, as the food supply at the mobile base on Mars is limited.",
-  "imagePath": "posters/martian.webp",
+  "poster": "posters/martian.webp",
   "genres": [
     {
       "title": "Sci-Fi",
@@ -201,6 +200,5 @@
       "role": "ACTOR",
       "details": "Rich Purnell"
     }
-  ],
-  "collections": []
+  ]
 }

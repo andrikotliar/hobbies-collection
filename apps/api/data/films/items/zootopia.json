@@ -6,8 +6,7 @@
   "duration": 108,
   "budget": 150000000,
   "boxOffice": 1020000000,
-  "synopsis": "Judy is a small rabbit who dreams of joining the police force in the largest animal city - Zootopia. After going through tough training, she becomes the first rabbit police officer. Of course, the police leadership is not thrilled and assigns her to regular patrolling and ticketing. But Judy wants more; she yearns to handle real cases. Thus, she catches the fox Nick for illegal trading and records a conversation with him, which helps her blackmail him into assisting her with a case involving a missing beaver. Judy is given 48 hours to solve the case, or she will have to leave the police force.",
-  "imagePath": "posters/zootopia.webp",
+  "poster": "posters/zootopia.webp",
   "genres": [
     {
       "title": "Adventures",

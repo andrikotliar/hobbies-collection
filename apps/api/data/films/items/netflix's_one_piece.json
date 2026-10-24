@@ -6,8 +6,7 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "After the execution of Gol D. Roger, the era of pirates began. Before his death, he announced that he had hidden his treasure somewhere on the Grand Line, and whoever reaches it first will become the King of Pirates. Young Monkey D. Luffy dreams of becoming the King of Pirates, despite having eaten a devil fruit and now being unable to swim, but instead can stretch. He embarks on a journey to form his pirate crew and reach the treasure One Piece.",
-  "imagePath": "posters/netflixs_one_piece",
+  "poster": "posters/netflixs_one_piece",
   "genres": [
     {
       "title": "Adventures",
@@ -134,7 +133,6 @@
       "details": "Arlong"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 76,
     "episodesTotal": 16,

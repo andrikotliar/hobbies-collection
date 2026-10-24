@@ -6,8 +6,7 @@
   "duration": 116,
   "budget": 30000000,
   "boxOffice": 350000000,
-  "synopsis": "An unknown terrorist appears in the city, starting to blow up buses. Police officer Jack Traven is trying to find him until the terrorist contacts him and states the number of the bus that has been rigged this time. He makes demands to the police, and if they are not met, the terrorist will blow up the bus. But there is another rule—the bus must be moving faster than 60 miles per hour; otherwise, the bomb will activate. Jack catches up to the bus and jumps on at speed to warn the passengers. A fight breaks out inside, during which the driver is injured, and one of the passengers, Annie, has to take the wheel while Jack tries to come up with a plan, clearing the way ahead of them with the police, as they can no longer brake.",
-  "imagePath": "posters/speed.webp",
+  "poster": "posters/speed.webp",
   "genres": [
     {
       "title": "Action",
@@ -133,6 +132,5 @@
       "role": "ACTOR",
       "details": "Harry"
     }
-  ],
-  "collections": []
+  ]
 }

@@ -6,8 +6,7 @@
   "duration": 107,
   "budget": 3480000,
   "boxOffice": 358000000,
-  "synopsis": "Mitsuha one day wakes up in the body of an unknown boy named Taki, and the same happens to Taki. This happens periodically and they gradually learn about each other’s lives. Over time, they begin to understand that they are separated not only by distance but also by time. Soon, Mitsuha's city is to be destroyed by a meteorite. Taki learns about this in the future and when he shifts into Mitsuha's body, he tries to save her and many residents of the city.",
-  "imagePath": "posters/your_name.webp",
+  "poster": "posters/your_name.webp",
   "genres": [
     {
       "title": "Drama",
@@ -122,6 +121,5 @@
       "role": "ACTOR",
       "details": "Yotsuha Miyamizu"
     }
-  ],
-  "collections": []
+  ]
 }

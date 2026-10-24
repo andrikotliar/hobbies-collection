@@ -6,8 +6,7 @@
   "duration": 145,
   "budget": 160000000,
   "boxOffice": 397000000,
-  "synopsis": null,
-  "imagePath": "posters/kingdom_of_the_planet_of_the_apes",
+  "poster": "posters/kingdom_of_the_planet_of_the_apes",
   "genres": [
     {
       "title": "Sci-Fi",

@@ -6,8 +6,7 @@
   "duration": 108,
   "budget": 76000000,
   "boxOffice": 236000000,
-  "synopsis": "The FBI is trying to catch arms dealer Johnny Tran. To do this, they involve former agent Brian, who agrees only if he has his own partner, who is his longtime friend Roman Pearce.",
-  "imagePath": "posters/fast_and_furious_2.webp",
+  "poster": "posters/fast_and_furious_2.webp",
   "genres": [
     {
       "title": "Action",

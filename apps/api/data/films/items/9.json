@@ -6,8 +6,7 @@
   "duration": 79,
   "budget": 30000000,
   "boxOffice": 48000000,
-  "synopsis": "A rag doll numbered 9 comes to consciousness in a completely destroyed world ruled by cruel machines. Trying to understand what is happening, he finds 8 more dolls with numbers. They must uncover the truth about their past and what led to the beginning of the end.",
-  "imagePath": "posters/9",
+  "poster": "posters/9",
   "genres": [
     {
       "title": "Sci-Fi",
@@ -134,6 +133,5 @@
       "role": "COMPOSER",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

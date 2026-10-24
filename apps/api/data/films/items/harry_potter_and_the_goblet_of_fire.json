@@ -6,8 +6,7 @@
   "duration": 157,
   "budget": 150000000,
   "boxOffice": 897000000,
-  "synopsis": "This year at Hogwarts, there will be a Triwizard Tournament held among several magical schools. Only students over 18 can participate, Harry is only 14, but his name comes out of the Goblet of Fire, which is supposed to choose the champions, and despite the rules, he becomes the fourth competitor. He will have to face three difficult tasks to ultimately confront the one whose name everyone is so afraid to speak.",
-  "imagePath": "posters/harry_potter_4.webp",
+  "poster": "posters/harry_potter_4.webp",
   "genres": [
     {
       "title": "Fantasy",

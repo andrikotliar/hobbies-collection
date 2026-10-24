@@ -6,8 +6,7 @@
   "duration": 138,
   "budget": 127000000,
   "boxOffice": 742000000,
-  "synopsis": "There is a city called Zion, where those who were able to escape the Matrix live. The machines are preparing an attack on it, and therefore Neo needs to learn the secrets of the Matrix as quickly as possible to stop the machines. But Agent Smith detached from the system when Neo defeated him, and now he is also seeking a way out of the Matrix and poses a great threat to both humanity and the machines. Neo must find the Keymaker who will lead him to the Architect - the one who created the Matrix; there he may be able to learn how this world is structured.",
-  "imagePath": "posters/matrix_2.webp",
+  "poster": "posters/matrix_2.webp",
   "genres": [
     {
       "title": "Sci-Fi",

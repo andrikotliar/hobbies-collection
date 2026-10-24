@@ -6,8 +6,7 @@
   "duration": 112,
   "budget": 11000000,
   "boxOffice": 427000000,
-  "synopsis": "Driss is looking for a job to provide for his poor family and becomes the caregiver of millionaire Philippe, who is paralyzed and completely confined to a wheelchair. Driss is determined to show Philippe how one can truly live even when completely restricted in their actions.",
-  "imagePath": "posters/intouchables.webp",
+  "poster": "posters/intouchables.webp",
   "genres": [
     {
       "title": "Biography",
@@ -126,6 +125,5 @@
       "role": "ACTOR",
       "details": "Magalie"
     }
-  ],
-  "collections": []
+  ]
 }

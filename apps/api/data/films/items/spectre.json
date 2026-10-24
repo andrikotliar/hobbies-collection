@@ -6,8 +6,7 @@
   "duration": 148,
   "budget": 245000000,
   "boxOffice": 880000000,
-  "synopsis": null,
-  "imagePath": "posters/spectre",
+  "poster": "posters/spectre",
   "genres": [
     {
       "title": "Action",

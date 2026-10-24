@@ -6,8 +6,7 @@
   "duration": 45,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "Wednesday Adams is heading to a school for exceptional children. There, children of various kinds learn, such as werewolves, sirens, and other mystical creatures. She tries to find her place in this community and unravel the mysterious attacks of a creature known as Hyde.",
-  "imagePath": "posters/wednesday",
+  "poster": "posters/wednesday",
   "genres": [
     {
       "title": "Fantasy",
@@ -149,7 +148,6 @@
       "details": "Morticia Addams"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 75,
     "episodesTotal": 15,

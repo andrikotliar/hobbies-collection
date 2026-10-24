@@ -6,8 +6,7 @@
   "duration": 103,
   "budget": 60000000,
   "boxOffice": 264000000,
-  "synopsis": "Truman lives his ordinary life, not even realizing that he is in a daily show 24/7 and everyone around him is just an actor, and only he does not know what life is like outside the filming studio. But over time, he has more and more questions and doubts. He will have to find out what is really going on.",
-  "imagePath": "posters/the_truman_show",
+  "poster": "posters/the_truman_show",
   "genres": [
     {
       "title": "Comedy",
@@ -133,6 +132,5 @@
       "role": "ACTOR",
       "details": "Christof"
     }
-  ],
-  "collections": []
+  ]
 }

@@ -6,7 +6,6 @@
   "duration": 116,
   "budget": 190000000,
   "boxOffice": 540000000,
-  "synopsis": null,
   "imagePath": "posters/world_war_z.webp",
   "genres": [
     {
@@ -146,6 +145,5 @@
       "role": "ACTOR",
       "details": "Jurgen Warmbrunn"
     }
-  ],
-  "collections": []
+  ]
 }

@@ -6,8 +6,7 @@
   "duration": 95,
   "budget": 145000000,
   "boxOffice": 521000000,
-  "synopsis": "Po finds out that his real father is alive and there is a hidden village where pandas live. But a new enemy threatens China - Kai. He was long defeated by Oogway and trapped in the spirit world, but he has found a way to return to reality and seeks revenge. Po must learn what it means to be a panda and find a way to stop Kai before he turns everyone into enemies.",
-  "imagePath": "posters/kung_fu_panda_3",
+  "poster": "posters/kung_fu_panda_3",
   "genres": [
     {
       "title": "Adventures",

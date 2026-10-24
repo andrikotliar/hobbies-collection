@@ -6,8 +6,7 @@
   "duration": 121,
   "budget": 139000000,
   "boxOffice": 825000000,
-  "synopsis": "Peter Parker is an exceptionally smart student - a loser. He faces bullying every day. One day, he is bitten by a mutated spider, which gives him unique abilities. He can climb walls and shoot webs from his hands. He invents an alter ego for himself and uses it to take part in underground fights where he can make some money. He wins a battle but learns that his Uncle Ben has been killed by a robber whom he let go when he tried to rob a venue where the fights were held. After this, he finds the robber and throws him out of a high-rise window. After this, Peter begins to understand that with great power comes great responsibility. Instead of seeking fun, he can direct his powers for good. Thus, he becomes Spider-Man, makes himself a superhero suit, and starts helping people all over the city. But soon he will have to face a real villain. Norman Osborn tested his serum to enhance people, but it drove him insane, and now in the Green Goblin costume, he wants revenge on everyone who denied Oscorp funding.",
-  "imagePath": "posters/raimi_spider_man_1.webp",
+  "poster": "posters/raimi_spider_man_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

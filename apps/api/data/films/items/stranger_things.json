@@ -6,8 +6,7 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "In the small town of Hawkins, a group of friends is heading home late at night, but on the way home, Will Byers goes missing. A search operation begins under the command of local sheriff Jim Hopper. Will's friends - Mike, Dustin, and Lucas - start their own investigation and find an unnamed girl in the woods who only says one number - Eleven. Soon the team discovers that she has telepathic and telekinetic abilities and has escaped from a secret laboratory. They suspect that this may be related to Will's disappearance. Meanwhile, his mother, Joyce, begins to notice strange behavior of the lights in her house and realizes that Will is trying to communicate with her this way. He has fallen into the Upside Down - an alternate dimension, an exact copy of Hawkins but its dark version, filled with monsters that begin to invade the real world. Now, Will's friends and family will need to find a way to stop the monsters and bring Will back to our world.",
-  "imagePath": "posters/stranger_things.webp",
+  "poster": "posters/stranger_things.webp",
   "genres": [
     {
       "title": "Fantasy",
@@ -277,7 +276,6 @@
       "details": "Billy Hargrove"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 11,
     "episodesTotal": 34,

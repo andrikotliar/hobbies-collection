@@ -6,8 +6,7 @@
   "duration": 115,
   "budget": 200000000,
   "boxOffice": 371000000,
-  "synopsis": "2018. The war with Skynet is in full swing. John Connor continues the search for young Kyle Reese, who doesn't even know yet that he has to save John. Reese has heard John on the radio, calling people to join the resistance. He and his mute girlfriend Blair set off to find John. Along the way, they meet Marcus Wright, who remembers nothing about his past. He decides to go to John, not even suspecting that he is part of Skynet's plan.",
-  "imagePath": "posters/terminator_4.webp",
+  "poster": "posters/terminator_4.webp",
   "genres": [
     {
       "title": "Sci-Fi",

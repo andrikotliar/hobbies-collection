@@ -6,7 +6,6 @@ import {
   type UpdateFilmInput,
   type GetCompleteDataListQuery,
   type CompleteDataResponse,
-  type TranslateDescriptionInput,
   type CreateFilmDraftInput,
   type FilmDraftResponse,
   type GetAdminListQueryParams,
@@ -41,7 +40,6 @@ export class FilmsService {
       | 'genresService'
       | 'countriesService'
       | 'studiosService'
-      | 'aiService'
       | 'usersService'
       | 'inMemoryCacheService'
       | 'storageService'
@@ -93,11 +91,12 @@ export class FilmsService {
 
     const todayCode = this.getDateCode(new Date());
 
-    const mappedList = data.list.map((film) => ({
+    const mappedList = data.list.map((film, index) => ({
       ...film,
       imagePath: this.deps.storageService.constructFullObjectPath(film.imagePath),
       upcoming: film.draft,
       inDays: film.draft && film.releaseDate ? this.getDaysDiffFromToday(film.releaseDate) : null,
+      sequenceNumber: index + 1,
       releasedYears:
         film.releaseDate && todayCode === this.getDateCode(new Date(film.releaseDate))
           ? this.countReleasedYear(film.releaseDate)
@@ -116,29 +115,6 @@ export class FilmsService {
       anniversaryImagePath: anniversary?.imagePath ?? null,
       allFilmsCount,
     };
-
-    if (queries.collectionId) {
-      const collectionParams = await this.deps.filmsRepository.getCollectionOrder(
-        queries.collectionId,
-      );
-
-      const values = new Map();
-
-      collectionParams.forEach((collection) => {
-        values.set(collection.filmId, collection.order);
-      });
-
-      const filmsListWithCollectionOrder = mappedList.map((film) => {
-        return {
-          ...film,
-          sequenceNum: values.get(film.id) ?? 0,
-        };
-      });
-
-      params.list = filmsListWithCollectionOrder.toSorted((a, b) => {
-        return a.sequenceNum - b.sequenceNum;
-      });
-    }
 
     return params;
   }
@@ -322,21 +298,6 @@ export class FilmsService {
         })),
       },
     };
-  }
-
-  async translateDescription(userId: number, input: TranslateDescriptionInput) {
-    const userPreferences = await this.deps.usersService.getUserTranslationPreferences(userId);
-
-    if (!userPreferences.translationPreferences) {
-      throw new BadRequestException({
-        message: 'Translation preferences is not set, update them in the user settings',
-      });
-    }
-
-    return this.deps.aiService.translateToLangPrompt(
-      input.text,
-      userPreferences.translationPreferences,
-    );
   }
 
   createDraft(filmId: string, input: CreateFilmDraftInput): Promise<FilmDraftResponse> {

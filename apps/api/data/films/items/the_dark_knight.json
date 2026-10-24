@@ -6,8 +6,7 @@
   "duration": 152,
   "budget": 185000000,
   "boxOffice": 1000000000,
-  "synopsis": "Billionaire Bruce Wayne continues to lead his double life by dressing up at night as a masked vigilante - Batman. Very soon he will have to confront his most dangerous enemy - the Joker. He is an unknown maniac in clown makeup, who is sweeping the entire criminal underworld of Gotham.",
-  "imagePath": "posters/batman_2.webp",
+  "poster": "posters/batman_2.webp",
   "genres": [
     {
       "title": "Action",
