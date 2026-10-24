@@ -6,7 +6,6 @@
   "duration": 113,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "Katie Mitchell is making a video for her YouTube channel and dreams of entering a film school. Her parents don't understand her passions but still allow her to go to university. She dreams of getting there as soon as possible. However, her father, Rick Mitchell, comes up with a family road trip to the university. Katie is not thrilled, but she has no choice. During their journey, an artificial intelligence uprising begins, and robots attack people. Now the Mitchells will have to test their family not only on the strength of their relationships but also on endurance as Katie devises a plan to stop the machines.",
   "poster": "posters/mitchells.webp",
   "genres": [
     {
@@ -132,6 +131,5 @@
       "role": "ACTOR",
       "details": "Deborahbot 5000"
     }
-  ],
-  "collections": []
+  ]
 }

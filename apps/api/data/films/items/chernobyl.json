@@ -6,7 +6,6 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "On June 26, 1986, at the fourth reactor of the Chernobyl nuclear power plant, an explosion occurs due to personnel negligence and defects in the system, leading to the largest man-made disaster in human history. The authorities try to conceal the fact of the accident. Hundreds of firefighters are sent to extinguish the fire without understanding the level of radiation around the power station. Valery Legasov from the Physics Institute and official Boris Shcherbina are appointed to deal with the aftermath of the disaster and its causes. Later, Ulyana Khomyuk from the Minsk Institute of Nuclear Physics, who embodies many real scientists who worked on the catastrophe, will join the investigation.",
   "poster": "posters/chernobyl.webp",
   "genres": [
     {
@@ -186,7 +185,6 @@
       "details": "Vasily Ignatenko"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 3,
     "episodesTotal": 5,

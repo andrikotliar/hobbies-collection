@@ -6,7 +6,6 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "One day, in different parts of the world, children are born to girls who were not pregnant before. They are found by a wealthy man, Reginald Hargreeves, who adopts them all. All these children possess extraordinary abilities. All except Vanya Hargreeves, who never discovered her powers. Hargreeves makes them superheroes who carry out various missions. During one of these missions, Ben, one of them, dies. This begins to fracture the Academy. Then the Fifth goes missing, who was playing with his abilities of time and space manipulation. The team disbands and starts their separate lives. They are brought back together by the news of Reginald's sudden death, and soon the Fifth returns, bringing news that the end of the world is imminent and that they must avert it. This will lead them to uncover the secrets of their adoptive father and learn about Vanya's hidden powers.",
   "poster": "posters/umbrella_academy.webp",
   "genres": [
     {
@@ -165,7 +164,6 @@
       "details": "Pogo"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 17,
     "episodesTotal": 30,

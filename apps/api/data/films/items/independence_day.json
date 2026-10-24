@@ -6,7 +6,6 @@
   "duration": 145,
   "budget": 75000000,
   "boxOffice": 817000000,
-  "synopsis": "One day, a large-scale invasion of extraterrestrial ships begins on Earth. For a time, they hover over the largest buildings in the world. The authorities are concerned, while some people welcome the aliens. David Levinson, a radio mechanic, decodes a signal from the aliens that they are transmitting through human satellites. It is some kind of countdown. He provides this data to the President of the USA, but it is already too late. The aliens launch a massive attack around the world simultaneously. Their ships cannot be destroyed; they are protected by a force field. Then David comes up with a plan to launch a virus into the aliens' mothership, which is in orbit, to disable the defense. Now, along with soldier Steven Hiller, who managed to destroy one of the alien fighters, he must reach the ship and carry out a mission that matters for the whole world.",
   "poster": "posters/independence_day.webp",
   "genres": [
     {
@@ -141,6 +140,5 @@
       "role": "ACTOR",
       "details": "Russell Casse"
     }
-  ],
-  "collections": []
+  ]
 }

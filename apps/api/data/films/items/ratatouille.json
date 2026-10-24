@@ -6,7 +6,6 @@
   "duration": 111,
   "budget": 150000000,
   "boxOffice": 623000000,
-  "synopsis": "Remy is a rat who, unlike his peers, has a taste for fine cuisine. He doesn't want to eat food straight from the garbage; he combines different ingredients to create true culinary masterpieces. One day, he finds himself in one of the famous restaurants in Paris. There, young chef Linguini has to prove to the master chef that he is a worthy cook. Remy is going to help him by discovering that he can control Linguini by tugging on his hair, which will help create exceptional dishes. However, they face opposition from another chef, Skinner, who suspects the presence of a rat and wants to shut down the restaurant. Soon, critic Anton Ego, whose review will determine the fate of the restaurant, is scheduled to visit.",
   "poster": "posters/ratatouille.webp",
   "genres": [
     {
@@ -183,6 +182,5 @@
       "role": "ACTOR",
       "details": "Gusteau"
     }
-  ],
-  "collections": []
+  ]
 }

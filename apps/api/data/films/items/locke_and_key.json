@@ -6,7 +6,6 @@
   "duration": 48,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "After the sudden death of her husband, Nina Lok moves to his estate in another city with her children. Soon, the children discover the secret of the estate where magical keys with various properties are hidden. However, Bodhi Lok accidentally frees a creature named Dodge, who appears to be an ordinary woman; her goal is to seize all the keys to unleash evil from another dimension.",
   "poster": "posters/locke_key.webp",
   "genres": [
     {
@@ -151,7 +150,6 @@
       "details": "Dodge"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 8,
     "episodesTotal": 30,

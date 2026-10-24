@@ -6,7 +6,6 @@
   "duration": 140,
   "budget": 30000000,
   "boxOffice": 59000000,
-  "synopsis": null,
   "poster": "posters/mollys_game",
   "genres": [
     {
@@ -110,6 +109,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

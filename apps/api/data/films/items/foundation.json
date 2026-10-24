@@ -6,7 +6,6 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "In a distant future, mathematician Hari Seldon predicts the fall of the Galactic Empire and seeks to preserve knowledge through a foundation of scientists and scholars. As political turmoil rises, Seldon’s followers, including the determined Gaal and the enigmatic Brother Day, confront power struggles to ensure humanity's survival amidst chaos.",
   "poster": "posters/foundation",
   "genres": [
     {
@@ -94,7 +93,6 @@
       "details": "Salvor Hardin"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 78,
     "episodesTotal": 20,

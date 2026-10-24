@@ -6,7 +6,6 @@
   "duration": 132,
   "budget": 28000000,
   "boxOffice": 143000000,
-  "synopsis": "Police officer John McClane arrives in New York for the Christmas holidays to meet his children from his ex-wife Holly Gennero. He is supposed to meet her at the office where Holly works. But soon the building is taken over by terrorists and locked down. John will try to deal with the terrorists on his own before they start killing hostages.",
   "poster": "posters/die_hard.webp",
   "genres": [
     {
@@ -98,6 +97,5 @@
       "role": "ACTOR",
       "details": "Haus Gruber"
     }
-  ],
-  "collections": []
+  ]
 }

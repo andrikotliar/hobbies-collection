@@ -6,7 +6,6 @@
   "duration": 127,
   "budget": 110000000,
   "boxOffice": 300000000,
-  "synopsis": "Charlie Kenton, a former boxing star, now conducts robot battles after the closure of the sport. People control the robots using joysticks, and Charlie is not very successful at it. He now has to take care of his young son Max, whom his ex-wife left with him for a while. The boy finds an old robot at a junkyard that can mimic human movements. It's mainly meant for training in combat, but Max suggests that Charlie use it in a fight, with Charlie having to perform the movements himself for the robot to replicate. Charlie thinks this is a silly idea, but eventually agrees. They become crowd favorites and enter the official league. Their opponent offers to buy the robot, but Max insists on participating to face the reigning champion in the ring.",
   "poster": "posters/real_steel.webp",
   "genres": [
     {
@@ -124,6 +123,5 @@
       "role": "ACTOR",
       "details": "Marvin"
     }
-  ],
-  "collections": []
+  ]
 }

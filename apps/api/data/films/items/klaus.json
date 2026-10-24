@@ -6,7 +6,6 @@
   "duration": 96,
   "budget": 40000000,
   "boxOffice": 0,
-  "synopsis": "Jesper is the son of a wealthy owner of a postal empire. He lives his carefree life until his father decides to give him a lesson in life and sends him to the distant island of Smirensburg with the condition that he must establish postal services there and send 6000 letters within a year. In the town, two clans, the Ellingboes and the Krams, are constantly at war with each other, which has led the town into complete decline, and all the residents hate each other. Jesper realizes that he won’t achieve anything here until he visits the hermit Klaus on the outskirts of town. Klaus turns out to be a master toymaker, and Jesper devises a scheme where children write letters to Klaus and, in return, receive toys. Jesper spreads the rumor that only obedient children receive gifts, so they begin to help the elders. Also, in order to write letters, they go to the closed school of Alva, and she has to resume teaching. The town gradually flourishes. This does not sit well with the clan leaders, and they prepare a treacherous plan to get rid of the postman.",
   "poster": "posters/klaus.webp",
   "genres": [
     {
@@ -150,6 +149,5 @@
       "role": "ACTOR",
       "details": "Mogens"
     }
-  ],
-  "collections": []
+  ]
 }

@@ -6,7 +6,6 @@
   "duration": 134,
   "budget": 60000000,
   "boxOffice": 122000000,
-  "synopsis": "Gran Turismo is a famous realistic racing simulator. To raise interest in the game, owner Danny Moore is introducing a tournament for the best players. The winners will have the opportunity to participate in training for real races. One of the participants is the world champion of the game - Jan Mardenborough, who successfully completes the training and gets the chance to compete in real races under the guidance of former racing legend Jack Settera.",
   "poster": "posters/gran_turismo.webp",
   "genres": [
     {
@@ -116,6 +115,5 @@
       "role": "ACTOR",
       "details": "Matty Davis"
     }
-  ],
-  "collections": []
+  ]
 }

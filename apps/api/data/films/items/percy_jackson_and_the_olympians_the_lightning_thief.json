@@ -6,7 +6,6 @@
   "duration": 95,
   "budget": 95000000,
   "boxOffice": 226000000,
-  "synopsis": "A regular schoolboy Percy is attacked by gorgons, who believe he is the thief of Zeus's Lightning. After this, Percy learns that he is a demigod - the son of Poseidon, and the Olympian gods accuse him of stealing the Lightning. His closest friend Grover turns out to be a satyr assigned to him for protection. Percy ends up in a camp where other demigods are trained, and his mother is captured by Hades, who demands that Percy bring him the Lightning. Percy decides to go to Hades' Kingdom, and helping him with this are Grover and Annabeth, the daughter of Athena, whom he met at the camp, along with the son of Hephaestus, Luke, who gives him a shield he once received from his father. This shield will play a key role in the team's adventures.",
   "poster": "posters/percy_jackson.webp",
   "genres": [
     {
@@ -166,6 +165,5 @@
       "role": "ACTOR",
       "details": "Poseidon"
     }
-  ],
-  "collections": []
+  ]
 }

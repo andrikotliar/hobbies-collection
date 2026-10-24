@@ -6,7 +6,6 @@
   "duration": 154,
   "budget": 140000000,
   "boxOffice": 454000000,
-  "synopsis": "In 1876, disillusioned American Civil War veteran Nathan Algren is recruited to train the Japanese army. As he immerses himself in the samurai culture, he befriends their leader, Katsumoto. Caught between tradition and modernization, Algren finds purpose in a struggle that challenges his values and ignites a fierce loyalty to the samurai way.",
   "poster": "posters/the_last_samurai",
   "genres": [
     {
@@ -114,6 +113,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

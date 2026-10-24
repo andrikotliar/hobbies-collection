@@ -6,7 +6,6 @@
   "duration": 148,
   "budget": 168000000,
   "boxOffice": 174000000,
-  "synopsis": null,
   "poster": "posters/furiosa_a_mad_max_saga",
   "genres": [
     {
@@ -98,6 +97,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

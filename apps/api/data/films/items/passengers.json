@@ -6,7 +6,6 @@
   "duration": 116,
   "budget": 110000000,
   "boxOffice": 303000000,
-  "synopsis": "The spaceship is flying through space for tens of light years to a new human colony in Alpha Centauri. The ship is operated without human supervision. All passengers and crew are in cryo-sleep. However, the ship suffers a collision with a significant number of meteoroids, which damages not only the protective field but also the ship's mechanisms. This leads to one of the passengers, Jim Preston, waking up from cryo-sleep. He is unable to return to cryo-sleep and realizes that he is stuck here forever. More than 80 years remain until the end of the flight, and he cannot send a message to Earth, as it would take even longer. For a year, he tries to come to terms with his fate. From time to time, he visits other passengers in cryo-sleep and there he finds a very beautiful passenger, Aurora. He struggles for a long time with the temptation to wake her up and finally goes through with it. He lies to her, saying she awoke due to a malfunction. She goes through a long period of acceptance, but she still has yet to learn the truth, and meanwhile, malfunctions on the ship begin to accumulate.",
   "poster": "posters/passengers.webp",
   "genres": [
     {
@@ -118,6 +117,5 @@
       "role": "ACTOR",
       "details": "Captain Norris"
     }
-  ],
-  "collections": []
+  ]
 }

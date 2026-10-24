@@ -6,7 +6,6 @@
   "duration": 104,
   "budget": 65000000,
   "boxOffice": 263000000,
-  "synopsis": "Alan Parrish discovers a mystical board game one day, which he starts playing with his friend Sarah. But they didn't know that once you start the game, you can't leave it until you've completed it, and Alan gets trapped inside the game and disappears for many years. Until Judy and Peter Shepherd, who move into the sold Parrish house, find the game and continue it. Alan returns to the real world, and they must find Sarah so she can continue the game with them; otherwise, it won’t end. Each roll of the dice brings new challenges - giant spiders, a stampede of animals, a mad hunter...",
   "poster": "posters/jumanji_1.webp",
   "genres": [
     {
@@ -129,6 +128,5 @@
       "role": "ACTOR",
       "details": "Van Pelt"
     }
-  ],
-  "collections": []
+  ]
 }

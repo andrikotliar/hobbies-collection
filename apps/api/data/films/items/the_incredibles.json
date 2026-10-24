@@ -6,7 +6,6 @@
   "duration": 115,
   "budget": 92000000,
   "boxOffice": 631000000,
-  "synopsis": "Bob Parr and his wife Helen were famous superheroes in the past, but now, when superheroes are no longer important to the world, they are trying to live a normal life until a new threat to the world requires the old heroes to return to action.",
   "imagePath": "posters/the_incredibles.webp",
   "genres": [
     {
@@ -176,6 +175,5 @@
       "role": "ACTOR",
       "details": "Edna Mode (E)"
     }
-  ],
-  "collections": []
+  ]
 }

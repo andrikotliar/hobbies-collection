@@ -6,7 +6,6 @@
   "duration": 120,
   "budget": 150000000,
   "boxOffice": 380000000,
-  "synopsis": "In a post-apocalyptic wasteland, a lone drifter named Max teams up with Furiosa, a fierce warrior, to rescue captive women from a tyrannical warlord. As they forge a path through endless desert, they face relentless adversaries in high-octane battles. Their quest becomes one of survival and liberation amid chaos.",
   "poster": "posters/mad_max_fury_road",
   "genres": [
     {
@@ -225,6 +224,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

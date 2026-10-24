@@ -6,7 +6,6 @@
   "duration": 118,
   "budget": 80000000,
   "boxOffice": 157000000,
-  "synopsis": "The earth is scorched by nuclear war. Eli, a loner who has the last copy of the Bible, attempts to deliver it to the last library in the world, which is trying to preserve the most important achievements of literature. But standing in his way is Carnegie, who believes that this book will help him control the masses.",
   "poster": "posters/the_book_of_eli",
   "genres": [
     {
@@ -100,6 +99,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

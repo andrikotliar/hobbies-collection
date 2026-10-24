@@ -6,7 +6,6 @@
   "duration": 49,
   "budget": 0,
   "boxOffice": 0,
-  "synopsis": "Maddie comes to in the school basement and eventually discovers that she is dead and has become a ghost bound to the school. Maddie meets other students from different times who have died in the school for various reasons and are now eternally tied to this place until they find a way to make the transition - to free their soul. Maddie begins her search for her killer, accidentally discovering that she can communicate with her best friend Simon, who agrees to help uncover the truth about her death.",
   "poster": "posters/school_spirits.webp",
   "genres": [
     {
@@ -146,7 +145,6 @@
       "details": "Sheriff Baxter"
     }
   ],
-  "collections": [],
   "seriesExtension": {
     "id": 23,
     "episodesTotal": 24,

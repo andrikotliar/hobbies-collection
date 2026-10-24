@@ -6,7 +6,6 @@
   "duration": 120,
   "budget": 49000000,
   "boxOffice": 102000000,
-  "synopsis": "In a near-future Johannesburg, a police droid gains consciousness when programmed with advanced AI by a brilliant yet troubled inventor. As Chappie learns about the world through the eyes of his unconventional caretakers, he grapples with themes of identity, morality, and survival in a society that fears him.",
   "poster": "posters/chappie",
   "genres": [
     {
@@ -124,6 +123,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

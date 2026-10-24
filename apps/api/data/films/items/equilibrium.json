@@ -6,7 +6,6 @@
   "duration": 107,
   "budget": 20000000,
   "boxOffice": 5000000,
-  "synopsis": "The world has survived a nuclear war. Now all people must take special medication that completely suppresses all emotions. The authorities believe that human emotions lead to wars. A special unit destroys all cultural possessions - books, paintings, music. Among them is clerk John Preston. He blindly believes in his work until he has to execute his work partner, Patrick, with his own hands because he secretly started reading books. After this, John stops taking medication and begins to realize that everything they are doing is wrong and it needs to be corrected.",
   "poster": "posters/equilibrium",
   "genres": [
     {
@@ -110,6 +109,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

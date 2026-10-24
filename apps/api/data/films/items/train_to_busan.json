@@ -6,7 +6,6 @@
   "duration": 118,
   "budget": 7000000,
   "boxOffice": 94000000,
-  "synopsis": "Seok-woo finds himself at the epicenter of a zombie apocalypse with his daughter. Their only hope now is a train from Seoul to Busan, where the virus has likely not yet reached. But soon the train will be infected, and they will have to survive in close quarters filled with zombies.",
   "imagePath": "posters/train_to_busan.webp",
   "genres": [
     {
@@ -111,6 +110,5 @@
       "role": "ACTOR",
       "details": "Jin-hee"
     }
-  ],
-  "collections": []
+  ]
 }

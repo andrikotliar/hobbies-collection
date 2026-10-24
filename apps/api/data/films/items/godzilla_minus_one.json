@@ -6,7 +6,6 @@
   "duration": 124,
   "budget": 15000000,
   "boxOffice": 114000000,
-  "synopsis": null,
   "imagePath": "posters/godzilla_minus_one.webp",
   "genres": [
     {
@@ -124,6 +123,5 @@
       "role": "ACTOR",
       "details": "Koichi Shikishima"
     }
-  ],
-  "collections": []
+  ]
 }

@@ -6,7 +6,6 @@
   "duration": 118,
   "budget": 48000000,
   "boxOffice": 120000000,
-  "synopsis": "Pitt and Ellie decide to adopt a child from the shelter. At the viewing, they are drawn to Lizzy, but they also have to take her little sister Lita and brother Juan. They have no idea what difficulties await them on the path to a complete family.",
   "imagePath": "posters/instant_family.webp",
   "genres": [
     {
@@ -131,6 +130,5 @@
       "role": "ACTOR",
       "details": "Karen"
     }
-  ],
-  "collections": []
+  ]
 }

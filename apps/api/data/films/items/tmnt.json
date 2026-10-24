@@ -6,7 +6,6 @@
   "duration": 87,
   "budget": 34000000,
   "boxOffice": 95000000,
-  "synopsis": "After the turtles defeated their main enemy Shredder, each of them began their independent lives. Leo went to the Amazon jungle, where he continued his training. Don is doing technical support online, Mikey is working as an animator at children's parties, wearing a giant turtle mask. Raph pretends to do nothing, but when night falls, he puts on his armor and goes out to patrol the streets of New York. Soon the brothers will have to unite their forces to confront a new evil that threatens the whole world.",
   "poster": "posters/tmnt",
   "genres": [
     {
@@ -160,6 +159,5 @@
       "role": "CAMERAMAN",
       "details": null
     }
-  ],
-  "collections": []
+  ]
 }

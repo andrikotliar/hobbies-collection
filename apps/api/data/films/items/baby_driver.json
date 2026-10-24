@@ -6,7 +6,6 @@
   "duration": 113,
   "budget": 34000000,
   "boxOffice": 227000000,
-  "synopsis": "A talented young getaway driver named Baby relies on music to combat his tinnitus and enhance his skills. After meeting a captivating waitress, he dreams of a normal life. However, he's drawn back into the criminal world by a ruthless kingpin, leading to high-stakes heists and a race against time to escape his past.",
   "poster": "posters/baby_driver",
   "genres": [
     {
@@ -107,6 +106,5 @@
       "role": "ACTOR",
       "details": "Debora"
     }
-  ],
-  "collections": []
+  ]
 }
