@@ -83,6 +83,7 @@ function CollectionEventsContainer() {
       search: (prev) => ({
         ...prev,
         q: value,
+        pageIndex: 0,
       }),
     });
   }, []);

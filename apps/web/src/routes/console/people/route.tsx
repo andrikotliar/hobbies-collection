@@ -112,6 +112,7 @@ function RouteComponent() {
       search: (values) => ({
         ...values,
         q: value,
+        pageIndex: 0,
       }),
     });
   }, []);
@@ -131,6 +132,7 @@ function RouteComponent() {
       search: (values) => ({
         ...values,
         ...appliedFilters,
+        pageIndex: 0,
       }),
     });
     hideFilter();

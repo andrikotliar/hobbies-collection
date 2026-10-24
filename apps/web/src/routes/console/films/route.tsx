@@ -164,6 +164,7 @@ function PageContainer() {
       search: (params) => ({
         ...params,
         ...sorting,
+        pageIndex: 0,
       }),
     });
   }, []);
