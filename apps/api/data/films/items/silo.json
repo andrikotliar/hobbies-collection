@@ -6,7 +6,7 @@
   "duration": 49,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/silo.webp",
+  "imagePath": "posters/silo.webp",
   "genres": [
     {
       "title": "Sci-Fi",

@@ -6,7 +6,7 @@
   "duration": 102,
   "budget": 78000000,
   "boxOffice": 334000000,
-  "poster": "posters/wild_robot.webp",
+  "imagePath": "posters/wild_robot.webp",
   "genres": [
     {
       "title": "Adventures",

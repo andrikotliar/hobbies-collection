@@ -6,7 +6,7 @@
   "duration": 124,
   "budget": 18000000,
   "boxOffice": 248000000,
-  "poster": "posters/star_wars_episode_V.webp",
+  "imagePath": "posters/star_wars_episode_V.webp",
   "genres": [
     {
       "title": "Space Opera",

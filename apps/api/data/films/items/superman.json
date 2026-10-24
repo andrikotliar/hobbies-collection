@@ -6,7 +6,7 @@
   "duration": 127,
   "budget": 225000000,
   "boxOffice": 618000000,
-  "poster": "posters/superman",
+  "imagePath": "posters/superman",
   "genres": [
     {
       "title": "Action",

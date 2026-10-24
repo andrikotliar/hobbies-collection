@@ -6,7 +6,7 @@
   "duration": 106,
   "budget": 38000000,
   "boxOffice": 207000000,
-  "poster": "posters/fast_and_furious_1.webp",
+  "imagePath": "posters/fast_and_furious_1.webp",
   "genres": [
     {
       "title": "Action",

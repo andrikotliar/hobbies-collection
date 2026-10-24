@@ -6,7 +6,7 @@
   "duration": 108,
   "budget": 100000000,
   "boxOffice": 384000000,
-  "poster": "posters/happy_feet.webp",
+  "imagePath": "posters/happy_feet.webp",
   "genres": [
     {
       "title": "Musical",

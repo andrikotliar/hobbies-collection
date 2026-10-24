@@ -6,7 +6,7 @@
   "duration": 98,
   "budget": 0,
   "boxOffice": 21000000,
-  "poster": "posters/wish_dragon",
+  "imagePath": "posters/wish_dragon",
   "genres": [
     {
       "title": "Fantasy",

@@ -6,7 +6,7 @@
   "duration": 148,
   "budget": 168000000,
   "boxOffice": 174000000,
-  "poster": "posters/furiosa_a_mad_max_saga",
+  "imagePath": "posters/furiosa_a_mad_max_saga",
   "genres": [
     {
       "title": "Action",

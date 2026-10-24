@@ -6,7 +6,7 @@
   "duration": 150,
   "budget": 200000000,
   "boxOffice": 836000000,
-  "poster": "posters/transformers_2.webp",
+  "imagePath": "posters/transformers_2.webp",
   "genres": [
     {
       "title": "Sci-Fi",

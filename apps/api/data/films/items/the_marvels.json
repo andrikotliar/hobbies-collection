@@ -6,7 +6,7 @@
   "duration": 105,
   "budget": 220000000,
   "boxOffice": 206000000,
-  "poster": "posters/the_marvels",
+  "imagePath": "posters/the_marvels",
   "genres": [
     {
       "title": "Sci-Fi",

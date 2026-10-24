@@ -6,7 +6,7 @@
   "duration": 103,
   "budget": 18000000,
   "boxOffice": 477000000,
-  "poster": "posters/home_alone",
+  "imagePath": "posters/home_alone",
   "genres": [
     {
       "title": "Comedy",

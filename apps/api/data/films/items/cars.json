@@ -6,7 +6,7 @@
   "duration": 116,
   "budget": 120000000,
   "boxOffice": 462000000,
-  "poster": "posters/cars",
+  "imagePath": "posters/cars",
   "genres": [
     {
       "title": "Adventures",

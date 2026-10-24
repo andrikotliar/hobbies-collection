@@ -6,7 +6,7 @@
   "duration": 145,
   "budget": 75000000,
   "boxOffice": 817000000,
-  "poster": "posters/independence_day.webp",
+  "imagePath": "posters/independence_day.webp",
   "genres": [
     {
       "title": "Sci-Fi",

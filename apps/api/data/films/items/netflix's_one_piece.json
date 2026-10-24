@@ -6,7 +6,7 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/netflixs_one_piece",
+  "imagePath": "posters/netflixs_one_piece",
   "genres": [
     {
       "title": "Adventures",

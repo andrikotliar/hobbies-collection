@@ -6,7 +6,7 @@
   "duration": 89,
   "budget": 150000000,
   "boxOffice": 604000000,
-  "poster": "posters/madagascar_2.webp",
+  "imagePath": "posters/madagascar_2.webp",
   "genres": [
     {
       "title": "Adventures",

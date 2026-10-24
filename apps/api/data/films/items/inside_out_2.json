@@ -6,7 +6,7 @@
   "duration": 96,
   "budget": 200000000,
   "boxOffice": 1690000000,
-  "poster": "posters/inside_out_2",
+  "imagePath": "posters/inside_out_2",
   "genres": [
     {
       "title": "Adventures",

@@ -6,7 +6,7 @@
   "duration": 104,
   "budget": 65000000,
   "boxOffice": 263000000,
-  "poster": "posters/jumanji_1.webp",
+  "imagePath": "posters/jumanji_1.webp",
   "genres": [
     {
       "title": "Fantasy",

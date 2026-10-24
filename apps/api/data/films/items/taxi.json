@@ -6,7 +6,7 @@
   "duration": 86,
   "budget": 9000000,
   "boxOffice": 44000000,
-  "poster": "posters/taxi_1.webp",
+  "imagePath": "posters/taxi_1.webp",
   "genres": [
     {
       "title": "Comedy",

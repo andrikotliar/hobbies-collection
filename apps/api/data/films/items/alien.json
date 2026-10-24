@@ -6,7 +6,7 @@
   "duration": 117,
   "budget": 11000000,
   "boxOffice": 106000000,
-  "poster": "posters/alien_1.webp",
+  "imagePath": "posters/alien_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

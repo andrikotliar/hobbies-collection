@@ -6,7 +6,7 @@
   "duration": 161,
   "budget": 90000000,
   "boxOffice": 394000000,
-  "poster": "posters/once_upon_a_time_in_hollywood_",
+  "imagePath": "posters/once_upon_a_time_in_hollywood_",
   "genres": [
     {
       "title": "Comedy",

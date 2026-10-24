@@ -6,7 +6,7 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/1899",
+  "imagePath": "posters/1899",
   "genres": [
     {
       "title": "Thriller",

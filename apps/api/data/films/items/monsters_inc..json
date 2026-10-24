@@ -6,7 +6,7 @@
   "duration": 92,
   "budget": 115000000,
   "boxOffice": 580000000,
-  "poster": "posters/monsters_inc.webp",
+  "imagePath": "posters/monsters_inc.webp",
   "genres": [
     {
       "title": "Adventures",

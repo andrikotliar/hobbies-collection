@@ -6,7 +6,7 @@
   "duration": 106,
   "budget": 14000000,
   "boxOffice": 14000000,
-  "poster": "posters/d13_2.webp",
+  "imagePath": "posters/d13_2.webp",
   "genres": [
     {
       "title": "Action",

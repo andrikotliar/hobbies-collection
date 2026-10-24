@@ -6,7 +6,7 @@
   "duration": 50,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/loki.webp",
+  "imagePath": "posters/loki.webp",
   "genres": [
     {
       "title": "Adventures",

@@ -6,7 +6,7 @@
   "duration": 95,
   "budget": 145000000,
   "boxOffice": 521000000,
-  "poster": "posters/kung_fu_panda_3",
+  "imagePath": "posters/kung_fu_panda_3",
   "genres": [
     {
       "title": "Adventures",

@@ -6,7 +6,7 @@
   "duration": 39,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/wandavision.webp",
+  "imagePath": "posters/wandavision.webp",
   "genres": [
     {
       "title": "Action",

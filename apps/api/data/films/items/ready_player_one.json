@@ -6,7 +6,7 @@
   "duration": 140,
   "budget": 175000000,
   "boxOffice": 582000000,
-  "poster": "posters/ready_player_one.webp",
+  "imagePath": "posters/ready_player_one.webp",
   "genres": [
     {
       "title": "Sci-Fi",

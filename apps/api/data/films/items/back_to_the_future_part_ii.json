@@ -6,7 +6,7 @@
   "duration": 108,
   "budget": 40000000,
   "boxOffice": 332000000,
-  "poster": "posters/back_to_the_future_2.webp",
+  "imagePath": "posters/back_to_the_future_2.webp",
   "genres": [
     {
       "title": "Sci-Fi",

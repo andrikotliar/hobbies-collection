@@ -6,7 +6,7 @@
   "duration": 154,
   "budget": 140000000,
   "boxOffice": 454000000,
-  "poster": "posters/the_last_samurai",
+  "imagePath": "posters/the_last_samurai",
   "genres": [
     {
       "title": "Action",

@@ -6,7 +6,7 @@
   "duration": 104,
   "budget": 85000000,
   "boxOffice": 158000000,
-  "poster": "posters/fast_and_furious_3.webp",
+  "imagePath": "posters/fast_and_furious_3.webp",
   "genres": [
     {
       "title": "Action",

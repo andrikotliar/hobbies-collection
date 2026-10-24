@@ -6,7 +6,7 @@
   "duration": 142,
   "budget": 55000000,
   "boxOffice": 678000000,
-  "poster": "posters/forrest_gump",
+  "imagePath": "posters/forrest_gump",
   "genres": [
     {
       "title": "Drama",

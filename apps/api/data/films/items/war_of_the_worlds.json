@@ -6,7 +6,7 @@
   "duration": 116,
   "budget": 132000000,
   "boxOffice": 604000000,
-  "poster": "posters/war_of_the_worlds.webp",
+  "imagePath": "posters/war_of_the_worlds.webp",
   "genres": [
     {
       "title": "Action",

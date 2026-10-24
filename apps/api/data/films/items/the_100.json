@@ -6,7 +6,7 @@
   "duration": 43,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/hundred.webp",
+  "imagePath": "posters/hundred.webp",
   "genres": [
     {
       "title": "Sci-Fi",

@@ -6,7 +6,7 @@
   "duration": 118,
   "budget": 80000000,
   "boxOffice": 157000000,
-  "poster": "posters/the_book_of_eli",
+  "imagePath": "posters/the_book_of_eli",
   "genres": [
     {
       "title": "Adventures",

@@ -6,7 +6,7 @@
   "duration": 106,
   "budget": 105000000,
   "boxOffice": 184000000,
-  "poster": "posters/predator_badlands",
+  "imagePath": "posters/predator_badlands",
   "genres": [
     {
       "title": "Action",

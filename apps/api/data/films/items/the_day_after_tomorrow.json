@@ -6,7 +6,7 @@
   "duration": 123,
   "budget": 125000000,
   "boxOffice": 544000000,
-  "poster": "posters/day_after_tomorrow.webp",
+  "imagePath": "posters/day_after_tomorrow.webp",
   "genres": [
     {
       "title": "Disaster",

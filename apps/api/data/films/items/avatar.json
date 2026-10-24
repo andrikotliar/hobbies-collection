@@ -6,7 +6,7 @@
   "duration": 162,
   "budget": 237000000,
   "boxOffice": 2900000000,
-  "poster": "posters/avatar.webp",
+  "imagePath": "posters/avatar.webp",
   "genres": [
     {
       "title": "Sci-Fi",

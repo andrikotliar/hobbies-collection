@@ -6,7 +6,7 @@
   "duration": 95,
   "budget": 0,
   "boxOffice": 51000000,
-  "poster": "posters/luca",
+  "imagePath": "posters/luca",
   "genres": [
     {
       "title": "Adventures",

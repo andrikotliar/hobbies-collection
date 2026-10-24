@@ -6,7 +6,7 @@
   "duration": 103,
   "budget": 15000000,
   "boxOffice": 110000000,
-  "poster": "posters/10_cloverfield_lane",
+  "imagePath": "posters/10_cloverfield_lane",
   "genres": [
     {
       "title": "Drama",

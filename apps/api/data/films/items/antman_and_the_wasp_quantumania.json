@@ -6,7 +6,7 @@
   "duration": 124,
   "budget": 200000000,
   "boxOffice": 476000000,
-  "poster": "posters/antman_and_the_wasp_quantumania",
+  "imagePath": "posters/antman_and_the_wasp_quantumania",
   "genres": [
     {
       "title": "Action",

@@ -6,7 +6,7 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/money_heist.webp",
+  "imagePath": "posters/money_heist.webp",
   "genres": [
     {
       "title": "Action",

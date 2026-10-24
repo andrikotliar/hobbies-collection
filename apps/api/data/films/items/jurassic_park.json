@@ -6,7 +6,7 @@
   "duration": 127,
   "budget": 63000000,
   "boxOffice": 1030000000,
-  "poster": "posters/jurassic_park_1.webp",
+  "imagePath": "posters/jurassic_park_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

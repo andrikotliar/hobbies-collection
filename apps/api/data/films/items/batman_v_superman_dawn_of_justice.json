@@ -6,7 +6,7 @@
   "duration": 151,
   "budget": 250000000,
   "boxOffice": 874000000,
-  "poster": "posters/batman_v_superman.webp",
+  "imagePath": "posters/batman_v_superman.webp",
   "genres": [
     {
       "title": "Action",

@@ -6,7 +6,7 @@
   "duration": 126,
   "budget": 140000000,
   "boxOffice": 585000000,
-  "poster": "posters/iron_man_1.webp",
+  "imagePath": "posters/iron_man_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

@@ -6,7 +6,7 @@
   "duration": 134,
   "budget": 200000000,
   "boxOffice": 379000000,
-  "poster": "posters/black_widow.webp",
+  "imagePath": "posters/black_widow.webp",
   "genres": [
     {
       "title": "Adventures",

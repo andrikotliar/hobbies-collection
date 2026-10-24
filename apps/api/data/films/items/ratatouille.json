@@ -6,7 +6,7 @@
   "duration": 111,
   "budget": 150000000,
   "boxOffice": 623000000,
-  "poster": "posters/ratatouille.webp",
+  "imagePath": "posters/ratatouille.webp",
   "genres": [
     {
       "title": "Comedy",

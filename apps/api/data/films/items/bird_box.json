@@ -6,7 +6,7 @@
   "duration": 124,
   "budget": 19000000,
   "boxOffice": 0,
-  "poster": "posters/bird_box",
+  "imagePath": "posters/bird_box",
   "genres": [
     {
       "title": "Mystery",

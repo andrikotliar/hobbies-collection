@@ -6,7 +6,7 @@
   "duration": 145,
   "budget": 225000000,
   "boxOffice": 2330000000,
-  "poster": "posters/spiderman_brand_new_day",
+  "imagePath": "posters/spiderman_brand_new_day",
   "genres": [
     {
       "title": "Sci-Fi",

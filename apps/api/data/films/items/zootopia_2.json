@@ -6,7 +6,7 @@
   "duration": 108,
   "budget": 150000000,
   "boxOffice": 1600000000,
-  "poster": "posters/zootopia_2.webp",
+  "imagePath": "posters/zootopia_2.webp",
   "genres": [
     {
       "title": "Adventures",

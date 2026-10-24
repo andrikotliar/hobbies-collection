@@ -6,7 +6,7 @@
   "duration": 142,
   "budget": 130000000,
   "boxOffice": 797000000,
-  "poster": "posters/harry_potter_3.webp",
+  "imagePath": "posters/harry_potter_3.webp",
   "genres": [
     {
       "title": "Fantasy",

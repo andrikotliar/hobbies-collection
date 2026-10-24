@@ -6,7 +6,7 @@
   "duration": 120,
   "budget": 150000000,
   "boxOffice": 380000000,
-  "poster": "posters/mad_max_fury_road",
+  "imagePath": "posters/mad_max_fury_road",
   "genres": [
     {
       "title": "Action",

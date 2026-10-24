@@ -6,7 +6,7 @@
   "duration": 93,
   "budget": 150000000,
   "boxOffice": 920000000,
-  "poster": "posters/shrek_2.webp",
+  "imagePath": "posters/shrek_2.webp",
   "genres": [
     {
       "title": "Adventures",

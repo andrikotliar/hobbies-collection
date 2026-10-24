@@ -6,7 +6,7 @@
   "duration": 169,
   "budget": 165000000,
   "boxOffice": 677000000,
-  "poster": "posters/interstellar.webp",
+  "imagePath": "posters/interstellar.webp",
   "genres": [
     {
       "title": "Sci-Fi",

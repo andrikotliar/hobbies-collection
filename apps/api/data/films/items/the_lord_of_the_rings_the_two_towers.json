@@ -6,7 +6,7 @@
   "duration": 179,
   "budget": 94000000,
   "boxOffice": 926000000,
-  "poster": "posters/middle_earth_5.webp",
+  "imagePath": "posters/middle_earth_5.webp",
   "genres": [
     {
       "title": "Fantasy",

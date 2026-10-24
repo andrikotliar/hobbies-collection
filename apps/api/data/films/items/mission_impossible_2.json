@@ -6,7 +6,7 @@
   "duration": 123,
   "budget": 125000000,
   "boxOffice": 546000000,
-  "poster": "posters/mi_2.webp",
+  "imagePath": "posters/mi_2.webp",
   "genres": [
     {
       "title": "Action",

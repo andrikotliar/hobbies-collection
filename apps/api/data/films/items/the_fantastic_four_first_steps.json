@@ -6,7 +6,7 @@
   "duration": 115,
   "budget": 200000000,
   "boxOffice": 522000000,
-  "poster": "posters/the_fantastic_four_first_steps",
+  "imagePath": "posters/the_fantastic_four_first_steps",
   "genres": [
     {
       "title": "Action",

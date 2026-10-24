@@ -6,7 +6,7 @@
   "duration": 121,
   "budget": 139000000,
   "boxOffice": 825000000,
-  "poster": "posters/raimi_spider_man_1.webp",
+  "imagePath": "posters/raimi_spider_man_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

@@ -6,7 +6,7 @@
   "duration": 107,
   "budget": 20000000,
   "boxOffice": 5000000,
-  "poster": "posters/equilibrium",
+  "imagePath": "posters/equilibrium",
   "genres": [
     {
       "title": "Sci-Fi",

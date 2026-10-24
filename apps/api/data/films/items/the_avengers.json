@@ -6,7 +6,7 @@
   "duration": 143,
   "budget": 220000000,
   "boxOffice": 1520000000,
-  "poster": "posters/avengers_1.webp",
+  "imagePath": "posters/avengers_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

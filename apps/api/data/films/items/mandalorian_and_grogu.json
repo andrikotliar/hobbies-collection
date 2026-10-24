@@ -6,7 +6,7 @@
   "duration": 132,
   "budget": 165000000,
   "boxOffice": 345000000,
-  "poster": "posters/mandalorian_and_grogu",
+  "imagePath": "posters/mandalorian_and_grogu",
   "genres": [
     {
       "title": "Fantasy",

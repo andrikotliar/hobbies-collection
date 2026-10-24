@@ -6,7 +6,7 @@
   "duration": 126,
   "budget": 415000000,
   "boxOffice": 955000000,
-  "poster": "posters/doctor_strange_in_the_multiverse_of_madness",
+  "imagePath": "posters/doctor_strange_in_the_multiverse_of_madness",
   "genres": [
     {
       "title": "Fantasy",

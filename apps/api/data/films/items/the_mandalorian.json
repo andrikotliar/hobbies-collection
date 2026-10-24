@@ -6,7 +6,7 @@
   "duration": 40,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/mandalorian.webp",
+  "imagePath": "posters/mandalorian.webp",
   "genres": [
     {
       "title": "Sci-Fi",

@@ -6,7 +6,7 @@
   "duration": 137,
   "budget": 97000000,
   "boxOffice": 619000000,
-  "poster": "posters/logan.webp",
+  "imagePath": "posters/logan.webp",
   "genres": [
     {
       "title": "Sci-Fi",

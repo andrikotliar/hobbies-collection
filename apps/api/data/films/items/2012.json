@@ -6,7 +6,7 @@
   "duration": 158,
   "budget": 200000000,
   "boxOffice": 770000000,
-  "poster": "posters/twenty_twelve.webp",
+  "imagePath": "posters/twenty_twelve.webp",
   "genres": [
     {
       "title": "Sci-Fi",

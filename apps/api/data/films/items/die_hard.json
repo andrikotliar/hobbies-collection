@@ -6,7 +6,7 @@
   "duration": 132,
   "budget": 28000000,
   "boxOffice": 143000000,
-  "poster": "posters/die_hard.webp",
+  "imagePath": "posters/die_hard.webp",
   "genres": [
     {
       "title": "Action",

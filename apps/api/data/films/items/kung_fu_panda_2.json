@@ -6,7 +6,7 @@
   "duration": 90,
   "budget": 150000000,
   "boxOffice": 665000000,
-  "poster": "posters/kung_fu_panda_2",
+  "imagePath": "posters/kung_fu_panda_2",
   "genres": [
     {
       "title": "Adventures",

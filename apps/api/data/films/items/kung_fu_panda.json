@@ -6,7 +6,7 @@
   "duration": 92,
   "budget": 130000000,
   "boxOffice": 632000000,
-  "poster": "posters/kungfu_panda.webp",
+  "imagePath": "posters/kungfu_panda.webp",
   "genres": [
     {
       "title": "Action",

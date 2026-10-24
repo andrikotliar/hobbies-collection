@@ -6,7 +6,7 @@
   "duration": 40,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/arcane.webp",
+  "imagePath": "posters/arcane.webp",
   "genres": [
     {
       "title": "Adventures",

@@ -6,7 +6,7 @@
   "duration": 112,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/bird_box_barcelona",
+  "imagePath": "posters/bird_box_barcelona",
   "genres": [
     {
       "title": "Horror",

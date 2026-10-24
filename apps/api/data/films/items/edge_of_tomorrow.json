@@ -6,7 +6,7 @@
   "duration": 113,
   "budget": 178000000,
   "boxOffice": 370000000,
-  "poster": "posters/edge_of_tomorow.webp",
+  "imagePath": "posters/edge_of_tomorow.webp",
   "genres": [
     {
       "title": "Sci-Fi",

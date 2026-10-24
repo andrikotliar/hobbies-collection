@@ -6,7 +6,7 @@
   "duration": 137,
   "budget": 94000000,
   "boxOffice": 521000000,
-  "poster": "posters/terminator_2.webp",
+  "imagePath": "posters/terminator_2.webp",
   "genres": [
     {
       "title": "Sci-Fi",

@@ -6,7 +6,7 @@
   "duration": 115,
   "budget": 165000000,
   "boxOffice": 678000000,
-  "poster": "posters/doctor_strange.webp",
+  "imagePath": "posters/doctor_strange.webp",
   "genres": [
     {
       "title": "Fantasy",

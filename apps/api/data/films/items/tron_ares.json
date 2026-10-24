@@ -6,7 +6,7 @@
   "duration": 119,
   "budget": 220000000,
   "boxOffice": 142000000,
-  "poster": "posters/tron_ares",
+  "imagePath": "posters/tron_ares",
   "genres": [
     {
       "title": "Sci-Fi",

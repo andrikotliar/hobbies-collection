@@ -6,7 +6,7 @@
   "duration": 120,
   "budget": 40000000,
   "boxOffice": 225000000,
-  "poster": "posters/the_social_network",
+  "imagePath": "posters/the_social_network",
   "genres": [
     {
       "title": "Drama",

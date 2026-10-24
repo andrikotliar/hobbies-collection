@@ -6,7 +6,7 @@
   "duration": 100,
   "budget": 65000000,
   "boxOffice": 0,
-  "poster": "posters/prey",
+  "imagePath": "posters/prey",
   "genres": [
     {
       "title": "Action",

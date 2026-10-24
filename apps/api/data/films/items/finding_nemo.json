@@ -6,7 +6,7 @@
   "duration": 100,
   "budget": 94000000,
   "boxOffice": 940000000,
-  "poster": "posters/finding_nemo.webp",
+  "imagePath": "posters/finding_nemo.webp",
   "genres": [
     {
       "title": "Adventures",

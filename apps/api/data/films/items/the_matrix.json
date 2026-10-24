@@ -6,7 +6,7 @@
   "duration": 136,
   "budget": 63000000,
   "boxOffice": 463000000,
-  "poster": "posters/matrix_1.webp",
+  "imagePath": "posters/matrix_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

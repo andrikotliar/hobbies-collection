@@ -6,7 +6,7 @@
   "duration": 99,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/avatar_aang_the_last_airbender",
+  "imagePath": "posters/avatar_aang_the_last_airbender",
   "genres": [
     {
       "title": "Adventures",

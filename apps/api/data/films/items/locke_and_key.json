@@ -6,7 +6,7 @@
   "duration": 48,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/locke_key.webp",
+  "imagePath": "posters/locke_key.webp",
   "genres": [
     {
       "title": "Fantasy",

@@ -6,7 +6,7 @@
   "duration": 85,
   "budget": 4000000,
   "boxOffice": 3000000,
-  "poster": "posters/flow.webp",
+  "imagePath": "posters/flow.webp",
   "genres": [
     {
       "title": "Adventures",

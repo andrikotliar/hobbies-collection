@@ -6,7 +6,7 @@
   "duration": 23,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/legend_of_korra.webp",
+  "imagePath": "posters/legend_of_korra.webp",
   "genres": [
     {
       "title": "Adventures",

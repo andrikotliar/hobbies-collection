@@ -6,7 +6,7 @@
   "duration": 140,
   "budget": 150000000,
   "boxOffice": 375000000,
-  "poster": "posters/batman_1.webp",
+  "imagePath": "posters/batman_1.webp",
   "genres": [
     {
       "title": "Action",

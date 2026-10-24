@@ -6,7 +6,7 @@
   "duration": 146,
   "budget": 250000000,
   "boxOffice": 960000000,
-  "poster": "posters/harry_potter_7.webp",
+  "imagePath": "posters/harry_potter_7.webp",
   "genres": [
     {
       "title": "Fantasy",

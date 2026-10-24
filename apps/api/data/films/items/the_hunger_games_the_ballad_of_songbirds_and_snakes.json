@@ -6,7 +6,7 @@
   "duration": 154,
   "budget": 100000000,
   "boxOffice": 361000000,
-  "poster": "posters/the_hunger_games_the_ballad_of_songbirds_snakes",
+  "imagePath": "posters/the_hunger_games_the_ballad_of_songbirds_snakes",
   "genres": [
     {
       "title": "Sci-Fi",

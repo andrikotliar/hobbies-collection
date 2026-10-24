@@ -6,7 +6,7 @@
   "duration": 79,
   "budget": 30000000,
   "boxOffice": 48000000,
-  "poster": "posters/9",
+  "imagePath": "posters/9",
   "genres": [
     {
       "title": "Sci-Fi",

@@ -6,7 +6,7 @@
   "duration": 0,
   "budget": 20000000,
   "boxOffice": 73000000,
-  "poster": "posters/eternal_sunshine_of_the_spotless_mind",
+  "imagePath": "posters/eternal_sunshine_of_the_spotless_mind",
   "genres": [
     {
       "title": "Romance",

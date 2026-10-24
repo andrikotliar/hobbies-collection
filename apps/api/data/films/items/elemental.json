@@ -6,7 +6,7 @@
   "duration": 101,
   "budget": 200000000,
   "boxOffice": 496000000,
-  "poster": "posters/elemental.webp",
+  "imagePath": "posters/elemental.webp",
   "genres": [
     {
       "title": "Adventures",

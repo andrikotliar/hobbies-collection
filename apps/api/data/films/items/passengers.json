@@ -6,7 +6,7 @@
   "duration": 116,
   "budget": 110000000,
   "boxOffice": 303000000,
-  "poster": "posters/passengers.webp",
+  "imagePath": "posters/passengers.webp",
   "genres": [
     {
       "title": "Sci-Fi",

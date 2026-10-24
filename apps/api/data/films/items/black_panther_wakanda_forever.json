@@ -6,7 +6,7 @@
   "duration": 161,
   "budget": 250000000,
   "boxOffice": 859000000,
-  "poster": "posters/black_panther_wakanda_forever",
+  "imagePath": "posters/black_panther_wakanda_forever",
   "genres": [
     {
       "title": "Action",

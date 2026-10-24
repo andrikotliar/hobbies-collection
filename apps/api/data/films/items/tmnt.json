@@ -6,7 +6,7 @@
   "duration": 87,
   "budget": 34000000,
   "boxOffice": 95000000,
-  "poster": "posters/tmnt",
+  "imagePath": "posters/tmnt",
   "genres": [
     {
       "title": "Action",

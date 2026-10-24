@@ -6,7 +6,7 @@
   "duration": 242,
   "budget": 300000000,
   "boxOffice": 0,
-  "poster": "posters/justice_league.webp",
+  "imagePath": "posters/justice_league.webp",
   "genres": [
     {
       "title": "Action",

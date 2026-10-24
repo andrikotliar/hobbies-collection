@@ -6,7 +6,7 @@
   "duration": 165,
   "budget": 100000000,
   "boxOffice": 426000000,
-  "poster": "posters/django_unchained",
+  "imagePath": "posters/django_unchained",
   "genres": [
     {
       "title": "Drama",

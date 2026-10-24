@@ -6,7 +6,7 @@
   "duration": 40,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/agatha_all_along",
+  "imagePath": "posters/agatha_all_along",
   "genres": [
     {
       "title": "Fantasy",

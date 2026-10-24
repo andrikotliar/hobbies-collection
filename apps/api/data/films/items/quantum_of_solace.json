@@ -6,7 +6,7 @@
   "duration": 106,
   "budget": 200000000,
   "boxOffice": 589000000,
-  "poster": "posters/quantum_of_solace",
+  "imagePath": "posters/quantum_of_solace",
   "genres": [
     {
       "title": "Action",

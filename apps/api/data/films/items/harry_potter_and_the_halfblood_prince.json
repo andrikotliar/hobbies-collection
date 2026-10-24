@@ -6,7 +6,7 @@
   "duration": 153,
   "budget": 250000000,
   "boxOffice": 934000000,
-  "poster": "posters/harry_potter_6.webp",
+  "imagePath": "posters/harry_potter_6.webp",
   "genres": [
     {
       "title": "Fantasy",

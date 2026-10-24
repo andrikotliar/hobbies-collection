@@ -6,7 +6,7 @@
   "duration": 97,
   "budget": 160000000,
   "boxOffice": 297000000,
-  "poster": "posters/quiet_place_2.webp",
+  "imagePath": "posters/quiet_place_2.webp",
   "genres": [
     {
       "title": "Sci-Fi",

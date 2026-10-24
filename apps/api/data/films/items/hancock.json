@@ -6,7 +6,7 @@
   "duration": 92,
   "budget": 150000000,
   "boxOffice": 624000000,
-  "poster": "posters/hancock.webp",
+  "imagePath": "posters/hancock.webp",
   "genres": [
     {
       "title": "Action",

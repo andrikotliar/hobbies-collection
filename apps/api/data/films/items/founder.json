@@ -6,7 +6,7 @@
   "duration": 115,
   "budget": 25000000,
   "boxOffice": 24000000,
-  "poster": "posters/founder",
+  "imagePath": "posters/founder",
   "genres": [
     {
       "title": "Biography",

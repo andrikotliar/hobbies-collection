@@ -6,7 +6,7 @@
   "duration": 45,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/heroes.webp",
+  "imagePath": "posters/heroes.webp",
   "genres": [
     {
       "title": "Sci-Fi",

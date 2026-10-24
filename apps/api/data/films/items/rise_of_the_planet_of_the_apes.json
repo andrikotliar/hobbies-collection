@@ -6,7 +6,7 @@
   "duration": 105,
   "budget": 93000000,
   "boxOffice": 481000000,
-  "poster": "posters/rise_of_the_planet_of_the_apes",
+  "imagePath": "posters/rise_of_the_planet_of_the_apes",
   "genres": [
     {
       "title": "Action",

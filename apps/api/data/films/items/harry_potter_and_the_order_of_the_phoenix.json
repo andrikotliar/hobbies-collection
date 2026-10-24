@@ -6,7 +6,7 @@
   "duration": 138,
   "budget": 150000000,
   "boxOffice": 940000000,
-  "poster": "posters/harry_potter_5.webp",
+  "imagePath": "posters/harry_potter_5.webp",
   "genres": [
     {
       "title": "Fantasy",

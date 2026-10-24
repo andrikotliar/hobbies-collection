@@ -6,7 +6,7 @@
   "duration": 157,
   "budget": 150000000,
   "boxOffice": 897000000,
-  "poster": "posters/harry_potter_4.webp",
+  "imagePath": "posters/harry_potter_4.webp",
   "genres": [
     {
       "title": "Fantasy",

@@ -6,7 +6,7 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/foundation",
+  "imagePath": "posters/foundation",
   "genres": [
     {
       "title": "Sci-Fi",

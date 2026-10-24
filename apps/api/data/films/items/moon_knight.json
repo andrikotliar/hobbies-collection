@@ -6,7 +6,7 @@
   "duration": 50,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/moon_knight",
+  "imagePath": "posters/moon_knight",
   "genres": [
     {
       "title": "Action",

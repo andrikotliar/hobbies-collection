@@ -6,7 +6,7 @@
   "duration": 130,
   "budget": 250000000,
   "boxOffice": 1340000000,
-  "poster": "posters/harry_potter_8.webp",
+  "imagePath": "posters/harry_potter_8.webp",
   "genres": [
     {
       "title": "Fantasy",

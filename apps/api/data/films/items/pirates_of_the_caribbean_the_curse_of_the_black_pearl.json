@@ -6,7 +6,7 @@
   "duration": 143,
   "budget": 140000000,
   "boxOffice": 654000000,
-  "poster": "posters/pirates_1.webp",
+  "imagePath": "posters/pirates_1.webp",
   "genres": [
     {
       "title": "Fantasy",

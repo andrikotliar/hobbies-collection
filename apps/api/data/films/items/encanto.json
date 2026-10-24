@@ -6,7 +6,7 @@
   "duration": 102,
   "budget": 50000000,
   "boxOffice": 261000000,
-  "poster": "posters/encanto",
+  "imagePath": "posters/encanto",
   "genres": [
     {
       "title": "Fantasy",

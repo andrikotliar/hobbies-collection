@@ -6,7 +6,7 @@
   "duration": 104,
   "budget": 175000000,
   "boxOffice": 823000000,
-  "poster": "posters/coco",
+  "imagePath": "posters/coco",
   "genres": [
     {
       "title": "Adventures",

@@ -6,7 +6,7 @@
   "duration": 125,
   "budget": 80000000,
   "boxOffice": 416000000,
-  "poster": "posters/mummy_1.webp",
+  "imagePath": "posters/mummy_1.webp",
   "genres": [
     {
       "title": "Fantasy",

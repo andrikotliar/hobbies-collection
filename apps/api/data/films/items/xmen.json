@@ -6,7 +6,7 @@
   "duration": 104,
   "budget": 75000000,
   "boxOffice": 296000000,
-  "poster": "posters/x_men_1.webp",
+  "imagePath": "posters/x_men_1.webp",
   "genres": [
     {
       "title": "Sci-Fi",

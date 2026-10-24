@@ -6,7 +6,7 @@
   "duration": 155,
   "budget": 103000000,
   "boxOffice": 465000000,
-  "poster": "posters/gladiator",
+  "imagePath": "posters/gladiator",
   "genres": [
     {
       "title": "Drama",

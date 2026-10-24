@@ -6,7 +6,7 @@
   "duration": 103,
   "budget": 80000000,
   "boxOffice": 233000000,
-  "poster": "posters/day_the_earth_stood_still.webp",
+  "imagePath": "posters/day_the_earth_stood_still.webp",
   "genres": [
     {
       "title": "Sci-Fi",

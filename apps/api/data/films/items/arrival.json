@@ -6,7 +6,7 @@
   "duration": 116,
   "budget": 47000000,
   "boxOffice": 212000000,
-  "poster": "posters/arrival.webp",
+  "imagePath": "posters/arrival.webp",
   "genres": [
     {
       "title": "Sci-Fi",

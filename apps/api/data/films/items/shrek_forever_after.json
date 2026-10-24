@@ -6,7 +6,7 @@
   "duration": 90,
   "budget": 165000000,
   "boxOffice": 752000000,
-  "poster": "posters/shrek_forever_after",
+  "imagePath": "posters/shrek_forever_after",
   "genres": [
     {
       "title": "Comedy",

@@ -6,7 +6,7 @@
   "duration": 194,
   "budget": 200000000,
   "boxOffice": 2260000000,
-  "poster": "posters/titanic.webp",
+  "imagePath": "posters/titanic.webp",
   "genres": [
     {
       "title": "Drama",

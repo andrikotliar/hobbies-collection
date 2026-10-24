@@ -6,7 +6,7 @@
   "duration": 91,
   "budget": 80000000,
   "boxOffice": 661000000,
-  "poster": "posters/ice_age_2.webp",
+  "imagePath": "posters/ice_age_2.webp",
   "genres": [
     {
       "title": "Adventures",

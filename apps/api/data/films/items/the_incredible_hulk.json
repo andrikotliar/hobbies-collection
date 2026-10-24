@@ -6,7 +6,7 @@
   "duration": 112,
   "budget": 150000000,
   "boxOffice": 263000000,
-  "poster": "posters/the_incredible_hulk.webp",
+  "imagePath": "posters/the_incredible_hulk.webp",
   "genres": [
     {
       "title": "Sci-Fi",

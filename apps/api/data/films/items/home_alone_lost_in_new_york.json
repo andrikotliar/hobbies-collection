@@ -6,7 +6,7 @@
   "duration": 120,
   "budget": 28000000,
   "boxOffice": 359000000,
-  "poster": "posters/home_alone_lost_in_new_york",
+  "imagePath": "posters/home_alone_lost_in_new_york",
   "genres": [
     {
       "title": "Comedy",

@@ -6,7 +6,7 @@
   "duration": 155,
   "budget": 165000000,
   "boxOffice": 398000000,
-  "poster": "posters/dune.webp",
+  "imagePath": "posters/dune.webp",
   "genres": [
     {
       "title": "Sci-Fi",

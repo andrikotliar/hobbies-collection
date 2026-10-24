@@ -6,7 +6,7 @@
   "duration": 146,
   "budget": 130000000,
   "boxOffice": 865000000,
-  "poster": "posters/hunger_games_2.webp",
+  "imagePath": "posters/hunger_games_2.webp",
   "genres": [
     {
       "title": "Sci-Fi",

@@ -6,7 +6,7 @@
   "duration": 83,
   "budget": 3000000,
   "boxOffice": 1000000,
-  "poster": "posters/ghost_in_the_shell",
+  "imagePath": "posters/ghost_in_the_shell",
   "genres": [
     {
       "title": "Cyberpunk",

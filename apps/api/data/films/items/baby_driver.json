@@ -6,7 +6,7 @@
   "duration": 113,
   "budget": 34000000,
   "boxOffice": 227000000,
-  "poster": "posters/baby_driver",
+  "imagePath": "posters/baby_driver",
   "genres": [
     {
       "title": "Action",

@@ -6,7 +6,7 @@
   "duration": 134,
   "budget": 60000000,
   "boxOffice": 122000000,
-  "poster": "posters/gran_turismo.webp",
+  "imagePath": "posters/gran_turismo.webp",
   "genres": [
     {
       "title": "Adventures",

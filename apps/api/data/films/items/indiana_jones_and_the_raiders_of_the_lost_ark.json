@@ -6,7 +6,7 @@
   "duration": 115,
   "budget": 18000000,
   "boxOffice": 390000000,
-  "poster": "posters/indiana_jones_1.webp",
+  "imagePath": "posters/indiana_jones_1.webp",
   "genres": [
     {
       "title": "Adventures",

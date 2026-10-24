@@ -6,7 +6,7 @@
   "duration": 107,
   "budget": 3480000,
   "boxOffice": 358000000,
-  "poster": "posters/your_name.webp",
+  "imagePath": "posters/your_name.webp",
   "genres": [
     {
       "title": "Drama",

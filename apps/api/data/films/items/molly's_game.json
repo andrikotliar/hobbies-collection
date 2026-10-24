@@ -6,7 +6,7 @@
   "duration": 140,
   "budget": 30000000,
   "boxOffice": 59000000,
-  "poster": "posters/mollys_game",
+  "imagePath": "posters/mollys_game",
   "genres": [
     {
       "title": "Crime",

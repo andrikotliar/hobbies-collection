@@ -6,7 +6,7 @@
   "duration": 95,
   "budget": 95000000,
   "boxOffice": 226000000,
-  "poster": "posters/percy_jackson.webp",
+  "imagePath": "posters/percy_jackson.webp",
   "genres": [
     {
       "title": "Fantasy",

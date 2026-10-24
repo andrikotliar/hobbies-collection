@@ -6,7 +6,7 @@
   "duration": 141,
   "budget": 52000000,
   "boxOffice": 352000000,
-  "poster": "posters/catch_me_if_you_can",
+  "imagePath": "posters/catch_me_if_you_can",
   "genres": [
     {
       "title": "Adventures",

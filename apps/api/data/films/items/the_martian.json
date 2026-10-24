@@ -6,7 +6,7 @@
   "duration": 142,
   "budget": 108000000,
   "boxOffice": 630000000,
-  "poster": "posters/martian.webp",
+  "imagePath": "posters/martian.webp",
   "genres": [
     {
       "title": "Sci-Fi",

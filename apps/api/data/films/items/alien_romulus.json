@@ -6,7 +6,7 @@
   "duration": 119,
   "budget": 80000000,
   "boxOffice": 350000000,
-  "poster": "posters/alien_romulus_.webp",
+  "imagePath": "posters/alien_romulus_.webp",
   "genres": [
     {
       "title": "Sci-Fi",

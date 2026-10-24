@@ -6,7 +6,7 @@
   "duration": 103,
   "budget": 60000000,
   "boxOffice": 264000000,
-  "poster": "posters/the_truman_show",
+  "imagePath": "posters/the_truman_show",
   "genres": [
     {
       "title": "Comedy",

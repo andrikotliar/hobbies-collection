@@ -6,7 +6,7 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/stranger_things.webp",
+  "imagePath": "posters/stranger_things.webp",
   "genres": [
     {
       "title": "Fantasy",

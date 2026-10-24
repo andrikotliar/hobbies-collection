@@ -6,7 +6,7 @@
   "duration": 60,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/umbrella_academy.webp",
+  "imagePath": "posters/umbrella_academy.webp",
   "genres": [
     {
       "title": "Fantasy",

@@ -6,7 +6,7 @@
   "duration": 118,
   "budget": 70000000,
   "boxOffice": 368000000,
-  "poster": "posters/hitch.webp",
+  "imagePath": "posters/hitch.webp",
   "genres": [
     {
       "title": "Romance",

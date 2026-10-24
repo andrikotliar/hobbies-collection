@@ -6,7 +6,7 @@
   "duration": 113,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/mitchells.webp",
+  "imagePath": "posters/mitchells.webp",
   "genres": [
     {
       "title": "Adventures",

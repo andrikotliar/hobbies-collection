@@ -6,7 +6,7 @@
   "duration": 98,
   "budget": 165000000,
   "boxOffice": 496000000,
-  "poster": "posters/how_to_train_your_dragon_1.webp",
+  "imagePath": "posters/how_to_train_your_dragon_1.webp",
   "genres": [
     {
       "title": "Fantasy",

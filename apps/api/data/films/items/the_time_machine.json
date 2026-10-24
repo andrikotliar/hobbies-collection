@@ -6,7 +6,7 @@
   "duration": 96,
   "budget": 80000000,
   "boxOffice": 124000000,
-  "poster": "posters/time_machine.webp",
+  "imagePath": "posters/time_machine.webp",
   "genres": [
     {
       "title": "Sci-Fi",

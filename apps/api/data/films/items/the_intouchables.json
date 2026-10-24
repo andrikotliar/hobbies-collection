@@ -6,7 +6,7 @@
   "duration": 112,
   "budget": 11000000,
   "boxOffice": 427000000,
-  "poster": "posters/intouchables.webp",
+  "imagePath": "posters/intouchables.webp",
   "genres": [
     {
       "title": "Biography",

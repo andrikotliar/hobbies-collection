@@ -6,7 +6,7 @@
   "duration": 127,
   "budget": 110000000,
   "boxOffice": 300000000,
-  "poster": "posters/real_steel.webp",
+  "imagePath": "posters/real_steel.webp",
   "genres": [
     {
       "title": "Sci-Fi",

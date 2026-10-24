@@ -6,7 +6,7 @@
   "duration": 120,
   "budget": 49000000,
   "boxOffice": 102000000,
-  "poster": "posters/chappie",
+  "imagePath": "posters/chappie",
   "genres": [
     {
       "title": "Action",

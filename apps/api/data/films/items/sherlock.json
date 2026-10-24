@@ -6,7 +6,7 @@
   "duration": 90,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/sherlock.webp",
+  "imagePath": "posters/sherlock.webp",
   "genres": [
     {
       "title": "Crime",

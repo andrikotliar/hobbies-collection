@@ -6,7 +6,7 @@
   "duration": 107,
   "budget": 15000000,
   "boxOffice": 98000000,
-  "poster": "posters/predator.webp",
+  "imagePath": "posters/predator.webp",
   "genres": [
     {
       "title": "Action",

@@ -6,7 +6,7 @@
   "duration": 114,
   "budget": 150000000,
   "boxOffice": 449000000,
-  "poster": "posters/thor_1.webp",
+  "imagePath": "posters/thor_1.webp",
   "genres": [
     {
       "title": "Fantasy",

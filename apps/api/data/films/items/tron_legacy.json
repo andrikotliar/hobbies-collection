@@ -6,7 +6,7 @@
   "duration": 125,
   "budget": 170000000,
   "boxOffice": 400000000,
-  "poster": "posters/tron.webp",
+  "imagePath": "posters/tron.webp",
   "genres": [
     {
       "title": "Sci-Fi",

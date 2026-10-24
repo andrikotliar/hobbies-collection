@@ -6,7 +6,7 @@
   "duration": 23,
   "budget": 0,
   "boxOffice": 0,
-  "poster": "posters/atla.webp",
+  "imagePath": "posters/atla.webp",
   "genres": [
     {
       "title": "Adventures",

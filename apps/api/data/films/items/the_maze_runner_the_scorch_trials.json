@@ -6,7 +6,7 @@
   "duration": 131,
   "budget": 61000000,
   "boxOffice": 312000000,
-  "poster": "posters/maze_runner_2.webp",
+  "imagePath": "posters/maze_runner_2.webp",
   "genres": [
     {
       "title": "Sci-Fi",

@@ -6,7 +6,7 @@
   "duration": 119,
   "budget": 35000000,
   "boxOffice": 52000000,
-  "poster": "posters/greenland.webp",
+  "imagePath": "posters/greenland.webp",
   "genres": [
     {
       "title": "Drama",
