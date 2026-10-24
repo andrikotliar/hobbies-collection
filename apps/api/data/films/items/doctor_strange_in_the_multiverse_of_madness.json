@@ -148,11 +148,5 @@
       "details": "Professor Charles Xavier"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 31.5
-    }
-  ]
+  "sequenceNumber": 31.5
 }

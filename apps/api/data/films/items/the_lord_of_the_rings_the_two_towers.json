@@ -276,11 +276,5 @@
       "details": "Merry"
     }
   ],
-  "collections": [
-    {
-      "id": 19,
-      "title": "Middle-Earth Universe",
-      "order": 5
-    }
-  ]
+  "sequenceNumber": 5
 }

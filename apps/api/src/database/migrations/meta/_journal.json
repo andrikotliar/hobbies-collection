@@ -250,43 +250,22 @@
     {
       "idx": 36,
       "version": "7",
-      "when": 1791023591230,
-      "tag": "0036_add-books-and-board-games",
+      "when": 1792432995099,
+      "tag": "0036_remove-articles-table",
       "breakpoints": true
     },
     {
       "idx": 37,
       "version": "7",
-      "when": 1791026844122,
-      "tag": "0037_add-image-paths",
+      "when": 1792846427435,
+      "tag": "0037_add-origin-film-id-and-seq-num",
       "breakpoints": true
     },
     {
       "idx": 38,
       "version": "7",
-      "when": 1791631962794,
-      "tag": "0038_add-book-reading-status-and-order",
-      "breakpoints": true
-    },
-    {
-      "idx": 39,
-      "version": "7",
-      "when": 1791651950711,
-      "tag": "0039_make-book-fields-nullable",
-      "breakpoints": true
-    },
-    {
-      "idx": 40,
-      "version": "7",
-      "when": 1791722221668,
-      "tag": "0040_remove-books-collections",
-      "breakpoints": true
-    },
-    {
-      "idx": 41,
-      "version": "7",
-      "when": 1791725766796,
-      "tag": "0041_make-series-order-default-1",
+      "when": 1792856888098,
+      "tag": "0038_make-order-column-nullable",
       "breakpoints": true
     }
   ]

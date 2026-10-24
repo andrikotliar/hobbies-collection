@@ -1,0 +1,156 @@
+{
+  "id": 421,
+  "title": "Transformers One",
+  "releaseDate": "2024-09-20",
+  "type": "ANIMATION",
+  "duration": 104,
+  "budget": 75000000,
+  "boxOffice": 129000000,
+  "synopsis": "Cybertron has been destroyed, the Transformers without a core are hard at work in the mines to extract the Energon necessary for life. Two ancient friends, Orion Pax and D-16, dream that they will be able to rise to the level of warriors seeking the lost Matrix of Leadership that can restore life to the planet. But a shocking truth about the surface and the death of the Primes awaits them.",
+  "imagePath": "posters/transformers_one.webp",
+  "genres": [
+    {
+      "title": "Action",
+      "id": 4
+    },
+    {
+      "title": "Adventures",
+      "id": 3
+    }
+  ],
+  "countries": [
+    {
+      "title": "USA",
+      "id": 1
+    }
+  ],
+  "studios": [
+    {
+      "title": "Paramount Animation",
+      "id": 109
+    },
+    {
+      "title": "Hasbro Entertainment",
+      "id": 110
+    }
+  ],
+  "trailers": [
+    {
+      "url": "https://www.youtube.com/watch?v=0rmJXXKDrsM&pp=ygUYdHJhbnNmb3JtZXJzIG9uZSB0cmFpbGVy",
+      "order": 1,
+      "id": 421
+    }
+  ],
+  "awards": [],
+  "castAndCrew": [
+    {
+      "id": 2862,
+      "name": "Josh Cooley",
+      "role": "DIRECTOR",
+      "details": null
+    },
+    {
+      "id": 1396,
+      "name": "Eric Pearson",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 3037,
+      "name": "Andrew Barrer",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 3038,
+      "name": "Gabriel Ferrari",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 3039,
+      "name": "Aaron Dem",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 2330,
+      "name": "Lorenzo di Bonaventura",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 3040,
+      "name": "Mark Vahradian",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 1275,
+      "name": "Michael Bay",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 2331,
+      "name": "Tom DeSanto",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 1918,
+      "name": "Don Murphy",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 1464,
+      "name": "Brian Tyler",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 195,
+      "name": "Chris Hemsworth",
+      "role": "ACTOR",
+      "details": " Orion Pax / Optimus Prime"
+    },
+    {
+      "id": 149,
+      "name": "Brian Tyree Henry",
+      "role": "ACTOR",
+      "details": "D-16 / Megatron"
+    },
+    {
+      "id": 1042,
+      "name": "Scarlett Johansson",
+      "role": "ACTOR",
+      "details": "Elita-1"
+    },
+    {
+      "id": 3041,
+      "name": "Keegan-Michael Key",
+      "role": "ACTOR",
+      "details": "B-127"
+    },
+    {
+      "id": 1090,
+      "name": "Steve Buscemi",
+      "role": "ACTOR",
+      "details": "Starscream"
+    },
+    {
+      "id": 707,
+      "name": "Laurence Fishburne",
+      "role": "ACTOR",
+      "details": "Alpha Trion"
+    },
+    {
+      "id": 2879,
+      "name": "Jon Hamm",
+      "role": "ACTOR",
+      "details": "Sentinel Prime"
+    }
+  ],
+  "collections": []
+}

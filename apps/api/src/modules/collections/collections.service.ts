@@ -1,7 +1,7 @@
 import {
   PAGE_LIMITS,
-  type CollectionListQueryParams,
   type CollectionsListResponse,
+  type CommonListQueryParams,
   type CreateCollectionInput,
   type UpdateCollectionInput,
 } from '@hobbies-collection/shared';
@@ -16,26 +16,16 @@ export class CollectionsService {
     return this.deps.collectionsRepository.getCollectionById(id);
   }
 
-  async getListOptions() {
-    const collections = await this.deps.collectionsRepository.getCollectionOptions();
-
-    return buildListOptions(collections);
-  }
-
   async getAllCollections() {
     const collections = await this.deps.collectionsRepository.getAll();
 
     return buildListOptions(collections);
   }
 
-  async getGeneralDataList(queries: CollectionListQueryParams): Promise<CollectionsListResponse> {
+  async getGeneralDataList(queries: CommonListQueryParams): Promise<CollectionsListResponse> {
     const { list, total } = await this.deps.collectionsRepository.getList(queries);
 
     return { list, total, pageLimit: PAGE_LIMITS.default };
-  }
-
-  getChapterRelatedCollections() {
-    return this.deps.collectionsRepository.getChapterRelatedCollections();
   }
 
   async createCollection(input: CreateCollectionInput) {
@@ -76,10 +66,6 @@ export class CollectionsService {
     }
 
     return collection;
-  }
-
-  countFilmsByCollection(id: number) {
-    return this.deps.collectionsRepository.countFilmsByCollection(id);
   }
 
   async getOptionsByHobbyId(_hobbyId: number) {

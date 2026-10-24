@@ -150,11 +150,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 100,
-      "title": "The Planet of the Apes",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

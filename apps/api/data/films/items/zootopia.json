@@ -162,11 +162,5 @@
       "details": "Stu Hopps"
     }
   ],
-  "collections": [
-    {
-      "id": 87,
-      "title": "Zootopia",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

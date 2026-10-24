@@ -158,11 +158,5 @@
       "details": "Cassie Lang"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 15
-    }
-  ]
+  "sequenceNumber": 15
 }

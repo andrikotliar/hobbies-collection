@@ -101,11 +101,5 @@
       "details": "Eret"
     }
   ],
-  "collections": [
-    {
-      "id": 63,
-      "title": "How to Train Your Dragon",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

@@ -118,11 +118,5 @@
       "details": "Sarah Connor"
     }
   ],
-  "collections": [
-    {
-      "id": 83,
-      "title": "Terminator",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

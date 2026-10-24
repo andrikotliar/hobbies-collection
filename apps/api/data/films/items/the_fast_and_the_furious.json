@@ -134,11 +134,5 @@
       "details": "Vince"
     }
   ],
-  "collections": [
-    {
-      "id": 62,
-      "title": "Fast and Furious",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

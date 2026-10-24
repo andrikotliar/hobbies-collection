@@ -165,11 +165,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 56,
-      "title": "Alien",
-      "order": 1.5
-    }
-  ]
+  "sequenceNumber": 1.5
 }

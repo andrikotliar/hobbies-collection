@@ -252,11 +252,5 @@
       "details": "James Rhodes / The War Machine"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 24
-    }
-  ]
+  "sequenceNumber": 24
 }

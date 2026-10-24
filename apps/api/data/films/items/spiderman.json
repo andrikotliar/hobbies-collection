@@ -123,11 +123,5 @@
       "details": "J. Jonah Jameson"
     }
   ],
-  "collections": [
-    {
-      "id": 80,
-      "title": "Raimi's Spider-Man",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

@@ -194,11 +194,5 @@
       "details": "Jarvis"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 8
-    }
-  ]
+  "sequenceNumber": 8
 }

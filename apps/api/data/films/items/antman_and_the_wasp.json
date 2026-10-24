@@ -135,11 +135,5 @@
       "details": "Dr. Hank Pym"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 22
-    }
-  ]
+  "sequenceNumber": 22
 }

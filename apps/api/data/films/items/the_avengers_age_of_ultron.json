@@ -188,11 +188,5 @@
       "details": "Heimdall"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 14
-    }
-  ]
+  "sequenceNumber": 14
 }

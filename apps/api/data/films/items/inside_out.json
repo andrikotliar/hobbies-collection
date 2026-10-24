@@ -188,11 +188,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 97,
-      "title": "Inside Out",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

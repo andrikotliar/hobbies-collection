@@ -146,11 +146,5 @@
       "details": "Castor / Zuse"
     }
   ],
-  "collections": [
-    {
-      "id": 91,
-      "title": "Tron",
-      "order": 0.5
-    }
-  ]
+  "sequenceNumber": 0.5
 }

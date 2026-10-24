@@ -135,11 +135,5 @@
       "details": "Draco Malfoy"
     }
   ],
-  "collections": [
-    {
-      "id": 2,
-      "title": "Harry Potter Universe",
-      "order": 6
-    }
-  ]
+  "sequenceNumber": 6
 }

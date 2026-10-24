@@ -27,14 +27,7 @@ export const CreateFilmInputSchema = z.object({
   genres: z.array(z.number()),
   studios: z.array(z.number()),
   countries: z.array(z.number()),
-  collections: z.array(
-    z.object({
-      collectionId: z.number(),
-      order: z.number().min(0.1, {
-        error: 'Order is required for the collection',
-      }),
-    }),
-  ),
+  collections: z.array(z.number()),
   duration: z.coerce.number(),
   releaseDate: DateStringSchema.nullable(),
   budget: z.coerce.number().max(900_000_000),
@@ -83,6 +76,7 @@ export const GetFilmsListQuerySchema = buildListQueryParamsSchema(
     endDate: z.string().optional(),
     year: z.coerce.number().optional(),
     collectionId: z.coerce.number().optional(),
+    originFilmId: z.coerce.number().optional(),
     duration: z.coerce.number().optional(),
     rating: z.coerce.number().optional(),
     seasonsTotal: z.coerce.number().optional(),
@@ -139,10 +133,11 @@ export const FilmResponseSchema = z.object({
   releaseDate: z.string().nullable(),
   budget: z.coerce.number().nullable(),
   boxOffice: z.coerce.number().nullable(),
+  chaptersRefId: z.number().nullable(),
   genres: z.array(GenreResponseSchema.omit({ createdAt: true, updatedAt: true })),
   studios: z.array(StudioResponseSchema.omit({ createdAt: true, updatedAt: true })),
   countries: z.array(CountryResponseSchema.omit({ createdAt: true, updatedAt: true })),
-  collections: z.array(CollectionResponseSchema.pick({ id: true, title: true, category: true })),
+  collections: z.array(CollectionResponseSchema.pick({ id: true, title: true })),
   trailers: z.array(TrailerSchema),
   awards: z.array(
     z.object({
@@ -181,7 +176,7 @@ export const FilmsListResponseSchema = getListResponseSchema(
       upcoming: z.boolean(),
       inDays: z.number().nullable(),
       releasedYears: z.number().nullable(),
-      sequenceNum: z.number().optional(),
+      sequenceNumber: z.number(),
     }),
   ),
 ).extend({
@@ -260,6 +255,8 @@ export const CompleteDataListItemSchema = z.object({
     description: true,
     imagePath: true,
   }).shape,
+  originFilmId: z.number().nullable(),
+  sequenceNumber: z.number(),
   genres: z.array(GenreResponseSchema.pick({ title: true, id: true })),
   countries: z.array(CountryResponseSchema.pick({ title: true, id: true })),
   studios: z.array(StudioResponseSchema.pick({ title: true, id: true })),
@@ -279,13 +276,6 @@ export const CompleteDataListItemSchema = z.object({
       details: z.string().nullable(),
     }),
   ),
-  collections: z.array(
-    z.object({
-      id: z.number(),
-      title: z.string(),
-      order: z.number(),
-    }),
-  ),
   seriesExtension: z
     .object({
       id: z.number(),
@@ -302,7 +292,6 @@ export const CompleteDataResponseSchema = z.object({
     countries: z.array(CountryResponseSchema.pick({ title: true, id: true })),
     studios: z.array(StudioResponseSchema.pick({ title: true, id: true })),
     people: z.array(PersonResponseSchema.pick({ name: true, id: true })),
-    collections: z.array(CollectionResponseSchema.pick({ title: true, id: true, category: true })),
     awards: z.array(
       z.object({
         ...AwardResponseSchema.pick({ id: true, title: true }).shape,
@@ -352,20 +341,12 @@ export const FilmStatsResponseSchema = z.object({
 });
 
 export const FilmsByCollectionResponseSchema = z.array(
-  FilmResponseSchema.pick({ id: true, title: true, imagePath: true }).extend({ order: z.number() }),
+  FilmResponseSchema.pick({ id: true, title: true, imagePath: true }),
 );
 
 export const DeleteFilmDrafts = z.object({
   ok: z.boolean(),
 });
-
-export const GetFilmByCollectionNameSchema = z.object({ title: z.string() });
-
-export const GetFilmByCollectionNameResponse = FilmResponseSchema.pick({
-  id: true,
-  title: true,
-  imagePath: true,
-}).extend({ order: z.number() });
 
 export type GetFilmsListQuery = z.infer<typeof GetFilmsListQuerySchema>;
 export type SearchFilmsQuery = z.infer<typeof SearchFilmsQuerySchema>;

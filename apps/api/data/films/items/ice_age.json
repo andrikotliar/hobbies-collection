@@ -105,11 +105,5 @@
       "details": "Soto"
     }
   ],
-  "collections": [
-    {
-      "id": 66,
-      "title": "Ice Age",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

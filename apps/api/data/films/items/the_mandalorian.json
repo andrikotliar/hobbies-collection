@@ -181,16 +181,10 @@
       "details": "The Armorer"
     }
   ],
-  "collections": [
-    {
-      "id": 22,
-      "title": "Star Wars Universe",
-      "order": 11
-    }
-  ],
   "seriesExtension": {
     "id": 15,
     "episodesTotal": 16,
     "seasonsTotal": 2
-  }
+  },
+  "sequenceNumber": 11
 }

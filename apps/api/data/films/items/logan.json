@@ -168,11 +168,5 @@
       "details": "Kathryn Munson"
     }
   ],
-  "collections": [
-    {
-      "id": 86,
-      "title": "X-Men",
-      "order": 9
-    }
-  ]
+  "sequenceNumber": 9
 }

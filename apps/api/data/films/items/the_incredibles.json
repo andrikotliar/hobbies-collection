@@ -1,0 +1,181 @@
+{
+  "id": 425,
+  "title": "The Incredibles",
+  "releaseDate": "2004-11-05",
+  "type": "ANIMATION",
+  "duration": 115,
+  "budget": 92000000,
+  "boxOffice": 631000000,
+  "synopsis": "Bob Parr and his wife Helen were famous superheroes in the past, but now, when superheroes are no longer important to the world, they are trying to live a normal life until a new threat to the world requires the old heroes to return to action.",
+  "imagePath": "posters/the_incredibles.webp",
+  "genres": [
+    {
+      "title": "Action",
+      "id": 4
+    }
+  ],
+  "countries": [
+    {
+      "title": "USA",
+      "id": 1
+    }
+  ],
+  "studios": [
+    {
+      "title": "Pixar Animation",
+      "id": 3
+    }
+  ],
+  "trailers": [
+    {
+      "url": "https://www.youtube.com/watch?v=-UaGUdNJdRQ&pp=ygUTaW5jcmVkaWJsZXMgdHJhaWxlcg%3D%3D",
+      "order": 1,
+      "id": 425
+    }
+  ],
+  "awards": [
+    {
+      "id": 1,
+      "title": "Oscar Awards",
+      "nominations": [
+        {
+          "title": "Best Achievement in Sound Editing",
+          "id": 12
+        },
+        {
+          "title": "Best Animated Feature Film of the Year",
+          "id": 296
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Saturn Awards",
+      "nominations": [
+        {
+          "title": "Best Animated Film",
+          "id": 50
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Critics Choice Movie Awards",
+      "nominations": [
+        {
+          "title": "Best Animated Feature",
+          "id": 81
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "BAFTA Award",
+      "nominations": [
+        {
+          "title": "Best Feature Film",
+          "id": 113
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Annie Awards",
+      "nominations": [
+        {
+          "title": "Best Animated Feature",
+          "id": 171
+        },
+        {
+          "title": "Animated Effects",
+          "id": 330
+        },
+        {
+          "title": "Character Animation",
+          "id": 331
+        },
+        {
+          "title": "Directing in an Animated Feature Production",
+          "id": 332
+        },
+        {
+          "title": "Music in an Animated Feature Production",
+          "id": 333
+        },
+        {
+          "title": "Production Design in an Animated Feature Production",
+          "id": 334
+        },
+        {
+          "title": "Storyboarding in an Animated Feature Production",
+          "id": 335
+        },
+        {
+          "title": "Voice Acting in an Animated Feature Production",
+          "id": 336
+        },
+        {
+          "title": "Writing in an Animated Feature Production",
+          "id": 337
+        }
+      ]
+    }
+  ],
+  "castAndCrew": [
+    {
+      "id": 1846,
+      "name": "Brad Bird",
+      "role": "DIRECTOR",
+      "details": null
+    },
+    {
+      "id": 1846,
+      "name": "Brad Bird",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 3058,
+      "name": "John Walker",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 1442,
+      "name": "Michael Giacchino",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 3059,
+      "name": "Craig T. Nelson",
+      "role": "ACTOR",
+      "details": "Bob Parr/Mr. Incredible"
+    },
+    {
+      "id": 450,
+      "name": "Holly Hunter",
+      "role": "ACTOR",
+      "details": "Helen Parr/Elastigirl"
+    },
+    {
+      "id": 1036,
+      "name": "Samuel L. Jackson",
+      "role": "ACTOR",
+      "details": "Lucius Best/Frozone"
+    },
+    {
+      "id": 3060,
+      "name": "Jason Lee",
+      "role": "ACTOR",
+      "details": "Buddy Pine/Syndrome"
+    },
+    {
+      "id": 1846,
+      "name": "Brad Bird",
+      "role": "ACTOR",
+      "details": "Edna Mode (E)"
+    }
+  ],
+  "collections": []
+}

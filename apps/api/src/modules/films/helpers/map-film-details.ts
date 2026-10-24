@@ -1,4 +1,4 @@
-import type { FilmResponseSchema } from '@hobbies-collection/shared';
+import { CollectionCategory, type FilmResponseSchema } from '@hobbies-collection/shared';
 import type z from 'zod';
 import type {
   Award,
@@ -22,7 +22,7 @@ import type {
 } from '~/modules/films/types.js';
 import { nullable } from '~/shared/helpers/nullable.js';
 
-type ExtendedFilm = Omit<Film, 'draft' | 'addedAt' | Timestamps> & {
+type ExtendedFilm = Omit<Film, 'draft' | 'addedAt' | 'sequenceNumber' | Timestamps> & {
   genres: Array<{ genre: PickBaseData<Genre> }>;
   studios: Array<{ studio: PickBaseData<Studio> }>;
   countries: Array<{ country: PickBaseData<Country> }>;
@@ -39,6 +39,7 @@ type ExtendedFilm = Omit<Film, 'draft' | 'addedAt' | Timestamps> & {
   }>;
   seriesExtensions: Array<Pick<SeriesExtension, 'seasonsTotal' | 'episodesTotal'>>;
   trailers: FilmTrailer[];
+  hasChapters: boolean;
 };
 
 const mapNestedRelations = <T extends Record<string, unknown>>(values: T[], selector: keyof T) => {
@@ -92,9 +93,12 @@ export const mapFilmDetails = (
     genres: mapNestedRelations(film.genres, 'genre'),
     countries: mapNestedRelations(film.countries, 'country'),
     studios: mapNestedRelations(film.studios, 'studio'),
-    collections,
+    collections: collections.filter(
+      (collection) => collection.category === CollectionCategory.GENERAL,
+    ),
     castAndCrew: sortGroupedPeople(castAndCrew),
     awards: Object.values(awards),
     seriesExtension: nullable(film.seriesExtensions[0]),
+    chaptersRefId: film.hasChapters ? (film.originFilmId ?? film.id) : null,
   };
 };

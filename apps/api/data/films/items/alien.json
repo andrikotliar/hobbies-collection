@@ -182,11 +182,5 @@
       "details": "Alien"
     }
   ],
-  "collections": [
-    {
-      "id": 56,
-      "title": "Alien",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

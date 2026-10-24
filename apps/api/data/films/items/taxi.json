@@ -113,11 +113,5 @@
       "details": "Commissaire Gibert"
     }
   ],
-  "collections": [
-    {
-      "id": 82,
-      "title": "Taxi",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

@@ -140,11 +140,5 @@
       "details": "Z"
     }
   ],
-  "collections": [
-    {
-      "id": 74,
-      "title": "Men in Black",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

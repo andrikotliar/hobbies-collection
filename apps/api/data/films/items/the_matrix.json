@@ -180,11 +180,5 @@
       "details": "Cypher"
     }
   ],
-  "collections": [
-    {
-      "id": 72,
-      "title": "The Matrix",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

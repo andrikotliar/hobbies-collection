@@ -194,16 +194,10 @@
       "details": "Katara"
     }
   ],
-  "collections": [
-    {
-      "id": 69,
-      "title": "The Legend of Aang",
-      "order": 2
-    }
-  ],
   "seriesExtension": {
     "id": 14,
     "episodesTotal": 52,
     "seasonsTotal": 4
-  }
+  },
+  "sequenceNumber": 2
 }

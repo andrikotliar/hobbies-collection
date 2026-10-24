@@ -103,11 +103,5 @@
       "details": "Marley"
     }
   ],
-  "collections": [
-    {
-      "id": 89,
-      "title": "The Home Alone",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

@@ -117,16 +117,10 @@
       "details": "He Who Remains"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 26
-    }
-  ],
   "seriesExtension": {
     "id": 9,
     "episodesTotal": 6,
     "seasonsTotal": 1
-  }
+  },
+  "sequenceNumber": 26
 }

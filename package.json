@@ -10,7 +10,8 @@
     "db:start": "docker compose up database -d",
     "db:init": "pnpm db:init:empty && pnpm --filter @hobbies-collection/api run db:seed",
     "db:init:empty": "pnpm --filter @hobbies-collection/api run db:migrate",
-    "dev": "pnpm run -r --parallel --aggregate-output dev"
+    "dev": "pnpm run -r --parallel --aggregate-output dev",
+    "typecheck": "pnpm run build:packages && pnpm run -r typecheck"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

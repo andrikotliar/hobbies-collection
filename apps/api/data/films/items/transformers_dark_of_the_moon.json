@@ -159,11 +159,5 @@
       "details": "Sentinel Prime"
     }
   ],
-  "collections": [
-    {
-      "id": 84,
-      "title": "Transformers",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

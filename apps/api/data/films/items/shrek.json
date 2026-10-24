@@ -166,11 +166,5 @@
       "details": "Lord Farquaad"
     }
   ],
-  "collections": [
-    {
-      "id": 79,
-      "title": "Shrek",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

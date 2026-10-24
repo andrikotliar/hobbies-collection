@@ -272,11 +272,5 @@
       "details": "Elrond"
     }
   ],
-  "collections": [
-    {
-      "id": 19,
-      "title": "Middle-Earth Universe",
-      "order": 6
-    }
-  ]
+  "sequenceNumber": 6
 }

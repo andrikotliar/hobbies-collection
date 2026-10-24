@@ -184,11 +184,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 103,
-      "title": "007",
-      "order": 4
-    }
-  ]
+  "sequenceNumber": 4
 }

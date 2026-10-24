@@ -1,17 +1,5 @@
-import {
-  CollectionCategory,
-  type CompleteDataListItem,
-  type Enum,
-} from '@hobbies-collection/shared';
-import type {
-  Collection,
-  Film,
-  FilmCollection,
-  FilmPerson,
-  FilmTrailer,
-  Person,
-  SeriesExtension,
-} from '~/database/schema.js';
+import { type CompleteDataListItem } from '@hobbies-collection/shared';
+import type { Film, FilmPerson, FilmTrailer, Person, SeriesExtension } from '~/database/schema.js';
 import type { Timestamps } from '~/modules/films/types.js';
 
 type PropertyWithTitleAndId = {
@@ -34,11 +22,6 @@ type CompleteDataFilm = Omit<Film, 'rating' | 'draft' | 'addedAt' | Timestamps> 
   }>;
   seriesExtensions: Array<Omit<SeriesExtension, Timestamps | 'filmId'>>;
   trailers: Array<Omit<FilmTrailer, Timestamps | 'filmId'>>;
-  collections: Array<
-    Pick<FilmCollection, 'order'> & {
-      collection: PropertyWithTitleAndId & Pick<Collection, 'category'>;
-    }
-  >;
 };
 
 type GroupedAwards = {
@@ -48,11 +31,6 @@ type GroupedAwards = {
     nominations: { id: number; title: string }[];
   };
 };
-
-const allowedCollections: Enum<typeof CollectionCategory>[] = [
-  CollectionCategory.CHAPTER,
-  CollectionCategory.CINEMATIC_UNIVERSE,
-];
 
 const mapIndividualFilm = (film: CompleteDataFilm): CompleteDataListItem => {
   const awards = film.awards.reduce((result, award) => {
@@ -95,13 +73,6 @@ const mapIndividualFilm = (film: CompleteDataFilm): CompleteDataListItem => {
     })),
     awards: Object.values(awards),
     castAndCrew,
-    collections: film.collections
-      .filter((collection) => allowedCollections.includes(collection.collection.category))
-      .map((data) => ({
-        id: data.collection.id,
-        title: data.collection.title,
-        order: data.order ?? 0,
-      })),
     seriesExtension: film.seriesExtensions.length
       ? {
           id: film.seriesExtensions[0].id,

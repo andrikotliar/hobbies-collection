@@ -248,11 +248,5 @@
       "details": "Ulysses Klaue"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 18
-    }
-  ]
+  "sequenceNumber": 18
 }

@@ -90,16 +90,10 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 22,
-      "title": "Star Wars Universe",
-      "order": 5
-    }
-  ],
   "seriesExtension": {
     "id": 68,
     "episodesTotal": 6,
     "seasonsTotal": 1
-  }
+  },
+  "sequenceNumber": 5
 }

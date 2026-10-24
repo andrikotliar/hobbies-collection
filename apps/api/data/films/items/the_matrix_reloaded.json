@@ -135,11 +135,5 @@
       "details": "The Architect"
     }
   ],
-  "collections": [
-    {
-      "id": 72,
-      "title": "The Matrix",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

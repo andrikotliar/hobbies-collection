@@ -182,11 +182,5 @@
       "details": "Madame Olympe Maxime"
     }
   ],
-  "collections": [
-    {
-      "id": 2,
-      "title": "Harry Potter Universe",
-      "order": 4
-    }
-  ]
+  "sequenceNumber": 4
 }

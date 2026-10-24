@@ -155,11 +155,5 @@
       "details": "Mason"
     }
   ],
-  "collections": [
-    {
-      "id": 71,
-      "title": "Madagascar",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

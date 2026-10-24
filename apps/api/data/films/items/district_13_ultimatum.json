@@ -121,11 +121,5 @@
       "details": "Ali-K"
     }
   ],
-  "collections": [
-    {
-      "id": 58,
-      "title": "District 13",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

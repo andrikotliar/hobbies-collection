@@ -230,11 +230,5 @@
       "details": "Thanos"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 23
-    }
-  ]
+  "sequenceNumber": 23
 }

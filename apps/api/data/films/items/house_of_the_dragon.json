@@ -185,16 +185,10 @@
       "details": "Lady Rhaena Targaryen"
     }
   ],
-  "collections": [
-    {
-      "id": 50,
-      "title": "Game of Thrones",
-      "order": 1
-    }
-  ],
   "seriesExtension": {
     "id": 24,
     "episodesTotal": 27,
     "seasonsTotal": 2
-  }
+  },
+  "sequenceNumber": 1
 }

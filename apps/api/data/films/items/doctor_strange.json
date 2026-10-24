@@ -138,11 +138,5 @@
       "details": "The Ancient One"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 20
-    }
-  ]
+  "sequenceNumber": 20
 }

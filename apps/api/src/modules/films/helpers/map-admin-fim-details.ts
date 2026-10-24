@@ -13,8 +13,11 @@ import type {
 import type { Timestamps } from '~/modules/films/types.js';
 import { getTypedKeys } from '~/shared/helpers/get-typed-keys.js';
 
-type EditableFilm = Omit<Film, Timestamps | 'addedAt' | 'id'> & {
-  collections: Pick<FilmCollection, 'collectionId' | 'order'>[];
+type EditableFilm = Omit<
+  Film,
+  Timestamps | 'addedAt' | 'id' | 'originFilmId' | 'sequenceNumber'
+> & {
+  collections: Pick<FilmCollection, 'collectionId'>[];
   genres: Pick<FilmGenre, 'genreId'>[];
   countries: Pick<FilmCountry, 'countryId'>[];
   studios: Pick<FilmStudio, 'studioId'>[];
@@ -73,7 +76,7 @@ export const mapAdminFilmDetails = (
     genres: mapInnerId(film.genres, 'genreId'),
     countries: mapInnerId(film.countries, 'countryId'),
     studios: mapInnerId(film.studios, 'studioId'),
-    collections: film.collections,
+    collections: mapInnerId(film.collections, 'collectionId'),
     releaseDate: film.releaseDate ? film.releaseDate.split('T')[0] : null,
     castAndCrew: getTypedKeys(groupedPeople).map((key) => {
       return {

@@ -137,11 +137,5 @@
       "details": "Predator"
     }
   ],
-  "collections": [
-    {
-      "id": 90,
-      "title": "Predator",
-      "order": 0.5
-    }
-  ]
+  "sequenceNumber": 0.5
 }

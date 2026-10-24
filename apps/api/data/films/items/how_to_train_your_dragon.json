@@ -113,11 +113,5 @@
       "details": "Fishlegs "
     }
   ],
-  "collections": [
-    {
-      "id": 63,
-      "title": "How to Train Your Dragon",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

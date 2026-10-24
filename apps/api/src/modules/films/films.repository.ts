@@ -25,7 +25,6 @@ import {
   type SQL,
 } from 'drizzle-orm';
 import {
-  collections,
   countries,
   filmAwardNominations,
   films,
@@ -39,7 +38,6 @@ import {
   genres,
   seriesExtensions,
   studios,
-  type Film,
   type FilmCollection,
 } from '~/database/schema.js';
 import type { Timestamps } from '~/modules/films/types.js';
@@ -81,12 +79,7 @@ export class FilmsRepository {
     const { filters, drafts } = mapListFilters(queries, this.deps.db);
     const sorting = this.mapSorting(queries.orderKey, queries.order);
 
-    const total = await this.count([
-      ...filters,
-      level === 'admin' ? drafts : eq(films.draft, false),
-    ]);
-
-    const baseQuery = this.deps.db
+    const list = await this.deps.db
       .select({
         id: films.id,
         title: films.title,
@@ -95,17 +88,15 @@ export class FilmsRepository {
         draft: films.draft,
       })
       .from(films)
-      .where(and(...filters, drafts));
-
-    if (queries.collectionId) {
-      const list = await baseQuery;
-      return { total, list, type: 'unsorted' as const };
-    }
-
-    const list = await baseQuery
+      .where(and(...filters, drafts))
       .limit(PAGE_LIMITS.filmsList)
       .offset(getSkipValue('filmsList', queries.pageIndex))
       .orderBy(sorting, asc(films.id));
+
+    const total = await this.count([
+      ...filters,
+      level === 'admin' ? drafts : eq(films.draft, false),
+    ]);
 
     return { list, total, type: 'sorted' as const };
   }
@@ -136,8 +127,19 @@ export class FilmsRepository {
         boxOffice: true,
         rating: true,
         type: true,
-        description: true,
+        synopsis: true,
+        originFilmId: true,
       },
+      extras: (table, { sql }) => ({
+        hasChapters: sql<boolean>`
+          ${table.originFilmId} IS NOT NULL
+          OR EXISTS (
+            SELECT 1
+            FROM ${films}
+            WHERE ${films.originFilmId} = ${table.id}
+          )
+        `.as('hasChapters'),
+      }),
       with: {
         genres: {
           with: {
@@ -422,10 +424,9 @@ export class FilmsRepository {
       }
 
       if (collections.length) {
-        const values = collections.map((collection) => ({
-          collectionId: collection.collectionId,
+        const values = collections.map((collectionId) => ({
+          collectionId,
           filmId,
-          order: collection.order,
         }));
 
         await tr.insert(filmsCollections).values(values);
@@ -459,7 +460,7 @@ export class FilmsRepository {
         releaseDate: true,
         budget: true,
         boxOffice: true,
-        description: true,
+        synopsis: true,
         draft: true,
       },
       with: {
@@ -481,7 +482,6 @@ export class FilmsRepository {
         collections: {
           columns: {
             collectionId: true,
-            order: true,
           },
         },
         castAndCrew: {
@@ -590,10 +590,9 @@ export class FilmsRepository {
           transaction,
           where: { filmId },
           table: filmsCollections,
-          values: collections.map((collection) => ({
-            collectionId: collection.collectionId,
+          values: collections.map((collectionId) => ({
+            collectionId,
             filmId,
-            order: collection.order,
           })),
         });
       }
@@ -669,11 +668,13 @@ export class FilmsRepository {
         title: true,
         releaseDate: true,
         duration: true,
-        description: true,
+        synopsis: true,
         budget: true,
         boxOffice: true,
         type: true,
         imagePath: true,
+        sequenceNumber: true,
+        originFilmId: true,
       },
       with: {
         countries: {
@@ -750,20 +751,6 @@ export class FilmsRepository {
             order: true,
           },
         },
-        collections: {
-          columns: {
-            order: true,
-          },
-          with: {
-            collection: {
-              columns: {
-                title: true,
-                id: true,
-                category: true,
-              },
-            },
-          },
-        },
       },
     });
   }
@@ -806,32 +793,6 @@ export class FilmsRepository {
 
   deleteAllDraftsOfFilm(filmId: string) {
     return this.deps.db.delete(filmsDrafts).where(eq(filmsDrafts.filmId, filmId));
-  }
-
-  getFilmByCollectionTitleAndDay(title: string) {
-    const now = new Date();
-    const dayOfMonth = now.getDate();
-    const digit = Math.abs(dayOfMonth) % 10;
-    const orderValue = digit === 0 ? 10 : digit;
-
-    return getFirstValue(
-      this.deps.db
-        .select({
-          id: films.id,
-          title: films.title,
-          imagePath: films.imagePath,
-          order: filmsCollections.order,
-        })
-        .from(films)
-        .innerJoin(
-          filmsCollections,
-          and(eq(filmsCollections.filmId, films.id), eq(filmsCollections.order, orderValue)),
-        )
-        .innerJoin(
-          collections,
-          and(eq(collections.id, filmsCollections.collectionId), eq(collections.title, title)),
-        ),
-    );
   }
 
   aggregateFilmGenres() {
@@ -901,14 +862,13 @@ export class FilmsRepository {
         id: films.id,
         title: films.title,
         imagePath: films.imagePath,
-        order: filmsCollections.order,
       })
       .from(films)
       .innerJoin(
         filmsCollections,
         and(eq(films.id, filmsCollections.filmId), eq(filmsCollections.collectionId, collectionId)),
       )
-      .orderBy(asc(filmsCollections.order));
+      .orderBy(desc(filmsCollections.createdAt));
   }
 
   async getAnniversaries() {
@@ -950,6 +910,22 @@ export class FilmsRepository {
 
   private mapSorting(key: string = 'releaseDate', direction: SortingOrder = 'desc') {
     const fn = getDirectionFn(direction);
-    return fn(films[key as keyof Film]);
+
+    switch (key) {
+      case 'originFilmId':
+        return asc(films.sequenceNumber);
+      case 'title':
+        return fn(films.title);
+      case 'createdAt':
+        return fn(films.createdAt);
+      case 'releaseDate':
+        return fn(films.releaseDate);
+      case 'addedAt':
+        return fn(films.addedAt);
+      case 'boxOffice':
+        return fn(films.boxOffice);
+      default:
+        return desc(films.updatedAt);
+    }
   }
 }

@@ -126,16 +126,10 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 34.5
-    }
-  ],
   "seriesExtension": {
     "id": 72,
     "episodesTotal": 9,
     "seasonsTotal": 1
-  }
+  },
+  "sequenceNumber": 34.5
 }

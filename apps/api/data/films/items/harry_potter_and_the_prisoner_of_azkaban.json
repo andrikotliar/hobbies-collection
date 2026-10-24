@@ -147,11 +147,5 @@
       "details": "Peter Pettigrew"
     }
   ],
-  "collections": [
-    {
-      "id": 2,
-      "title": "Harry Potter Universe",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

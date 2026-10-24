@@ -181,11 +181,5 @@
       "details": "General Ardmore"
     }
   ],
-  "collections": [
-    {
-      "id": 31,
-      "title": "Avatar Universe",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

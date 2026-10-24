@@ -159,11 +159,5 @@
       "details": "Ronan"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

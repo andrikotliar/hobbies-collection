@@ -6,7 +6,6 @@ import {
   CollectionResponseSchema,
   CommonListQuerySchema,
   buildListOptionSchema,
-  CollectionCategory,
 } from '@hobbies-collection/shared';
 import z from 'zod';
 import { createContract } from '../helpers/index.js';
@@ -49,12 +48,7 @@ export const collectionsContract = {
     method: 'GET',
     url: '/collections/all',
     schema: {
-      response: buildListOptionSchema(
-        z.number(),
-        z.object({
-          category: z.enum(CollectionCategory),
-        }),
-      ),
+      response: buildListOptionSchema(z.number()),
     },
   }),
   getHobbyRelated: createContract({

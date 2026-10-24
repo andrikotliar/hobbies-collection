@@ -35,12 +35,12 @@ function RouteComponent() {
     <StatsLayout>
       <PageTopNavigation getLinks={getFilmsPagesTopNavConfig} />
       <ChartsGrid>
-        {charts.map((category) => (
+        {charts.map((chart) => (
           <DonutChart
-            data={category.stats}
-            title={category.block}
+            data={chart.stats}
+            title={chart.block}
             total={data.filmsTotal}
-            key={category.block}
+            key={chart.block}
           />
         ))}
       </ChartsGrid>

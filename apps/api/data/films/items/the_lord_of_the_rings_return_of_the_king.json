@@ -368,11 +368,5 @@
       "details": "Eowyn"
     }
   ],
-  "collections": [
-    {
-      "id": 19,
-      "title": "Middle-Earth Universe",
-      "order": 4
-    }
-  ]
+  "sequenceNumber": 4
 }

@@ -1,0 +1,204 @@
+{
+  "id": 17,
+  "title": "Avatar: The Legend of Aang",
+  "releaseDate": "2005-02-21",
+  "type": "ANIMATED_SERIES",
+  "duration": 23,
+  "budget": 0,
+  "boxOffice": 0,
+  "synopsis": "Four nations: the Earth Kingdom, the Fire Nation, the Water Tribe, and the Air Nomads lived in peace and harmony until the Fire Nation waged war against the other nations. The Avatar, a powerful master of the elements who can control all four elements, was meant to maintain the balance of power and peace. But when the war began, the Avatar disappeared, allowing the Fire Nation to significantly advance in conquering the world. One day, two children from the Northern Water Tribe - Katara and Sokka - find a boy frozen in an iceberg - Aang. He turns out to be not only the last Airbender but also the missing Avatar. When he learns about the war and the destruction of his nations, he decides to continue his Avatar training to master all the elements and stop the Fire Nation. Sokka and Katara accompany him on his journey to help the young Avatar, while the son of Fire Lord Zuko continues his search for the Avatar in hopes of capturing him and delivering him to the Lord to earn the right to return home.",
+  "imagePath": "posters/atla.webp",
+  "genres": [
+    {
+      "title": "Adventures",
+      "id": 3
+    },
+    {
+      "title": "Fantasy",
+      "id": 2
+    }
+  ],
+  "countries": [
+    {
+      "title": "USA",
+      "id": 1
+    }
+  ],
+  "studios": [
+    {
+      "title": "Nickelodeon Animation Studios",
+      "id": 22
+    }
+  ],
+  "trailers": [
+    {
+      "url": "https://www.youtube.com/watch?v=ahPeclU9VW0",
+      "order": 1,
+      "id": 17
+    }
+  ],
+  "awards": [
+    {
+      "id": 6,
+      "title": "Emmy Awards",
+      "nominations": [
+        {
+          "title": "Outstanding Individual Achievement in Animation",
+          "id": 127
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Annie Awards",
+      "nominations": [
+        {
+          "title": "Best Animated Television Production Produced for Children",
+          "id": 165
+        },
+        {
+          "title": "Best Directing in an Animated Television Production or Short Form",
+          "id": 166
+        },
+        {
+          "title": "Best Character Animation in a Television Production",
+          "id": 167
+        },
+        {
+          "title": "Best Directing in an Animated Television Production",
+          "id": 168
+        },
+        {
+          "title": "Best Storyboarding in an Animated Television Production",
+          "id": 169
+        },
+        {
+          "title": "Best Animated Television Production",
+          "id": 170
+        }
+      ]
+    }
+  ],
+  "castAndCrew": [
+    {
+      "id": 1339,
+      "name": "Michael Dante DiMartino",
+      "role": "CREATOR",
+      "details": null
+    },
+    {
+      "id": 1340,
+      "name": "Bryan Konietzko",
+      "role": "CREATOR",
+      "details": null
+    },
+    {
+      "id": 1362,
+      "name": "Benjamin Wynn",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 1363,
+      "name": "Jeremy Zuckerman",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 1196,
+      "name": "Zach Tyler",
+      "role": "ACTOR",
+      "details": "Aang"
+    },
+    {
+      "id": 763,
+      "name": "Mae Whitman",
+      "role": "ACTOR",
+      "details": "Katara"
+    },
+    {
+      "id": 481,
+      "name": "Jack De Sena",
+      "role": "ACTOR",
+      "details": "Sokka"
+    },
+    {
+      "id": 258,
+      "name": "Dante Basco",
+      "role": "ACTOR",
+      "details": "Zuko"
+    },
+    {
+      "id": 833,
+      "name": "Michaela Jill Murphy",
+      "role": "ACTOR",
+      "details": "Toph"
+    },
+    {
+      "id": 770,
+      "name": "Mako",
+      "role": "ACTOR",
+      "details": "Airo"
+    },
+    {
+      "id": 418,
+      "name": "Grey Griffin",
+      "role": "ACTOR",
+      "details": "Azula"
+    },
+    {
+      "id": 59,
+      "name": "André Sogliuzzo",
+      "role": "ACTOR",
+      "details": "Hakoda"
+    },
+    {
+      "id": 231,
+      "name": "Cricket Leigh",
+      "role": "ACTOR",
+      "details": "Mai"
+    },
+    {
+      "id": 889,
+      "name": "Olivia Hack",
+      "role": "ACTOR",
+      "details": "Ty Lee"
+    },
+    {
+      "id": 507,
+      "name": "James Garrett",
+      "role": "ACTOR",
+      "details": "Roku"
+    },
+    {
+      "id": 527,
+      "name": "Jason Isaacs",
+      "role": "ACTOR",
+      "details": "Zhao"
+    },
+    {
+      "id": 215,
+      "name": "Clancy Brown",
+      "role": "ACTOR",
+      "details": "Long Feng"
+    },
+    {
+      "id": 573,
+      "name": "Johanna Braddy",
+      "role": "ACTOR",
+      "details": "Princess Yue"
+    },
+    {
+      "id": 545,
+      "name": "Jennie Kwan",
+      "role": "ACTOR",
+      "details": "Suki"
+    }
+  ],
+  "seriesExtension": {
+    "id": 2,
+    "episodesTotal": 61,
+    "seasonsTotal": 3
+  },
+  "sequenceNumber": 1
+}

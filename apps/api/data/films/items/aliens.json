@@ -178,11 +178,5 @@
       "details": "Private Hudson"
     }
   ],
-  "collections": [
-    {
-      "id": 56,
-      "title": "Alien",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

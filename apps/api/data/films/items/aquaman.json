@@ -135,11 +135,5 @@
       "details": "Tom Curry"
     }
   ],
-  "collections": [
-    {
-      "id": 11,
-      "title": "DC Extended Universe",
-      "order": 6
-    }
-  ]
+  "sequenceNumber": 6
 }

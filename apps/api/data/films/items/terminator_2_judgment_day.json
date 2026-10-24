@@ -192,11 +192,5 @@
       "details": "Miles Bennett Dyson"
     }
   ],
-  "collections": [
-    {
-      "id": 83,
-      "title": "Terminator",
-      "order": 2
-    }
-  ]
+  "sequenceNumber": 2
 }

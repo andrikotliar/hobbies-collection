@@ -136,11 +136,5 @@
       "details": null
     }
   ],
-  "collections": [
-    {
-      "id": 93,
-      "title": "The Bird Box",
-      "order": 0.5
-    }
-  ]
+  "sequenceNumber": 0.5
 }

@@ -117,11 +117,5 @@
       "details": "Samuel Sterns"
     }
   ],
-  "collections": [
-    {
-      "id": 25,
-      "title": "Marvel Cinematic Universe",
-      "order": 6
-    }
-  ]
+  "sequenceNumber": 6
 }

@@ -206,11 +206,5 @@
       "details": "Brody"
     }
   ],
-  "collections": [
-    {
-      "id": 67,
-      "title": "Indiana Jones",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

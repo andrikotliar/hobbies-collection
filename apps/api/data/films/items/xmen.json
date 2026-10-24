@@ -178,11 +178,5 @@
       "details": "Senator Kelly"
     }
   ],
-  "collections": [
-    {
-      "id": 86,
-      "title": "X-Men",
-      "order": 5
-    }
-  ]
+  "sequenceNumber": 5
 }

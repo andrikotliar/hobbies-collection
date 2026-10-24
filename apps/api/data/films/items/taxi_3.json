@@ -121,11 +121,5 @@
       "details": "Lilly Bertineau"
     }
   ],
-  "collections": [
-    {
-      "id": 82,
-      "title": "Taxi",
-      "order": 3
-    }
-  ]
+  "sequenceNumber": 3
 }

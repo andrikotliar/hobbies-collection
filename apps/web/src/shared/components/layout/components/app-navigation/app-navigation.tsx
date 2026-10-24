@@ -5,7 +5,6 @@ import clsx from 'clsx';
 import {
   BookIcon,
   ClapperboardIcon,
-  InfoIcon,
   LogOutIcon,
   PlayingCardsFanIcon,
   SettingsIcon,
@@ -33,12 +32,6 @@ const getNavigationConfig = (location: ParsedLocation): NavLink[] => [
     icon: <PlayingCardsFanIcon className={styles.navigation_item_icon} />,
     title: 'BG',
     path: '/board-games',
-  },
-  {
-    id: 'about',
-    icon: <InfoIcon className={styles.navigation_item_icon} />,
-    title: 'About',
-    path: '/about',
   },
 ];
 

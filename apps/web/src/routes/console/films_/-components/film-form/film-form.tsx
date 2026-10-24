@@ -3,8 +3,6 @@ import { useMutation, useQuery, useSuspenseQuery } from '@tanstack/react-query';
 import {
   api,
   Form,
-  buildGetAllCollectionOptionsQueryOptions,
-  buildGetFilmsByCollectionQueryOptions,
   buildGetInitialDataQueryOptions,
   getObjectsDiff,
   buildGetUserDataQueryOptions,
@@ -26,7 +24,7 @@ import { useState } from 'react';
 import type { FilmDraftResponse } from '@hobbies-collection/shared';
 import { useNavigate, useSearch } from '@tanstack/react-router';
 import { FilmFormSchema } from '~/routes/console/films_/-components/film-form/-schemas';
-import { validateLanguage, CollectionsSelect, DescriptionEditor } from '~/routes/console/-shared';
+import { validateLanguage, DescriptionEditor } from '~/routes/console/-shared';
 
 type FilmFormProps = {
   values: z.infer<typeof FilmFormSchema>;
@@ -34,12 +32,11 @@ type FilmFormProps = {
 
 type CreateNewEntityInput = {
   value: string;
-  type: 'genres' | 'countries' | 'studios';
+  type: 'genres' | 'countries' | 'studios' | 'collections';
 };
 
 export const FilmForm = ({ values }: FilmFormProps) => {
   const { data: initialOptions } = useSuspenseQuery(buildGetInitialDataQueryOptions());
-  const { data: collectionOptions } = useSuspenseQuery(buildGetAllCollectionOptionsQueryOptions());
   const { data: user } = useQuery(buildGetUserDataQueryOptions());
   const [selectedDraft, setSelectedDraft] = useState<FilmDraftResponse | null>(null);
   const navigate = useNavigate();
@@ -47,7 +44,7 @@ export const FilmForm = ({ values }: FilmFormProps) => {
 
   const { isPending, mutateAsync: handleSubmit } = useMutation({
     mutationFn: async (data: z.infer<typeof FilmFormSchema>) => {
-      validateLanguage(data.description, user);
+      validateLanguage(data.synopsis, user);
 
       const imagePath = await uploadImage({
         image: data.imagePath,
@@ -133,6 +130,13 @@ export const FilmForm = ({ values }: FilmFormProps) => {
             label: result.title,
           };
         }
+        case 'collections': {
+          const result = await api.collections.create({ input: { title: value, films: [] } });
+          return {
+            value: result.id,
+            label: result.title,
+          };
+        }
         default:
           throw new Error('Unknown type');
       }
@@ -188,10 +192,12 @@ export const FilmForm = ({ values }: FilmFormProps) => {
           onCreateOption={(value) => createNewEntity({ value, type: 'studios' })}
           isMulti
         />
-        <CollectionsSelect
-          options={collectionOptions}
-          getCurrentCollection={buildGetFilmsByCollectionQueryOptions}
-          currentItemId={values.id}
+        <Form.Select
+          label="Collections"
+          name="collections"
+          options={initialOptions.options.collections}
+          onCreateOption={(value) => createNewEntity({ value, type: 'collections' })}
+          isMulti
         />
         <Form.DatePicker name="releaseDate" label="Release Date" />
         <Form.TextInput name="duration" type="number" label="Runtime (min)" min="0" />

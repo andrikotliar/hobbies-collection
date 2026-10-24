@@ -158,11 +158,5 @@
       "details": "Governor Weatherby Swann"
     }
   ],
-  "collections": [
-    {
-      "id": 77,
-      "title": "Pirates of the Carribean",
-      "order": 1
-    }
-  ]
+  "sequenceNumber": 1
 }

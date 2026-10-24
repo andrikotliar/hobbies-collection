@@ -3,7 +3,6 @@ import {
   Awards,
   CastAndCrew,
   ContentLayout,
-  Description,
   FilmPageLayout,
   PageSkeleton,
   SummarySection,
@@ -20,14 +19,13 @@ export const FilmDrawer = ({ data, isLoading = false, onCloseNavigation }: FilmD
   const hasExtendedData = data?.awards.length !== 0 || data.castAndCrew.length !== 0;
 
   return (
-    <Drawer isOpen onClose={onCloseNavigation}>
+    <Drawer isOpen onClose={onCloseNavigation} maxWidth={940}>
       {isLoading && <PageSkeleton />}
 
       {data && (
         <FilmPageLayout>
           <SummarySection film={data} hasExtendedData={hasExtendedData} />
           <ContentLayout>
-            {data.description && <Description value={data.description} />}
             {data.castAndCrew.length !== 0 && <CastAndCrew data={data.castAndCrew} />}
             {data.awards.length > 0 && <Awards data={data.awards} />}
           </ContentLayout>

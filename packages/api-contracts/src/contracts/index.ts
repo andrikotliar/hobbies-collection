@@ -7,7 +7,6 @@ import { filesContract } from './files.contract.js';
 import { filmsContract } from './films.contract.js';
 import { genresContract } from './genres.contract.js';
 import { initialDataContract } from './initial-data.contract.js';
-import { articlesContract } from './articles.contract.js';
 import { peopleContract } from './people.contract.js';
 import { studiosContract } from './studios.contract.js';
 import { usersContracts } from './users.contract.js';
@@ -26,7 +25,6 @@ export const contracts = {
   films: filmsContract,
   genres: genresContract,
   initialData: initialDataContract,
-  articles: articlesContract,
   people: peopleContract,
   studios: studiosContract,
   users: usersContracts,

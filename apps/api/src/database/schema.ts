@@ -48,7 +48,9 @@ export const films = pgTable(
       .$onUpdate(() => new Date().toISOString())
       .notNull(),
     deletedAt: timestamp('deleted_at', { precision: 3, mode: 'string' }),
-    description: text(),
+    synopsis: text(),
+    originFilmId: integer('origin_film_id'),
+    sequenceNumber: numeric('sequence_number', { mode: 'number' }).notNull().default(1),
     draft: boolean().notNull().default(false),
   },
   (table) => [
@@ -134,7 +136,7 @@ export const filmsCollections = pgTable(
     id: serial().primaryKey().notNull(),
     filmId: integer('film_id').notNull(),
     collectionId: integer('collection_id').notNull(),
-    order: numeric('order', { mode: 'number' }).notNull(),
+    order: numeric('order', { mode: 'number' }),
     createdAt: timestamp('created_at', { precision: 3, mode: 'string' }).defaultNow().notNull(),
     updatedAt: timestamp('updated_at', { precision: 3, mode: 'string' })
       .defaultNow()
@@ -519,18 +521,6 @@ export const people = pgTable('people', {
     .defaultNow()
     .$onUpdate(() => new Date().toISOString()),
   selected: boolean().default(false).notNull(),
-});
-
-export const articles = pgTable('articles', {
-  id: serial().primaryKey().notNull(),
-  title: text().notNull(),
-  content: text().notNull(),
-  slug: text('slug').notNull().unique(),
-  createdAt: timestamp('created_at', { precision: 3, mode: 'string' }).defaultNow().notNull(),
-  updatedAt: timestamp('updated_at', { precision: 3, mode: 'string' })
-    .defaultNow()
-    .$onUpdate(() => new Date().toISOString())
-    .notNull(),
 });
 
 export const filmsDrafts = pgTable('films_drafts', {

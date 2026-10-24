@@ -141,11 +141,5 @@
       "details": "Severus Snape"
     }
   ],
-  "collections": [
-    {
-      "id": 2,
-      "title": "Harry Potter Universe",
-      "order": 5
-    }
-  ]
+  "sequenceNumber": 5
 }

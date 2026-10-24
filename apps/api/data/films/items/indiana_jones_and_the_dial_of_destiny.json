@@ -1,0 +1,157 @@
+{
+  "id": 423,
+  "title": "Indiana Jones and the Dial of Destiny",
+  "releaseDate": "2023-06-30",
+  "type": "FILM",
+  "duration": 154,
+  "budget": 387000000,
+  "boxOffice": 384000000,
+  "synopsis": null,
+  "imagePath": "posters/indiana_jones_and_the_dial_of_destiny.webp",
+  "genres": [
+    {
+      "title": "Adventures",
+      "id": 3
+    },
+    {
+      "title": "Fantasy",
+      "id": 2
+    }
+  ],
+  "countries": [
+    {
+      "title": "USA",
+      "id": 1
+    }
+  ],
+  "studios": [
+    {
+      "title": "Walt Disney Pictures",
+      "id": 1
+    },
+    {
+      "title": "Lucasfilm",
+      "id": 37
+    }
+  ],
+  "trailers": [
+    {
+      "url": "https://www.youtube.com/watch?v=eQfMbSe7F2g&pp=ygUtSW5kaWFuYSBKb25lcyBhbmQgdGhlIERpYWwgb2YgRGVzdGlueSB0cmFpbGVy",
+      "order": 1,
+      "id": 423
+    }
+  ],
+  "awards": [
+    {
+      "id": 2,
+      "title": "Saturn Awards",
+      "nominations": [
+        {
+          "title": "Best fantasy Film",
+          "id": 49
+        },
+        {
+          "title": "Best Actor in a Film",
+          "id": 328
+        },
+        {
+          "title": "Best Music in a Film",
+          "id": 329
+        }
+      ]
+    }
+  ],
+  "castAndCrew": [
+    {
+      "id": 1478,
+      "name": "James Mangold",
+      "role": "DIRECTOR",
+      "details": null
+    },
+    {
+      "id": 1450,
+      "name": "Jez Butterworth",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 1451,
+      "name": "John-Henry Butterworth",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 1702,
+      "name": "David Koepp",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 1478,
+      "name": "James Mangold",
+      "role": "WRITER",
+      "details": null
+    },
+    {
+      "id": 1922,
+      "name": "Simon Emanuel",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 1738,
+      "name": "Kathleen Kennedy",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 1704,
+      "name": "Frank Marshall",
+      "role": "PRODUCER",
+      "details": null
+    },
+    {
+      "id": 1563,
+      "name": "John Williams",
+      "role": "COMPOSER",
+      "details": null
+    },
+    {
+      "id": 1483,
+      "name": "Phedon Papamichael",
+      "role": "CAMERAMAN",
+      "details": null
+    },
+    {
+      "id": 431,
+      "name": "Harrison Ford",
+      "role": "ACTOR",
+      "details": "Indiana Jones"
+    },
+    {
+      "id": 930,
+      "name": "Phoebe Waller-Bridge",
+      "role": "ACTOR",
+      "details": "Helena"
+    },
+    {
+      "id": 77,
+      "name": "Antonio Banderas",
+      "role": "ACTOR",
+      "details": "Renaldo"
+    },
+    {
+      "id": 638,
+      "name": "Karen Allen",
+      "role": "ACTOR",
+      "details": "Marion"
+    },
+    {
+      "id": 595,
+      "name": "John Rhys-Davies",
+      "role": "ACTOR",
+      "details": "Sallah"
+    }
+  ],
+  "sequenceNumber": 5
+}

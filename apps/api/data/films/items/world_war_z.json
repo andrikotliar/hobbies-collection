@@ -6,9 +6,7 @@
   "duration": 116,
   "budget": 190000000,
   "boxOffice": 540000000,
-  "overview": null,
-  "chapterKey": null,
-  "chapterOrder": null,
+  "synopsis": null,
   "imagePath": "posters/world_war_z.webp",
   "genres": [
     {
@@ -24,7 +22,6 @@
       "id": 10
     }
   ],
-  "style": "LIVE_ACTION",
   "countries": [
     {
       "title": "USA",
@@ -149,5 +146,6 @@
       "role": "ACTOR",
       "details": "Jurgen Warmbrunn"
     }
-  ]
+  ],
+  "collections": []
 }
