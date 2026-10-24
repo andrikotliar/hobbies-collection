@@ -2,7 +2,7 @@ import { type ListOption } from '@hobbies-collection/shared';
 import { useMutation } from '@tanstack/react-query';
 import { useMatches, useParams } from '@tanstack/react-router';
 import type z from 'zod';
-import { DescriptionEditor, getFormTitle, useFormModal } from '~/routes/console/-shared';
+import { getFormTitle, useFormModal } from '~/routes/console/-shared';
 import { HobbyItemFormSchema } from '~/routes/console/hobbies_/-schemas/hobby-item-schema';
 import {
   api,
@@ -106,7 +106,6 @@ export const HobbyItemForm = ({ values }: HobbyItemFormProps) => {
       isLoading={hobbyItemMutation.isPending}
     >
       <Form.TextInput name="title" label="Title" />
-      <DescriptionEditor name="description" label="Description" />
       <Form.TextInput type="number" name="releaseYear" label="Release year" />
       <Form.FileInput name="imagePath" label="Image" />
       <Form.AsyncSelect

@@ -6,7 +6,6 @@ import {
   type UpdateFilmInput,
   type GetCompleteDataListQuery,
   type CompleteDataResponse,
-  type TranslateDescriptionInput,
   type CreateFilmDraftInput,
   type FilmDraftResponse,
   type GetAdminListQueryParams,
@@ -41,7 +40,6 @@ export class FilmsService {
       | 'genresService'
       | 'countriesService'
       | 'studiosService'
-      | 'aiService'
       | 'usersService'
       | 'inMemoryCacheService'
     >,
@@ -286,21 +284,6 @@ export class FilmsService {
         })),
       },
     };
-  }
-
-  async translateDescription(userId: number, input: TranslateDescriptionInput) {
-    const userPreferences = await this.deps.usersService.getUserTranslationPreferences(userId);
-
-    if (!userPreferences.translationPreferences) {
-      throw new BadRequestException({
-        message: 'Translation preferences is not set, update them in the user settings',
-      });
-    }
-
-    return this.deps.aiService.translateToLangPrompt(
-      input.text,
-      userPreferences.translationPreferences,
-    );
   }
 
   createDraft(filmId: string, input: CreateFilmDraftInput): Promise<FilmDraftResponse> {

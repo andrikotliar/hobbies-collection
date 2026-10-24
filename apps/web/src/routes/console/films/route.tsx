@@ -19,9 +19,7 @@ import {
   defaultAdminFilters,
   getAdminFiltersConfig,
 } from '~/routes/console/films/-helpers';
-import { ContentWithSidebar, List, useFormModal, withFormModal } from '~/routes/console/-shared';
-import { FormIcon } from 'lucide-react';
-import { QuickEditForm } from '~/routes/console/films/-components';
+import { ContentWithSidebar, List } from '~/routes/console/-shared';
 
 export const Route = createFileRoute('/console/films')({
   validateSearch: (search) => {
@@ -31,7 +29,7 @@ export const Route = createFileRoute('/console/films')({
     await context.queryClient.ensureQueryData(getFilmsAdminListQueryOptions(location.search));
     await context.queryClient.ensureQueryData(getInitialDataQueryOptions());
   },
-  component: withFormModal(QuickEditForm, PageContainer),
+  component: PageContainer,
   staticData: {
     title: 'Films',
     backPath: '/console',
@@ -85,8 +83,6 @@ function PageContainer() {
   const { data: initialData, isFetching: isInitialDataFetching } = useSuspenseQuery(
     getInitialDataQueryOptions(),
   );
-
-  const { onOpen: handleOptionQuickForm } = useFormModal();
 
   const { isFilterOpen, toggleFilter, hideFilter } = useSidebarVisibility('/console/films');
 
@@ -205,13 +201,6 @@ function PageContainer() {
           fields: sortingFields,
           apply: handleApplySorting,
         }}
-        additionalHandlers={[
-          {
-            id: 'quickEdit',
-            icon: <FormIcon />,
-            action: ({ id }) => handleOptionQuickForm({ id }),
-          },
-        ]}
       />
     </ContentWithSidebar>
   );

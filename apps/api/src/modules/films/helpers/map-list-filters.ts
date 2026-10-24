@@ -107,7 +107,6 @@ export const mapListFilters = (plainFilters: PlainFilmFilters, db: Database): Ma
     boxOffice,
     q,
     draftLevels = [],
-    noDescription,
     releasedThisDay,
     noBoxOffice,
     noCrewOrCast,
@@ -270,10 +269,6 @@ export const mapListFilters = (plainFilters: PlainFilmFilters, db: Database): Ma
 
   if (q) {
     filters.push(ilike(films.title, sqlSearchQuery(q)));
-  }
-
-  if (noDescription) {
-    filters.push(or(isNull(films.synopsis), sql`LENGTH(synopsis) = 0`));
   }
 
   if (noBoxOffice && type !== 'SERIES') {

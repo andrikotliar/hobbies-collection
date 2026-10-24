@@ -12,8 +12,6 @@ import {
   UpdateFilmInputSchema,
   GetCompleteDataListQuerySchema,
   CompleteDataResponseSchema,
-  TranslateDescriptionInputSchema,
-  TranslateDescriptionResponseSchema,
   CreateFilmDraftInputSchema,
   FilmDraftInputResponse,
   FilmDraftFilmIdParamsSchema,
@@ -121,14 +119,6 @@ export const filmsContract = {
     schema: {
       params: IdParamSchema,
       response: IdParamSchema,
-    },
-  }),
-  translateDescription: createContract({
-    method: 'POST',
-    url: '/films/admin/translate',
-    schema: {
-      body: TranslateDescriptionInputSchema,
-      response: TranslateDescriptionResponseSchema,
     },
   }),
   createDraft: createContract({
