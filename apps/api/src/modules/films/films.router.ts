@@ -214,12 +214,4 @@ export const filmsRouter = createRouter(contracts.films, {
       return { data };
     },
   },
-
-  getFilmByCollectionName: {
-    handler: async ({ request, app }) => {
-      const data = await app.resolve('filmsService').getFilmByCollectionName(request.query.title);
-
-      return { data };
-    },
-  },
 });

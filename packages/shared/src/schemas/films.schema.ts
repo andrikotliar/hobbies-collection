@@ -342,20 +342,12 @@ export const FilmStatsResponseSchema = z.object({
 });
 
 export const FilmsByCollectionResponseSchema = z.array(
-  FilmResponseSchema.pick({ id: true, title: true, imagePath: true }).extend({ order: z.number() }),
+  FilmResponseSchema.pick({ id: true, title: true, imagePath: true }),
 );
 
 export const DeleteFilmDrafts = z.object({
   ok: z.boolean(),
 });
-
-export const GetFilmByCollectionNameSchema = z.object({ title: z.string() });
-
-export const GetFilmByCollectionNameResponse = FilmResponseSchema.pick({
-  id: true,
-  title: true,
-  imagePath: true,
-}).extend({ order: z.number() });
 
 export type GetFilmsListQuery = z.infer<typeof GetFilmsListQuerySchema>;
 export type SearchFilmsQuery = z.infer<typeof SearchFilmsQuerySchema>;

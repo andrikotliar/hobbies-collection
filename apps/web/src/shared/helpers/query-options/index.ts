@@ -15,7 +15,6 @@ export * from './films/get-films-search-query-options';
 export * from './films/get-film-trailers-query-options';
 export * from './films/get-films-by-collection-query-options';
 export * from './films/get-films-stats-query-options';
-export * from './films/get-film-by-collection-name-and-order-query-options';
 export * from './genres/get-genres-list-query-options';
 export * from './hobbies/get-hobbies-list-query-options';
 export * from './hobbies/get-hobby-with-items-query-options';

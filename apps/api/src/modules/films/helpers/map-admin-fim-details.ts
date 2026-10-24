@@ -17,7 +17,7 @@ type EditableFilm = Omit<
   Film,
   Timestamps | 'addedAt' | 'id' | 'originFilmId' | 'sequenceNumber'
 > & {
-  collections: Pick<FilmCollection, 'collectionId' | 'order'>[];
+  collections: Pick<FilmCollection, 'collectionId'>[];
   genres: Pick<FilmGenre, 'genreId'>[];
   countries: Pick<FilmCountry, 'countryId'>[];
   studios: Pick<FilmStudio, 'studioId'>[];
@@ -72,7 +72,7 @@ export const mapAdminFilmDetails = (film: EditableFilm): CreateFilmInput => {
     genres: mapInnerId(film.genres, 'genreId'),
     countries: mapInnerId(film.countries, 'countryId'),
     studios: mapInnerId(film.studios, 'studioId'),
-    collections: film.collections,
+    collections: mapInnerId(film.collections, 'collectionId'),
     releaseDate: film.releaseDate ? film.releaseDate.split('T')[0] : null,
     castAndCrew: getTypedKeys(groupedPeople).map((key) => {
       return {

@@ -388,10 +388,6 @@ export class FilmsService {
     return this.deps.filmsRepository.unlinkCollection(collectionId);
   }
 
-  getFilmByCollectionName(title: string) {
-    return throwIfNotFound(this.deps.filmsRepository.getFilmByCollectionTitleAndDay(title));
-  }
-
   private getValidatedOptions<T extends { updatedAt: string }>(
     options: T[],
     newestOnly?: boolean,
