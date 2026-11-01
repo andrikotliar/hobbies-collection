@@ -5,7 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   server: {
-    port: 8080,
+    port: 18080,
     host: true,
     open: true,
   },

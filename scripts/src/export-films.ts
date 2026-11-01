@@ -74,14 +74,7 @@ const fetchData = async (
 };
 
 type BaseDataItems = keyof CompleteDataResponse['baseData'];
-const baseDataItems: BaseDataItems[] = [
-  'genres',
-  'countries',
-  'studios',
-  'awards',
-  'people',
-  'collections',
-];
+const baseDataItems: BaseDataItems[] = ['genres', 'countries', 'studios', 'awards', 'people'];
 
 const getDestinationFolder = (item: BaseDataItems) => {
   if (commonData.includes(item)) {
