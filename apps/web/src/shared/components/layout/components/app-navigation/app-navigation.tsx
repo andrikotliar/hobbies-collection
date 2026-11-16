@@ -1,4 +1,4 @@
-import { useQueryClient } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import styles from './app-navigation.module.css';
 import { Link, useLocation, useNavigate, type ParsedLocation } from '@tanstack/react-router';
 import clsx from 'clsx';
@@ -12,6 +12,8 @@ import {
 import { Logo } from '~/shared/components/logo/logo';
 import { api, queryKey } from '~/shared/services';
 import type { NavLink } from '~/shared/types';
+import { useState } from 'react';
+import { ConfirmModal } from '~/shared/components/confirm-modal/confirm-modal';
 
 const getNavigationConfig = (location: ParsedLocation): NavLink[] => [
   {
@@ -39,12 +41,18 @@ export const AppNavigation = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+  const [logoutData, setLogoutData] = useState<{
+    open: boolean;
+  } | null>(null);
 
-  const logout = async () => {
-    await api.auth.logout();
-    queryClient.removeQueries({ queryKey: queryKey('auth.getState') });
-    navigate({ to: '/login' });
-  };
+  const logout = useMutation({
+    mutationFn: api.auth.logout,
+    onSuccess: () => {
+      queryClient.removeQueries({ queryKey: queryKey('auth.getState') });
+      navigate({ to: '/login' });
+      setLogoutData(null);
+    },
+  });
 
   return (
     <div className={styles.app_navigation_layout}>
@@ -65,7 +73,10 @@ export const AppNavigation = () => {
           </Link>
         ))}
         {location.pathname.includes('/console') ? (
-          <button className={clsx(styles.navigation_item, styles.bottom_item)} onClick={logout}>
+          <button
+            className={clsx(styles.navigation_item, styles.bottom_item)}
+            onClick={() => setLogoutData({ open: true })}
+          >
             <LogOutIcon className={styles.navigation_item_icon} />
             <span className={styles.navigation_item_title}>Log Out</span>
           </button>
@@ -83,6 +94,13 @@ export const AppNavigation = () => {
           </Link>
         )}
       </div>
+      <ConfirmModal
+        onClose={() => setLogoutData(null)}
+        title="Confirm logout?"
+        data={logoutData}
+        onConfirm={() => logout.mutate()}
+        isPending={logout.isPending}
+      />
     </div>
   );
 };

@@ -1,11 +1,4 @@
-.wrapper {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.content {
-  max-width: 800px;
-  max-height: 90%;
+.content_wrapper {
   overflow-y: auto;
-  border-radius: var(--rounded-default);
-  background-color: var(--color-white);
+  height: 100%;
 }

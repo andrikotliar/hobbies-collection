@@ -2,7 +2,9 @@
   position: relative;
   border-radius: 10px;
   width: 100%;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .content.withPaddings {
