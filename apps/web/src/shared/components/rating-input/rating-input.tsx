@@ -1,6 +1,6 @@
 import { StarIcon } from 'lucide-react';
 import styles from './styles.module.css';
-import { FieldLabel } from '../field-label/field-label';
+import { FieldLabel } from '../field-label';
 
 type Props = {
   name: string;

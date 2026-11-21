@@ -10,7 +10,7 @@ import { getCollectionEventsQueryOptions } from '~/shared/helpers/query-options/
 import { api, queryKey } from '~/shared/services/api';
 import { useFormModal } from '~/shared/context/form-modal-context';
 import type { FormModalValues } from '~/shared/helpers/form-modal-values';
-import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
+import { ConsolePageList } from '~/shared/components/console-page-list';
 import { getDateMonthLabel } from '~/shared/helpers/get-date-month-label';
 
 const getCollectionEventDefaultValues = () => {

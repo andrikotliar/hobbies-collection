@@ -1,7 +1,7 @@
 import { HttpError } from '@hobbies-collection/contracts';
 import { createRouter } from '@tanstack/react-router';
 import { routeTree } from '~/routeTree.gen';
-import { ErrorScreen } from '~/shared/components/error-screen/error-screen';
+import { ErrorScreen } from '~/shared/components/error-screen';
 import { PageLoader } from '~/shared/components/page-loader/page-loader';
 import { queryClient } from '~/shared/services/query-client';
 

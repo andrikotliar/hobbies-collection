@@ -9,7 +9,7 @@ import { getEmptyFormValues } from '~/shared/helpers/get-empty-form-values';
 import type { Input } from '~/shared/types/extract-params';
 import { api, queryKey } from '~/shared/services/api';
 import { useFormModal } from '~/shared/context/form-modal-context';
-import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
+import { ConsolePageList } from '~/shared/components/console-page-list';
 
 export const Route = createFileRoute('/console/genres')({
   validateSearch: (search) => CommonListQuerySchema.parse(search),

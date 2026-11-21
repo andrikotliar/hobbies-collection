@@ -1,7 +1,7 @@
 import styles from './styles.module.css';
 import clsx from 'clsx';
-import { FieldError } from '../field-error/field-error';
-import { FieldLabel } from '../field-label/field-label';
+import { FieldError } from '../field-error';
+import { FieldLabel } from '../field-label';
 import type { RefCallBack } from 'react-hook-form';
 import { XIcon } from 'lucide-react';
 import type { FormError } from '~/shared/types/form-error';

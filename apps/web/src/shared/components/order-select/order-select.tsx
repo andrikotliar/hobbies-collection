@@ -1,4 +1,4 @@
-import { FieldLabel } from '~/shared/components/field-label/field-label';
+import { FieldLabel } from '~/shared/components/field-label';
 import styles from './styles.module.css';
 import { ScrollableLine } from '~/shared/components/scrollable-line/scrollable-line';
 import { Image } from '~/shared/components/image/image';

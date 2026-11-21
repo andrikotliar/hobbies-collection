@@ -6,7 +6,7 @@ import type { Input } from '~/shared/types/extract-params';
 import type { api } from '~/shared/services/api';
 import { AppForm } from '~/shared/components/app-form';
 import { Button } from '~/shared/components/button';
-import { ConfirmModal } from '~/shared/components/confirm-modal/confirm-modal';
+import { ConfirmModal } from '~/shared/components/confirm-modal';
 
 const nominationDefaultValues = {
   id: -1,

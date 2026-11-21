@@ -1,7 +1,7 @@
 import styles from './styles.module.css';
 import { useFormContext } from 'react-hook-form';
 import type z from 'zod';
-import { FieldLabel } from '~/shared/components/field-label/field-label';
+import { FieldLabel } from '~/shared/components/field-label';
 import { AppForm } from '~/shared/components/app-form';
 import type { CollectionEventFormSchema } from '~/shared/schemas/collection-event-form.schema';
 

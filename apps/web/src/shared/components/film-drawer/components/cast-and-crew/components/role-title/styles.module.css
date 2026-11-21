@@ -1,7 +1,0 @@
-.title {
-  font-family: 'Roboto-Condensed';
-  text-transform: uppercase;
-  font-size: var(--text-sm);
-  width: 170px;
-  flex-shrink: 0;
-}

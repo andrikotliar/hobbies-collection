@@ -2,8 +2,8 @@ import type { ListOption } from '@hobbies-collection/shared';
 import { useFormContext } from 'react-hook-form';
 import { FormCheckbox } from '~/shared/components/form-fields/form-checkbox';
 import type { CheckboxType } from '~/shared/components/checkbox';
-import { FieldLabel } from '~/shared/components/field-label/field-label';
-import { FieldError } from '~/shared/components/field-error/field-error';
+import { FieldLabel } from '~/shared/components/field-label';
+import { FieldError } from '~/shared/components/field-error';
 
 type Props = {
   label?: string;

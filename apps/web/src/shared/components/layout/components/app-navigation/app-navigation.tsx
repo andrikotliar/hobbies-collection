@@ -9,11 +9,11 @@ import {
   PlayingCardsFanIcon,
   SettingsIcon,
 } from 'lucide-react';
-import { Logo } from '~/shared/components/logo/logo';
+import { Logo } from '~/shared/components/logo';
 import { api, queryKey } from '~/shared/services/api';
 import type { NavLink } from '~/shared/types/nav-link';
 import { useState } from 'react';
-import { ConfirmModal } from '~/shared/components/confirm-modal/confirm-modal';
+import { ConfirmModal } from '~/shared/components/confirm-modal';
 
 const getNavigationConfig = (location: ParsedLocation): NavLink[] => [
   {

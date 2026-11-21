@@ -2,7 +2,7 @@ import { CommonListQuerySchema } from '@hobbies-collection/shared';
 import { mutationOptions, useQuery } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
 import { useCallback } from 'react';
-import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
+import { ConsolePageList } from '~/shared/components/console-page-list';
 import { getAwardsBaseDataListQueryOptions } from '~/shared/helpers/query-options/awards/get-awards-base-data-list-query-options';
 import { api, queryKey } from '~/shared/services/api';
 

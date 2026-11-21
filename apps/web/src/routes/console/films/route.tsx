@@ -16,9 +16,9 @@ import {
 } from '~/routes/console/films/-helpers/get-admin-filters-config';
 import { countObjectKeys } from '~/shared/helpers/count-keys';
 import type { SortingParams } from '~/shared/components/sorting-popup/sorting-popup';
-import { ContentWithSidebar } from '~/shared/components/content-with-sidebar/content-with-sidebar';
+import { ContentWithSidebar } from '~/shared/components/content-with-sidebar';
 import { FiltersSidebar } from '~/shared/components/filters-sidebar/filters-sidebar';
-import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
+import { ConsolePageList } from '~/shared/components/console-page-list';
 
 export const Route = createFileRoute('/console/films')({
   validateSearch: (search) => {

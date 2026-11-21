@@ -8,7 +8,7 @@ import type { FileRoutesByTo } from '~/routeTree.gen';
 import { router } from '~/shared/services/router';
 import type { InvalidateQueryOption } from '~/shared/types/invalidate-query-option';
 import { queryClient } from '~/shared/services/query-client';
-import { FilterProvider } from '~/shared/components/filter-provider/filter-provider';
+import { FilterProvider } from '~/shared/components/filter-provider';
 import { Toaster } from '~/shared/components/toaster/toaster';
 
 declare module '@tanstack/react-router' {

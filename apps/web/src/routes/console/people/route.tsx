@@ -18,10 +18,10 @@ import { useFormModal } from '~/shared/context/form-modal-context';
 import { useSidebarVisibility } from '~/shared/hooks/use-sidebar-visibility';
 import { countObjectKeys } from '~/shared/helpers/count-keys';
 import { filterValues } from '~/shared/helpers/filter-values';
-import { ContentWithSidebar } from '~/shared/components/content-with-sidebar/content-with-sidebar';
+import { ContentWithSidebar } from '~/shared/components/content-with-sidebar';
 import { FiltersSidebar } from '~/shared/components/filters-sidebar/filters-sidebar';
 import { Filters } from '~/shared/components/filters/filters';
-import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
+import { ConsolePageList } from '~/shared/components/console-page-list';
 import { getPeopleAdminListQueryOptions } from '~/shared/helpers/query-options/people/get-people-admin-list-query-options';
 
 const personDefaultValues = getEmptyFormValues<Input<typeof api.people.create>>({

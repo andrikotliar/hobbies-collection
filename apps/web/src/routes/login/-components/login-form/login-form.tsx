@@ -7,7 +7,7 @@ import { api } from '~/shared/services/api';
 import { LOGIN_BLOCK_KEY } from '~/shared/constants/app';
 import { AppForm } from '~/shared/components/app-form';
 import { CenteredBlock } from '~/shared/components/centered-block';
-import { Logo } from '~/shared/components/logo/logo';
+import { Logo } from '~/shared/components/logo';
 
 const defaultLoginValues: Input<typeof api.auth.login> = {
   username: '',

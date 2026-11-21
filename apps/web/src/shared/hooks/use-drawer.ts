@@ -9,10 +9,10 @@ type Options = {
   position: DrawerPosition;
 };
 
-const DRAGGING_CLASS_NAME = 'is-dragging';
-const SETTLING_CLASS_NAME = 'is-settling';
-const CLOSING_CLASS_NAME_LEFT = 'is-closing-left';
-const CLOSING_CLASS_NAME_RIGHT = 'is-closing-right';
+const DRAGGING_CLASS_NAME = 'transition-none!';
+const SETTLING_CLASS_NAME = 'transition duration-300 ease';
+const CLOSING_CLASS_NAME_LEFT = '-translate-x-[250%]!';
+const CLOSING_CLASS_NAME_RIGHT = 'translate-x-[250%]!';
 
 const positionToClassName: Record<DrawerPosition, string> = {
   left: CLOSING_CLASS_NAME_LEFT,

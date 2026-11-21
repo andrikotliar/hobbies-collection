@@ -1,5 +1,5 @@
 import { Controller, useFormContext } from 'react-hook-form';
-import { FileInput } from '~/shared/components/file-input/file-input';
+import { FileInput } from '~/shared/components/file-input';
 import type { FormFieldProps } from '~/shared/types/form-field-props';
 
 export const FormFileInput = ({

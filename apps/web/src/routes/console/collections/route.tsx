@@ -9,7 +9,7 @@ import { getCollectionsListQueryOptions } from '~/shared/helpers/query-options/c
 import { withFormModal } from '~/shared/helpers/with-form-modal';
 import { CollectionForm } from '~/routes/console/collections/-components/collection-form/collection-form';
 import { useFormModal } from '~/shared/context/form-modal-context';
-import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
+import { ConsolePageList } from '~/shared/components/console-page-list';
 
 const collectionFormDefaultValues = getEmptyFormValues<Input<typeof api.collections.create>>({
   title: '',

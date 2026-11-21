@@ -3,7 +3,7 @@ import { VideoPreview } from './components/video-preview/video-preview';
 import styles from './styles.module.css';
 import { Button } from '~/shared/components/button';
 import { Trash2Icon } from 'lucide-react';
-import { FieldLabel } from '~/shared/components/field-label/field-label';
+import { FieldLabel } from '~/shared/components/field-label';
 import { TextInput } from '~/shared/components/text-input/text-input';
 import { getEmbeddableYoutubeUrl } from '~/shared/helpers/get-embeddable-youtube-url';
 import type { RefCallBack } from 'react-hook-form';

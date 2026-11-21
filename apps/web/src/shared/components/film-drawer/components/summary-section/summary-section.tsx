@@ -5,7 +5,7 @@ import type { ApiResponse } from '~/shared/types/extract-params';
 import type { api } from '~/shared/services/api';
 import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
 import { defineCssProperties } from '~/shared/helpers/define-css-properties';
-import { getFilmSummaryConfig } from '../../helpers/get-film-summary-config';
+import { getFilmSummaryConfig } from '~/shared/configs/get-film-summary-config';
 import { Rating } from '../summary-section/components/rating/rating';
 import { Title } from '../summary-section/components/title/title';
 import { Poster } from '../summary-section/components/poster/poster';

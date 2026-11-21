@@ -1,6 +1,6 @@
 import { SkeletonBlock } from '~/shared/components/skeleton-block/skeleton-block';
 import styles from './styles.module.css';
-import type { SummaryConfig } from '../../helpers/get-film-summary-config';
+import type { SummaryConfig } from '../../../../configs/get-film-summary-config';
 import {
   BookIcon,
   BuildingIcon,
@@ -12,9 +12,7 @@ import {
   WalletIcon,
 } from 'lucide-react';
 import { SummaryBlock } from '../summary-section/components/summary-block/summary-block';
-import { FilmPageLayout } from '../film-page-layout/film-page-layout';
 import { PersonRole } from '@hobbies-collection/shared';
-import { RoleTitle } from '../cast-and-crew/components/role-title/role-title';
 
 const skeletonSummaryConfig: SummaryConfig[] = [
   {
@@ -63,7 +61,7 @@ const skeletonSummaryConfig: SummaryConfig[] = [
 
 export const PageSkeleton = () => {
   return (
-    <FilmPageLayout>
+    <div className="flex flex-col">
       <div className={styles.top_section}>
         <div className={styles.title_row}>
           <div className={styles.stars}>
@@ -98,11 +96,13 @@ export const PageSkeleton = () => {
       <div className={styles.bottom_section}>
         {Object.values(PersonRole).map((role) => (
           <div className={styles.role_item} key={role}>
-            <RoleTitle role={role} />
+            <div className="font-stretch-ultra-condensed uppercase text-sm w-42.5 shrink-0">
+              {role}
+            </div>
             <SkeletonBlock width="100%" height={role === 'ACTOR' ? '340px' : '20px'} />
           </div>
         ))}
       </div>
-    </FilmPageLayout>
+    </div>
   );
 };

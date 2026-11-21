@@ -8,7 +8,7 @@ import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
 import { AppForm } from '~/shared/components/app-form';
 import { api, queryKey } from '~/shared/services/api';
 import { Button } from '~/shared/components/button';
-import { FieldError } from '~/shared/components/field-error/field-error';
+import { FieldError } from '~/shared/components/field-error';
 
 type Props = {
   index: number;

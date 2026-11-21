@@ -11,7 +11,7 @@ import { api, queryKey } from '~/shared/services/api';
 import { Panel } from '~/shared/components/panel/panel';
 import { Button } from '~/shared/components/button';
 import { Modal } from '~/shared/components/modal/modal';
-import { ConfirmModal } from '~/shared/components/confirm-modal/confirm-modal';
+import { ConfirmModal } from '~/shared/components/confirm-modal';
 
 type Props = {
   selectedDraft: FilmDraftResponse | null;

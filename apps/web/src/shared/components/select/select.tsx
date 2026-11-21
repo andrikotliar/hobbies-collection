@@ -1,8 +1,8 @@
 import styles from './styles.module.css';
 import { type ChangeEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { FieldLabel } from '~/shared/components/field-label/field-label';
+import { FieldLabel } from '~/shared/components/field-label';
 import { PopupMenu } from '~/shared/components/popup-menu/popup-menu';
-import { FieldError } from '~/shared/components/field-error/field-error';
+import { FieldError } from '~/shared/components/field-error';
 import { getSelectValue } from './helpers/get-select-value';
 import type { ListOption } from '@hobbies-collection/shared';
 import type { FormError } from '~/shared/types/form-error';

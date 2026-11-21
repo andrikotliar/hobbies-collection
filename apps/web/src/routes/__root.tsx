@@ -1,7 +1,7 @@
+import z from 'zod';
 import { type QueryClient } from '@tanstack/react-query';
 import { createRootRouteWithContext } from '@tanstack/react-router';
-import z from 'zod';
-import { Layout } from '~/shared/components/layout/layout';
+import { GlobalLayout } from '~/shared/components/layout/global-layout';
 
 const RootSearchSchema = z.object({
   filmId: z.coerce.number().optional(),
@@ -12,5 +12,5 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   validateSearch: (search) => {
     return RootSearchSchema.parse(search);
   },
-  component: () => <Layout />,
+  component: () => <GlobalLayout />,
 });

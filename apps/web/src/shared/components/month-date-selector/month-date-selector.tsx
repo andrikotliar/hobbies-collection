@@ -1,13 +1,13 @@
-import { FieldLabel } from '~/shared/components/field-label/field-label';
+import { FieldLabel } from '~/shared/components/field-label';
 import { Select } from '~/shared/components/select/select';
 import styles from './styles.module.css';
 import clsx from 'clsx';
-import { FieldError } from '~/shared/components/field-error/field-error';
+import { FieldError } from '~/shared/components/field-error';
 import type { FormError } from '~/shared/types/form-error';
 import { getDefaultDateCode } from '~/shared/helpers/get-default-date-code';
 import { getDateCodeParts } from '~/shared/helpers/get-date-code-parts';
 import { getDateCode } from '~/shared/helpers/get-date-code';
-import { monthOptions } from '~/shared/components/month-date-selector/configs/month-options';
+import { monthOptions } from '~/shared/configs/month-options';
 
 type Props = {
   value?: number;

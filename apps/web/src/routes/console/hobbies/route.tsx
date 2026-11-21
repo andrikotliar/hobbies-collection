@@ -2,7 +2,7 @@ import { NEW_ITEM_ID } from '@hobbies-collection/shared';
 import { mutationOptions, useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute, useNavigate } from '@tanstack/react-router';
 import { HobbyForm } from '~/routes/console/hobbies/-components/hobby-form';
-import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
+import { ConsolePageList } from '~/shared/components/console-page-list';
 import { useFormModal } from '~/shared/context/form-modal-context';
 import { getHobbiesListQueryOptions } from '~/shared/helpers/query-options/hobbies/get-hobbies-list-query-options';
 import { withFormModal } from '~/shared/helpers/with-form-modal';
