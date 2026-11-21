@@ -1,4 +1,4 @@
-import styles from './option.module.css';
+import styles from './styles.module.css';
 import clsx from 'clsx';
 import type { ListOption } from '@hobbies-collection/shared';
 

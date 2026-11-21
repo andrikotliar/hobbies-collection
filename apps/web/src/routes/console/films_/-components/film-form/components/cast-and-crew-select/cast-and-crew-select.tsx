@@ -1,11 +1,11 @@
 import { useFieldArray, useFormContext } from 'react-hook-form';
-import { Form } from '~/shared';
 import type { Enum, ListOption, PersonRole } from '@hobbies-collection/shared';
 import type z from 'zod';
-import type { FilmFormSchema } from '~/routes/console/films_/-components/film-form/-schemas';
-import { PeopleSelect } from '~/routes/console/films_/-components/film-form/components/cast-and-crew-select/components';
+import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
+import { AppForm } from '~/shared/components/app-form';
+import { PeopleSelect } from '../cast-and-crew-select/components/people-select/people-select';
 
-type CastAndCrewSelectProps = {
+type Props = {
   positionOptions: ListOption<string>[];
 };
 
@@ -19,7 +19,7 @@ const rolesNextSelect: Record<Enum<typeof PersonRole>, Enum<typeof PersonRole>> 
   ACTOR: 'DIRECTOR',
 };
 
-export const CastAndCrewSelect = ({ positionOptions }: CastAndCrewSelectProps) => {
+export const CastAndCrewSelect = ({ positionOptions }: Props) => {
   const { control } = useFormContext<z.infer<typeof FilmFormSchema>>();
 
   const { fields, append, remove } = useFieldArray({
@@ -45,20 +45,20 @@ export const CastAndCrewSelect = ({ positionOptions }: CastAndCrewSelectProps) =
   };
 
   return (
-    <Form.Section label="Cast and Crew">
-      <Form.ArrayWrapper onCreate={handleAddNewPerson} createButtonLabel="Add role">
+    <AppForm.Section label="Cast and Crew">
+      <AppForm.ArrayWrapper onCreate={handleAddNewPerson} createButtonLabel="Add role">
         {fields.map((field, index) => (
-          <Form.ArrayFieldWrapper onRemove={() => remove(index)} key={field.id}>
-            <Form.Select
+          <AppForm.ArrayFieldWrapper onRemove={() => remove(index)} key={field.id}>
+            <AppForm.Select
               name={`castAndCrew.${index}.role`}
               options={positionOptions}
               isSearchable={false}
               label="Role"
             />
             <PeopleSelect index={index} />
-          </Form.ArrayFieldWrapper>
+          </AppForm.ArrayFieldWrapper>
         ))}
-      </Form.ArrayWrapper>
-    </Form.Section>
+      </AppForm.ArrayWrapper>
+    </AppForm.Section>
   );
 };

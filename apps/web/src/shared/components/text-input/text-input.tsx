@@ -1,12 +1,12 @@
-import styles from './text-input.module.css';
+import styles from './styles.module.css';
 import clsx from 'clsx';
 import { FieldError } from '../field-error/field-error';
 import { FieldLabel } from '../field-label/field-label';
-import { type FormError } from '~/shared';
 import type { RefCallBack } from 'react-hook-form';
 import { XIcon } from 'lucide-react';
+import type { FormError } from '~/shared/types/form-error';
 
-export type TextInputProps = {
+type Props = {
   type?: 'text' | 'number' | 'password';
   label?: string;
   error?: FormError;
@@ -24,7 +24,7 @@ export const TextInput = ({
   ref,
   isClearable,
   ...props
-}: TextInputProps) => {
+}: Props) => {
   return (
     <label className={clsx(styles.input_wrapper, className)}>
       {label && <FieldLabel>{label}</FieldLabel>}

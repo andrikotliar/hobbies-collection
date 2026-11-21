@@ -1,28 +1,28 @@
-import {
-  api,
-  countObjectKeys,
-  Filters,
-  FiltersSidebar,
-  filterValues,
-  getEmptyFormValues,
-  getPeopleAdminListQueryOptions,
-  queryKey,
-  useSidebarVisibility,
-  type FilterItem,
-  type Input,
-} from '~/shared';
-import { ContentWithSidebar, List, useFormModal, withFormModal } from '~/routes/console/-shared';
-import { PersonForm } from '~/routes/console/people/-components';
 import { createFileRoute } from '@tanstack/react-router';
 import {
   convertEnumValuesToOption,
+  enumValues,
   GetPeopleListQuerySchema,
   PersonRole,
-  enumValues,
 } from '@hobbies-collection/shared';
 import { mutationOptions, useQuery } from '@tanstack/react-query';
 import type { z } from 'zod';
 import { useCallback, useMemo } from 'react';
+import { getEmptyFormValues } from '~/shared/helpers/get-empty-form-values';
+import type { Input } from '~/shared/types/extract-params';
+import { api, queryKey } from '~/shared/services/api';
+import type { FilterItem } from '~/shared/types/filter';
+import { withFormModal } from '~/shared/helpers/with-form-modal';
+import { PersonForm } from '~/routes/console/people/-components/person-form/person-form';
+import { useFormModal } from '~/shared/context/form-modal-context';
+import { useSidebarVisibility } from '~/shared/hooks/use-sidebar-visibility';
+import { countObjectKeys } from '~/shared/helpers/count-keys';
+import { filterValues } from '~/shared/helpers/filter-values';
+import { ContentWithSidebar } from '~/shared/components/content-with-sidebar/content-with-sidebar';
+import { FiltersSidebar } from '~/shared/components/filters-sidebar/filters-sidebar';
+import { Filters } from '~/shared/components/filters/filters';
+import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
+import { getPeopleAdminListQueryOptions } from '~/shared/helpers/query-options/people/get-people-admin-list-query-options';
 
 const personDefaultValues = getEmptyFormValues<Input<typeof api.people.create>>({
   name: '',
@@ -163,7 +163,7 @@ function RouteComponent() {
           onReset={handleReset}
         />
       </FiltersSidebar>
-      <List
+      <ConsolePageList
         data={data}
         titleKey="name"
         onSearch={handleSearch}

@@ -1,6 +1,6 @@
 import { convertImageToWebp } from '~/shared/helpers/convert-image-to-webp';
 import { titleToFileName } from '~/shared/helpers/title-to-file-name';
-import { api } from '~/shared/services';
+import { api } from '~/shared/services/api';
 
 type UploadImageParams = {
   image: File | string | null | undefined;

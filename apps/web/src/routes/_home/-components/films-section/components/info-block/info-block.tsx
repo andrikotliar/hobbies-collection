@@ -1,15 +1,15 @@
-import styles from './info-block.module.css';
+import styles from './styles.module.css';
 import { XCircleIcon } from 'lucide-react';
 import { useNavigate } from '@tanstack/react-router';
-import { Button } from '~/shared';
+import { Button } from '~/shared/components/button';
 
-type InfoBlockProps = {
+type Props = {
   label: string;
   title: string;
   description?: string | null;
 };
 
-export const InfoBlock = ({ label, title, description }: InfoBlockProps) => {
+export const InfoBlock = ({ label, title, description }: Props) => {
   const navigate = useNavigate();
 
   const handleClearFilter = () => {

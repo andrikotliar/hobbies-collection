@@ -1,11 +1,11 @@
 import { FieldLabel } from '~/shared/components/field-label/field-label';
-import styles from './order-select.module.css';
+import styles from './styles.module.css';
 import { ScrollableLine } from '~/shared/components/scrollable-line/scrollable-line';
-import { getVirtualChapterValue } from '~/shared/components/order-select/helpers';
 import { Image } from '~/shared/components/image/image';
 import clsx from 'clsx';
-import { getExternalImageUrl } from '~/shared/helpers';
-import type { MixedId } from '~/shared/types';
+import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
+import type { MixedId } from '~/shared/types/mixed-id';
+import { getVirtualChapterValue } from '~/shared/helpers/get-virtual-chapter-value';
 
 type ListItem = {
   id: number;
@@ -13,7 +13,7 @@ type ListItem = {
   imagePath: string | null;
 };
 
-export type OrderSelectProps = {
+type Props = {
   label?: string;
   list: ListItem[];
   value: number;
@@ -27,7 +27,7 @@ export const OrderSelect = ({
   value,
   currentId,
   onChange,
-}: OrderSelectProps) => {
+}: Props) => {
   const startingVirtualChapter = getVirtualChapterValue(0, list[0]?.order);
 
   return (

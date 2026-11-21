@@ -1,13 +1,13 @@
 import { HttpError } from '@hobbies-collection/contracts';
 import { onlineManager } from '@tanstack/react-query';
-import { Status } from '~/shared/components/error-screen/components';
-import { imagePaths } from '~/shared/configs';
+import { imagePaths } from '~/shared/configs/image-paths';
+import { Status } from './components/status/status';
 
-type ErrorScreenProps = {
+type Props = {
   error: unknown;
 };
 
-export const ErrorScreen = ({ error }: ErrorScreenProps) => {
+export const ErrorScreen = ({ error }: Props) => {
   if (!onlineManager.isOnline()) {
     return (
       <Status

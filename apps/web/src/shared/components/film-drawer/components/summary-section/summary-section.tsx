@@ -1,16 +1,24 @@
-import styles from './summary-section.module.css';
+import styles from './styles.module.css';
 import { useMemo } from 'react';
-import { defineCssProperties, getExternalImageUrl, type api, type ApiResponse } from '~/shared';
-import { Collections, Poster, Rating, SummaryBlock, TrailersButton, Title } from './components';
-import { getFilmSummaryConfig } from '../../helpers';
 import clsx from 'clsx';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import type { api } from '~/shared/services/api';
+import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
+import { defineCssProperties } from '~/shared/helpers/define-css-properties';
+import { getFilmSummaryConfig } from '../../helpers/get-film-summary-config';
+import { Rating } from '../summary-section/components/rating/rating';
+import { Title } from '../summary-section/components/title/title';
+import { Poster } from '../summary-section/components/poster/poster';
+import { TrailersButton } from '../summary-section/components/trailers-button/trailers-button';
+import { SummaryBlock } from '../summary-section/components/summary-block/summary-block';
+import { Collections } from '../summary-section/components/collections/collections';
 
-type SummarySectionProps = {
+type Props = {
   film: ApiResponse<typeof api.films.getById>;
   hasExtendedData: boolean;
 };
 
-export const SummarySection = ({ film, hasExtendedData }: SummarySectionProps) => {
+export const SummarySection = ({ film, hasExtendedData }: Props) => {
   const filmConfig = useMemo(() => {
     return getFilmSummaryConfig(film);
   }, [film]);

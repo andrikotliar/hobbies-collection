@@ -1,10 +1,10 @@
 import clsx from 'clsx';
-import styles from './modal-content.module.css';
+import styles from './styles.module.css';
 
 type Theme = 'light' | 'dark';
 type Size = 'form' | 'video' | 'message';
 
-type ModalContentProps = {
+type Props = {
   children: React.ReactNode;
   theme?: Theme;
   withPaddings?: boolean;
@@ -18,7 +18,7 @@ export const ModalContent = ({
   withPaddings = true,
   size = 'form',
   flex,
-}: ModalContentProps) => {
+}: Props) => {
   return (
     <div
       className={clsx(

@@ -1,9 +1,9 @@
-import styles from './image.module.css';
+import styles from './styles.module.css';
 import clsx from 'clsx';
-import { handleImageError } from './helpers';
-import { imagePaths } from '~/shared/configs';
+import { handleImageError } from './helpers/handle-image-error';
+import { imagePaths } from '~/shared/configs/image-paths';
 
-type ImageProps = {
+type Props = {
   src?: string | null;
   errorImageSrc?: string;
   shouldFitContainer?: boolean;
@@ -17,7 +17,7 @@ export const Image = ({
   shouldFitContainer = false,
   ref,
   ...props
-}: ImageProps) => {
+}: Props) => {
   const getImageSource = () => {
     if (!src) {
       return errorImageSrc;

@@ -1,8 +1,12 @@
-import styles from './nominations-form.module.css';
+import styles from './styles.module.css';
 import { useState } from 'react';
 import { useFieldArray, useFormContext } from 'react-hook-form';
 import { PlusIcon, Trash2Icon } from 'lucide-react';
-import { Button, ConfirmModal, Form, type api, type Input } from '~/shared';
+import type { Input } from '~/shared/types/extract-params';
+import type { api } from '~/shared/services/api';
+import { AppForm } from '~/shared/components/app-form';
+import { Button } from '~/shared/components/button';
+import { ConfirmModal } from '~/shared/components/confirm-modal/confirm-modal';
 
 const nominationDefaultValues = {
   id: -1,
@@ -21,15 +25,15 @@ export const NominationsForm = () => {
   });
 
   return (
-    <Form.Section label="Nominations">
+    <AppForm.Section label="Nominations">
       <div className={styles.nominations_form}>
         {fields.map((_, index) => (
           <div className={styles.nomination} key={index}>
             <div className={styles.nomination_title}>
-              <Form.TextInput name={`nominations.${index}.title`} label="Nomination title" />
+              <AppForm.TextInput name={`nominations.${index}.title`} label="Nomination title" />
             </div>
             <div className={styles.nomination_toggle}>
-              <Form.Toggle
+              <AppForm.Toggle
                 title="Should include actor"
                 name={`nominations.${index}.shouldIncludeActor`}
               />
@@ -60,6 +64,6 @@ export const NominationsForm = () => {
           }}
         />
       </div>
-    </Form.Section>
+    </AppForm.Section>
   );
 };

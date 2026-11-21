@@ -1,14 +1,14 @@
-import styles from './video-preview.module.css';
+import styles from './styles.module.css';
 import { Image } from '~/shared/components/image/image';
 import { PlayIcon } from 'lucide-react';
-import { imagePaths } from '~/shared/configs';
+import { imagePaths } from '~/shared/configs/image-paths';
 
-type VideoPreviewProps = {
+type Props = {
   imagePath: string;
   videoUrl: string;
 };
 
-export const VideoPreview = ({ imagePath, videoUrl }: VideoPreviewProps) => {
+export const VideoPreview = ({ imagePath, videoUrl }: Props) => {
   if (!videoUrl.length) {
     return (
       <div className={styles.preview_wrapper}>

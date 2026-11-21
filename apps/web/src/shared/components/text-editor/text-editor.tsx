@@ -1,13 +1,13 @@
-import styles from './text-editor.module.css';
+import styles from './styles.module.css';
 import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
-import { type FormError } from '~/shared';
 import { FieldLabel } from '../field-label/field-label';
 import { FieldError } from '../field-error/field-error';
-import { MenuBar } from './components';
 import { useEffect, useImperativeHandle } from 'react';
-import type { EditorMenuOption } from '~/shared/components/text-editor/components/menu-bar-additional-options/menu-bar-additional-options';
+import type { FormError } from '~/shared/types/form-error';
+import { MenuBar } from './components/menu-bar/menu-bar';
+import type { EditorMenuOption } from './components/menu-bar-additional-options/menu-bar-additional-options';
 
 const extensions = [
   StarterKit,
@@ -19,7 +19,7 @@ const extensions = [
   }),
 ];
 
-export type TextEditorProps = {
+type Props = {
   label?: string;
   error?: FormError;
   content?: string;
@@ -32,14 +32,7 @@ export type EditorRef = {
   setContent: (content: string) => boolean | undefined;
 };
 
-export const TextEditor = ({
-  label,
-  error,
-  content = '',
-  onChange,
-  menuOptions,
-  ref,
-}: TextEditorProps) => {
+export const TextEditor = ({ label, error, content = '', onChange, menuOptions, ref }: Props) => {
   const editor = useEditor({
     extensions,
     content,

@@ -1,8 +1,13 @@
-import { Logo, Form, CenteredBlock, api, type Input, LOGIN_BLOCK_KEY } from '~/shared';
 import { LogInIcon } from 'lucide-react';
 import { LoginSchema } from '@hobbies-collection/shared';
 import { useNavigate, useSearch } from '@tanstack/react-router';
 import { useMutation } from '@tanstack/react-query';
+import type { Input } from '~/shared/types/extract-params';
+import { api } from '~/shared/services/api';
+import { LOGIN_BLOCK_KEY } from '~/shared/constants/app';
+import { AppForm } from '~/shared/components/app-form';
+import { CenteredBlock } from '~/shared/components/centered-block';
+import { Logo } from '~/shared/components/logo/logo';
 
 const defaultLoginValues: Input<typeof api.auth.login> = {
   username: '',
@@ -31,7 +36,7 @@ export const LoginForm = () => {
   });
 
   return (
-    <Form
+    <AppForm
       onSubmit={mutateAsync}
       isLoading={isPending}
       defaultValues={defaultLoginValues}
@@ -42,8 +47,8 @@ export const LoginForm = () => {
       <CenteredBlock>
         <Logo size={120} />
       </CenteredBlock>
-      <Form.TextInput name="username" label="Username" />
-      <Form.PasswordInput name="password" label="Password" />
-    </Form>
+      <AppForm.TextInput name="username" label="Username" />
+      <AppForm.PasswordInput name="password" label="Password" />
+    </AppForm>
   );
 };

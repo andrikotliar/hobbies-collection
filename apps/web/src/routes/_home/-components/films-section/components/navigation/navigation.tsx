@@ -1,5 +1,5 @@
 import { Link, useLocation } from '@tanstack/react-router';
-import styles from './navigation.module.css';
+import styles from './styles.module.css';
 import type { FileRoutesByTo } from '~/routeTree.gen';
 import clsx from 'clsx';
 

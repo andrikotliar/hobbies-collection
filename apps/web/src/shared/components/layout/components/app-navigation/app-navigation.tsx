@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import styles from './app-navigation.module.css';
+import styles from './styles.module.css';
 import { Link, useLocation, useNavigate, type ParsedLocation } from '@tanstack/react-router';
 import clsx from 'clsx';
 import {
@@ -10,8 +10,8 @@ import {
   SettingsIcon,
 } from 'lucide-react';
 import { Logo } from '~/shared/components/logo/logo';
-import { api, queryKey } from '~/shared/services';
-import type { NavLink } from '~/shared/types';
+import { api, queryKey } from '~/shared/services/api';
+import type { NavLink } from '~/shared/types/nav-link';
 import { useState } from 'react';
 import { ConfirmModal } from '~/shared/components/confirm-modal/confirm-modal';
 

@@ -1,14 +1,14 @@
-import styles from './search-menu-content.module.css';
+import styles from './styles.module.css';
 import { FoundFilm } from '../found-film/found-film';
-import type { ApiResponse } from '~/shared/types';
-import type { api } from '~/shared/services';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import type { api } from '~/shared/services/api';
 
-type SearchMenuContentProps = {
+type Props = {
   films: ApiResponse<typeof api.films.search>;
   onFilmOpen: VoidFunction;
 };
 
-export const SearchMenuContent = ({ films, onFilmOpen }: SearchMenuContentProps) => {
+export const SearchMenuContent = ({ films, onFilmOpen }: Props) => {
   const isEmpty = films.length === 0;
 
   if (isEmpty) {

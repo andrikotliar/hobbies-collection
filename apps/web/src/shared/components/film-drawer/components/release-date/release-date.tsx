@@ -1,11 +1,11 @@
-import { getFormattedDate } from '~/shared';
+import { getFormattedDate } from '~/shared/helpers/get-formatted-date';
 import { DataLink } from '../data-link/data-link';
 
-type ReleaseDateProps = {
+type Props = {
   value: string | null;
 };
 
-export const ReleaseDate = ({ value }: ReleaseDateProps) => {
+export const ReleaseDate = ({ value }: Props) => {
   if (!value) {
     return 'N/A';
   }

@@ -1,17 +1,14 @@
 import { useMutation, useSuspenseQuery } from '@tanstack/react-query';
-import styles from './sessions.module.css';
-import {
-  Button,
-  ConfirmModal,
-  getLastActivity,
-  getUserSessionsQueryOptions,
-  Panel,
-  api,
-  type ApiResponse,
-  queryKey,
-} from '~/shared';
+import styles from './styles.module.css';
 import { useState } from 'react';
 import { LaptopMinimalIcon, RadioIcon, SmartphoneIcon, TabletIcon } from 'lucide-react';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import { api, queryKey } from '~/shared/services/api';
+import { getUserSessionsQueryOptions } from '~/shared/helpers/query-options/users/get-user-sessions';
+import { Panel } from '~/shared/components/panel/panel';
+import { getLastActivity } from '~/shared/helpers/get-last-activity';
+import { Button } from '~/shared/components/button';
+import { ConfirmModal } from '~/shared/components/confirm-modal/confirm-modal';
 
 const deviceTypeToIcon = {
   mobile: <SmartphoneIcon />,

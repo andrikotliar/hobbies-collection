@@ -1,12 +1,12 @@
-import { defineCssProperties } from '~/shared/helpers';
-import styles from './skeleton-block.module.css';
+import { defineCssProperties } from '~/shared/helpers/define-css-properties';
+import styles from './styles.module.css';
 
-type SkeletonBlockProps = {
+type Props = {
   width?: string;
   height: string;
 };
 
-export const SkeletonBlock = ({ width = '100%', height }: SkeletonBlockProps) => {
+export const SkeletonBlock = ({ width = '100%', height }: Props) => {
   return (
     <div
       className={styles.skeleton}

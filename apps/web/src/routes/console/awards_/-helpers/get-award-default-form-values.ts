@@ -1,4 +1,6 @@
-import { getEmptyFormValues, type api, type ApiResponse } from '~/shared';
+import { getEmptyFormValues } from '~/shared/helpers/get-empty-form-values';
+import type { api } from '~/shared/services/api';
+import type { ApiResponse } from '~/shared/types/extract-params';
 
 export const getFormDefaultValues = (data: ApiResponse<typeof api.awards.getById> | null) => {
   if (data) {

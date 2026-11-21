@@ -1,10 +1,10 @@
-import styles from './text-area.module.css';
+import styles from './styles.module.css';
 import { FieldLabel } from '../field-label/field-label';
 import { FieldError } from '../field-error/field-error';
 import { Loader } from '~/shared/components/loader/loader';
 import type { RefCallBack } from 'react-hook-form';
 
-export type TextAreaProps = {
+type Props = {
   label?: string;
   error?: string | string[];
   isLoading?: boolean;
@@ -18,7 +18,7 @@ export const TextArea = ({
   ref,
   disabled,
   ...textAreaProps
-}: TextAreaProps) => {
+}: Props) => {
   return (
     <label className={styles.wrapper}>
       {label && <FieldLabel>{label}</FieldLabel>}

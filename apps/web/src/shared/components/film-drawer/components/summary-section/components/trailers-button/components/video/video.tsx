@@ -1,10 +1,10 @@
-import styles from './video.module.css';
+import styles from './styles.module.css';
 
-type VideoProps = {
+type Props = {
   url: string;
 };
 
-export const Video = ({ url }: VideoProps) => {
+export const Video = ({ url }: Props) => {
   return (
     <div className={styles.video}>
       <iframe src={url} allow="autoplay" allowFullScreen />

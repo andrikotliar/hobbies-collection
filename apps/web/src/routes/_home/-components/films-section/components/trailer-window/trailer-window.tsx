@@ -1,13 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
-import { getFilmTrailersQueryOptions, Loader, Modal } from '~/shared';
-import styles from './trailer-window.module.css';
+import styles from './styles.module.css';
+import { getFilmTrailersQueryOptions } from '~/shared/helpers/query-options/films/get-film-trailers-query-options';
+import { Modal } from '~/shared/components/modal/modal';
+import { Loader } from '~/shared/components/loader/loader';
 
-type TrailerWindowProps = {
+type Props = {
   filmId: number | null;
   onClose: VoidFunction;
 };
 
-export const TrailerWindow = ({ filmId, onClose }: TrailerWindowProps) => {
+export const TrailerWindow = ({ filmId, onClose }: Props) => {
   const { data, isLoading } = useQuery(getFilmTrailersQueryOptions(filmId));
 
   return (

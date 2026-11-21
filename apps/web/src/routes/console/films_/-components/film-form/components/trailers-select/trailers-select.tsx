@@ -1,8 +1,9 @@
-import { SortableList, Form } from '~/shared';
 import { type DragEndEvent } from '@dnd-kit/core';
 import { useFieldArray, useFormContext } from 'react-hook-form';
 import type z from 'zod';
-import type { FilmFormSchema } from '~/routes/console/films_/-components/film-form/-schemas';
+import { AppForm } from '~/shared/components/app-form';
+import { SortableList } from '~/shared/components/sortable-list/sortable-list';
+import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
 
 export const TrailersSelect = () => {
   const { control, watch, formState } = useFormContext<z.infer<typeof FilmFormSchema>>();
@@ -39,12 +40,12 @@ export const TrailersSelect = () => {
   };
 
   return (
-    <Form.Section label={`Trailers (${trailers.length})`}>
-      <Form.ArrayWrapper onCreate={handleAddNewTrailer} createButtonLabel="Add trailer">
+    <AppForm.Section label={`Trailers (${trailers.length})`}>
+      <AppForm.ArrayWrapper onCreate={handleAddNewTrailer} createButtonLabel="Add trailer">
         <SortableList items={trailers} onDragEnd={handleDragEnd}>
           {trailers.map((trailer, index) => (
             <SortableList.Item id={trailer.id} key={trailer.id}>
-              <Form.VideoInput
+              <AppForm.VideoInput
                 name={`trailers.${index}.url`}
                 label={`${trailerLabel} ${index + 1}`}
                 onRemove={() => removeTrailer(index)}
@@ -53,7 +54,7 @@ export const TrailersSelect = () => {
             </SortableList.Item>
           ))}
         </SortableList>
-      </Form.ArrayWrapper>
-    </Form.Section>
+      </AppForm.ArrayWrapper>
+    </AppForm.Section>
   );
 };

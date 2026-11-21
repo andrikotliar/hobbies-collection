@@ -1,8 +1,10 @@
-import { type SortingParams, SortingPopup, TextInput, useDebouncedSearch } from '~/shared';
-import styles from './admin-films-tools.module.css';
+import styles from './styles.module.css';
 import { getRouteApi } from '@tanstack/react-router';
 import { type ListOption } from '@hobbies-collection/shared';
 import { SearchIcon } from 'lucide-react';
+import { useDebouncedSearch } from '~/shared/hooks/use-debounced-search';
+import { SortingPopup, type SortingParams } from '~/shared/components/sorting-popup/sorting-popup';
+import { TextInput } from '~/shared/components/text-input/text-input';
 
 const sortingFields: ListOption<string>[] = [
   {

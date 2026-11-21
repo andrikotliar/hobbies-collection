@@ -1,26 +1,23 @@
-import styles from './nomination-select.module.css';
+import styles from './styles.module.css';
 import { useFieldArray, useFormContext, useWatch } from 'react-hook-form';
-import {
-  api,
-  Button,
-  FieldError,
-  Form,
-  getNominationsByAwardQueryOptions,
-  Loader,
-  queryKey,
-} from '~/shared';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import type z from 'zod';
-import type { FilmFormSchema } from '~/routes/console/films_/-components/film-form/-schemas';
-import { autoDetectShouldIncludeActor } from '~/routes/console/films_/-components/film-form/components/awards-select/helpers';
 import { PlusIcon, TrashIcon } from 'lucide-react';
 import { useMemo } from 'react';
+import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
+import { getNominationsByAwardQueryOptions } from '~/shared/helpers/query-options/awards/get-nominations-by-award-query-options';
+import { api, queryKey } from '~/shared/services/api';
+import { FieldError } from '~/shared/components/field-error/field-error';
+import { Loader } from '~/shared/components/loader/loader';
+import { AppForm } from '~/shared/components/app-form';
+import { Button } from '~/shared/components/button';
+import { autoDetectShouldIncludeActor } from '../../helpers/auto-detect-should-include-actor';
 
-type NominationSelectProps = {
+type Props = {
   index: number;
 };
 
-export const NominationSelect = ({ index }: NominationSelectProps) => {
+export const NominationSelect = ({ index }: Props) => {
   const awards = useWatch<z.infer<typeof FilmFormSchema>, 'awards'>({
     name: 'awards',
   });
@@ -110,7 +107,7 @@ export const NominationSelect = ({ index }: NominationSelectProps) => {
       {fields.map((nomination, nominationIndex) => (
         <div key={nomination.id} className={styles.nomination_row}>
           <div className={styles.selects}>
-            <Form.Select
+            <AppForm.Select
               options={data}
               label="Nomination"
               name={`awards.${index}.nominations.${nominationIndex}.nominationId`}
@@ -118,7 +115,7 @@ export const NominationSelect = ({ index }: NominationSelectProps) => {
               isOptionsLoading={isNominationCreating}
             />
             {includeActorsMap[currentAward.nominations[nominationIndex]?.nominationId] && (
-              <Form.AsyncSelect
+              <AppForm.AsyncSelect
                 name={`awards.${index}.nominations.${nominationIndex}.actorId`}
                 optionsLoader={api.people.search}
                 label="Person"

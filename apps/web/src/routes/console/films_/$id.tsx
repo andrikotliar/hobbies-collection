@@ -1,18 +1,16 @@
-import { createFileRoute } from '@tanstack/react-router';
 import { useMemo } from 'react';
-import {
-  isNewItem,
-  getInitialDataQueryOptions,
-  getAdminFilmDetailsQueryOptions,
-  getMixedId,
-  getFilmDraftsQueryOptions,
-} from '~/shared';
-import { filmDefaultFormValues } from '~/routes/console/-shared';
-import { FilmForm } from '~/routes/console/films_/-components';
-import type z from 'zod';
+import { createFileRoute } from '@tanstack/react-router';
 import { useSuspenseQuery } from '@tanstack/react-query';
-import type { FilmFormSchema } from '~/routes/console/films_/-components/film-form/-schemas';
+import type z from 'zod';
 import { GetAdminListQuerySchema } from '@hobbies-collection/shared';
+import { getInitialDataQueryOptions } from '~/shared/helpers/query-options/initial-data/get-initial-data-query-options';
+import { getFilmDraftsQueryOptions } from '~/shared/helpers/query-options/films/get-film-drafts-query-options';
+import { isNewItem } from '~/shared/helpers/is-new-item';
+import { getAdminFilmDetailsQueryOptions } from '~/shared/helpers/query-options/films/get-admin-film-details-query-options';
+import { getMixedId } from '~/shared/helpers/get-mixed-id';
+import { FilmForm } from './-components/film-form/film-form';
+import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
+import { filmDefaultFormValues } from '~/shared/configs/film-default-form-values';
 
 export const Route = createFileRoute('/console/films_/$id')({
   validateSearch: (search) => GetAdminListQuerySchema.parse(search),

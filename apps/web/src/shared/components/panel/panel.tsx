@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import styles from './panel.module.css';
+import styles from './styles.module.css';
 
-type PanelProps = {
+type Props = {
   hasPaddings?: boolean;
   isFlexContainer?: boolean;
   isScrollable?: boolean;
@@ -13,7 +13,7 @@ export const Panel = ({
   hasPaddings = true,
   isFlexContainer = false,
   isScrollable = false,
-}: PanelProps) => {
+}: Props) => {
   return (
     <div
       className={clsx(styles.panel, {

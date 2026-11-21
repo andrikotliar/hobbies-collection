@@ -1,24 +1,16 @@
-import {
-  type FormComponentProps,
-  api,
-  Form,
-  FormIdParamSchema,
-  mutateEntity,
-  queryKey,
-} from '~/shared';
-import { getFormTitle } from '~/routes/console/-shared/helpers';
 import type z from 'zod';
-import { CreatePersonSchema } from '@hobbies-collection/shared';
-import { useFormModal } from '~/routes/console/-shared/context';
 import { useMutation } from '@tanstack/react-query';
+import type { FormComponentProps } from '~/shared/types/form-component-props';
+import { PersonFormSchema } from '~/shared/schemas/person-form.schema';
+import { mutateEntity } from '~/shared/helpers/mutate-entity';
+import { api, queryKey } from '~/shared/services/api';
+import { useFormModal } from '~/shared/context/form-modal-context';
+import { AppForm } from '~/shared/components/app-form';
+import { getFormTitle } from '~/shared/helpers/get-form-title';
 
-export const PersonFormSchema = CreatePersonSchema.extend({
-  id: FormIdParamSchema,
-});
+export type Props = FormComponentProps<z.infer<typeof PersonFormSchema>>;
 
-export type PersonFormProps = FormComponentProps<z.infer<typeof PersonFormSchema>>;
-
-export const PersonForm = ({ values }: PersonFormProps) => {
+export const PersonForm = ({ values }: Props) => {
   const { mutateAsync, isPending } = useMutation({
     mutationFn: mutateEntity(api.people.create, api.people.update),
     meta: {
@@ -33,15 +25,15 @@ export const PersonForm = ({ values }: PersonFormProps) => {
   };
 
   return (
-    <Form
+    <AppForm
       onSubmit={submit}
       defaultValues={values}
       schema={PersonFormSchema}
       title={getFormTitle(values, 'Person', 'name')}
       isLoading={isPending}
     >
-      <Form.TextInput name="name" label="Person name" />
-      <Form.Checkbox name="selected" label="Selected" type="checkbox" />
-    </Form>
+      <AppForm.TextInput name="name" label="Person name" />
+      <AppForm.Checkbox name="selected" label="Selected" type="checkbox" />
+    </AppForm>
   );
 };

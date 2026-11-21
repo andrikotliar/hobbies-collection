@@ -1,13 +1,13 @@
-import styles from "./toggle.module.css";
+import styles from './styles.module.css';
 import { type ChangeEvent } from 'react';
 
-export type ToggleProps = {
+type Props = {
   value: boolean;
   onToggle: (isSelected: boolean) => void;
   title?: string;
 };
 
-export const Toggle = ({ value, onToggle, title }: ToggleProps) => {
+export const Toggle = ({ value, onToggle, title }: Props) => {
   const handleToggle = (event: ChangeEvent<HTMLInputElement>) => {
     const isChecked = event.target.checked;
 

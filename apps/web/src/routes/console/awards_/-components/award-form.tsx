@@ -1,18 +1,18 @@
-import { api, Form, FormIdParamSchema, mutateEntity, Panel, queryKey, type Input } from '~/shared';
 import { NominationsForm } from '~/routes/console/awards_/-components/nominations-form/nominations-form';
-import { CreateAwardInputSchema } from '@hobbies-collection/shared';
 import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from '@tanstack/react-router';
+import type { Input } from '~/shared/types/extract-params';
+import { api, queryKey } from '~/shared/services/api';
+import { mutateEntity } from '~/shared/helpers/mutate-entity';
+import { AppForm } from '~/shared/components/app-form';
+import { Panel } from '~/shared/components/panel/panel';
+import { AwardFormSchema } from '~/shared/schemas/award-form.schema';
 
-type AwardFormProps = {
+type Props = {
   values: Input<typeof api.awards.create>;
 };
 
-const AwardFormSchema = CreateAwardInputSchema.extend({
-  id: FormIdParamSchema,
-});
-
-export const AwardForm = ({ values }: AwardFormProps) => {
+export const AwardForm = ({ values }: Props) => {
   const navigate = useNavigate();
 
   const { mutateAsync, isPending } = useMutation({
@@ -38,7 +38,7 @@ export const AwardForm = ({ values }: AwardFormProps) => {
   });
 
   return (
-    <Form
+    <AppForm
       onSubmit={mutateAsync}
       defaultValues={values}
       schema={AwardFormSchema}
@@ -46,10 +46,10 @@ export const AwardForm = ({ values }: AwardFormProps) => {
       islandActions
     >
       <Panel isFlexContainer>
-        <Form.TextInput name="title" label="Title" />
-        <Form.TextArea name="description" label="Description" />
+        <AppForm.TextInput name="title" label="Title" />
+        <AppForm.TextArea name="description" label="Description" />
         <NominationsForm />
       </Panel>
-    </Form>
+    </AppForm>
   );
 };

@@ -1,12 +1,12 @@
-import styles from './poster.module.css';
-import { Image } from '~/shared';
+import styles from './styles.module.css';
+import { Image } from '~/shared/components/image/image';
 
-type PosterProps = {
+type Props = {
   image: string;
   title: string;
 };
 
-export const Poster = ({ image, title }: PosterProps) => {
+export const Poster = ({ image, title }: Props) => {
   return (
     <div className={styles.poster}>
       <Image src={image} alt={`Poster of "${title}"`} />

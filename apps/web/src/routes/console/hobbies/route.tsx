@@ -1,9 +1,12 @@
 import { NEW_ITEM_ID } from '@hobbies-collection/shared';
 import { mutationOptions, useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute, useNavigate } from '@tanstack/react-router';
-import { List, useFormModal, withFormModal } from '~/routes/console/-shared';
-import { HobbyForm } from '~/routes/console/hobbies/-components';
-import { api, getHobbiesListQueryOptions, queryKey } from '~/shared';
+import { HobbyForm } from '~/routes/console/hobbies/-components/hobby-form';
+import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
+import { useFormModal } from '~/shared/context/form-modal-context';
+import { getHobbiesListQueryOptions } from '~/shared/helpers/query-options/hobbies/get-hobbies-list-query-options';
+import { withFormModal } from '~/shared/helpers/with-form-modal';
+import { api, queryKey } from '~/shared/services/api';
 
 const getDeleteMutationOptions = () => {
   return mutationOptions({
@@ -39,7 +42,7 @@ function RouteComponent() {
   const navigate = useNavigate();
 
   return (
-    <List
+    <ConsolePageList
       data={{ list: data.list, total: 0 }}
       getDeleteMutationOptions={getDeleteMutationOptions}
       isFetching={false}

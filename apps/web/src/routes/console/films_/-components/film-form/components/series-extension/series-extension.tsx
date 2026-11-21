@@ -1,7 +1,7 @@
 import { useFormContext } from 'react-hook-form';
 import type z from 'zod';
-import type { FilmFormSchema } from '~/routes/console/films_/-components/film-form/-schemas';
-import { Form } from '~/shared';
+import { AppForm } from '~/shared/components/app-form';
+import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
 
 export const SeriesExtension = () => {
   const { watch } = useFormContext<z.infer<typeof FilmFormSchema>>();
@@ -14,8 +14,12 @@ export const SeriesExtension = () => {
 
   return (
     <>
-      <Form.TextInput type="number" name="seriesExtension.seasonsTotal" label="Seasons total" />
-      <Form.TextInput type="number" name="seriesExtension.episodesTotal" label="Episodes total" />
+      <AppForm.TextInput type="number" name="seriesExtension.seasonsTotal" label="Seasons total" />
+      <AppForm.TextInput
+        type="number"
+        name="seriesExtension.episodesTotal"
+        label="Episodes total"
+      />
     </>
   );
 };

@@ -1,20 +1,14 @@
 import { mutationOptions, useQuery } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
-import {
-  api,
-  getEmptyFormValues,
-  getStudiosListQueryOptions,
-  queryKey,
-  type Input,
-} from '~/shared';
-import { List, useFormModal, withFormModal } from '~/routes/console/-shared';
-import { StudioForm } from '~/routes/console/studios/-components';
 import { useCallback } from 'react';
 import { CommonListQuerySchema } from '@hobbies-collection/shared';
-
-const studioInitialValues = getEmptyFormValues<Input<typeof api.studios.create>>({
-  title: '',
-});
+import { api, queryKey } from '~/shared/services/api';
+import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
+import { useFormModal } from '~/shared/context/form-modal-context';
+import { getStudiosListQueryOptions } from '~/shared/helpers/query-options/studios/get-studios-list-query-options';
+import { withFormModal } from '~/shared/helpers/with-form-modal';
+import { StudioForm } from '~/routes/console/studios/-components/studio-form';
+import { studioInitialValues } from '~/routes/console/studios/-configs/default-values';
 
 export const Route = createFileRoute('/console/studios')({
   validateSearch: (search) => CommonListQuerySchema.parse(search),
@@ -70,7 +64,7 @@ function PageContainer() {
   }, []);
 
   return (
-    <List
+    <ConsolePageList
       data={data}
       getDeleteMutationOptions={getDeleteMutationOptions}
       onEdit={onOpen}

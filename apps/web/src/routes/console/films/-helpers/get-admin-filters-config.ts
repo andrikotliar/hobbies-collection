@@ -1,7 +1,13 @@
 import { convertEnumValuesToOption, DraftLevel, enumValues } from '@hobbies-collection/shared';
 import { z } from 'zod';
-import { filterDefaultValues, FiltersSchema, getFiltersConfig } from '~/routes/_home/-helpers';
-import type { api, ApiResponse, FilterItem } from '~/shared';
+import {
+  filterDefaultValues,
+  FiltersSchema,
+  getFiltersConfig,
+} from '~/routes/_home/-helpers/filters-config';
+import type { api } from '~/shared/services/api';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import type { FilterItem } from '~/shared/types/filter';
 
 const AdminOnlyFiltersSchema = z.object({
   draftLevels: z.array(z.enum(DraftLevel)),

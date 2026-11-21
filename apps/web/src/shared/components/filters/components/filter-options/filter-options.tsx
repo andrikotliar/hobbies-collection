@@ -1,5 +1,6 @@
-import { Form, type FilterItem } from '~/shared';
-import { ComboSelect } from '~/shared/components/filters/components/combo-select/combo-select';
+import { AppForm } from '~/shared/components/app-form';
+import { ComboSelect } from '../combo-select/combo-select';
+import type { FilterItem } from '~/shared/types/filter';
 
 type FilterOptionsProps<T extends Record<string, any>> = {
   filter: FilterItem<T>;
@@ -9,9 +10,9 @@ export const FilterOptions = <T extends Record<string, any>>({ filter }: FilterO
   switch (filter.type) {
     case 'checkmark':
       return (
-        <Form.Group title={filter.title}>
+        <AppForm.Group title={filter.title}>
           {filter.options.map((option) => (
-            <Form.Checkbox
+            <AppForm.Checkbox
               type={filter.inputType}
               label={option.label}
               value={option.value}
@@ -19,33 +20,38 @@ export const FilterOptions = <T extends Record<string, any>>({ filter }: FilterO
               key={option.value}
             />
           ))}
-        </Form.Group>
+        </AppForm.Group>
       );
 
     case 'daterange':
-      return <Form.DateRange title={filter.title} inputs={filter.inputs} />;
+      return <AppForm.DateRange title={filter.title} inputs={filter.inputs} />;
 
     case 'boolean':
       return (
-        <Form.Group title={filter.title}>
+        <AppForm.Group title={filter.title}>
           {filter.options.map((option) => (
-            <Form.Checkbox type="checkbox" label={option.label} name={option.id} key={option.id} />
+            <AppForm.Checkbox
+              type="checkbox"
+              label={option.label}
+              name={option.id}
+              key={option.id}
+            />
           ))}
-        </Form.Group>
+        </AppForm.Group>
       );
 
     case 'rating':
       return (
-        <Form.Group title={filter.title}>
-          <Form.RatingInput name={filter.id} size={filter.size} />
-        </Form.Group>
+        <AppForm.Group title={filter.title}>
+          <AppForm.RatingInput name={filter.id} size={filter.size} />
+        </AppForm.Group>
       );
 
     case 'number':
       return (
-        <Form.Group title={filter.title}>
-          <Form.TextInput name={filter.id} type="number" min={filter.min} max={filter.max} />
-        </Form.Group>
+        <AppForm.Group title={filter.title}>
+          <AppForm.TextInput name={filter.id} type="number" min={filter.min} max={filter.max} />
+        </AppForm.Group>
       );
 
     case 'combo-select':
@@ -53,16 +59,16 @@ export const FilterOptions = <T extends Record<string, any>>({ filter }: FilterO
 
     case 'select':
       return (
-        <Form.Group title={filter.title}>
-          <Form.Select options={filter.options} name={filter.id} />
-        </Form.Group>
+        <AppForm.Group title={filter.title}>
+          <AppForm.Select options={filter.options} name={filter.id} />
+        </AppForm.Group>
       );
 
     case 'range':
       return (
-        <Form.Group title={filter.title}>
-          <Form.RangeInput name={filter.id} {...filter} />
-        </Form.Group>
+        <AppForm.Group title={filter.title}>
+          <AppForm.RangeInput name={filter.id} {...filter} />
+        </AppForm.Group>
       );
 
     default:

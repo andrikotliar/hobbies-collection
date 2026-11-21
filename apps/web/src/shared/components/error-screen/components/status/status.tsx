@@ -1,17 +1,17 @@
-import { Button } from '~/shared/components/button/button';
-import styles from './status.module.css';
+import { Button } from '~/shared/components/button';
+import styles from './styles.module.css';
 import { Image } from '~/shared/components/image/image';
 import { Link } from '@tanstack/react-router';
 import { HomeIcon, RefreshCcwIcon } from 'lucide-react';
 
-type StatusProps = {
+type Props = {
   title: string;
   message: string;
   imageSrc: string;
   isRecoverable?: boolean;
 };
 
-export const Status = ({ title, message, imageSrc, isRecoverable = false }: StatusProps) => {
+export const Status = ({ title, message, imageSrc, isRecoverable = false }: Props) => {
   return (
     <div className={styles.error_screen}>
       <div className={styles.container}>

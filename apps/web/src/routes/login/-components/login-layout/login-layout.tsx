@@ -1,4 +1,4 @@
-import styles from './login-layout.module.css';
+import styles from './styles.module.css';
 
 export const LoginLayout = ({ children }: React.PropsWithChildren) => {
   return (

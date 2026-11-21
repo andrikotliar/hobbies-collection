@@ -1,7 +1,7 @@
-import styles from './stats-layout.module.css';
+import styles from './styles.module.css';
 
-type StatsLayoutProps = React.PropsWithChildren;
+type Props = React.PropsWithChildren;
 
-export const StatsLayout = ({ children }: StatsLayoutProps) => {
+export const StatsLayout = ({ children }: Props) => {
   return <div className={styles.page}>{children}</div>;
 };

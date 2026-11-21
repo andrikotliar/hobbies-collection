@@ -1,10 +1,12 @@
 import { useFieldArray, useFormContext } from 'react-hook-form';
 import type z from 'zod';
-import type { CollectionFormSchema } from '~/routes/console/collections/-schemas';
-import { api, Form, toaster } from '~/shared';
-import { AsyncSelect } from '~/shared/components/async-select/async-select';
-import styles from './films-select.module.css';
+import { AsyncSelect } from '~/shared/components/async-select';
+import styles from './styles.module.css';
 import { TrashIcon } from 'lucide-react';
+import { api } from '~/shared/services/api';
+import { toaster } from '~/shared/utils/toaster';
+import { AppForm } from '~/shared/components/app-form';
+import type { CollectionFormSchema } from '~/shared/schemas/collection-form.schema';
 
 export const FilmsSelect = () => {
   const { control } = useFormContext<z.infer<typeof CollectionFormSchema>>();
@@ -30,7 +32,7 @@ export const FilmsSelect = () => {
           label="Add film"
         />
       </div>
-      <Form.Section label="Films">
+      <AppForm.Section label="Films">
         <div className={styles.wrapper}>
           {fields.map((film, index) => (
             <div className={styles.item} key={film.id}>
@@ -42,7 +44,7 @@ export const FilmsSelect = () => {
           ))}
         </div>
         {fields.length === 0 && <div>No selected films</div>}
-      </Form.Section>
+      </AppForm.Section>
     </div>
   );
 };

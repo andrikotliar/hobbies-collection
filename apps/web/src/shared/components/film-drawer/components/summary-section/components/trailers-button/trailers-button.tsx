@@ -1,16 +1,18 @@
-import styles from './trailers-button.module.css';
-import { Modal, type api, type ApiResponse } from '~/shared';
+import styles from './styles.module.css';
 import { useState } from 'react';
 import { PlayIcon } from 'lucide-react';
-import { TrailersPlaylist } from './components';
+import { TrailersPlaylist } from './components/trailers-playlist/trailers-playlist';
 import type { Enum, TitleType } from '@hobbies-collection/shared';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import type { api } from '~/shared/services/api';
+import { Modal } from '~/shared/components/modal/modal';
 
-type TrailersButtonProps = {
+type Props = {
   data: ApiResponse<typeof api.films.getById>['trailers'];
   type: Enum<typeof TitleType>;
 };
 
-export const TrailersButton = ({ data, type }: TrailersButtonProps) => {
+export const TrailersButton = ({ data, type }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleClose = () => {

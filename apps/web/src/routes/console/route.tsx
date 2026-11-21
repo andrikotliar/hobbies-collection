@@ -1,6 +1,7 @@
 import { createFileRoute, redirect } from '@tanstack/react-router';
-import { ConsoleRootLayout } from '~/routes/console/-shared';
-import { getAuthStateQueryOptions, LOGIN_BLOCK_KEY } from '~/shared';
+import { ConsoleRootLayout } from '~/shared/components/console-root-layout/console-root-layout';
+import { LOGIN_BLOCK_KEY } from '~/shared/constants/app';
+import { getAuthStateQueryOptions } from '~/shared/helpers/query-options/auth/get-auth-state-query-options';
 
 export const Route = createFileRoute('/console')({
   beforeLoad: async ({ context: { queryClient } }) => {

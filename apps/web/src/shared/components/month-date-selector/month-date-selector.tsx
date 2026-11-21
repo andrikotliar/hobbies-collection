@@ -1,12 +1,15 @@
 import { FieldLabel } from '~/shared/components/field-label/field-label';
-import { monthOptions } from '~/shared/components/month-date-selector/configs';
 import { Select } from '~/shared/components/select/select';
-import styles from './month-date-selector.module.css';
+import styles from './styles.module.css';
 import clsx from 'clsx';
-import { getDateCode, getDateCodeParts, getDefaultDateCode, type FormError } from '~/shared';
 import { FieldError } from '~/shared/components/field-error/field-error';
+import type { FormError } from '~/shared/types/form-error';
+import { getDefaultDateCode } from '~/shared/helpers/get-default-date-code';
+import { getDateCodeParts } from '~/shared/helpers/get-date-code-parts';
+import { getDateCode } from '~/shared/helpers/get-date-code';
+import { monthOptions } from '~/shared/components/month-date-selector/configs/month-options';
 
-export type MonthDateSelectorProps = {
+type Props = {
   value?: number;
   label?: string;
   error?: FormError;
@@ -20,7 +23,7 @@ export const MonthDateSelector = ({
   label,
   error,
   onChange,
-}: MonthDateSelectorProps) => {
+}: Props) => {
   const dateParts = getDateCodeParts(value);
   const selectedMonth = dateParts[0];
   const selectedDate = dateParts[1];

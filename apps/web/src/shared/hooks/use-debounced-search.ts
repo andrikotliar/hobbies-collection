@@ -1,5 +1,5 @@
-import { debounce } from '~/shared';
 import { type ChangeEvent, useCallback } from 'react';
+import { debounce } from '~/shared/helpers/debounce';
 
 type SearchHandler = (value: string) => void | Promise<void>;
 

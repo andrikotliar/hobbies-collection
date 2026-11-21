@@ -1,14 +1,17 @@
-import styles from './found-film.module.css';
+import styles from './styles.module.css';
 import { Link, useLocation } from '@tanstack/react-router';
-import { getExternalImageUrl, getYearFromDate, type api, type ApiResponse } from '~/shared';
 import { Image } from '~/shared/components/image/image';
+import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
+import { getYearFromDate } from '~/shared/helpers/get-year-from-date';
+import type { api } from '~/shared/services/api';
+import type { ApiResponse } from '~/shared/types/extract-params';
 
-type FoundFilmProps = {
+type Props = {
   film: ApiResponse<typeof api.films.search>[number];
   onFilmOpen: VoidFunction;
 };
 
-export const FoundFilm = ({ film, onFilmOpen }: FoundFilmProps) => {
+export const FoundFilm = ({ film, onFilmOpen }: Props) => {
   const genres = film.genres.map((genre) => genre.title).join(', ');
   const location = useLocation();
 

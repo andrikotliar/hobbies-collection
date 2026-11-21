@@ -1,7 +1,4 @@
-import type { ListOption } from '@hobbies-collection/shared';
-import { type SelectProps } from '~/shared/components/select/select';
-
-export const getSelectValue = <T extends ListOption<any>>(value: SelectProps<T>['value']) => {
+export const getSelectValue = (value: unknown) => {
   if (Array.isArray(value)) {
     return value;
   }

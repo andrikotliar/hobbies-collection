@@ -1,30 +1,25 @@
 import type z from 'zod';
-import { useMutation, useSuspenseQuery } from '@tanstack/react-query';
-import {
-  api,
-  Form,
-  getInitialDataQueryOptions,
-  getObjectsDiff,
-  isNewItem,
-  Panel,
-  queryKey,
-  uploadImage,
-} from '~/shared';
-import {
-  AwardsSelect,
-  CastAndCrewSelect,
-  Drafts,
-  FilmValuesWatcher,
-  MoneyInput,
-  SeriesExtension,
-  TrailersSelect,
-} from '~/routes/console/films_/-components/film-form/components';
-import { useState } from 'react';
 import type { FilmDraftResponse } from '@hobbies-collection/shared';
 import { useNavigate, useSearch } from '@tanstack/react-router';
-import { FilmFormSchema } from '~/routes/console/films_/-components/film-form/-schemas';
+import { useMutation, useSuspenseQuery } from '@tanstack/react-query';
+import { useState } from 'react';
+import { getInitialDataQueryOptions } from '~/shared/helpers/query-options/initial-data/get-initial-data-query-options';
+import { uploadImage } from '~/shared/helpers/upload-image';
+import { isNewItem } from '~/shared/helpers/is-new-item';
+import { getObjectsDiff } from '~/shared/helpers/get-objects-diff';
+import { api, queryKey } from '~/shared/services/api';
+import { AppForm } from '~/shared/components/app-form';
+import { Panel } from '~/shared/components/panel/panel';
+import { Drafts } from './components/drafts/drafts';
+import { TrailersSelect } from './components/trailers-select/trailers-select';
+import { SeriesExtension } from './components/series-extension/series-extension';
+import { MoneyInput } from './components/money-input/money-input';
+import { AwardsSelect } from './components/awards-select/awards-select';
+import { CastAndCrewSelect } from './components/cast-and-crew-select/cast-and-crew-select';
+import { FilmValuesWatcher } from './components/film-values-watcher/film-values-watcher';
+import { FilmFormSchema } from '~/shared/schemas/film-form.schema';
 
-type FilmFormProps = {
+type Props = {
   values: z.infer<typeof FilmFormSchema>;
 };
 
@@ -33,7 +28,7 @@ type CreateNewEntityInput = {
   type: 'genres' | 'countries' | 'studios' | 'collections';
 };
 
-export const FilmForm = ({ values }: FilmFormProps) => {
+export const FilmForm = ({ values }: Props) => {
   const { data: initialOptions } = useSuspenseQuery(getInitialDataQueryOptions());
   const [selectedDraft, setSelectedDraft] = useState<FilmDraftResponse | null>(null);
   const navigate = useNavigate();
@@ -142,7 +137,7 @@ export const FilmForm = ({ values }: FilmFormProps) => {
   });
 
   return (
-    <Form
+    <AppForm
       onSubmit={handleSubmit}
       defaultValues={values}
       schema={FilmFormSchema}
@@ -155,58 +150,58 @@ export const FilmForm = ({ values }: FilmFormProps) => {
     >
       <Drafts selectedDraft={selectedDraft} onSelectDraft={setSelectedDraft} />
       <Panel isFlexContainer>
-        <Form.TextInput name="title" label="Title" />
-        <Form.CheckboxesGroup
+        <AppForm.TextInput name="title" label="Title" />
+        <AppForm.CheckboxesGroup
           label="Type"
           name="type"
           options={initialOptions.options.types}
           type="radio"
         />
-        <Form.RatingInput name="rating" label="Rating" size={3} />
-        <Form.FileInput label="Poster" name="imagePath" />
+        <AppForm.RatingInput name="rating" label="Rating" size={3} />
+        <AppForm.FileInput label="Poster" name="imagePath" />
         <TrailersSelect />
         <SeriesExtension />
-        <Form.Select
+        <AppForm.Select
           label="Genres"
           name="genres"
           options={initialOptions.options.genres}
           isMulti
           onCreateOption={(value) => createNewEntity({ value, type: 'genres' })}
         />
-        <Form.Select
+        <AppForm.Select
           label="Countries"
           name="countries"
           options={initialOptions.options.countries}
           onCreateOption={(value) => createNewEntity({ value, type: 'countries' })}
           isMulti
         />
-        <Form.Select
+        <AppForm.Select
           label="Studios"
           name="studios"
           options={initialOptions.options.studios}
           onCreateOption={(value) => createNewEntity({ value, type: 'studios' })}
           isMulti
         />
-        <Form.Select
+        <AppForm.Select
           label="Collections"
           name="collections"
           options={initialOptions.options.collections}
           onCreateOption={(value) => createNewEntity({ value, type: 'collections' })}
           isMulti
         />
-        <Form.DatePicker name="releaseDate" label="Release Date" />
-        <Form.TextInput name="duration" type="number" label="Runtime (min)" min="0" />
+        <AppForm.DatePicker name="releaseDate" label="Release Date" />
+        <AppForm.TextInput name="duration" type="number" label="Runtime (min)" min="0" />
         <MoneyInput name="budget" label="Budget" />
         <MoneyInput name="boxOffice" label="Box Office" />
         <AwardsSelect awardOptions={initialOptions.options.awards} />
         <CastAndCrewSelect positionOptions={initialOptions.options.roles} />
-        <Form.Checkbox name="draft" label="Draft" type="checkbox" />
+        <AppForm.Checkbox name="draft" label="Draft" type="checkbox" />
       </Panel>
       <FilmValuesWatcher
         selectedDraft={selectedDraft}
         onDraftCreated={setSelectedDraft}
         formDefaultValues={values}
       />
-    </Form>
+    </AppForm>
   );
 };

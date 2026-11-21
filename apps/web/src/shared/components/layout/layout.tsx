@@ -1,6 +1,6 @@
 import { HeadContent, Outlet, useSearch } from '@tanstack/react-router';
-import { AppNavigation } from './components';
-import styles from './layout.module.css';
+import { AppNavigation } from './components/app-navigation/app-navigation';
+import styles from './styles.module.css';
 import { FilmDrawer } from '~/shared/components/film-drawer/film-drawer';
 
 export const Layout = () => {

@@ -4,8 +4,12 @@ import { createRoot } from 'react-dom/client';
 import { RouterProvider } from '@tanstack/react-router';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { Toaster, queryClient, type InvalidateQueryOption, router, FilterProvider } from '~/shared';
 import type { FileRoutesByTo } from '~/routeTree.gen';
+import { router } from '~/shared/services/router';
+import type { InvalidateQueryOption } from '~/shared/types/invalidate-query-option';
+import { queryClient } from '~/shared/services/query-client';
+import { FilterProvider } from '~/shared/components/filter-provider/filter-provider';
+import { Toaster } from '~/shared/components/toaster/toaster';
 
 declare module '@tanstack/react-router' {
   interface Register {

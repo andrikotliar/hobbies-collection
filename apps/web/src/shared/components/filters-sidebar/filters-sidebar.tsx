@@ -1,11 +1,11 @@
-import styles from './filters-sidebar.module.css';
+import styles from './styles.module.css';
 import clsx from 'clsx';
 import { Loader } from '~/shared/components/loader/loader';
-import { defineCssProperties } from '~/shared/helpers';
+import { defineCssProperties } from '~/shared/helpers/define-css-properties';
 import { XIcon } from 'lucide-react';
-import { BLOCKING_SCROLL_CLASS_NAME } from '~/shared/constants';
+import { BLOCKING_SCROLL_CLASS_NAME } from '~/shared/constants/app';
 
-type SidebarProps = {
+type Props = {
   isOpen: boolean;
   onToggle: () => void;
   isLoading?: boolean;
@@ -21,7 +21,7 @@ export const FiltersSidebar = ({
   heightReducer = '0px',
   topPositionMargin = '0px',
   children,
-}: SidebarProps) => {
+}: Props) => {
   if (isLoading) {
     return (
       <div className={styles.sidebar_content}>

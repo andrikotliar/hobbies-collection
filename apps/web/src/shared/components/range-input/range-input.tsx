@@ -1,8 +1,8 @@
 import { useRef } from 'react';
-import styles from './range-input.module.css';
+import styles from './styles.module.css';
 import clsx from 'clsx';
 
-export type RangeInputProps = {
+type Props = {
   min: number;
   max: number;
   step: number;
@@ -10,7 +10,7 @@ export type RangeInputProps = {
   onChange: (value: number[]) => void;
 };
 
-export const RangeInput = ({ min, max, step, value = [min, max], onChange }: RangeInputProps) => {
+export const RangeInput = ({ min, max, step, value = [min, max], onChange }: Props) => {
   const inputsRef = useRef<HTMLInputElement[]>([]);
 
   const handleValue = (event: React.ChangeEvent<HTMLInputElement>, index: number) => {

@@ -1,16 +1,17 @@
-import type { api, ApiResponse } from '~/shared';
-import styles from './collections.module.css';
+import styles from './styles.module.css';
 import { Link } from '@tanstack/react-router';
-import { getColorBaseOnFirstLetter } from '../../helpers';
 import { FilmIcon } from 'lucide-react';
 import clsx from 'clsx';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import type { api } from '~/shared/services/api';
+import { getColorBaseOnFirstLetter } from '../../helpers/get-color-based-on-first-letter';
 
-type CollectionsProps = {
+type Props = {
   list: ApiResponse<typeof api.films.getById>['collections'];
   chaptersRefId: number | null;
 };
 
-export const Collections = ({ list, chaptersRefId }: CollectionsProps) => {
+export const Collections = ({ list, chaptersRefId }: Props) => {
   return (
     <div className={styles.collections}>
       {chaptersRefId && (

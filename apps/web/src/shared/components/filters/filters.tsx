@@ -1,11 +1,14 @@
 import type z from 'zod';
-import styles from './filters.module.css';
+import styles from './styles.module.css';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm, FormProvider, type DefaultValues } from 'react-hook-form';
 import { RefreshCcwIcon, SearchIcon } from 'lucide-react';
-import { type FilterItem, Button, TextInput, useDebouncedSearch } from '~/shared';
-import { FilterOptions } from './components';
+import { FilterOptions } from './components/filter-options/filter-options';
 import { useEffect, useState } from 'react';
+import type { FilterItem } from '~/shared/types/filter';
+import { useDebouncedSearch } from '~/shared/hooks/use-debounced-search';
+import { TextInput } from '~/shared/components/text-input/text-input';
+import { Button } from '~/shared/components/button';
 
 export type FiltersProps<
   TDefaultValues extends Record<string, unknown>,

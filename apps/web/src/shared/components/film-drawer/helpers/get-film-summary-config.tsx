@@ -1,5 +1,3 @@
-import { getPluralWord, type api, type ApiResponse } from '~/shared';
-import { LinksGroupWrapper, DataLink, LinksGroup, ReleaseDate } from '../components';
 import {
   BookIcon,
   BuildingIcon,
@@ -11,6 +9,13 @@ import {
   WalletIcon,
 } from 'lucide-react';
 import { getFormattedMoneyValue } from '@hobbies-collection/shared';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import type { api } from '~/shared/services/api';
+import { getPluralWord } from '~/shared/helpers/get-plural-word';
+import { LinksGroup } from '../components/links-group/links-group';
+import { ReleaseDate } from '../components/release-date/release-date';
+import { DataLink } from '../components/data-link/data-link';
+import { LinksGroupWrapper } from '../components/links-group-wrapper/links-group-wrapper';
 
 export type SummaryConfig = {
   id: string;

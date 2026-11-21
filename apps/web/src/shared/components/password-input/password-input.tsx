@@ -1,13 +1,11 @@
-import styles from './password-input.module.css';
+import styles from './styles.module.css';
 import { EyeIcon, EyeOffIcon } from 'lucide-react';
 import { useState } from 'react';
-import { TextInput, type TextInputProps } from '../text-input/text-input';
-
-export type PasswordInputProps = Omit<TextInputProps, 'type'>;
+import { TextInput } from '../text-input/text-input';
 
 type InputTypeVariants = 'text' | 'password';
 
-export const PasswordInput = (props: PasswordInputProps) => {
+export const PasswordInput = (props: Omit<React.ComponentProps<typeof TextInput>, 'type'>) => {
   const [inputType, setInputType] = useState<InputTypeVariants>('password');
 
   const handleShowPassword = () => {

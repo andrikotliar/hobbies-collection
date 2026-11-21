@@ -1,9 +1,12 @@
 import { Link } from '@tanstack/react-router';
-import styles from './event-poster.module.css';
+import styles from './styles.module.css';
 import clsx from 'clsx';
-import { getExternalImageUrl, Image, type api, type QueryParams } from '~/shared';
+import type { QueryParams } from '~/shared/types/extract-params';
+import type { api } from '~/shared/services/api';
+import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
+import { Image } from '~/shared/components/image/image';
 
-type EventPosterProps = {
+type Props = {
   isSelected?: boolean;
   posterPath: string | null;
   title: string;
@@ -11,13 +14,7 @@ type EventPosterProps = {
   search: QueryParams<typeof api.films.getList>;
 };
 
-export const EventPoster = ({
-  posterPath,
-  isSelected = false,
-  title,
-  subTitle,
-  search,
-}: EventPosterProps) => {
+export const EventPoster = ({ posterPath, isSelected = false, title, subTitle, search }: Props) => {
   return (
     <Link
       to="/"

@@ -1,6 +1,8 @@
-import { getHobbyRelatedCollectionsQueryOptions, Select, TextInput } from '~/shared';
-import styles from './hobby-item-filters.module.css';
+import { getHobbyRelatedCollectionsQueryOptions } from '~/shared/helpers/query-options/collections/get-hobby-related-collections-query-options';
+import styles from './styles.module.css';
 import { useSuspenseQuery } from '@tanstack/react-query';
+import { TextInput } from '~/shared/components/text-input/text-input';
+import { Select } from '~/shared/components/select/select';
 
 type PartialFilters = {
   [key: string]: any;

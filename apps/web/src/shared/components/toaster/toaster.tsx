@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
-import { eventEmitter, type Toast, type ToastType } from '~/shared';
-import { Message, MessagesWrapper } from './components';
+import type { Toast, ToastType } from '~/shared/types/toaster';
+import { eventEmitter } from '~/shared/services/event-emitter';
+import { Message } from './components/message/message';
+import { MessagesWrapper } from './components/messages-wrapper/messages-wrapper';
 
 const messageTypeToTimeout: Record<ToastType, number> = {
   success: 3000,

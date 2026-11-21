@@ -1,14 +1,14 @@
-import styles from './tool-button.module.css';
+import styles from './styles.module.css';
 
 import clsx from 'clsx';
 
-type ToolButtonProps = {
+type Props = {
   onClick: VoidFunction;
   icon: React.ReactNode;
   isActive?: boolean;
 };
 
-export const ToolButton = ({ icon, onClick, isActive = false }: ToolButtonProps) => {
+export const ToolButton = ({ icon, onClick, isActive = false }: Props) => {
   return (
     <button
       className={clsx(styles.button, {

@@ -1,21 +1,18 @@
 import type z from 'zod';
-import {
-  type FormComponentProps,
-  Form,
-  api,
-  getFilmsByCollectionQueryOptions,
-  mutateEntity,
-  queryKey,
-} from '~/shared';
-import { getFormTitle } from '~/routes/console/-shared/helpers';
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { CollectionFormSchema } from '~/routes/console/collections/-schemas';
-import { useFormModal } from '~/routes/console/-shared';
 import { FilmsSelect } from '~/routes/console/collections/-components/films-select/films-select';
+import type { FormComponentProps } from '~/shared/types/form-component-props';
+import { useFormModal } from '~/shared/context/form-modal-context';
+import { getFilmsByCollectionQueryOptions } from '~/shared/helpers/query-options/films/get-films-by-collection-query-options';
+import { mutateEntity } from '~/shared/helpers/mutate-entity';
+import { api, queryKey } from '~/shared/services/api';
+import { AppForm } from '~/shared/components/app-form';
+import { getFormTitle } from '~/shared/helpers/get-form-title';
+import { CollectionFormSchema } from '~/shared/schemas/collection-form.schema';
 
-type CollectionFormProps = FormComponentProps<z.infer<typeof CollectionFormSchema>>;
+type Props = FormComponentProps<z.infer<typeof CollectionFormSchema>>;
 
-export const CollectionForm = ({ values }: CollectionFormProps) => {
+export const CollectionForm = ({ values }: Props) => {
   const { onClose } = useFormModal();
   const { data: films = [] } = useQuery(getFilmsByCollectionQueryOptions(values.id));
 
@@ -41,16 +38,16 @@ export const CollectionForm = ({ values }: CollectionFormProps) => {
   };
 
   return (
-    <Form
+    <AppForm
       onSubmit={submit}
       defaultValues={{ ...values, films: films.map((film) => ({ ...film, filmId: film.id })) }}
       title={getFormTitle(values, 'Collection')}
       schema={CollectionFormSchema}
       isLoading={isPending}
     >
-      <Form.TextInput type="text" name="title" label="Title" />
-      <Form.TextArea label="Description" name="description" />
+      <AppForm.TextInput type="text" name="title" label="Title" />
+      <AppForm.TextArea label="Description" name="description" />
       <FilmsSelect />
-    </Form>
+    </AppForm>
   );
 };

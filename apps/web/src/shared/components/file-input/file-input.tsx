@@ -1,13 +1,15 @@
 import { FieldLabel } from '~/shared/components/field-label/field-label';
 import { Image } from '~/shared/components/image/image';
 import { useEffect, useRef, useState } from 'react';
-import styles from './file-input.module.css';
+import styles from './styles.module.css';
 import { Trash2Icon, UploadIcon } from 'lucide-react';
-import { Button } from '~/shared/components/button/button';
-import { getExternalImageUrl, imagePaths, type FormError } from '~/shared';
+import { Button } from '~/shared/components/button';
 import { FieldError } from '~/shared/components/field-error/field-error';
+import type { FormError } from '~/shared/types/form-error';
+import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
+import { imagePaths } from '~/shared/configs/image-paths';
 
-export type FileInputProps = {
+type Props = {
   label?: string;
   onChange: (file: File) => void;
   width?: React.CSSProperties['width'];
@@ -27,7 +29,7 @@ export const FileInput = ({
   defaultValue = null,
   onRemove,
   error,
-}: FileInputProps) => {
+}: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
 

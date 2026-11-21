@@ -1,12 +1,14 @@
-import { EventPoster } from '~/routes/_home/-components/films-section/components/current-events/components/event-poster/event-poster';
-import { getPluralWord, type api, type ApiResponse } from '~/shared';
+import { getPluralWord } from '~/shared/helpers/get-plural-word';
+import type { api } from '~/shared/services/api';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import { EventPoster } from '../event-poster/event-poster';
 
-type EventBannerProps = {
+type Props = {
   event: ApiResponse<typeof api.films.getList>['events'][number];
   selectedEventId?: number;
 };
 
-export const EventBanner = ({ event, selectedEventId }: EventBannerProps) => {
+export const EventBanner = ({ event, selectedEventId }: Props) => {
   const year = new Date().getFullYear();
   const isSelected = selectedEventId === event.collectionId;
   const subTitle = event.yearFrom

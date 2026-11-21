@@ -1,15 +1,17 @@
-import { Button, Form, toaster } from '~/shared';
-import styles from './money-input.module.css';
+import styles from './styles.module.css';
 import { useFormContext } from 'react-hook-form';
 import type z from 'zod';
-import type { FilmFormSchema } from '~/routes/console/films_/-components/film-form/-schemas';
+import { Button } from '~/shared/components/button';
+import { AppForm } from '~/shared/components/app-form';
+import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
+import { toaster } from '~/shared/utils/toaster';
 
-type MoneyInputProps = {
+type Props = {
   label: string;
   name: 'budget' | 'boxOffice';
 };
 
-export const MoneyInput = ({ name, label }: MoneyInputProps) => {
+export const MoneyInput = ({ name, label }: Props) => {
   const { setValue, getValues } = useFormContext<z.infer<typeof FilmFormSchema>>();
 
   const handleMultiplier = (multiplier: number) => {
@@ -37,7 +39,7 @@ export const MoneyInput = ({ name, label }: MoneyInputProps) => {
 
   return (
     <div className={styles.wrapper}>
-      <Form.TextInput type="number" name={name} label={label} min="0" />
+      <AppForm.TextInput type="number" name={name} label={label} min="0" />
       <div className={styles.auto_fill}>
         <Button variant="light" onClick={() => handleMultiplier(1_000_000)}>
           × 1 million

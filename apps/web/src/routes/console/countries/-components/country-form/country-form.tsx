@@ -1,13 +1,16 @@
-import { api, Form, mutateEntity, queryKey, type FormComponentProps } from '~/shared';
-import { getFormTitle } from '~/routes/console/-shared/helpers';
 import type z from 'zod';
-import { useFormModal } from '~/routes/console/-shared';
-import { CountryFormSchema } from '~/routes/console/countries/-schemas';
 import { useMutation } from '@tanstack/react-query';
+import type { FormComponentProps } from '~/shared/types/form-component-props';
+import { mutateEntity } from '~/shared/helpers/mutate-entity';
+import { api, queryKey } from '~/shared/services/api';
+import { useFormModal } from '~/shared/context/form-modal-context';
+import { AppForm } from '~/shared/components/app-form';
+import { getFormTitle } from '~/shared/helpers/get-form-title';
+import { CountryFormSchema } from '~/shared/schemas/country-form.schema';
 
-type CountryFormProps = FormComponentProps<z.infer<typeof CountryFormSchema>>;
+type Props = FormComponentProps<z.infer<typeof CountryFormSchema>>;
 
-export const CountryForm = ({ values }: CountryFormProps) => {
+export const CountryForm = ({ values }: Props) => {
   const { mutateAsync, isPending } = useMutation({
     mutationFn: mutateEntity(api.countries.create, api.countries.update),
     meta: {
@@ -25,14 +28,14 @@ export const CountryForm = ({ values }: CountryFormProps) => {
   };
 
   return (
-    <Form
+    <AppForm
       onSubmit={submit}
       defaultValues={values}
       schema={CountryFormSchema}
       isLoading={isPending}
       title={getFormTitle(values, 'Country')}
     >
-      <Form.TextInput name="title" label="Title" />
-    </Form>
+      <AppForm.TextInput name="title" label="Title" />
+    </AppForm>
   );
 };

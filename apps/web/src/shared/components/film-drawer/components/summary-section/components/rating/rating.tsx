@@ -1,13 +1,13 @@
 import { Link } from '@tanstack/react-router';
-import styles from './rating.module.css';
+import styles from './styles.module.css';
 import { StarIcon } from 'lucide-react';
 import clsx from 'clsx';
 
-type RatingProps = {
+type Props = {
   value: number;
 };
 
-export const Rating = ({ value }: RatingProps) => {
+export const Rating = ({ value }: Props) => {
   return (
     <Link className={styles.rating} to="/" search={{ rating: value }}>
       {Array.from({ length: 3 }, (_, index) => (

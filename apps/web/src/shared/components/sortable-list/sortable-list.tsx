@@ -1,6 +1,6 @@
 import { closestCenter, DndContext, type DragEndEvent, type UniqueIdentifier } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
-import { SortableItem } from './components';
+import { SortableItem } from './components/sortable-item/sortable-item';
 
 type ListItem = {
   id: UniqueIdentifier;

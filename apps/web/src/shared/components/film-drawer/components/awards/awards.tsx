@@ -1,14 +1,15 @@
-import { type api, type ApiResponse } from '~/shared';
-import { Award } from './components';
-import styles from './awards.module.css';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import { Award } from './components/award/award';
+import styles from './styles.module.css';
+import type { api } from '~/shared/services/api';
 
 type Awards = ApiResponse<typeof api.films.getById>['awards'];
 
-type AwardsProps = {
+type Props = {
   data: Awards;
 };
 
-export const Awards = ({ data }: AwardsProps) => {
+export const Awards = ({ data }: Props) => {
   return (
     <div className={styles.awards}>
       <div className={styles.title}>Awards</div>

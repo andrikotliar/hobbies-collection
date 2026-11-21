@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FilterContext, type FilterId } from '~/shared/context';
+import { FilterContext, type FilterId } from '~/shared/context/filter-context';
 
 export const FilterProvider = ({ children }: React.PropsWithChildren) => {
   const [filterId, setFilterId] = useState<FilterId | null>(null);

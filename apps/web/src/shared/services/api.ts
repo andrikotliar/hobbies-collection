@@ -2,7 +2,7 @@ import { redirect } from '@tanstack/react-router';
 import { createApiClient, HttpError } from '@hobbies-collection/contracts';
 import type { ErrorCode } from '@hobbies-collection/shared';
 import { queryClient } from '~/shared/services/query-client';
-import { LOGIN_BLOCK_KEY } from '~/shared/constants';
+import { LOGIN_BLOCK_KEY } from '~/shared/constants/app';
 
 const TOKEN_ERRORS: Extract<ErrorCode, 'TOKEN_EXPIRED' | 'TOKEN_MISSED'>[] = [
   'TOKEN_EXPIRED',

@@ -1,10 +1,11 @@
 import { createPortal } from 'react-dom';
-import styles from './modal.module.css';
-import { ModalCloseButton, ModalContent } from '~/shared/components/modal/components';
+import styles from './styles.module.css';
 import clsx from 'clsx';
-import { BLOCKING_SCROLL_CLASS_NAME } from '~/shared/constants';
+import { BLOCKING_SCROLL_CLASS_NAME } from '~/shared/constants/app';
+import { ModalContent } from './components/modal-content/modal-content';
+import { ModalCloseButton } from './components/modal-close-button/modal-close-button';
 
-type ModalProps = {
+type Props = {
   isOpen: boolean;
   onClose: VoidFunction;
   isAllowedClickOutside?: boolean;
@@ -16,7 +17,7 @@ export const Modal = ({
   children,
   onClose,
   isAllowedClickOutside = true,
-}: ModalProps) => {
+}: Props) => {
   if (!isOpen) {
     return null;
   }

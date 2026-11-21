@@ -3,15 +3,18 @@ import { useMutation } from '@tanstack/react-query';
 import { PlusIcon, TrashIcon } from 'lucide-react';
 import { useFieldArray, useFormContext } from 'react-hook-form';
 import type z from 'zod';
-import type { FilmFormSchema } from '~/routes/console/films_/-components/film-form/-schemas';
-import { api, Button, FieldError, Form, queryKey } from '~/shared';
-import styles from './people-select.module.css';
+import styles from './styles.module.css';
+import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
+import { AppForm } from '~/shared/components/app-form';
+import { api, queryKey } from '~/shared/services/api';
+import { Button } from '~/shared/components/button';
+import { FieldError } from '~/shared/components/field-error/field-error';
 
-type PeopleSelectProps = {
+type Props = {
   index: number;
 };
 
-export const PeopleSelect = ({ index }: PeopleSelectProps) => {
+export const PeopleSelect = ({ index }: Props) => {
   const { control, watch, formState } = useFormContext<z.infer<typeof FilmFormSchema>>();
 
   const values = watch('castAndCrew');
@@ -50,7 +53,7 @@ export const PeopleSelect = ({ index }: PeopleSelectProps) => {
         <div key={field.id} className={styles.person}>
           <div className={styles.row}>
             <div className={styles.left_column}>
-              <Form.AsyncSelect
+              <AppForm.AsyncSelect
                 name={`castAndCrew.${index}.people.${personIndex}.personId`}
                 label="Person"
                 optionsLoader={api.people.search}
@@ -62,7 +65,7 @@ export const PeopleSelect = ({ index }: PeopleSelectProps) => {
                 }}
               />
               {values[index].role === 'ACTOR' && (
-                <Form.TextInput
+                <AppForm.TextInput
                   name={`castAndCrew.${index}.people.${personIndex}.details`}
                   label="Details"
                 />

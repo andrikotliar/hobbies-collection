@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react';
-import { VideoPreview } from './components';
-import styles from './video-input.module.css';
-import { Button } from '~/shared/components/button/button';
+import { VideoPreview } from './components/video-preview/video-preview';
+import styles from './styles.module.css';
+import { Button } from '~/shared/components/button';
 import { Trash2Icon } from 'lucide-react';
 import { FieldLabel } from '~/shared/components/field-label/field-label';
-import { TextInput, type TextInputProps } from '~/shared/components/text-input/text-input';
-import { getEmbeddableYoutubeUrl } from '~/shared/helpers';
+import { TextInput } from '~/shared/components/text-input/text-input';
+import { getEmbeddableYoutubeUrl } from '~/shared/helpers/get-embeddable-youtube-url';
 import type { RefCallBack } from 'react-hook-form';
 
-export type VideoInputProps = {
+type Props = {
   label?: string;
   error?: string | string[];
   externalWatchedValue?: string;
   onRemove?: VoidFunction;
   ref?: RefCallBack;
-} & Omit<TextInputProps, 'type' | 'label' | 'ref'>;
+} & Omit<React.ComponentProps<typeof TextInput>, 'type' | 'label' | 'ref'>;
 
 export const VideoInput = ({
   onBlur,
@@ -24,7 +24,7 @@ export const VideoInput = ({
   onRemove,
   ref,
   ...textInputProps
-}: VideoInputProps) => {
+}: Props) => {
   const [videoData, setVideoData] = useState(getEmbeddableYoutubeUrl(externalWatchedValue ?? ''));
   const [internalError, setInternalError] = useState<string | null>(null);
 

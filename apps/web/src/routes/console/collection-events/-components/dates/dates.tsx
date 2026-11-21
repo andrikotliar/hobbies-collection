@@ -1,8 +1,9 @@
-import styles from './dates.module.css';
+import styles from './styles.module.css';
 import { useFormContext } from 'react-hook-form';
 import type z from 'zod';
-import type { CollectionEventFormSchema } from '~/routes/console/collection-events/-schemas';
-import { FieldLabel, Form } from '~/shared';
+import { FieldLabel } from '~/shared/components/field-label/field-label';
+import { AppForm } from '~/shared/components/app-form';
+import type { CollectionEventFormSchema } from '~/shared/schemas/collection-event-form.schema';
 
 export const Dates = () => {
   const { watch } = useFormContext<z.infer<typeof CollectionEventFormSchema>>();
@@ -14,16 +15,16 @@ export const Dates = () => {
       <div className={styles.column}>
         <div className={styles.date_field}>
           <FieldLabel>Start Date</FieldLabel>
-          <Form.Checkbox name="isOneDayEvent" type="checkbox" label="One day event" />
+          <AppForm.Checkbox name="isOneDayEvent" type="checkbox" label="One day event" />
         </div>
-        <Form.MonthDateSelector name="startDateCode" />
+        <AppForm.MonthDateSelector name="startDateCode" />
       </div>
       {!isOneDayEvent && (
         <div className={styles.column}>
           <div className={styles.date_field}>
             <FieldLabel>End Date</FieldLabel>
           </div>
-          <Form.MonthDateSelector name="endDateCode" />
+          <AppForm.MonthDateSelector name="endDateCode" />
         </div>
       )}
     </div>

@@ -1,16 +1,18 @@
-import styles from './trailers-playlist.module.css';
+import styles from './styles.module.css';
 import { useMemo, useState } from 'react';
 import { PlayIcon } from 'lucide-react';
 import clsx from 'clsx';
 import { Video } from '../video/video';
-import { getEmbeddableYoutubeUrl, type api, type ApiResponse } from '~/shared';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import type { api } from '~/shared/services/api';
+import { getEmbeddableYoutubeUrl } from '~/shared/helpers/get-embeddable-youtube-url';
 
-type TrailersPlaylistProps = {
+type Props = {
   trailers: ApiResponse<typeof api.films.getById>['trailers'];
   previewLabel: string;
 };
 
-export const TrailersPlaylist = ({ trailers, previewLabel }: TrailersPlaylistProps) => {
+export const TrailersPlaylist = ({ trailers, previewLabel }: Props) => {
   const [shouldAutoPlay, setShouldAutoPlay] = useState(trailers.length === 1);
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
 

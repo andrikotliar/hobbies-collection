@@ -1,21 +1,19 @@
-import {
-  getExternalImageUrl,
-  getPluralWord,
-  getYearFromDate,
-  Image,
-  type api,
-  type ApiResponse,
-} from '~/shared';
-import styles from './films-grid.module.css';
+import styles from './styles.module.css';
 import { Link } from '@tanstack/react-router';
 import { FilmsNotFound } from '~/routes/_home/-components/films-section/components/films-not-found/films-not-found';
 import { PlayIcon } from 'lucide-react';
 import { useState } from 'react';
 import { TrailerWindow } from '~/routes/_home/-components/films-section/components/trailer-window/trailer-window';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import type { api } from '~/shared/services/api';
+import { getYearFromDate } from '~/shared/helpers/get-year-from-date';
+import { getPluralWord } from '~/shared/helpers/get-plural-word';
+import { Image } from '~/shared/components/image/image';
+import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
 
 type Film = ApiResponse<typeof api.films.getList>['list'][number];
 
-type FilmsGridProps = {
+type Props = {
   films: ApiResponse<typeof api.films.getList>['list'];
   shouldShowCounter: boolean;
 };
@@ -32,7 +30,7 @@ const getYearValue = (film: Film) => {
   return getYearFromDate(film.releaseDate);
 };
 
-export const FilmsGrid = ({ films, shouldShowCounter }: FilmsGridProps) => {
+export const FilmsGrid = ({ films, shouldShowCounter }: Props) => {
   const [selectedFilmId, setSelectedFilmId] = useState<number | null>(null);
 
   if (!films.length) {

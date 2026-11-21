@@ -1,4 +1,4 @@
-import { getDateCodeParts } from '~/shared';
+import { getDateCodeParts } from '~/shared/helpers/get-date-code-parts';
 
 const months = [
   'Jan',
@@ -20,9 +20,7 @@ const convertCodeToString = (dateCode: number) => {
   return `${months[dateCodeParts[0] - 1]}, ${dateCodeParts[1]}`;
 };
 
-export const getDateMonthLabel = <T extends { startDateCode: number; endDateCode: number }>(
-  data: T,
-) => {
+export const getDateMonthLabel = <T extends Record<string, any>>(data: T) => {
   if (data.startDateCode === data.endDateCode) {
     return convertCodeToString(data.startDateCode);
   }

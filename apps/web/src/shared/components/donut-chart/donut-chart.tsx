@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { createSlicePath } from '~/shared/components/donut-chart/helpers/create-slice-path';
 import { generateColors } from '~/shared/components/donut-chart/helpers/generate-colors';
-import styles from './donut-chart.module.css';
+import styles from './styles.module.css';
 import clsx from 'clsx';
 
 type Item = {
@@ -9,7 +9,7 @@ type Item = {
   value: number;
 };
 
-type DonutChartProps = {
+type Props = {
   data: Item[];
   size?: number;
   radius?: number;
@@ -44,7 +44,7 @@ export const DonutChart = ({
   title,
   innerRadius = 50,
   total,
-}: DonutChartProps) => {
+}: Props) => {
   const [info, setInfo] = useState(getDefaultInfoParams(total));
 
   const colors = useMemo(() => {

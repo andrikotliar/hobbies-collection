@@ -1,12 +1,15 @@
 import { Link } from '@tanstack/react-router';
-import styles from './award.module.css';
-import { getPluralWord, RouterLink, type api, type ApiResponse } from '~/shared';
+import styles from './styles.module.css';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import type { api } from '~/shared/services/api';
+import { getPluralWord } from '~/shared/helpers/get-plural-word';
+import { RouterLink } from '~/shared/components/router-link/router-link';
 
-type AwardProps = {
+type Props = {
   data: ApiResponse<typeof api.films.getById>['awards'][number];
 };
 
-export const Award = ({ data }: AwardProps) => {
+export const Award = ({ data }: Props) => {
   return (
     <div className={styles.award}>
       <Link className={styles.header} to="/" search={{ awardId: data.award.id }}>

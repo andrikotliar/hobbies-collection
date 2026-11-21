@@ -1,26 +1,21 @@
-import styles from './films-section.module.css';
-import {
-  AdditionalInfoSection,
-  CurrentEvents,
-  FilmsGrid,
-  FilmsGridSkeleton,
-  Navigation,
-} from './components';
+import styles from './styles.module.css';
 import { getRouteApi } from '@tanstack/react-router';
-import {
-  Button,
-  countObjectKeys,
-  getFilmsListQueryOptions,
-  Pagination,
-  SortingPopup,
-  TextInput,
-  useDebouncedSearch,
-  useSidebarVisibility,
-  type SortingParams,
-} from '~/shared';
 import { useQuery } from '@tanstack/react-query';
 import type { ListOption, SortingOrder } from '@hobbies-collection/shared';
 import { FilterIcon, SearchIcon } from 'lucide-react';
+import { getFilmsListQueryOptions } from '~/shared/helpers/query-options/films/get-films-list-query-options';
+import { useSidebarVisibility } from '~/shared/hooks/use-sidebar-visibility';
+import { useDebouncedSearch } from '~/shared/hooks/use-debounced-search';
+import { SortingPopup, type SortingParams } from '~/shared/components/sorting-popup/sorting-popup';
+import { countObjectKeys } from '~/shared/helpers/count-keys';
+import { Pagination } from '~/shared/components/pagination/pagination';
+import { Navigation } from './components/navigation/navigation';
+import { TextInput } from '~/shared/components/text-input/text-input';
+import { Button } from '~/shared/components/button';
+import { CurrentEvents } from './components/current-events/current-events';
+import { AdditionalInfoSection } from './components/additional-info-section/additional-info-section';
+import { FilmsGridSkeleton } from './components/films-grid-skeleton/films-grid-skeleton';
+import { FilmsGrid } from './components/films-grid/films-grid';
 
 type SortingValues = {
   order: SortingOrder;

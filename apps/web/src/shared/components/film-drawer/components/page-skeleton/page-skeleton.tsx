@@ -1,6 +1,6 @@
 import { SkeletonBlock } from '~/shared/components/skeleton-block/skeleton-block';
-import styles from './page-skeleton.module.css';
-import type { SummaryConfig } from '../../helpers';
+import styles from './styles.module.css';
+import type { SummaryConfig } from '../../helpers/get-film-summary-config';
 import {
   BookIcon,
   BuildingIcon,
@@ -11,10 +11,10 @@ import {
   StarIcon,
   WalletIcon,
 } from 'lucide-react';
-import { SummaryBlock } from '../summary-section/components';
+import { SummaryBlock } from '../summary-section/components/summary-block/summary-block';
 import { FilmPageLayout } from '../film-page-layout/film-page-layout';
 import { PersonRole } from '@hobbies-collection/shared';
-import { RoleTitle } from '../cast-and-crew/components';
+import { RoleTitle } from '../cast-and-crew/components/role-title/role-title';
 
 const skeletonSummaryConfig: SummaryConfig[] = [
   {

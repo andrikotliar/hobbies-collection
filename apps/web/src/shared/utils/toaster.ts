@@ -1,5 +1,5 @@
-import type { ToastType } from '~/shared/types';
-import { eventEmitter } from '~/shared/services';
+import type { ToastType } from '~/shared/types/toaster';
+import { eventEmitter } from '~/shared/services/event-emitter';
 
 type MessageData = {
   message: string;

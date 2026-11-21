@@ -1,18 +1,15 @@
-import { createFileRoute } from '@tanstack/react-router';
-import {
-  getCollectionsListQueryOptions,
-  getEmptyFormValues,
-  api,
-  type Input,
-  queryKey,
-} from '~/shared';
-import { List, useFormModal, withFormModal } from '~/routes/console/-shared';
-import { CollectionForm } from '~/routes/console/collections/-components';
-import type z from 'zod';
-import type { CollectionFormSchema } from '~/routes/console/collections/-schemas';
-import { useQuery } from '@tanstack/react-query';
 import { useCallback } from 'react';
+import { createFileRoute } from '@tanstack/react-router';
+import { useQuery } from '@tanstack/react-query';
 import { CommonListQuerySchema } from '@hobbies-collection/shared';
+import { getEmptyFormValues } from '~/shared/helpers/get-empty-form-values';
+import type { Input } from '~/shared/types/extract-params';
+import { api, queryKey } from '~/shared/services/api';
+import { getCollectionsListQueryOptions } from '~/shared/helpers/query-options/collections/get-collections-list-query-options';
+import { withFormModal } from '~/shared/helpers/with-form-modal';
+import { CollectionForm } from '~/routes/console/collections/-components/collection-form/collection-form';
+import { useFormModal } from '~/shared/context/form-modal-context';
+import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
 
 const collectionFormDefaultValues = getEmptyFormValues<Input<typeof api.collections.create>>({
   title: '',
@@ -52,7 +49,7 @@ const getDeleteMutationsOptions = () => {
 function PageContainer() {
   const search = Route.useSearch();
   const { data, isFetching } = useQuery(getCollectionsListQueryOptions(search));
-  const { onOpen } = useFormModal<z.infer<typeof CollectionFormSchema>>();
+  const { onOpen } = useFormModal();
   const navigate = Route.useNavigate();
 
   const handlePageChange = (index: number) => {
@@ -75,7 +72,7 @@ function PageContainer() {
   }, []);
 
   return (
-    <List
+    <ConsolePageList
       data={data}
       getDeleteMutationOptions={getDeleteMutationsOptions}
       onEdit={(data) => onOpen({ ...data, films: [] })}

@@ -1,9 +1,9 @@
-import styles from './section-title.module.css';
+import styles from './styles.module.css';
 
-type SectionTitleProps = {
+type Props = {
   children?: React.ReactNode;
 };
 
-export const SectionTitle = ({ children }: SectionTitleProps) => {
+export const SectionTitle = ({ children }: Props) => {
   return <h2 className={styles.section_title}>{children}</h2>;
 };

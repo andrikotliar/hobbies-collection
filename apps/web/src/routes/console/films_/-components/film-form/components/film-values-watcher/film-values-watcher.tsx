@@ -1,10 +1,13 @@
-import { api, countObjectKeys, debounce, getObjectsDiff } from '~/shared';
 import { useCallback, useEffect } from 'react';
 import { useFormContext } from 'react-hook-form';
-import type { FilmFormSchema } from '~/routes/console/films_/-components/film-form/-schemas';
 import type z from 'zod';
 import type { FilmDraftResponse } from '@hobbies-collection/shared';
 import { useParams } from '@tanstack/react-router';
+import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
+import { debounce } from '~/shared/helpers/debounce';
+import { getObjectsDiff } from '~/shared/helpers/get-objects-diff';
+import { countObjectKeys } from '~/shared/helpers/count-keys';
+import { api } from '~/shared/services/api';
 
 type FilmValuesWatcher = {
   selectedDraft: FilmDraftResponse | null;
@@ -32,7 +35,7 @@ export const FilmValuesWatcher = ({
           return;
         }
 
-        api.films.updateDraft({
+        void api.films.updateDraft({
           params: {
             id: selectedDraft.id,
           },
@@ -50,7 +53,7 @@ export const FilmValuesWatcher = ({
         return;
       }
 
-      api.films
+      void api.films
         .createDraft({
           input: { content },
           params: { filmId: params.id },

@@ -1,7 +1,8 @@
-import { createFileRoute, redirect } from '@tanstack/react-router';
-import { LoginForm, LoginLayout } from './-components';
 import { z } from 'zod';
-import { LOGIN_BLOCK_KEY } from '~/shared';
+import { createFileRoute, redirect } from '@tanstack/react-router';
+import { LOGIN_BLOCK_KEY } from '~/shared/constants/app';
+import { LoginLayout } from '~/routes/login/-components/login-layout/login-layout';
+import { LoginForm } from '~/routes/login/-components/login-form/login-form';
 
 const SearchParamsSchema = z.object({
   from: z.string().optional(),

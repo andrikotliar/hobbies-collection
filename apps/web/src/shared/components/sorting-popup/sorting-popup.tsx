@@ -1,18 +1,19 @@
+import clsx from 'clsx';
 import { useRef, useState } from 'react';
 import { PopupMenu } from '../popup-menu/popup-menu';
-import { Button, sortingDirectionOptions } from '~/shared';
-import styles from './sorting-popup.module.css';
+import styles from './styles.module.css';
 import type { ListOption, SortingOrder } from '@hobbies-collection/shared';
-import { getDefaultLabel } from '~/shared/components/sorting-popup/helpers';
 import { ArrowDownAZIcon, ArrowUpAZIcon } from 'lucide-react';
-import clsx from 'clsx';
+import { Button } from '~/shared/components/button';
+import { sortingDirectionOptions } from '~/shared/configs/sorting-direction-options';
+import { getDefaultLabel } from '~/shared/components/sorting-popup/helpers/get-default-label';
 
 export type SortingParams = {
   orderKey?: string;
   order?: SortingOrder;
 };
 
-type SortingPopupProps = {
+type Props = {
   fields: ListOption<string, { isNotSelectable?: boolean }>[];
   defaultOrderKey: string;
   defaultOrder: SortingOrder;
@@ -28,7 +29,7 @@ export const SortingPopup = ({
   defaultOrder,
   isDisabled = false,
   buttonWrapperClassName,
-}: SortingPopupProps) => {
+}: Props) => {
   const sortingPopupButton = useRef<HTMLButtonElement>(null);
   const [isOpen, setIsOpen] = useState(false);
 

@@ -1,12 +1,12 @@
 import { DataLink } from '../data-link/data-link';
 import { LinksGroupWrapper } from '../links-group-wrapper/links-group-wrapper';
 
-type LinksGroupProps = {
+type Props = {
   basePath: string;
   items: { id: number; title: string }[];
 };
 
-export const LinksGroup = ({ basePath, items }: LinksGroupProps) => {
+export const LinksGroup = ({ basePath, items }: Props) => {
   if (items.length === 0) {
     return <span>N/A</span>;
   }

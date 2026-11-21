@@ -1,16 +1,7 @@
-import styles from './pagination.module.css';
+import styles from './styles.module.css';
 import { useMemo } from 'react';
 import clsx from 'clsx';
-import { buildPagination } from '~/shared';
-
-export type PaginationProps = {
-  currentPageIndex?: number;
-  total: number;
-  onPageChange: (pageIndex: number) => void;
-  perPageCounter: number;
-  totalLabel?: string;
-  wrapperClassName?: string;
-};
+import { buildPagination } from '~/shared/helpers/build-pagination';
 
 type RangeParams = {
   currentPageIndex: number;
@@ -32,6 +23,15 @@ const getCurrentRangeEnd = ({ currentPageIndex, total, perPageCounter }: RangePa
   return total;
 };
 
+type Props = {
+  currentPageIndex?: number;
+  total: number;
+  onPageChange: (pageIndex: number) => void;
+  perPageCounter: number;
+  totalLabel?: string;
+  wrapperClassName?: string;
+};
+
 export const Pagination = ({
   total,
   onPageChange,
@@ -39,7 +39,7 @@ export const Pagination = ({
   perPageCounter,
   totalLabel = 'items',
   wrapperClassName,
-}: PaginationProps) => {
+}: Props) => {
   const pagesCount = Math.ceil(total / perPageCounter);
   const currentRangeEnd = getCurrentRangeEnd({ total, currentPageIndex, perPageCounter });
 

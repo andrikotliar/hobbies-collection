@@ -1,6 +1,6 @@
-import { mainLogoSvg } from '~/assets';
+import mainLogoSvg from '~/assets/logos/main-logo.svg';
 import { Image } from '~/shared/components/image/image';
-import styles from './page-loader.module.css';
+import styles from './styles.module.css';
 
 export const PageLoader = () => {
   return (

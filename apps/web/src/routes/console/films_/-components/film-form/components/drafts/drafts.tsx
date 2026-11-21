@@ -2,26 +2,23 @@ import type { FilmDraftResponse } from '@hobbies-collection/shared';
 import { useMutation, useSuspenseQuery } from '@tanstack/react-query';
 import { useParams } from '@tanstack/react-router';
 import { useState } from 'react';
-import {
-  api,
-  Button,
-  ConfirmModal,
-  getFilmDraftsQueryOptions,
-  Modal,
-  Panel,
-  queryKey,
-  toaster,
-} from '~/shared';
-import styles from './drafts.module.css';
+import styles from './styles.module.css';
 import { useFormContext } from 'react-hook-form';
 import { Trash2Icon, TrashIcon } from 'lucide-react';
+import { getFilmDraftsQueryOptions } from '~/shared/helpers/query-options/films/get-film-drafts-query-options';
+import { toaster } from '~/shared/utils/toaster';
+import { api, queryKey } from '~/shared/services/api';
+import { Panel } from '~/shared/components/panel/panel';
+import { Button } from '~/shared/components/button';
+import { Modal } from '~/shared/components/modal/modal';
+import { ConfirmModal } from '~/shared/components/confirm-modal/confirm-modal';
 
-type DraftsProps = {
+type Props = {
   selectedDraft: FilmDraftResponse | null;
   onSelectDraft: (draft: FilmDraftResponse | null) => void;
 };
 
-export const Drafts = ({ selectedDraft, onSelectDraft }: DraftsProps) => {
+export const Drafts = ({ selectedDraft, onSelectDraft }: Props) => {
   const params = useParams({ from: '/console/films_/$id' });
   const { data } = useSuspenseQuery(getFilmDraftsQueryOptions(params.id));
   const [contentToView, setContentToView] = useState<FilmDraftResponse | null>(null);

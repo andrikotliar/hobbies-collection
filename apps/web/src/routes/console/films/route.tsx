@@ -1,25 +1,24 @@
-import {
-  Filters,
-  getFilmsAdminListQueryOptions,
-  getInitialDataQueryOptions,
-  useSidebarVisibility,
-  filterValues,
-  countObjectKeys,
-  api,
-  FiltersSidebar,
-  type SortingParams,
-  queryKey,
-} from '~/shared';
+import type z from 'zod';
 import { createFileRoute } from '@tanstack/react-router';
-import { GetAdminListQuerySchema, type ListOption } from '@hobbies-collection/shared';
-import { mutationOptions, useQuery, useSuspenseQuery } from '@tanstack/react-query';
 import { useCallback, useMemo } from 'react';
+import { mutationOptions, useQuery, useSuspenseQuery } from '@tanstack/react-query';
+import { GetAdminListQuerySchema, type ListOption } from '@hobbies-collection/shared';
+import { getFilmsAdminListQueryOptions } from '~/shared/helpers/query-options/films/get-films-admin-list-query-options';
+import { getInitialDataQueryOptions } from '~/shared/helpers/query-options/initial-data/get-initial-data-query-options';
+import { api, queryKey } from '~/shared/services/api';
+import { useSidebarVisibility } from '~/shared/hooks/use-sidebar-visibility';
+import { Filters } from '~/shared/components/filters/filters';
+import { filterValues } from '~/shared/helpers/filter-values';
 import {
   AdminFiltersSchema,
   defaultAdminFilters,
   getAdminFiltersConfig,
-} from '~/routes/console/films/-helpers';
-import { ContentWithSidebar, List } from '~/routes/console/-shared';
+} from '~/routes/console/films/-helpers/get-admin-filters-config';
+import { countObjectKeys } from '~/shared/helpers/count-keys';
+import type { SortingParams } from '~/shared/components/sorting-popup/sorting-popup';
+import { ContentWithSidebar } from '~/shared/components/content-with-sidebar/content-with-sidebar';
+import { FiltersSidebar } from '~/shared/components/filters-sidebar/filters-sidebar';
+import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
 
 export const Route = createFileRoute('/console/films')({
   validateSearch: (search) => {
@@ -112,7 +111,7 @@ function PageContainer() {
     });
   };
 
-  const filterFilms: React.ComponentProps<typeof Filters>['onSubmit'] = (data) => {
+  const filterFilms = (data: z.infer<typeof AdminFiltersSchema>) => {
     const appliedFilters = filterValues(data);
 
     const searchParams = {
@@ -188,7 +187,7 @@ function PageContainer() {
           onReset={handleReset}
         />
       </FiltersSidebar>
-      <List
+      <ConsolePageList
         data={data}
         getDeleteMutationOptions={getDeleteMutationOptions}
         onEdit={handleEditFilm}

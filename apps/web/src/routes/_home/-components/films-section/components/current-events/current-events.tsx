@@ -1,18 +1,17 @@
-import styles from './current-events.module.css';
-import { type api, type ApiResponse } from '~/shared';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import styles from './styles.module.css';
 import { Link, useSearch } from '@tanstack/react-router';
-import {
-  EventBanner,
-  EventPoster,
-} from '~/routes/_home/-components/films-section/components/current-events/components';
+import type { api } from '~/shared/services/api';
+import { EventPoster } from './components/event-poster/event-poster';
+import { EventBanner } from './components/event-banner/event-banner';
 
-type CurrentEventsProps = {
+type Props = {
   events: ApiResponse<typeof api.films.getList>['events'];
   total: number;
   anniversaryPoster: string | null;
 };
 
-export const CurrentEvents = ({ events, total, anniversaryPoster }: CurrentEventsProps) => {
+export const CurrentEvents = ({ events, total, anniversaryPoster }: Props) => {
   const search = useSearch({ from: '/_home/' });
 
   if (!events.length && !anniversaryPoster) {

@@ -1,11 +1,14 @@
-import { getExternalImageUrl, Image, type api, type ApiResponse } from '~/shared';
-import styles from './hobby-items-grid.module.css';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import styles from './styles.module.css';
+import type { api } from '~/shared/services/api';
+import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
+import { Image } from '~/shared/components/image/image';
 
-type HobbyItemsGridProps = {
+type Props = {
   items: ApiResponse<typeof api.hobbies.getHobby>['items'];
 };
 
-export const HobbyItemsGrid = ({ items }: HobbyItemsGridProps) => {
+export const HobbyItemsGrid = ({ items }: Props) => {
   return (
     <div className={styles.wrapper}>
       {items.map((item) => (

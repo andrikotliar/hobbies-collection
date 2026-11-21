@@ -1,4 +1,3 @@
-import { type MenuConfigItem } from '../types';
 import {
   BuildingIcon,
   CalendarClockIcon,
@@ -15,6 +14,7 @@ import {
   VideotapeIcon,
 } from 'lucide-react';
 import { DraftLevel } from '@hobbies-collection/shared';
+import type { MenuConfigItem } from '~/shared/types/menu-config-item';
 
 export const consoleMenuConfig: Record<string, MenuConfigItem> = {
   films: {

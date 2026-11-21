@@ -1,15 +1,15 @@
-import styles from './date-picker.module.css';
+import styles from './styles.module.css';
 import { FieldError } from '../field-error/field-error';
 import { FieldLabel } from '../field-label/field-label';
 import type { RefCallBack } from 'react-hook-form';
 
-export type DatePickerProps = {
+type Props = {
   label?: string;
   error?: string | string[];
   ref?: RefCallBack;
 } & Omit<React.ComponentProps<'input'>, 'name' | 'type' | 'className'>;
 
-export const DatePicker = ({ label, error, ref, ...props }: DatePickerProps) => {
+export const DatePicker = ({ label, error, ref, ...props }: Props) => {
   return (
     <label className={styles.wrapper}>
       {label && <FieldLabel>{label}</FieldLabel>}

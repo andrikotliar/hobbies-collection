@@ -1,5 +1,6 @@
-import { PageTitle, SkeletonBlock } from '~/shared';
-import styles from './films-grid-skeleton.module.css';
+import styles from './styles.module.css';
+import { PageTitle } from '~/shared/components/page-title/page-title';
+import { SkeletonBlock } from '~/shared/components/skeleton-block/skeleton-block';
 
 export const FilmsGridSkeleton = () => {
   return (

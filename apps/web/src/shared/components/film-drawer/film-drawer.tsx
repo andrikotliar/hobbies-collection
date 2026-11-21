@@ -1,17 +1,19 @@
 import { useQuery } from '@tanstack/react-query';
 import { Drawer } from '~/shared/components/drawer/drawer';
-import {
-  Awards,
-  CastAndCrew,
-  ContentLayout,
-  FilmPageLayout,
-  PageSkeleton,
-  SummarySection,
-} from '~/shared/components/film-drawer/components';
-import { getAdminFilmQueryOptions, getFilmQueryOptions } from '~/shared/helpers';
 import { useLocation, useNavigate } from '@tanstack/react-router';
+import {
+  getAdminFilmQueryOptions,
+  getFilmQueryOptions,
+} from '~/shared/helpers/query-options/films/get-film-query-options';
+import { PageSkeleton } from './components/page-skeleton/page-skeleton';
+import { FilmPageLayout } from './components/film-page-layout/film-page-layout';
+import { SummarySection } from './components/summary-section/summary-section';
+import { ContentLayout } from './components/content-layout/content-layout';
+import { CastAndCrew } from './components/cast-and-crew/cast-and-crew';
+import { Awards } from './components/awards/awards';
+import { VisibleSection } from '~/shared/components/film-drawer/components/visible-section';
 
-type FilmDrawerProps = {
+type Props = {
   filmId: number;
 };
 
@@ -23,7 +25,7 @@ const getQueryOptions = (isConsole: boolean, filmId: number) => {
   return getFilmQueryOptions(filmId);
 };
 
-export const FilmDrawer = ({ filmId }: FilmDrawerProps) => {
+export const FilmDrawer = ({ filmId }: Props) => {
   const location = useLocation();
   const { data: film, isLoading } = useQuery(
     getQueryOptions(location.pathname.startsWith('/console'), filmId),
@@ -47,8 +49,8 @@ export const FilmDrawer = ({ filmId }: FilmDrawerProps) => {
         <FilmPageLayout>
           <SummarySection film={film} hasExtendedData={hasExtendedData} />
           <ContentLayout>
-            {film.castAndCrew.length !== 0 && <CastAndCrew data={film.castAndCrew} />}
-            {film.awards.length > 0 && <Awards data={film.awards} />}
+            <VisibleSection data={film.castAndCrew} component={CastAndCrew} />
+            <VisibleSection data={film.awards} component={Awards} />
           </ContentLayout>
         </FilmPageLayout>
       )}

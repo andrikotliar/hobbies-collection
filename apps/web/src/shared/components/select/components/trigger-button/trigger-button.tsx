@@ -1,10 +1,10 @@
-import { Button } from '~/shared/components/button/button';
-import styles from './trigger-button.module.css';
+import { Button } from '~/shared/components/button';
+import styles from './styles.module.css';
 import clsx from 'clsx';
 import { ChevronDownIcon, XIcon } from 'lucide-react';
 import { Loader } from '~/shared/components/loader/loader';
 
-type TriggerButtonProps = {
+type Props = {
   onClick: VoidFunction;
   onClear: VoidFunction;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
@@ -30,7 +30,7 @@ export const TriggerButton = ({
   isSearchable = true,
   shouldShowClearButton,
   ref,
-}: TriggerButtonProps) => {
+}: Props) => {
   return (
     <div
       className={clsx(styles.wrapper, {

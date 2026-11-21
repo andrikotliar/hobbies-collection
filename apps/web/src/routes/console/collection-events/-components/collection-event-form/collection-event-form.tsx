@@ -1,21 +1,18 @@
 import type z from 'zod';
 import { useMutation, useSuspenseQuery } from '@tanstack/react-query';
-import {
-  api,
-  Form,
-  type FormComponentProps,
-  getInitialDataQueryOptions,
-  mutateEntity,
-  queryKey,
-} from '~/shared';
-import { getFormTitle } from '~/routes/console/-shared/helpers';
-import { Dates } from '~/routes/console/collection-events/-components';
-import { CollectionEventFormSchema } from '~/routes/console/collection-events/-schemas';
-import { useFormModal } from '~/routes/console/-shared';
+import type { FormComponentProps } from '~/shared/types/form-component-props';
+import { getInitialDataQueryOptions } from '~/shared/helpers/query-options/initial-data/get-initial-data-query-options';
+import { useFormModal } from '~/shared/context/form-modal-context';
+import { mutateEntity } from '~/shared/helpers/mutate-entity';
+import { api, queryKey } from '~/shared/services/api';
+import { getFormTitle } from '~/shared/helpers/get-form-title';
+import { AppForm } from '~/shared/components/app-form';
+import { Dates } from '~/routes/console/collection-events/-components/dates/dates';
+import { CollectionEventFormSchema } from '~/shared/schemas/collection-event-form.schema';
 
-type CollectionEventFormProps = FormComponentProps<z.infer<typeof CollectionEventFormSchema>>;
+type Props = FormComponentProps<z.infer<typeof CollectionEventFormSchema>>;
 
-export const CollectionEventForm = ({ values }: CollectionEventFormProps) => {
+export const CollectionEventForm = ({ values }: Props) => {
   const { data } = useSuspenseQuery(getInitialDataQueryOptions());
   const { onClose } = useFormModal();
 
@@ -40,27 +37,31 @@ export const CollectionEventForm = ({ values }: CollectionEventFormProps) => {
   };
 
   return (
-    <Form
+    <AppForm
       onSubmit={submit}
       defaultValues={values}
       title={title}
       schema={CollectionEventFormSchema}
       isLoading={isPending}
     >
-      <Form.TextInput name="title" label="Title" />
-      <Form.Select
+      <AppForm.TextInput name="title" label="Title" />
+      <AppForm.Select
         label="Collection"
         options={data?.options.collections ?? []}
         name="collectionId"
       />
       <Dates />
-      <Form.AsyncSelect
+      <AppForm.AsyncSelect
         name="titleFilmId"
         optionsLoader={api.films.getOptions}
         label="Title film"
         queryKeyParams={{ key: 'collectionEventFilmId', values: [values.titleFilmId] }}
       />
-      <Form.TextInput name="yearFrom" label="First event occurrence year" placeholder="E.g. 2020" />
-    </Form>
+      <AppForm.TextInput
+        name="yearFrom"
+        label="First event occurrence year"
+        placeholder="E.g. 2020"
+      />
+    </AppForm>
   );
 };

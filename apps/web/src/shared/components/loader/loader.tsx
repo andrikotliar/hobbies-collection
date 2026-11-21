@@ -1,18 +1,14 @@
-import styles from './loader.module.css';
+import styles from './styles.module.css';
 import clsx from 'clsx';
 import { LoaderCircle } from 'lucide-react';
 
-export type LoaderProps = {
+type Props = {
   isFullPage?: boolean;
   size?: number;
   shouldInheritColor?: boolean;
 };
 
-export const Loader = ({
-  isFullPage = false,
-  size = 60,
-  shouldInheritColor = false,
-}: LoaderProps) => {
+export const Loader = ({ isFullPage = false, size = 60, shouldInheritColor = false }: Props) => {
   return (
     <div
       className={clsx(styles.loader_container, {

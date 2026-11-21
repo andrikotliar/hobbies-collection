@@ -1,0 +1,4 @@
+.checkbox input:checked + .icon_wrapper .icon {
+  display: block;
+  color: var(--checkbox-theme-text, var(--color-black));
+}

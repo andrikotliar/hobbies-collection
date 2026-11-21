@@ -1,12 +1,13 @@
 import clsx from 'clsx';
-import styles from './drawer.module.css';
+import styles from './styles.module.css';
 import { XIcon } from 'lucide-react';
 import { createPortal } from 'react-dom';
-import { BLOCKING_SCROLL_CLASS_NAME } from '~/shared/constants';
-import { useDrawer } from '~/shared/hooks';
+import { BLOCKING_SCROLL_CLASS_NAME } from '~/shared/constants/app';
+import { useDrawer } from '~/shared/hooks/use-drawer';
+
 type Position = 'left' | 'right';
 
-type DrawerProps = {
+type Props = {
   children: React.ReactNode;
   /**
    * @default 1080
@@ -24,7 +25,7 @@ export const Drawer = ({
   isOpen,
   onClose,
   position = 'right',
-}: DrawerProps) => {
+}: Props) => {
   const {
     drawerRef,
     handleClose,

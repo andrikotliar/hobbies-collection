@@ -1,14 +1,19 @@
-import styles from './select.module.css';
+import styles from './styles.module.css';
 import { type ChangeEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { type FormError, useDebouncedSearch } from '~/shared';
 import { FieldLabel } from '~/shared/components/field-label/field-label';
 import { PopupMenu } from '~/shared/components/popup-menu/popup-menu';
 import { FieldError } from '~/shared/components/field-error/field-error';
-import { CreateNewItemButton, NotFound, Option, SelectedOption, TriggerButton } from './components';
-import { getSelectValue } from './helpers';
+import { getSelectValue } from './helpers/get-select-value';
 import type { ListOption } from '@hobbies-collection/shared';
+import type { FormError } from '~/shared/types/form-error';
+import { useDebouncedSearch } from '~/shared/hooks/use-debounced-search';
+import { TriggerButton } from './components/trigger-button/trigger-button';
+import { SelectedOption } from './components/selected-option/selected-option';
+import { NotFound } from './components/not-found/not-found';
+import { CreateNewItemButton } from './components/create-new-item-button/create-new-item-button';
+import { Option } from './components/option/option';
 
-export type SelectProps<T extends ListOption<any>> = {
+type Props<T extends ListOption<any>> = {
   label?: string;
   error?: FormError;
   options: T[];
@@ -40,7 +45,7 @@ export const Select = <T extends ListOption<any>>({
   onOptionsSearch,
   onCreateOption,
   onClear,
-}: SelectProps<T>) => {
+}: Props<T>) => {
   const selectedValues = useMemo(() => {
     return getSelectValue(value);
   }, [value]);

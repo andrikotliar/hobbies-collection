@@ -1,7 +1,6 @@
 import { useFormContext } from 'react-hook-form';
-import { Form } from '~/shared/components/form/form';
-
-import type { AsyncComboSelectFilter } from '~/shared/types';
+import { AppForm } from '~/shared/components/app-form';
+import type { AsyncComboSelectFilter } from '~/shared/types/filter';
 
 type ComboSelectProps<T extends Record<string, any>> = {
   filter: AsyncComboSelectFilter<T>;
@@ -13,14 +12,14 @@ export const ComboSelect = <T extends Record<string, any>>({ filter }: ComboSele
   const selectedValue = watch(filter.dependency.id);
 
   return (
-    <Form.Group title={filter.title}>
-      <Form.Select
+    <AppForm.Group title={filter.title}>
+      <AppForm.Select
         name={filter.dependency.id}
         options={filter.dependency.options}
         label={filter.dependency.label}
       />
       {selectedValue && (
-        <Form.AsyncSelect
+        <AppForm.AsyncSelect
           name={filter.selector.id}
           optionsLoader={filter.selector.loader}
           queryKeyParams={{ key: filter.selector.queryKey }}
@@ -28,6 +27,6 @@ export const ComboSelect = <T extends Record<string, any>>({ filter }: ComboSele
           isMulti={filter.selector.isMultiple}
         />
       )}
-    </Form.Group>
+    </AppForm.Group>
   );
 };

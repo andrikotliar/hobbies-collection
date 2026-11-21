@@ -1,16 +1,15 @@
-import {
-  api,
-  getCountriesListQueryOptions,
-  getEmptyFormValues,
-  queryKey,
-  type Input,
-} from '~/shared';
-import { List, useFormModal, withFormModal } from '~/routes/console/-shared';
-import { createFileRoute } from '@tanstack/react-router';
-import { CountryForm } from '~/routes/console/countries/-components';
-import { mutationOptions, useQuery } from '@tanstack/react-query';
 import { useCallback } from 'react';
+import { createFileRoute } from '@tanstack/react-router';
+import { mutationOptions, useQuery } from '@tanstack/react-query';
 import { CommonListQuerySchema } from '@hobbies-collection/shared';
+import { getEmptyFormValues } from '~/shared/helpers/get-empty-form-values';
+import type { Input } from '~/shared/types/extract-params';
+import { api, queryKey } from '~/shared/services/api';
+import { getCountriesListQueryOptions } from '~/shared/helpers/query-options/countries/get-countries-list-query-options';
+import { withFormModal } from '~/shared/helpers/with-form-modal';
+import { CountryForm } from '~/routes/console/countries/-components/country-form/country-form';
+import { useFormModal } from '~/shared/context/form-modal-context';
+import { ConsolePageList } from '~/shared/components/console-page-list/console-page-list';
 
 const countryDefaultValues = getEmptyFormValues<Input<typeof api.countries.create>>({
   title: '',
@@ -73,7 +72,7 @@ function PageContainer() {
   }, []);
 
   return (
-    <List
+    <ConsolePageList
       data={data}
       getDeleteMutationOptions={getDeleteMutationOptions}
       onEdit={onOpen}

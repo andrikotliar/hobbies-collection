@@ -1,9 +1,6 @@
-import {
-  FloatingElement,
-  type FloatingElementProps,
-} from '~/shared/components/popup-menu/components';
+import { FloatingElement } from './components/floating-element/floating-element';
 
-export const PopupMenu = (props: FloatingElementProps) => {
+export const PopupMenu = (props: React.ComponentProps<typeof FloatingElement>) => {
   if (!props.isOpen) {
     return null;
   }

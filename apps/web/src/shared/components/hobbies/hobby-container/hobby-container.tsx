@@ -1,8 +1,8 @@
 import type { PropsWithChildren } from 'react';
-import styles from './hobby-container.module.css';
+import styles from './styles.module.css';
 
-type HobbyContainerProps = PropsWithChildren;
+type Props = PropsWithChildren;
 
-export const HobbyContainer = ({ children }: HobbyContainerProps) => {
+export const HobbyContainer = ({ children }: Props) => {
   return <div className={styles.container}>{children}</div>;
 };

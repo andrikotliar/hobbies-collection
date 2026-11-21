@@ -1,8 +1,11 @@
 import clsx from 'clsx';
 import { useLayoutEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
-import styles from './floating-element.module.css';
-import { useClickOutside, useCloseOnEscape, useFocusTrap, useResizeObserver } from '~/shared/hooks';
+import styles from './styles.module.css';
+import { useCloseOnEscape } from '~/shared/hooks/use-close-on-escape';
+import { useFocusTrap } from '~/shared/hooks/use-focus-trap';
+import { useClickOutside } from '~/shared/hooks/use-click-outside';
+import { useResizeObserver } from '~/shared/hooks/use-resize-observer';
 
 type Styles = {
   left: number;
@@ -11,7 +14,7 @@ type Styles = {
   width?: number;
 };
 
-type UpdateMenuPositionProps = {
+type MenuPositionOptions = {
   menuElement: HTMLDivElement | null;
   triggerElement: HTMLElement | null;
   menuMargin: number;
@@ -19,7 +22,7 @@ type UpdateMenuPositionProps = {
   isFixed: boolean;
 };
 
-export type FloatingElementProps = {
+type Props = {
   isOpen: boolean;
   triggerRef: React.RefObject<HTMLElement | null>;
   /**
@@ -51,7 +54,7 @@ const updateMenuPosition = ({
   menuMargin,
   shouldAdjustToTriggerWidth,
   isFixed,
-}: UpdateMenuPositionProps): Styles => {
+}: MenuPositionOptions): Styles => {
   if (!menuElement || !triggerElement) {
     return {
       left: 0,
@@ -125,7 +128,7 @@ export const FloatingElement = ({
   onClose,
   positionState = 'scroll',
   ...divProps
-}: FloatingElementProps) => {
+}: Props) => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {

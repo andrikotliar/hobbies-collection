@@ -1,13 +1,14 @@
-import { PageTitle, getPluralWord } from '~/shared';
-import styles from './hobby-title.module.css';
+import { PageTitle } from '~/shared/components/page-title/page-title';
+import styles from './styles.module.css';
+import { getPluralWord } from '~/shared/helpers/get-plural-word';
 
-type HobbyTitleProps = {
+type Props = {
   children?: React.ReactNode;
   imagePath?: string | null;
   total: number;
 };
 
-export const HobbyTitle = ({ children, total = 0 }: HobbyTitleProps) => {
+export const HobbyTitle = ({ children, total = 0 }: Props) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.row}>

@@ -1,13 +1,13 @@
 import { Link } from '@tanstack/react-router';
 import { type FileRoutesByTo } from '~/routeTree.gen';
-import styles from './data-link.module.css';
+import styles from './styles.module.css';
 
-export type DataLinkProps = {
+type Props = {
   basePath: keyof FileRoutesByTo;
   query: { [key: string]: unknown };
   children: React.ReactNode;
 };
-export const DataLink = ({ basePath, query, children }: DataLinkProps) => {
+export const DataLink = ({ basePath, query, children }: Props) => {
   return (
     <Link
       to={basePath}

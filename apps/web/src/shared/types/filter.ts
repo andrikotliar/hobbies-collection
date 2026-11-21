@@ -1,5 +1,5 @@
 import type { ListOption } from '@hobbies-collection/shared';
-import type { AsyncSelectProps } from '~/shared/components/async-select/async-select';
+import type { AsyncSelectProps } from '~/shared/components/async-select';
 
 type OnlyStringKey<T> = Extract<keyof T, string>;
 

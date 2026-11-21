@@ -1,18 +1,18 @@
-import styles from './menu-bar.module.css';
+import styles from './styles.module.css';
 import { type Editor } from '@tiptap/react';
 import { ToolButton } from '../tool-button/tool-button';
-import { toolsConfig } from '~/shared/components/text-editor/configs';
+import { toolsConfig } from '~/shared/components/text-editor/configs/tools-config';
 import {
   MenuBarAdditionalOptions,
   type EditorMenuOption,
 } from '~/shared/components/text-editor/components/menu-bar-additional-options/menu-bar-additional-options';
 
-type MenuBarProps = {
+type Props = {
   editor: Editor | null;
   menuOptions?: EditorMenuOption[];
 };
 
-export const MenuBar = ({ editor, menuOptions }: MenuBarProps) => {
+export const MenuBar = ({ editor, menuOptions }: Props) => {
   if (!editor) {
     return null;
   }

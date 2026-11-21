@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "export-films": "tsx src/export-films.ts",
-    "gen-pass": "tsx src/generate-password.ts"
+    "gen-pass": "tsx src/generate-password.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@hobbies-collection/eslint-config": "workspace:^",

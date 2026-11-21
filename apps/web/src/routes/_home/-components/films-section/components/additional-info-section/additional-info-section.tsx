@@ -1,11 +1,12 @@
-import type { api, ApiResponse } from '~/shared';
+import type { ApiResponse } from '~/shared/types/extract-params';
 import { InfoBlock } from '../info-block/info-block';
+import type { api } from '~/shared/services/api';
 
-type FilmsSectionProps = {
+type Props = {
   info: ApiResponse<typeof api.films.getList>['additionalInfo'];
 };
 
-export const AdditionalInfoSection = ({ info }: FilmsSectionProps) => {
+export const AdditionalInfoSection = ({ info }: Props) => {
   if (!info) {
     return null;
   }

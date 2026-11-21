@@ -1,13 +1,15 @@
-import styles from './role-item.module.css';
+import styles from './styles.module.css';
 import clsx from 'clsx';
 import { RoleTitle } from '../role-title/role-title';
-import { RouterLink, type api, type ApiResponse } from '~/shared';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import type { api } from '~/shared/services/api';
+import { RouterLink } from '~/shared/components/router-link/router-link';
 
-type RoleItemProps = {
+type Props = {
   data: ApiResponse<typeof api.films.getById>['castAndCrew'][number];
 };
 
-export const RoleItem = ({ data }: RoleItemProps) => {
+export const RoleItem = ({ data }: Props) => {
   const isActorRole = data.role === 'ACTOR';
 
   return (

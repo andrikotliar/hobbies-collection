@@ -1,11 +1,12 @@
-import type { api, ApiResponse } from '~/shared';
-import { RoleItem } from './components';
+import type { ApiResponse } from '~/shared/types/extract-params';
+import { RoleItem } from './components/role-item/role-item';
+import type { api } from '~/shared/services/api';
 
-type CastAndCrewProps = {
+type Props = {
   data: ApiResponse<typeof api.films.getById>['castAndCrew'];
 };
 
-export const CastAndCrew = ({ data }: CastAndCrewProps) => {
+export const CastAndCrew = ({ data }: Props) => {
   return (
     <div>
       {data.map((personData) => (
