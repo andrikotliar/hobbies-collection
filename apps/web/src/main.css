@@ -2,7 +2,7 @@
   --color-blue-primary: hsl(200, 100%, 40%);
   --color-blue-light: hsl(190, 80%, 90%);
   --color-blue-extra-light: hsl(200, 100%, 95%);
-  --color-blue-invisible: hsl(220, 37%, 97%);
+  --color-blue-invisible: oklch(97.352% 0.00553 274.897);
   --color-blue-dark: hsl(200, 100%, 30%);
 
   --color-green-primary: hsl(180, 100%, 40%);
@@ -57,79 +57,9 @@
   --text-2xl: 1.5rem;
   --text-3xl: 2rem;
   --text-4xl: 2.5rem;
-
-  --font-condensed: 'Roboto-Condensed', sans-serif;
 }
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto-Regular.woff2');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto-Bold.woff2');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Roboto-Condensed';
-  src: url('/fonts/Roboto-Condensed-Medium.woff2');
-  font-weight: 500;
-}
-
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  -webkit-tap-highlight-color: transparent;
-}
-
-li {
-  list-style: none;
-}
-
-button {
-  display: block;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  border: none;
-  background: none;
-  cursor: pointer;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-input {
-  color: inherit;
-  font-size: inherit;
-  font-family: inherit;
-}
-
-html {
-  scrollbar-gutter: stable;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  position: relative;
-  background-color: var(--color-blue-invisible);
-}
-
-body:has(.no-doc-scroll) {
-  overflow: hidden;
-}
+@import 'tailwindcss';
 
 .is-dragging {
   transition: none !important;
