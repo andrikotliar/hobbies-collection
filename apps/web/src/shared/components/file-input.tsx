@@ -1,5 +1,5 @@
 import { FieldLabel } from '~/shared/components/field-label';
-import { Image } from '~/shared/components/image/image';
+import { Image } from '~/shared/components/image';
 import { useEffect, useRef, useState } from 'react';
 import styles from './styles.module.css';
 import { Trash2Icon, UploadIcon } from 'lucide-react';

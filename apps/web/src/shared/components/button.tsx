@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { Loader } from '~/shared/components/loader/loader';
+import { Loader } from '~/shared/components/loader';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger' | 'light';
 

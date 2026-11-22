@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import styles from './styles.module.css';
 import { getFilmTrailersQueryOptions } from '~/shared/helpers/query-options/films/get-film-trailers-query-options';
-import { Modal } from '~/shared/components/modal/modal';
-import { Loader } from '~/shared/components/loader/loader';
+import { Modal } from '~/shared/components/modals/modal';
+import { Loader } from '~/shared/components/loader';
 
 type Props = {
   filmId: number | null;

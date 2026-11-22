@@ -4,11 +4,12 @@ import clsx from 'clsx';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useMatches } from '@tanstack/react-router';
 import { consoleMenuConfig } from '~/shared/configs/console-menu-config';
-import { IconLink } from '~/shared/components/icon-link/icon-link';
+import { IconLink } from '~/shared/components/icon-link';
 import { PageTitle } from '~/shared/components/page-title/page-title';
 import { Button } from '~/shared/components/button';
 import { PopupMenu } from '~/shared/components/popup-menu/popup-menu';
 import { getReducedTailwindColor } from '~/shared/helpers/get-reduced-tailwind-color';
+import { defineCssProperties } from '~/shared/helpers/define-css-properties';
 
 const menuItems = Object.values(consoleMenuConfig);
 
@@ -65,11 +66,15 @@ export const ConsoleHeader = () => {
               key={item.id}
               to={item.route}
               className={clsx(
-                `text-${item.color}`,
+                `text-(--item-color)`,
                 'flex items-center gap-2.5 p-2.5 rounded-lg border border-transparent text-center text-xs md:text-base',
-                `hover:bg-${getReducedTailwindColor(item.color)} hover:border-${item.color}`,
+                `hover:bg-(--reduced-item-color) hover:border-(--item-color)`,
               )}
               search={'search' in item ? item.search : undefined}
+              style={defineCssProperties({
+                '--item-color': item.color,
+                '--reduced-item-color': getReducedTailwindColor(item.color),
+              })}
             >
               {item.icon}
               {item.title}

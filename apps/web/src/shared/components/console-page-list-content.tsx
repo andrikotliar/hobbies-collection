@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ConfirmModal } from '~/shared/components/confirm-modal';
+import { ConfirmModal } from '~/shared/components/modals/confirm-modal';
 import { Panel } from '~/shared/components/panel/panel';
 import { useMutation } from '@tanstack/react-query';
 import type { DefaultListItem } from '~/shared/types/default-list-item';

@@ -8,7 +8,7 @@ import { getUserSessionsQueryOptions } from '~/shared/helpers/query-options/user
 import { Panel } from '~/shared/components/panel/panel';
 import { getLastActivity } from '~/shared/helpers/get-last-activity';
 import { Button } from '~/shared/components/button';
-import { ConfirmModal } from '~/shared/components/confirm-modal';
+import { ConfirmModal } from '~/shared/components/modals/confirm-modal';
 
 const deviceTypeToIcon = {
   mobile: <SmartphoneIcon />,

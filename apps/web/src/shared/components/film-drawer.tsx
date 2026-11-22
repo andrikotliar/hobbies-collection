@@ -5,8 +5,8 @@ import {
   getAdminFilmQueryOptions,
   getFilmQueryOptions,
 } from '~/shared/helpers/query-options/films/get-film-query-options';
-import { PageSkeleton } from './film-drawer/components/page-skeleton/page-skeleton';
-import { SummarySection } from './film-drawer/components/summary-section/summary-section';
+import { PageSkeleton } from './page-skeleton';
+import { SummarySection } from './summary-section';
 import { CastAndCrew } from './film-drawer-cast-and-crew';
 import { Awards } from './film-drawer-awards';
 import { VisibleSection } from '~/shared/components/visible-section';
@@ -30,8 +30,6 @@ export const FilmDrawer = ({ filmId }: Props) => {
   );
   const navigate = useNavigate();
 
-  const hasExtendedData = film?.awards.length !== 0 || film.castAndCrew.length !== 0;
-
   const closeDrawer = () => {
     navigate({
       to: location.pathname,
@@ -45,7 +43,7 @@ export const FilmDrawer = ({ filmId }: Props) => {
 
       {film && (
         <div className="flex flex-col text-black">
-          <SummarySection film={film} hasExtendedData={hasExtendedData} />
+          <SummarySection film={film} />
           <div className="bg-white overflow-hidden relative">
             <VisibleSection data={film.castAndCrew} component={CastAndCrew} />
             <VisibleSection data={film.awards} component={Awards} />

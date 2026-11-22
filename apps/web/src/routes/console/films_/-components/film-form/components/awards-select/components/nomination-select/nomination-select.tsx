@@ -8,7 +8,7 @@ import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
 import { getNominationsByAwardQueryOptions } from '~/shared/helpers/query-options/awards/get-nominations-by-award-query-options';
 import { api, queryKey } from '~/shared/services/api';
 import { FieldError } from '~/shared/components/field-error';
-import { Loader } from '~/shared/components/loader/loader';
+import { Loader } from '~/shared/components/loader';
 import { AppForm } from '~/shared/components/app-form';
 import { Button } from '~/shared/components/button';
 import { autoDetectShouldIncludeActor } from '../../helpers/auto-detect-should-include-actor';

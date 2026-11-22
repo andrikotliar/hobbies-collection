@@ -10,13 +10,12 @@ import {
   filterDefaultValues,
   FiltersSchema,
   getFiltersConfig,
-} from '~/routes/_home/-helpers/filters-config';
-import { Filters } from '~/shared/components/filters/filters';
+} from '~/shared/configs/root-filters-config';
+import { Filters } from '~/shared/components/filters';
 import { filterValues } from '~/shared/helpers/filter-values';
 import { countObjectKeys } from '~/shared/helpers/count-keys';
-import { RootPageLayout } from '~/routes/_home/-components/root-page-layout/root-page-layout';
 import { FilmsSection } from '~/routes/_home/-components/films-section/films-section';
-import { FiltersSidebar } from '~/shared/components/filters-sidebar/filters-sidebar';
+import { FiltersSidebar } from '~/shared/components/filters-sidebar';
 
 export const Route = createFileRoute('/_home/')({
   validateSearch: (search) => {
@@ -84,7 +83,7 @@ function RootPageContainer() {
   const filtersCount = countObjectKeys(routeSearch, ['pageIndex', 'filmId']);
 
   return (
-    <RootPageLayout>
+    <div className="min-h-screen md:min-h-auto flex gap-5 p-5 w-full">
       <FilmsSection />
       <FiltersSidebar
         isLoading={isInitialDataLoading}
@@ -103,6 +102,6 @@ function RootPageContainer() {
           config={filtersConfig}
         />
       </FiltersSidebar>
-    </RootPageLayout>
+    </div>
   );
 }

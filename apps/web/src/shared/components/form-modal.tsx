@@ -1,5 +1,5 @@
 import type { FormComponentProps } from '~/shared/types/form-component-props';
-import { Modal } from '~/shared/components/modal/modal';
+import { Modal } from '~/shared/components/modals/modal';
 
 type FormModalProps<T extends Record<PropertyKey, unknown>> = {
   onClose: VoidFunction;

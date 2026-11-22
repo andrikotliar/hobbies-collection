@@ -1,7 +1,7 @@
 import styles from './styles.module.css';
 import { FieldLabel } from '../field-label';
 import { FieldError } from '../field-error';
-import { Loader } from '~/shared/components/loader/loader';
+import { Loader } from '~/shared/components/loader';
 import type { RefCallBack } from 'react-hook-form';
 
 type Props = {

@@ -1,5 +1,5 @@
 import styles from './styles.module.css';
-import { Image } from '~/shared/components/image/image';
+import { Image } from '~/shared/components/image';
 import { PlayIcon } from 'lucide-react';
 import { imagePaths } from '~/shared/configs/image-paths';
 

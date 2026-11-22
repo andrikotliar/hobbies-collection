@@ -3,7 +3,7 @@ import { onlineManager } from '@tanstack/react-query';
 import { Link } from '@tanstack/react-router';
 import { HomeIcon, RefreshCcwIcon } from 'lucide-react';
 import { Button } from '~/shared/components/button';
-import { Image } from '~/shared/components/image/image';
+import { Image } from '~/shared/components/image';
 import { imagePaths } from '~/shared/configs/image-paths';
 
 type Props = {

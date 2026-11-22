@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import type { QueryParams } from '~/shared/types/extract-params';
 import type { api } from '~/shared/services/api';
 import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
-import { Image } from '~/shared/components/image/image';
+import { Image } from '~/shared/components/image';
 
 type Props = {
   isSelected?: boolean;

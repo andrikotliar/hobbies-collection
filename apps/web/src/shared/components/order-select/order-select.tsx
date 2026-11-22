@@ -1,7 +1,7 @@
 import { FieldLabel } from '~/shared/components/field-label';
 import styles from './styles.module.css';
 import { ScrollableLine } from '~/shared/components/scrollable-line/scrollable-line';
-import { Image } from '~/shared/components/image/image';
+import { Image } from '~/shared/components/image';
 import clsx from 'clsx';
 import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
 import type { MixedId } from '~/shared/types/mixed-id';

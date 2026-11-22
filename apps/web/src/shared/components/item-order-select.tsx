@@ -1,7 +1,7 @@
 import { useQuery, type UseQueryOptions } from '@tanstack/react-query';
 import { FieldError } from '~/shared/components/field-error';
 import { AppForm } from '~/shared/components/app-form';
-import { Loader } from '~/shared/components/loader/loader';
+import { Loader } from '~/shared/components/loader';
 import type { MixedId } from '~/shared/types/mixed-id';
 
 export type DataParams = {

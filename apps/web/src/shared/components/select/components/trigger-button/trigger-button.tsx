@@ -2,7 +2,7 @@ import { Button } from '~/shared/components/button';
 import styles from './styles.module.css';
 import clsx from 'clsx';
 import { ChevronDownIcon, XIcon } from 'lucide-react';
-import { Loader } from '~/shared/components/loader/loader';
+import { Loader } from '~/shared/components/loader';
 
 type Props = {
   onClick: VoidFunction;

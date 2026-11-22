@@ -8,7 +8,7 @@ import type { ApiResponse } from '~/shared/types/extract-params';
 import type { api } from '~/shared/services/api';
 import { getYearFromDate } from '~/shared/helpers/get-year-from-date';
 import { getPluralWord } from '~/shared/helpers/get-plural-word';
-import { Image } from '~/shared/components/image/image';
+import { Image } from '~/shared/components/image';
 import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
 
 type Film = ApiResponse<typeof api.films.getList>['list'][number];
