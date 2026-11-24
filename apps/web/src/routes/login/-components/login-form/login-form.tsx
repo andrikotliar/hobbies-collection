@@ -5,9 +5,8 @@ import { useMutation } from '@tanstack/react-query';
 import type { Input } from '~/shared/types/extract-params';
 import { api } from '~/shared/services/api';
 import { LOGIN_BLOCK_KEY } from '~/shared/constants/app';
-import { AppForm } from '~/shared/components/app-form';
-import { CenteredBlock } from '~/shared/components/centered-block';
-import { Logo } from '~/shared/components/logo';
+import { AppForm } from '~/shared/components/form/app-form';
+import { Logo } from '~/shared/components/ui/logo';
 
 const defaultLoginValues: Input<typeof api.auth.login> = {
   username: '',
@@ -44,9 +43,9 @@ export const LoginForm = () => {
       submitIcon={<LogInIcon />}
       submitButtonText="Login"
     >
-      <CenteredBlock>
+      <div className="mx-auto">
         <Logo size={120} />
-      </CenteredBlock>
+      </div>
       <AppForm.TextInput name="username" label="Username" />
       <AppForm.PasswordInput name="password" label="Password" />
     </AppForm>

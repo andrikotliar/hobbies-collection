@@ -8,7 +8,7 @@ import type { ApiResponse } from '~/shared/types/extract-params';
 import type { api } from '~/shared/services/api';
 import { getYearFromDate } from '~/shared/helpers/get-year-from-date';
 import { getPluralWord } from '~/shared/helpers/get-plural-word';
-import { Image } from '~/shared/components/image';
+import { AppImage } from '~/shared/components/ui/app-image';
 import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
 
 type Film = ApiResponse<typeof api.films.getList>['list'][number];
@@ -53,7 +53,7 @@ export const FilmsGrid = ({ films, shouldShowCounter }: Props) => {
           <div className={styles.cover}>
             {shouldShowCounter && <div className={styles.counter}>{film.sequenceNumber}</div>}
             {film.upcoming && <div className={styles.upcoming}>Upcoming</div>}
-            <Image src={getExternalImageUrl(film.imagePath)} alt={film.title} />
+            <AppImage src={getExternalImageUrl(film.imagePath)} alt={film.title} />
             {film.upcoming && (
               <button className={styles.play_button} onClick={() => setSelectedFilmId(film.id)}>
                 <PlayIcon />

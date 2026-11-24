@@ -1,4 +1,4 @@
-import { FormModalProvider } from '~/shared/components/form-modal-provider';
+import { FormModalProvider } from '~/shared/components/modals/form-modal-provider';
 import type { Component } from '~/shared/types/component';
 import type { Entity } from '~/shared/types/entity';
 import type { FormComponentProps } from '~/shared/types/form-component-props';

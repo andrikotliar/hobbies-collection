@@ -5,10 +5,10 @@ import { useFieldArray, useFormContext } from 'react-hook-form';
 import type z from 'zod';
 import styles from './styles.module.css';
 import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
-import { AppForm } from '~/shared/components/app-form';
+import { AppForm } from '~/shared/components/form/app-form';
 import { api, queryKey } from '~/shared/services/api';
-import { Button } from '~/shared/components/button';
-import { FieldError } from '~/shared/components/field-error';
+import { Button } from '~/shared/components/controls/button';
+import { FieldError } from '~/shared/components/ui/field-error';
 
 type Props = {
   index: number;

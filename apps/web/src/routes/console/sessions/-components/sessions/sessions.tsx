@@ -5,9 +5,9 @@ import { LaptopMinimalIcon, RadioIcon, SmartphoneIcon, TabletIcon } from 'lucide
 import type { ApiResponse } from '~/shared/types/extract-params';
 import { api, queryKey } from '~/shared/services/api';
 import { getUserSessionsQueryOptions } from '~/shared/helpers/query-options/users/get-user-sessions';
-import { Panel } from '~/shared/components/panel/panel';
+import { Panel } from '~/shared/components/ui/panel';
 import { getLastActivity } from '~/shared/helpers/get-last-activity';
-import { Button } from '~/shared/components/button';
+import { Button } from '~/shared/components/controls/button';
 import { ConfirmModal } from '~/shared/components/modals/confirm-modal';
 
 const deviceTypeToIcon = {

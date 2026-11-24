@@ -4,8 +4,8 @@ import { useFieldArray, useFormContext } from 'react-hook-form';
 import { PlusIcon, Trash2Icon } from 'lucide-react';
 import type { Input } from '~/shared/types/extract-params';
 import type { api } from '~/shared/services/api';
-import { AppForm } from '~/shared/components/app-form';
-import { Button } from '~/shared/components/button';
+import { AppForm } from '~/shared/components/form/app-form';
+import { Button } from '~/shared/components/controls/button';
 import { ConfirmModal } from '~/shared/components/modals/confirm-modal';
 
 const nominationDefaultValues = {

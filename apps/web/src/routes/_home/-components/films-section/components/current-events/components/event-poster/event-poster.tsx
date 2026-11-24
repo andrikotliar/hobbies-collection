@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import type { QueryParams } from '~/shared/types/extract-params';
 import type { api } from '~/shared/services/api';
 import { getExternalImageUrl } from '~/shared/helpers/get-external-image-url';
-import { Image } from '~/shared/components/image';
+import { AppImage } from '~/shared/components/ui/app-image';
 
 type Props = {
   isSelected?: boolean;
@@ -22,7 +22,7 @@ export const EventPoster = ({ posterPath, isSelected = false, title, subTitle, s
       className={clsx(styles.event_banner_button, isSelected && styles.selected_event)}
     >
       <div className={styles.event_banner_inner}>
-        <Image src={getExternalImageUrl(posterPath)} className={styles.poster_image} />
+        <AppImage src={getExternalImageUrl(posterPath)} className={styles.poster_image} />
       </div>
       <div className={styles.event_title}>
         {subTitle} {title}

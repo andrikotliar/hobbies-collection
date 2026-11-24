@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { ChartsGrid } from '~/routes/films/stats/-components/charts-grid/charts-grid';
 import { StatsLayout } from '~/routes/films/stats/-components/stats-layout/stats-layout';
 import { useSuspenseQuery } from '@tanstack/react-query';
-import { DonutChart } from '~/shared/components/donut-chart';
+import { DonutChart } from '~/shared/components/ui/donut-chart';
 import { useMemo } from 'react';
 import { getFilmsStatsQueryOptions } from '~/shared/helpers/query-options/films/get-films-stats-query-options';
 import { Navigation } from '~/routes/_home/-components/films-section/components/navigation/navigation';

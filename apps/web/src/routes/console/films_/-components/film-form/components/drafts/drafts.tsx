@@ -8,8 +8,8 @@ import { Trash2Icon, TrashIcon } from 'lucide-react';
 import { getFilmDraftsQueryOptions } from '~/shared/helpers/query-options/films/get-film-drafts-query-options';
 import { toaster } from '~/shared/utils/toaster';
 import { api, queryKey } from '~/shared/services/api';
-import { Panel } from '~/shared/components/panel/panel';
-import { Button } from '~/shared/components/button';
+import { Panel } from '~/shared/components/ui/panel';
+import { Button } from '~/shared/components/controls/button';
 import { Modal } from '~/shared/components/modals/modal';
 import { ConfirmModal } from '~/shared/components/modals/confirm-modal';
 

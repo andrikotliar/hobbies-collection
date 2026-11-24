@@ -1,8 +1,8 @@
 import styles from './styles.module.css';
 import { useFormContext } from 'react-hook-form';
 import type z from 'zod';
-import { Button } from '~/shared/components/button';
-import { AppForm } from '~/shared/components/app-form';
+import { Button } from '~/shared/components/controls/button';
+import { AppForm } from '~/shared/components/form/app-form';
 import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
 import { toaster } from '~/shared/utils/toaster';
 

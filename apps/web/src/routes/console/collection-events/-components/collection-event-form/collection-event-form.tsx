@@ -6,7 +6,7 @@ import { useFormModal } from '~/shared/context/form-modal-context';
 import { mutateEntity } from '~/shared/helpers/mutate-entity';
 import { api, queryKey } from '~/shared/services/api';
 import { getFormTitle } from '~/shared/helpers/get-form-title';
-import { AppForm } from '~/shared/components/app-form';
+import { AppForm } from '~/shared/components/form/app-form';
 import { Dates } from '~/routes/console/collection-events/-components/dates/dates';
 import { CollectionEventFormSchema } from '~/shared/schemas/collection-event-form.schema';
 

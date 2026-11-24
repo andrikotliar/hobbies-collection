@@ -1,7 +1,7 @@
 import styles from './styles.module.css';
 import { XCircleIcon } from 'lucide-react';
 import { useNavigate } from '@tanstack/react-router';
-import { Button } from '~/shared/components/button';
+import { Button } from '~/shared/components/controls/button';
 
 type Props = {
   label: string;

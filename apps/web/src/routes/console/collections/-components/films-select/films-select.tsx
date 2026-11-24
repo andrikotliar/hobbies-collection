@@ -1,11 +1,11 @@
 import { useFieldArray, useFormContext } from 'react-hook-form';
 import type z from 'zod';
-import { AsyncSelect } from '~/shared/components/async-select';
+import { AsyncSelect } from '~/shared/components/controls/async-select';
 import styles from './styles.module.css';
 import { TrashIcon } from 'lucide-react';
 import { api } from '~/shared/services/api';
 import { toaster } from '~/shared/utils/toaster';
-import { AppForm } from '~/shared/components/app-form';
+import { AppForm } from '~/shared/components/form/app-form';
 import type { CollectionFormSchema } from '~/shared/schemas/collection-form.schema';
 
 export const FilmsSelect = () => {

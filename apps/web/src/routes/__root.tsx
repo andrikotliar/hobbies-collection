@@ -1,7 +1,7 @@
 import z from 'zod';
 import { type QueryClient } from '@tanstack/react-query';
 import { createRootRouteWithContext } from '@tanstack/react-router';
-import { GlobalLayout } from '~/shared/components/global-layout';
+import { GlobalLayout } from '~/shared/components/layout/global-layout';
 
 const RootSearchSchema = z.object({
   filmId: z.coerce.number().optional(),

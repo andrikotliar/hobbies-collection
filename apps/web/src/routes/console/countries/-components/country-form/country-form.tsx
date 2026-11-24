@@ -4,7 +4,7 @@ import type { FormComponentProps } from '~/shared/types/form-component-props';
 import { mutateEntity } from '~/shared/helpers/mutate-entity';
 import { api, queryKey } from '~/shared/services/api';
 import { useFormModal } from '~/shared/context/form-modal-context';
-import { AppForm } from '~/shared/components/app-form';
+import { AppForm } from '~/shared/components/form/app-form';
 import { getFormTitle } from '~/shared/helpers/get-form-title';
 import { CountryFormSchema } from '~/shared/schemas/country-form.schema';
 

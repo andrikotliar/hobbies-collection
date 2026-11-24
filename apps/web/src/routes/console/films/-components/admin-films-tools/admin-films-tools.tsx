@@ -3,8 +3,8 @@ import { getRouteApi } from '@tanstack/react-router';
 import { type ListOption } from '@hobbies-collection/shared';
 import { SearchIcon } from 'lucide-react';
 import { useDebouncedSearch } from '~/shared/hooks/use-debounced-search';
-import { SortingPopup, type SortingParams } from '~/shared/components/sorting-popup/sorting-popup';
-import { TextInput } from '~/shared/components/text-input/text-input';
+import { SortingPopup, type SortingParams } from '~/shared/components/modals/sorting-popup';
+import { TextInput } from '~/shared/components/text-input';
 
 const sortingFields: ListOption<string>[] = [
   {

@@ -5,7 +5,7 @@ import { PersonFormSchema } from '~/shared/schemas/person-form.schema';
 import { mutateEntity } from '~/shared/helpers/mutate-entity';
 import { api, queryKey } from '~/shared/services/api';
 import { useFormModal } from '~/shared/context/form-modal-context';
-import { AppForm } from '~/shared/components/app-form';
+import { AppForm } from '~/shared/components/form/app-form';
 import { getFormTitle } from '~/shared/helpers/get-form-title';
 
 export type Props = FormComponentProps<z.infer<typeof PersonFormSchema>>;

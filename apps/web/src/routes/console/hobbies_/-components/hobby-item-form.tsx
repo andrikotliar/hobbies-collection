@@ -2,7 +2,7 @@ import { type ListOption } from '@hobbies-collection/shared';
 import { useMutation } from '@tanstack/react-query';
 import { useMatches, useParams } from '@tanstack/react-router';
 import type z from 'zod';
-import { AppForm } from '~/shared/components/app-form';
+import { AppForm } from '~/shared/components/form/app-form';
 import { useFormModal } from '~/shared/context/form-modal-context';
 import { getFormTitle } from '~/shared/helpers/get-form-title';
 import { getObjectsDiff } from '~/shared/helpers/get-objects-diff';

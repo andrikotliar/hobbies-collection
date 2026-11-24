@@ -12,10 +12,10 @@ import { getFormattedMoneyValue } from '@hobbies-collection/shared';
 import type { ApiResponse } from '~/shared/types/extract-params';
 import type { api } from '~/shared/services/api';
 import { getPluralWord } from '~/shared/helpers/get-plural-word';
-import { LinksGroup } from '../components/links-group';
-import { ReleaseDate } from '../components/release-date';
-import { DataLink } from '../components/data-link';
-import { LinksGroupWrapper } from '../components/links-group-wrapper';
+import { LinksGroup } from '../components/layout/links-group';
+import { ReleaseDate } from '../components/drawers/film/film-drawer-release-date';
+import { DataLink } from '../components/links/data-link';
+import { LinksGroupWrapper } from '../components/layout/links-group-wrapper';
 
 export type SummaryConfig = {
   id: string;

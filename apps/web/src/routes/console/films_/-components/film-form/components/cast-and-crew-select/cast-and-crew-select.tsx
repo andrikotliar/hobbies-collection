@@ -2,7 +2,7 @@ import { useFieldArray, useFormContext } from 'react-hook-form';
 import type { Enum, ListOption, PersonRole } from '@hobbies-collection/shared';
 import type z from 'zod';
 import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
-import { AppForm } from '~/shared/components/app-form';
+import { AppForm } from '~/shared/components/form/app-form';
 import { PeopleSelect } from '../cast-and-crew-select/components/people-select/people-select';
 
 type Props = {

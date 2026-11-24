@@ -1,7 +1,7 @@
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
-import { HobbyItemsGrid } from '~/shared/components/hobby-items-grid';
-import { HobbyTitle } from '~/shared/components/hobby-title';
+import { HobbyItemsGrid } from '~/shared/components/layout/hobby-items-grid';
+import { HobbyTitle } from '~/shared/components/layout/hobby-title';
 import { getHobbyByTitleQueryOptions } from '~/shared/helpers/query-options/hobbies/get-hobby-by-title-query-options';
 
 export const Route = createFileRoute('/board-games')({

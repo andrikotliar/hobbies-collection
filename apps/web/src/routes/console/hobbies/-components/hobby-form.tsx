@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query';
 import type z from 'zod';
-import { AppForm } from '~/shared/components/app-form';
+import { AppForm } from '~/shared/components/form/app-form';
 import { useFormModal } from '~/shared/context/form-modal-context';
 import { getFormTitle } from '~/shared/helpers/get-form-title';
 import { mutateEntity } from '~/shared/helpers/mutate-entity';

@@ -1,8 +1,8 @@
 import { type DragEndEvent } from '@dnd-kit/core';
 import { useFieldArray, useFormContext } from 'react-hook-form';
 import type z from 'zod';
-import { AppForm } from '~/shared/components/app-form';
-import { SortableList } from '~/shared/components/sortable-list/sortable-list';
+import { AppForm } from '~/shared/components/form/app-form';
+import { SortableList } from '~/shared/components/layout/sortable-list';
 import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
 
 export const TrailersSelect = () => {

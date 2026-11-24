@@ -1,1 +1,57 @@
 @import 'tailwindcss';
+
+@theme {
+  --animate-slide: slide 3s ease infinite;
+  --animate-toast-slide: toast-slide 0.5s;
+  --breakpoint-xs: 480px;
+
+  @keyframes slide {
+    0% {
+      background-position-x: 200%;
+    }
+    100% {
+      background-position-x: -200%;
+    }
+  }
+
+  @keyframes toast-slide {
+    0% {
+      transform: translateX(120%);
+    }
+
+    50% {
+      transform: translateX(-10%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@custom-variant slider-thumb-webkit (&::-webkit-slider-thumb);
+@custom-variant slider-thumb {
+  &::-webkit-slider-thumb {
+    @slot;
+  }
+
+  &::-moz-range-thumb {
+    @slot;
+  }
+}
+
+@custom-variant rating-hover {
+  &:hover,
+  &:hover ~ & {
+    @slot;
+  }
+}
+
+@custom-variant rating-selected {
+  &:hover,
+  &:has(.input:checked),
+  &:has(.input:checked) ~ &,
+  &:not(:has(.input:checked)):hover ~ & {
+    @slot;
+  }
+}

@@ -7,10 +7,10 @@ import { useMemo } from 'react';
 import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
 import { getNominationsByAwardQueryOptions } from '~/shared/helpers/query-options/awards/get-nominations-by-award-query-options';
 import { api, queryKey } from '~/shared/services/api';
-import { FieldError } from '~/shared/components/field-error';
-import { Loader } from '~/shared/components/loader';
-import { AppForm } from '~/shared/components/app-form';
-import { Button } from '~/shared/components/button';
+import { FieldError } from '~/shared/components/ui/field-error';
+import { Loader } from '~/shared/components/ui/loader';
+import { AppForm } from '~/shared/components/form/app-form';
+import { Button } from '~/shared/components/controls/button';
 import { autoDetectShouldIncludeActor } from '../../helpers/auto-detect-should-include-actor';
 
 type Props = {

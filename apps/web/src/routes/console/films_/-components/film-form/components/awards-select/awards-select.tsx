@@ -2,7 +2,7 @@ import { useFieldArray, useFormContext } from 'react-hook-form';
 import type { ListOption } from '@hobbies-collection/shared';
 import type z from 'zod';
 import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
-import { AppForm } from '~/shared/components/app-form';
+import { AppForm } from '~/shared/components/form/app-form';
 import { NominationSelect } from './components/nomination-select/nomination-select';
 
 type Props = {

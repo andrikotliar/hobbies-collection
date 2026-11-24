@@ -4,8 +4,8 @@ import { useNavigate } from '@tanstack/react-router';
 import type { Input } from '~/shared/types/extract-params';
 import { api, queryKey } from '~/shared/services/api';
 import { mutateEntity } from '~/shared/helpers/mutate-entity';
-import { AppForm } from '~/shared/components/app-form';
-import { Panel } from '~/shared/components/panel/panel';
+import { AppForm } from '~/shared/components/form/app-form';
+import { Panel } from '~/shared/components/ui/panel';
 import { AwardFormSchema } from '~/shared/schemas/award-form.schema';
 
 type Props = {

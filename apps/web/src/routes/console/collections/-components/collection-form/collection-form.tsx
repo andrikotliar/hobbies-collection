@@ -6,7 +6,7 @@ import { useFormModal } from '~/shared/context/form-modal-context';
 import { getFilmsByCollectionQueryOptions } from '~/shared/helpers/query-options/films/get-films-by-collection-query-options';
 import { mutateEntity } from '~/shared/helpers/mutate-entity';
 import { api, queryKey } from '~/shared/services/api';
-import { AppForm } from '~/shared/components/app-form';
+import { AppForm } from '~/shared/components/form/app-form';
 import { getFormTitle } from '~/shared/helpers/get-form-title';
 import { CollectionFormSchema } from '~/shared/schemas/collection-form.schema';
 

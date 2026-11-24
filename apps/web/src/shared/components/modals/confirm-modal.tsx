@@ -1,4 +1,4 @@
-import { Button, type ButtonVariant } from '~/shared/components/button';
+import { Button, type ButtonVariant } from '~/shared/components/controls/button';
 import { Modal } from './modal';
 
 type ConfirmModalProps<T> = {

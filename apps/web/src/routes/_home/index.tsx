@@ -11,11 +11,11 @@ import {
   FiltersSchema,
   getFiltersConfig,
 } from '~/shared/configs/root-filters-config';
-import { Filters } from '~/shared/components/filters';
+import { Filters } from '~/shared/components/filters/filters';
 import { filterValues } from '~/shared/helpers/filter-values';
 import { countObjectKeys } from '~/shared/helpers/count-keys';
 import { FilmsSection } from '~/routes/_home/-components/films-section/films-section';
-import { FiltersSidebar } from '~/shared/components/filters-sidebar';
+import { FiltersSidebar } from '~/shared/components/filters/filters-sidebar';
 
 export const Route = createFileRoute('/_home/')({
   validateSearch: (search) => {

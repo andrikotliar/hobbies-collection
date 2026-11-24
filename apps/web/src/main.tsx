@@ -8,8 +8,8 @@ import type { FileRoutesByTo } from '~/routeTree.gen';
 import { router } from '~/shared/services/router';
 import type { InvalidateQueryOption } from '~/shared/types/invalidate-query-option';
 import { queryClient } from '~/shared/services/query-client';
-import { FilterProvider } from '~/shared/components/filter-provider';
-import { Toaster } from '~/shared/components/toaster/toaster';
+import { FilterProvider } from '~/shared/components/filters/filter-provider';
+import { Toaster } from '~/shared/components/modals/toaster';
 
 declare module '@tanstack/react-router' {
   interface Register {
