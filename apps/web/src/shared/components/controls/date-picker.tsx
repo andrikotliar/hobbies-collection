@@ -1,5 +1,5 @@
-import { FieldError } from './field-error';
-import { FieldLabel } from './field-label';
+import { FieldError } from '../ui/field-error';
+import { FieldLabel } from '../ui/field-label';
 import type { RefCallBack } from 'react-hook-form';
 
 type Props = {

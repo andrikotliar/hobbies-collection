@@ -4,7 +4,7 @@ import {
   filterDefaultValues,
   FiltersSchema,
   getFiltersConfig,
-} from '~/routes/_home/-helpers/filters-config';
+} from '~/shared/configs/root-filters-config';
 import type { api } from '~/shared/services/api';
 import type { ApiResponse } from '~/shared/types/extract-params';
 import type { FilterItem } from '~/shared/types/filter';

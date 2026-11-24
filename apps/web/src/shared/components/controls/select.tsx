@@ -5,11 +5,11 @@ import { FieldError } from '~/shared/components/ui/field-error';
 import type { ListOption } from '@hobbies-collection/shared';
 import type { FormError } from '~/shared/types/form-error';
 import { useDebouncedSearch } from '~/shared/hooks/use-debounced-search';
-import { TriggerButton } from '../select-trigger-button';
 import { getSelectValue } from '~/shared/helpers/get-select-value';
 import clsx from 'clsx';
 import { Button } from '~/shared/components/controls/button';
 import { SaveIcon, XIcon } from 'lucide-react';
+import { TriggerButton } from '~/shared/components/controls/select-trigger-button';
 
 type Props<T extends ListOption<any>> = {
   label?: string;

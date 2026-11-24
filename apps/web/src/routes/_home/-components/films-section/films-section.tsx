@@ -10,7 +10,7 @@ import { SortingPopup, type SortingParams } from '~/shared/components/modals/sor
 import { countObjectKeys } from '~/shared/helpers/count-keys';
 import { Pagination } from '~/shared/components/layout/pagination';
 import { Navigation } from './components/navigation/navigation';
-import { TextInput } from '~/shared/components/text-input';
+import { TextInput } from '~/shared/components/controls/text-input';
 import { Button } from '~/shared/components/controls/button';
 import { CurrentEvents } from './components/current-events/current-events';
 import { AdditionalInfoSection } from './components/additional-info-section/additional-info-section';

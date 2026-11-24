@@ -9,7 +9,7 @@ import { getCountriesListQueryOptions } from '~/shared/helpers/query-options/cou
 import { withFormModal } from '~/shared/helpers/with-form-modal';
 import { CountryForm } from '~/routes/console/countries/-components/country-form/country-form';
 import { useFormModal } from '~/shared/context/form-modal-context';
-import { ConsolePageList } from '~/shared/components/console-page-list';
+import { ConsolePageList } from '~/shared/components/layout/console-page-list';
 
 const countryDefaultValues = getEmptyFormValues<Input<typeof api.countries.create>>({
   title: '',

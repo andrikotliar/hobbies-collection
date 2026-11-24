@@ -16,9 +16,7 @@ function RouteComponent() {
 
   return (
     <div className="w-full">
-      <HobbyTitle imagePath={data.imagePath} total={data.items.length}>
-        {data.title} Collection
-      </HobbyTitle>
+      <HobbyTitle total={data.items.length}>{data.title} Collection</HobbyTitle>
       <HobbyItemsGrid items={data.items} />
     </div>
   );

@@ -2,7 +2,7 @@ import { mutationOptions, useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
 import { HobbyItemForm } from '~/routes/console/hobbies_/-components/hobby-item-form';
 import { getDefaultHobbyItem } from '~/routes/console/hobbies_/-configs/default-form-values';
-import { ConsolePageList } from '~/shared/components/console-page-list';
+import { ConsolePageList } from '~/shared/components/layout/console-page-list';
 import { useFormModal } from '~/shared/context/form-modal-context';
 import { getHobbyAdminQueryOptions } from '~/shared/helpers/query-options/hobbies/get-hobby-admin-query-options';
 import { withFormModal } from '~/shared/helpers/with-form-modal';

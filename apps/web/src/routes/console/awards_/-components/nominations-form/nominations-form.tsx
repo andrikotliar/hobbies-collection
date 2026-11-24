@@ -1,4 +1,3 @@
-import styles from './styles.module.css';
 import { useState } from 'react';
 import { useFieldArray, useFormContext } from 'react-hook-form';
 import { PlusIcon, Trash2Icon } from 'lucide-react';
@@ -26,16 +25,20 @@ export const NominationsForm = () => {
 
   return (
     <AppForm.Section label="Nominations">
-      <div className={styles.nominations_form}>
+      <div className="flex flex-col gap-10 md:gap-5">
         {fields.map((_, index) => (
-          <div className={styles.nomination} key={index}>
-            <div className={styles.nomination_title}>
+          <div
+            className="flex flex-col md:flex-row gap-2.5 md:gap-5 items-start md:items-center"
+            key={index}
+          >
+            <div className="w-full">
               <AppForm.TextInput name={`nominations.${index}.title`} label="Nomination title" />
             </div>
-            <div className={styles.nomination_toggle}>
-              <AppForm.Toggle
-                title="Should include actor"
+            <div className="flex gap-5 mt-0 md:mt-5 justify-between md:justify-stretch w-full md:w-auto">
+              <AppForm.Checkbox
+                label="Should include actor"
                 name={`nominations.${index}.shouldIncludeActor`}
+                type="checkbox"
               />
               <Button
                 variant="ghost"

@@ -3,7 +3,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { useCallback } from 'react';
 import { CommonListQuerySchema } from '@hobbies-collection/shared';
 import { api, queryKey } from '~/shared/services/api';
-import { ConsolePageList } from '~/shared/components/console-page-list';
+import { ConsolePageList } from '~/shared/components/layout/console-page-list';
 import { useFormModal } from '~/shared/context/form-modal-context';
 import { getStudiosListQueryOptions } from '~/shared/helpers/query-options/studios/get-studios-list-query-options';
 import { withFormModal } from '~/shared/helpers/with-form-modal';

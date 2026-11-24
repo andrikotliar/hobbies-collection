@@ -4,7 +4,7 @@ import { type ListOption } from '@hobbies-collection/shared';
 import { SearchIcon } from 'lucide-react';
 import { useDebouncedSearch } from '~/shared/hooks/use-debounced-search';
 import { SortingPopup, type SortingParams } from '~/shared/components/modals/sorting-popup';
-import { TextInput } from '~/shared/components/text-input';
+import { TextInput } from '~/shared/components/controls/text-input';
 
 const sortingFields: ListOption<string>[] = [
   {
