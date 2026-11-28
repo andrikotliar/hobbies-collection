@@ -38,7 +38,7 @@ createRoot(document.getElementById('root')!).render(
       <FilterProvider>
         <RouterProvider router={router} />
         <Toaster />
-        {/* <ReactQueryDevtools buttonPosition="top-left" /> */}
+        <ReactQueryDevtools buttonPosition="top-left" />
       </FilterProvider>
     </QueryClientProvider>
   </StrictMode>,
