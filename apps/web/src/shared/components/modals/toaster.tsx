@@ -15,7 +15,7 @@ const typeToClassName: Record<ToastType, string> = {
   error: clsx('text-white bg-red-400'),
   success: clsx('text-white bg-teal-600'),
   warning: clsx('bg-yellow-400'),
-  info: clsx('bg-purple-200'),
+  info: clsx('bg-purple-100 text-black'),
 };
 
 const typeToIcon: Record<ToastType, React.ReactNode> = {
@@ -54,7 +54,7 @@ export const Toaster = () => {
         <div
           key={toast.id}
           className={clsx(
-            'relative rounded-md py-4 pr-15 pl-5 bg-slate-300 cursor-pointer animate-toast-slide w-full shadow-xl',
+            'relative rounded-md py-4 pr-15 pl-5 cursor-pointer animate-toast-slide w-full shadow-xl',
             typeToClassName[toast.type],
           )}
           onClick={() => removeToast(toast.id)}

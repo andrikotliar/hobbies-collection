@@ -64,7 +64,7 @@ export const ConsolePageList = <T extends DefaultListItem>({
       {typeof onSearch === 'function' && <ConsolePageListSearch onSearch={onSearch} />}
       <div>
         {shouldShowHeader && (
-          <div className="bg-slate-100 px-2.5 pt-2.5 pb-3.5">
+          <div className="bg-slate-200 rounded-t-md px-2.5 pt-2.5 pb-3.5 -mb-1">
             {onNavigateToForm && (
               <Link
                 className="flex items-center gap-1 leading-px uppercase text-sm font-bold hover:text-sky-600"

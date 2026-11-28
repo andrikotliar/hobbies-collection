@@ -22,7 +22,7 @@ export const Checkbox = ({
       <input ref={ref} type={type} className="hidden peer" {...checkboxInputProps} />
       <div
         className={clsx(
-          'flex items-center justify-center border border-sky-600 bg-white size-5.5 p-0.5',
+          'flex items-center shrink-0 justify-center border border-sky-600 bg-white size-5.5 p-0.5',
           'peer-checked:bg-sky-600 peer-checked:[&>svg]:text-white peer-checked:[&>svg]:opacity-100',
           {
             'rounded-sm': type === 'checkbox',

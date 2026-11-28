@@ -7,8 +7,6 @@ import { IconLink } from '~/shared/components/links/icon-link';
 import { PageTitle } from '~/shared/components/layout/page-title';
 import { Button } from '~/shared/components/controls/button';
 import { PopupMenu } from '~/shared/components/ui/popup-menu';
-import { getReducedTailwindColor } from '~/shared/helpers/get-reduced-tailwind-color';
-import { defineCssProperties } from '~/shared/helpers/define-css-properties';
 
 const menuItems = Object.values(consoleMenuConfig);
 
@@ -60,13 +58,9 @@ export const ConsoleHeader = () => {
               className={clsx(
                 `text-(--item-color)`,
                 'flex items-center gap-2.5 p-2.5 rounded-lg border border-transparent text-center text-xs md:text-base',
-                `hover:bg-(--reduced-item-color) hover:border-(--item-color)`,
+                item.color,
               )}
               search={'search' in item ? item.search : undefined}
-              style={defineCssProperties({
-                '--item-color': item.color,
-                '--reduced-item-color': getReducedTailwindColor(item.color),
-              })}
             >
               {item.icon}
               {item.title}

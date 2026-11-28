@@ -5,6 +5,7 @@ export type MenuConfigItem = {
   title: string;
   shortTitle?: string;
   icon: React.ReactNode;
+  bg: string;
   color: string;
   route: keyof FileRoutesByTo;
   search?: Record<string, any>;
