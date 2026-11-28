@@ -60,7 +60,7 @@ export const TriggerButton = ({
       >
         {displayedValue}
       </div>
-      <div className="flex gap-1 absolute top-1/2 right-2.5 -translate-y-1/2 z-10">
+      <div className="flex gap-1 absolute top-1/2 right-2.5 -translate-y-1/2 z-10 bg-white">
         {isLoading && <Loader size={18} shouldInheritColor />}
         {shouldShowClearButton && !isLoading && (
           <Button

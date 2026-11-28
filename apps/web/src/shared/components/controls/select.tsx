@@ -280,7 +280,7 @@ export const Select = <T extends ListOption<any>>({
         shouldFocusTriggerOnClose={false}
         role="listbox"
       >
-        <div className="max-h-62" ref={optionsWrapperRef}>
+        <div className="max-h-62 overflow-y-auto" ref={optionsWrapperRef}>
           {internalOptions.map((option, index) => {
             const isActive = selectedValues.includes(option.value);
             return (

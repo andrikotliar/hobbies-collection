@@ -101,7 +101,7 @@ export const SortingPopup = ({
                   <button
                     className={clsx(
                       'text-xs text-sky-600 border border-sky-600 py-1 px-2.5 transition-colors',
-                      'hover:not-disabled:bg-sky-200',
+                      'hover:not-disabled:bg-sky-200 rounded-sm cursor-pointer',
                       isActiveField &&
                         selectedData.order === option.value &&
                         'bg-sky-600 text-white cursor-default pointer-events-none',

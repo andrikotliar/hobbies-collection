@@ -142,7 +142,7 @@ export const FilmsSection = () => {
           />
           <div className="relative md:hidden">
             <Button variant="light" onClick={toggleFilter} icon={<FilterIcon />}>
-              <div className="size-5 text-white bg-amber-400 text-xs rounded-full leading-5 absolute -top-1.25 right-1.25">
+              <div className="size-5 text-white bg-orange-500 text-xs rounded-full leading-5 absolute -top-1.25 right-1.25">
                 {countFilter}
               </div>
             </Button>

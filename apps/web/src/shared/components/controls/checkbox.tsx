@@ -23,16 +23,16 @@ export const Checkbox = ({
       <div
         className={clsx(
           'flex items-center justify-center border border-sky-600 bg-white size-5.5 p-0.5',
-          'peer-checked:bg-sky-600',
+          'peer-checked:bg-sky-600 peer-checked:[&>svg]:text-white peer-checked:[&>svg]:opacity-100',
           {
-            'rounded-xs': type === 'checkbox',
+            'rounded-sm': type === 'checkbox',
             'rounded-full': type === 'radio',
           },
         )}
       >
-        <CheckIcon className="hidden peer-checked:text-white" />
+        <CheckIcon className="size-3 opacity-0" />
       </div>
-      <div className="flex items-center grow gap-2.5 justify-between text-xs select-none group-hover:text-sky-600">
+      <div className="flex items-center grow gap-2.5 justify-between text-sm select-none group-hover:text-sky-600">
         {label}
         {rightIcon}
       </div>

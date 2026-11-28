@@ -24,17 +24,17 @@ const iconSizeClassNames = {
 };
 
 const buttonSizeClassNames = {
-  small: 'text-sm py-1.5 px-3',
-  medium: 'text-base py-2.5 px-5',
-  large: 'text-xl py-2.5 px-5',
+  small: clsx('text-sm py-1.5 px-3 leading-3.5'),
+  medium: clsx('text-base py-2.5 px-5 leading-4'),
+  large: clsx('text-xl py-2.5 px-5 leading-5'),
 };
 
 const buttonColorClassNames = {
-  primary: 'bg-sky-600 disabled:text-gray-500',
-  secondary: 'text-black text-slate-100 disabled:text-gray-500',
-  ghost: 'text-black bg-transparent rounded-none p-0',
-  danger: 'text-white bg-red-400 disabled:text-gray-500 not-disabled:hover:text-sky-600',
-  light: 'text-black bg-white border border-slate-300 disabled:text-gray-500',
+  primary: clsx('text-white bg-sky-600 disabled:text-gray-500'),
+  secondary: clsx('text-black bg-slate-100 disabled:text-gray-500'),
+  ghost: clsx('text-black bg-transparent rounded-none p-0!'),
+  danger: clsx('text-white bg-red-400 disabled:text-gray-500 not-disabled:hover:text-sky-600'),
+  light: clsx('text-black bg-white border border-slate-300 disabled:text-gray-500'),
 };
 
 export const Button = ({
@@ -56,7 +56,7 @@ export const Button = ({
       type={type}
       className={clsx(
         'flex justify-center items-center gap-1 shrink-0',
-        'text-white rounded-lg transition-colors cursor-pointer',
+        'rounded-lg transition-colors cursor-pointer',
         'cursor-default not-disabled:hover:ring not-disabled:hover:ring-black',
         buttonColorClassNames[variant],
         buttonSizeClassNames[size],

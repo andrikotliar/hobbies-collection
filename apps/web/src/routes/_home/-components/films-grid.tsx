@@ -34,7 +34,7 @@ export const FilmsGrid = ({ films, shouldShowCounter }: Props) => {
 
   if (!films.length) {
     return (
-      <div className="text-slate-600 text-lg font-bold w-full flex items-center justify-center uppercase rounded-lg bg-slate-100 grow">
+      <div className="text-slate-500 text-lg font-semibold w-full h-full font-stretch-condensed flex items-center justify-center uppercase rounded-lg bg-slate-100 grow">
         Films not found
       </div>
     );

@@ -105,7 +105,7 @@ export const Filters = <TDefaultValues extends Record<string, unknown>, TSchema 
 
   return (
     <FormProvider {...filtersForm}>
-      <div className="flex items-center h-15 px-2.5 bg-slate-300">
+      <div className="flex items-center h-15 px-2.5 bg-slate-100">
         <TextInput
           onChange={searchFilter}
           icon={<SearchIcon />}
@@ -127,7 +127,7 @@ export const Filters = <TDefaultValues extends Record<string, unknown>, TSchema 
             return <FilterOptions filter={filter} key={filter.title} />;
           })}
         </div>
-        <div className="pr-20 md:p-5 flex flex-col w-full gap-2.5 mt-auto">
+        <div className="py-5 pl-5 pr-15 md:pr-5 flex flex-col w-full gap-2.5 mt-auto">
           <Button icon={<SearchIcon />} type="submit">
             Search
           </Button>

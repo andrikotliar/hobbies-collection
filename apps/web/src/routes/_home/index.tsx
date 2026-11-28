@@ -83,7 +83,7 @@ function RootPageContainer() {
   const filtersCount = countObjectKeys(routeSearch, ['pageIndex', 'filmId']);
 
   return (
-    <div className="min-h-screen md:min-h-auto flex gap-5 p-5 w-full">
+    <div className="min-h-screen flex gap-5 p-5 w-full">
       <FilmsSection />
       <FiltersSidebar
         isLoading={isInitialDataLoading}

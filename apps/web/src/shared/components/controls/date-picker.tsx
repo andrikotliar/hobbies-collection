@@ -15,7 +15,7 @@ export const DatePicker = ({ label, error, ref, ...props }: Props) => {
       <input
         ref={ref}
         type="date"
-        className="w-full p-2.5 border border-slate-300 bg-white transition-colors cursor-text hover:border-black"
+        className="w-full p-2.5 border border-slate-300 bg-white transition-colors cursor-text hover:border-black rounded-lg"
         {...props}
       />
       <FieldError error={error} />
