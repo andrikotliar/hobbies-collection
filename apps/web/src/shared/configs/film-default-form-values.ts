@@ -22,4 +22,6 @@ export const filmDefaultFormValues: z.infer<typeof FilmFormSchema> = {
   trailers: [],
   seriesExtension: null,
   draft: false,
+  originFilmId: null,
+  sequenceNumber: 1,
 };

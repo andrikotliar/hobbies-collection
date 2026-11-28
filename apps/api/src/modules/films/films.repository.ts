@@ -21,6 +21,7 @@ import {
   isNull,
   lt,
   notInArray,
+  or,
   sql,
   type SQL,
 } from 'drizzle-orm';
@@ -42,6 +43,7 @@ import {
   type FilmCollection,
 } from '~/database/schema.js';
 import {
+  alias,
   type PgColumn,
   type PgInsertValue,
   type PgTableWithColumns,
@@ -135,16 +137,20 @@ export class FilmsRepository {
         type: true,
         originFilmId: true,
       },
-      extras: (table, { sql }) => ({
-        hasChapters: sql<boolean>`
-          ${table.originFilmId} IS NOT NULL
-          OR EXISTS (
-            SELECT 1
-            FROM ${films}
-            WHERE ${films.originFilmId} = ${table.id}
-          )
-        `.as('hasChapters'),
-      }),
+      extras: (table, { sql }) => {
+        const chapter = alias(films, 'chapter');
+        const matchingChapters = this.deps.db
+          .select({ one: sql`1` })
+          .from(chapter)
+          .where(eq(chapter.originFilmId, table.id));
+
+        return {
+          hasChapters: sql<boolean>`
+            ${table.originFilmId} IS NOT NULL
+            OR EXISTS ${matchingChapters}
+          `.as('hasChapters'),
+        };
+      },
       with: {
         genres: {
           with: {
@@ -465,6 +471,8 @@ export class FilmsRepository {
         budget: true,
         boxOffice: true,
         draft: true,
+        originFilmId: true,
+        sequenceNumber: true,
       },
       with: {
         genres: {
@@ -964,5 +972,13 @@ export class FilmsRepository {
       default:
         return desc(films.releaseDate);
     }
+  }
+
+  getFilmsByOriginId(id: number) {
+    return this.deps.db
+      .select({ id: films.id, imagePath: films.imagePath, order: films.sequenceNumber })
+      .from(films)
+      .where(or(eq(films.id, id), eq(films.originFilmId, id)))
+      .orderBy(asc(films.sequenceNumber));
   }
 }

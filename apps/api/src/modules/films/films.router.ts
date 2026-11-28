@@ -200,4 +200,13 @@ export const filmsRouter = createRouter(contracts.films, {
       return { data };
     },
   },
+
+  getFilmChapters: {
+    preHandler: [validateAuth],
+    handler: async ({ request, app }) => {
+      const data = await app.resolve('filmsService').getFilmChapters(request.params.id);
+
+      return { data };
+    },
+  },
 });

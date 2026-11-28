@@ -372,6 +372,10 @@ export class FilmsService {
     return this.deps.filmsRepository.unlinkCollection(collectionId);
   }
 
+  getFilmChapters(filmId: number) {
+    return this.deps.filmsRepository.getFilmsByOriginId(filmId);
+  }
+
   private getValidatedOptions<T extends { updatedAt: string }>(
     options: T[],
     newestOnly?: boolean,

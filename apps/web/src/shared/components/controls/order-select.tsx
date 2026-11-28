@@ -24,7 +24,7 @@ const itemClassNames = clsx(
   'block w-30 h-45 overflow-hidden rounded-lg has-[input:checked]:ring-5 has-[input:checked]:ring-amber-500',
 );
 const positionSelectClassNames = clsx(
-  'text-xl flex items-center justify-center cursor-pointer bg-slate-300 [&>input]:hidden',
+  'text-xl flex items-center justify-center cursor-pointer bg-slate-100 [&>input]:hidden',
 );
 
 export const OrderSelect = ({
