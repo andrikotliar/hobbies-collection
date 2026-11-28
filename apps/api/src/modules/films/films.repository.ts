@@ -955,14 +955,14 @@ export class FilmsRepository {
         return fn(films.title);
       case 'createdAt':
         return fn(films.createdAt);
-      case 'releaseDate':
-        return fn(films.releaseDate);
+      case 'updatedAt':
+        return fn(films.updatedAt);
       case 'addedAt':
         return fn(films.addedAt);
       case 'boxOffice':
         return fn(films.boxOffice);
       default:
-        return desc(films.updatedAt);
+        return desc(films.releaseDate);
     }
   }
 }
