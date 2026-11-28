@@ -396,6 +396,7 @@ export class FilmsRepository {
             ...person,
             filmId,
             role: item.role,
+            details: person.details ? person.details.trim() : null,
           }));
         });
         await tr.insert(filmsPeople).values(values.flat());
@@ -568,6 +569,7 @@ export class FilmsRepository {
             ...person,
             filmId,
             role: item.role,
+            details: person.details ? person.details.trim() : null,
           }));
         });
 
