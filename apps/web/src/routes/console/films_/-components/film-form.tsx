@@ -18,6 +18,7 @@ import { AwardsSelect } from './awards-select';
 import { CastAndCrewSelect } from './cast-and-crew-select';
 import { FilmValuesWatcher } from './film-values-watcher';
 import { FilmFormSchema } from '~/shared/schemas/film-form.schema';
+import { FilmChapterSelect } from '~/routes/console/films_/-components/film-chapter-select';
 
 type Props = {
   values: z.infer<typeof FilmFormSchema>;
@@ -195,6 +196,7 @@ export const FilmForm = ({ values }: Props) => {
         <MoneyInput name="boxOffice" label="Box Office" />
         <AwardsSelect awardOptions={initialOptions.options.awards} />
         <CastAndCrewSelect positionOptions={initialOptions.options.roles} />
+        <FilmChapterSelect />
         <AppForm.Checkbox name="draft" label="Draft" type="checkbox" />
       </Panel>
       <FilmValuesWatcher

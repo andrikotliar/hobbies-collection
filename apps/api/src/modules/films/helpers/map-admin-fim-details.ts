@@ -13,10 +13,7 @@ import type {
 import type { Timestamps } from '~/modules/films/types.js';
 import { getTypedKeys } from '~/shared/helpers/get-typed-keys.js';
 
-type EditableFilm = Omit<
-  Film,
-  Timestamps | 'addedAt' | 'id' | 'originFilmId' | 'sequenceNumber'
-> & {
+type EditableFilm = Omit<Film, Timestamps | 'addedAt' | 'id'> & {
   collections: Pick<FilmCollection, 'collectionId'>[];
   genres: Pick<FilmGenre, 'genreId'>[];
   countries: Pick<FilmCountry, 'countryId'>[];

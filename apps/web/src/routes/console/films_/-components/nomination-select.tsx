@@ -104,7 +104,7 @@ export const NominationSelect = ({ index }: Props) => {
   return (
     <div className="flex flex-col gap-4">
       {fields.map((nomination, nominationIndex) => (
-        <div key={nomination.id} className="flex gap-5 items-start bg-sky-50 p-2.5 rounded-sm">
+        <div key={nomination.id} className="flex gap-5 items-start bg-slate-100 p-2.5 rounded-sm">
           <div className="flex flex-col gap-2.5 w-full">
             <AppForm.Select
               options={data}

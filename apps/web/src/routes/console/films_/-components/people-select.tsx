@@ -50,7 +50,7 @@ export const PeopleSelect = ({ index }: Props) => {
     <div className="flex flex-col items-start gap-4">
       {fields.map((field, personIndex) => (
         <div key={field.id} className="w-full">
-          <div className="flex items-start gap-2.5 bg-sky-50 p-2.5 rounded-sm">
+          <div className="flex items-start gap-2.5 bg-slate-100 p-2.5 rounded-sm">
             <div className="flex gap-4 flex-col grow">
               <AppForm.AsyncSelect
                 name={`castAndCrew.${index}.people.${personIndex}.personId`}

@@ -66,6 +66,8 @@ export const CreateFilmInputSchema = z.object({
   tempDraftId: z.coerce.number().optional(),
   seriesExtension: SeriesExtensionSchema.nullable(),
   draft: z.boolean(),
+  originFilmId: z.number().nullable().optional(),
+  sequenceNumber: z.number().min(0),
 });
 
 export const GetFilmsListQuerySchema = z.object({
@@ -336,6 +338,10 @@ export const FilmsByCollectionResponseSchema = z.array(
 export const DeleteFilmDrafts = z.object({
   ok: z.boolean(),
 });
+
+export const FilmChaptersResponseSchema = z.array(
+  z.object({ id: z.number(), order: z.number(), imagePath: z.string().nullable() }),
+);
 
 export type GetFilmsListQuery = z.infer<typeof GetFilmsListQuerySchema>;
 export type SearchFilmsQuery = z.infer<typeof SearchFilmsQuerySchema>;
