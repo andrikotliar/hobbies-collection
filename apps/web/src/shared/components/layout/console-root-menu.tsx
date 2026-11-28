@@ -9,7 +9,9 @@ export const ConsoleRootMenu = () => {
     <div className="flex flex-col gap-5 w-full">
       {consoleMenuGroups.map((group) => (
         <div key={group.title}>
-          <h2 className="font-stretch-ultra-condensed text:lg md:text-2xl mb-2.5">{group.title}</h2>
+          <h2 className="font-stretch-condensed text:lg font-semibold md:text-2xl mb-2.5">
+            {group.title}
+          </h2>
           <div className="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-5 w-full">
             {group.itemIds.map((itemId) => {
               const menuItem = consoleMenuConfig[itemId];
@@ -21,7 +23,7 @@ export const ConsoleRootMenu = () => {
                   className={clsx(
                     'text-white flex flex-col items-center justify-center gap-2.5 w-full h-30 shrink-0 rounded-lg text-center',
                     'transition-shadow shadow-md hover:shadow-xl',
-                    `bg-linear-45 from-(--gradient-from-color) to-(--gradient-to-color)`,
+                    `bg-linear-to-br from-(--gradient-from-color) to-(--gradient-to-color)`,
                   )}
                   search={'search' in menuItem ? menuItem.search : undefined}
                   style={defineCssProperties({

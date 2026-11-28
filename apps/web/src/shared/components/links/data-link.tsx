@@ -11,7 +11,7 @@ export const DataLink = ({ basePath, query, children }: Props) => {
     <Link
       to={basePath}
       search={({ filmId: _, ...rest }) => ({ ...rest, ...query })}
-      className="inline-block text-base [-webkit-user-drag:none]"
+      className="inline-block text-base leading-4 [-webkit-user-drag:none]"
       onClick={() => window.scrollTo(0, 0)}
     >
       {children}

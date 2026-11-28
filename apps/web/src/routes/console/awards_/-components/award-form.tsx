@@ -1,4 +1,3 @@
-import { NominationsForm } from '~/routes/console/awards_/-components/nominations-form/nominations-form';
 import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from '@tanstack/react-router';
 import type { Input } from '~/shared/types/extract-params';
@@ -7,6 +6,7 @@ import { mutateEntity } from '~/shared/helpers/mutate-entity';
 import { AppForm } from '~/shared/components/form/app-form';
 import { Panel } from '~/shared/components/ui/panel';
 import { AwardFormSchema } from '~/shared/schemas/award-form.schema';
+import { NominationsForm } from './nominations-form';
 
 type Props = {
   values: Input<typeof api.awards.create>;

@@ -1,5 +1,4 @@
 import { FieldLabel } from '~/shared/components/ui/field-label';
-import styles from './styles.module.css';
 import { ScrollableLine } from '~/shared/components/layout/scrollable-line';
 import { AppImage } from '~/shared/components/ui/app-image';
 import clsx from 'clsx';
@@ -66,7 +65,7 @@ export const OrderSelect = ({
                     onChange={() => onChange(startingVirtualChapter)}
                     checked={startingVirtualChapter === value}
                   />
-                  <span className={styles.chapter_number}>{index + 1}</span>
+                  <span>{index + 1}</span>
                 </label>
               )}
               {isCurrentFilmSelected ? (
@@ -76,14 +75,11 @@ export const OrderSelect = ({
                     onChange={() => onChange(item.order ?? 0)}
                     checked={item.order === value}
                   />
-                  <span className={styles.chapter_number}>{item.order}</span>
+                  <span>{item.order}</span>
                 </label>
               ) : (
                 <div className={itemClassNames}>
-                  <AppImage
-                    src={getExternalImageUrl(item.imagePath)}
-                    className={styles.poster_select_image}
-                  />
+                  <AppImage src={getExternalImageUrl(item.imagePath)} />
                 </div>
               )}
               {!isCurrentFilmSelected && !isNextChapterSelected && (
@@ -93,7 +89,7 @@ export const OrderSelect = ({
                     onChange={() => onChange(virtualChapter)}
                     checked={virtualChapter === value}
                   />
-                  <span className={styles.chapter_number}>{index + 2}</span>
+                  <span>{index + 2}</span>
                 </label>
               )}
             </div>

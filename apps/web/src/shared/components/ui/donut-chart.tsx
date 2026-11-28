@@ -87,7 +87,7 @@ export const DonutChart = ({
 
   return (
     <div className="bg-white rounded-lg p-5 shadow-sm [&:has(.highlighted_slice)_.slice:not(.highlighted_slice)]:opacity-20">
-      {title && <div className="font-stretch-ultra-condensed uppercase text-xl">{title}</div>}
+      {title && <div className="font-stretch-condensed uppercase text-xl">{title}</div>}
       <div className="flex flex-col items-center md:flex-row justify-center gap-6">
         <div className="relative">
           <svg width={size} height={size} viewBox="0 0 240 240">

@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { Sessions } from '~/routes/console/sessions/-components/sessions/sessions';
+import { Sessions } from '~/routes/console/sessions/-components/sessions';
 import { getUserSessionsQueryOptions } from '~/shared/helpers/query-options/users/get-user-sessions';
 
 export const Route = createFileRoute('/console/sessions')({

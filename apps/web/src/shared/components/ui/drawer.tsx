@@ -58,7 +58,7 @@ export const Drawer = ({
     >
       <div className="sticky top-0 z-200 h-0">
         <button
-          className="flex items-center justify-center bg-white rounded-bl-xl ml-auto size-7"
+          className="flex items-center justify-center bg-white rounded-bl-xl ml-auto size-7 cursor-pointer"
           onClick={handleClose}
         >
           <XIcon />

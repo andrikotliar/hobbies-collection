@@ -1,7 +1,6 @@
 import { FieldLabel } from '~/shared/components/ui/field-label';
 import { AppImage } from '~/shared/components/ui/app-image';
 import { useEffect, useRef, useState } from 'react';
-import styles from './styles.module.css';
 import { Trash2Icon, UploadIcon } from 'lucide-react';
 import { Button } from '~/shared/components/controls/button';
 import { FieldError } from '~/shared/components/ui/field-error';
@@ -60,7 +59,7 @@ export const FileInput = ({
 
   return (
     <div className="relative flex flex-col gap-1" style={{ width }}>
-      {label && <FieldLabel className={styles.label}>{label}</FieldLabel>}
+      {label && <FieldLabel>{label}</FieldLabel>}
       <div className={clsx('absolute -right-6', label ? 'top-6' : 'top-0')}>
         {imagePreview && (
           <Button icon={<Trash2Icon />} onClick={handleRemoveImage} variant="ghost" />

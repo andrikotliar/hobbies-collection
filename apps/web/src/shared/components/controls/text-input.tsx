@@ -34,7 +34,7 @@ export const TextInput = ({
           ref={ref}
           type={type}
           className={clsx(
-            'w-full p-2.5 rounded-lg border border-slate-300 outline-sky-600 transition-colors bg-white hover:border-slate-600',
+            'w-full p-2.5 rounded-lg border text-base leading-4 border-slate-300 outline-sky-600 transition-colors bg-white hover:border-slate-600',
             'focus:[&+.icons-bar_.icon-wrapper_svg]:text-sky-600',
             'not-placeholder-shown:[&+.icons-bar_.clear-btn]:flex',
             {

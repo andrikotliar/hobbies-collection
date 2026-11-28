@@ -5,7 +5,7 @@ import { CommonListQuerySchema } from '@hobbies-collection/shared';
 import { getDefaultDateCode } from '~/shared/helpers/get-default-date-code';
 import { getEmptyFormValues } from '~/shared/helpers/get-empty-form-values';
 import { withFormModal } from '~/shared/helpers/with-form-modal';
-import { CollectionEventForm } from './-components/collection-event-form/collection-event-form';
+import { CollectionEventForm } from './-components/collection-event-form';
 import { getCollectionEventsQueryOptions } from '~/shared/helpers/query-options/collection-events/get-collection-events-query-options';
 import { api, queryKey } from '~/shared/services/api';
 import { useFormModal } from '~/shared/context/form-modal-context';

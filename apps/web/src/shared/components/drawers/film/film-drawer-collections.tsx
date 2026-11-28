@@ -18,7 +18,7 @@ const CollectionLink = ({
   return (
     <Link
       className={clsx(
-        'flex items-center gap-0.5 bg-white py-0.5 px-4 rounded-md text-sm uppercase font-stretch-ultra-condensed',
+        'flex items-center gap-0.5 bg-white py-0.5 px-4 rounded-md text-sm uppercase font-stretch-condensed',
         className,
       )}
       style={style}
@@ -34,7 +34,7 @@ export const Collections = ({ list, chaptersRefId }: Props) => {
         <CollectionLink
           to="/"
           search={{ originFilmId: chaptersRefId, orderKey: 'sequenceNumber' }}
-          className="bg-linear-45 from-gray-400 to-white"
+          className="bg-linear-90 from-slate-100 to-white"
         >
           <FilmIcon />
           <span>Chapters</span>

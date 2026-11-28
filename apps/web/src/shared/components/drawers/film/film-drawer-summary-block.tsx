@@ -15,7 +15,7 @@ export const FilmDrawerSummaryBlock = ({ label, icon, children, hasPadding = tru
           <div className="-rotate-10 [&>svg]:size-4.5">{icon}</div> <span>{label}</span>
         </div>
       )}
-      <div className={clsx('bg-black/10 rounded-lg w-full', hasPadding && 'py-3 px-4')}>
+      <div className={clsx('bg-white/10 rounded-lg w-full leading-4', hasPadding && 'py-3 px-4')}>
         {children}
       </div>
     </div>

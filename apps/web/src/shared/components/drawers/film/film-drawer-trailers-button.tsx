@@ -23,12 +23,12 @@ export const TrailersButton = ({ data, type }: Props) => {
   return (
     <>
       <button
-        className="w-full md:w-96 relative bg-white flex items-center justify-center gap-1 rounded-lg p-2.5 transition-transform active:scale-95"
+        className="w-full md:w-96 relative bg-white flex items-center cursor-pointer justify-center gap-1 rounded-lg p-2.5 transition-transform active:scale-95"
         title="Play trailer"
         onClick={() => setIsModalOpen(true)}
       >
         <PlayIcon className="fill-white size-5" />
-        <span className="font-stretch-ultra-condensed text-base uppercase">
+        <span className="font-stretch-condensed text-base uppercase">
           Trailer{data.length > 1 && 's'}
         </span>
       </button>

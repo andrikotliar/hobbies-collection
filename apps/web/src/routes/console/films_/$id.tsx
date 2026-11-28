@@ -8,7 +8,7 @@ import { getFilmDraftsQueryOptions } from '~/shared/helpers/query-options/films/
 import { isNewItem } from '~/shared/helpers/is-new-item';
 import { getAdminFilmDetailsQueryOptions } from '~/shared/helpers/query-options/films/get-admin-film-details-query-options';
 import { getMixedId } from '~/shared/helpers/get-mixed-id';
-import { FilmForm } from './-components/film-form/film-form';
+import { FilmForm } from './-components/film-form';
 import type { FilmFormSchema } from '~/shared/schemas/film-form.schema';
 import { filmDefaultFormValues } from '~/shared/configs/film-default-form-values';
 

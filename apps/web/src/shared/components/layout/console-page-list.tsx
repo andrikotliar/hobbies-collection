@@ -1,4 +1,3 @@
-import styles from './styles.module.css';
 import type { FileRoutesByTo } from '~/routeTree.gen';
 import { Link, useLocation } from '@tanstack/react-router';
 import { PlusIcon } from 'lucide-react';
@@ -90,7 +89,7 @@ export const ConsolePageList = <T extends DefaultListItem>({
         <ConsolePageListContent isFetching={isFetching} list={data?.list} {...props} />
       </div>
       {typeof onPageChange === 'function' && (
-        <div className={styles.pagination_wrapper}>
+        <div>
           <Pagination
             total={data?.total ?? 0}
             perPageCounter={data?.pageLimit ?? PAGE_LIMITS.default}

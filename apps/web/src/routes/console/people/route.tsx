@@ -13,7 +13,7 @@ import type { Input } from '~/shared/types/extract-params';
 import { api, queryKey } from '~/shared/services/api';
 import type { FilterItem } from '~/shared/types/filter';
 import { withFormModal } from '~/shared/helpers/with-form-modal';
-import { PersonForm } from '~/routes/console/people/-components/person-form/person-form';
+import { PersonForm } from '~/routes/console/people/-components/person-form';
 import { useFormModal } from '~/shared/context/form-modal-context';
 import { useSidebarVisibility } from '~/shared/hooks/use-sidebar-visibility';
 import { countObjectKeys } from '~/shared/helpers/count-keys';

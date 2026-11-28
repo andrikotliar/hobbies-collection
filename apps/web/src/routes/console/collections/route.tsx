@@ -7,7 +7,7 @@ import type { Input } from '~/shared/types/extract-params';
 import { api, queryKey } from '~/shared/services/api';
 import { getCollectionsListQueryOptions } from '~/shared/helpers/query-options/collections/get-collections-list-query-options';
 import { withFormModal } from '~/shared/helpers/with-form-modal';
-import { CollectionForm } from '~/routes/console/collections/-components/collection-form/collection-form';
+import { CollectionForm } from '~/routes/console/collections/-components/collection-form';
 import { useFormModal } from '~/shared/context/form-modal-context';
 import { ConsolePageList } from '~/shared/components/layout/console-page-list';
 

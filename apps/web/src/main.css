@@ -4,6 +4,7 @@
   --animate-slide: slide 3s ease infinite;
   --animate-toast-slide: toast-slide 0.5s;
   --breakpoint-xs: 480px;
+  --text-xxs: 10px;
 
   @keyframes slide {
     0% {
@@ -54,4 +55,29 @@
   &:not(:has(.input:checked)):hover ~ & {
     @slot;
   }
+}
+
+@utility responsive-grid {
+  @apply grid grid-cols-12 gap-6.25;
+  @apply max-[1920px]:grid-cols-8;
+  @apply max-xl:grid-cols-6;
+  @apply max-[960px]:grid-cols-4;
+  @apply max-[540px]:grid-cols-3;
+  @apply max-[400px]:gap-3.75;
+}
+
+.is-dragging {
+  transition: none !important;
+}
+
+.is-settling {
+  transition: transform 300ms ease;
+}
+
+.is-closing-right {
+  transform: translateX(120%) !important;
+}
+
+.is-closing-left {
+  transform: translateX(-120%) !important;
 }

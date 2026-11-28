@@ -9,16 +9,16 @@ import { api, queryKey } from '~/shared/services/api';
 import { useSidebarVisibility } from '~/shared/hooks/use-sidebar-visibility';
 import { Filters } from '~/shared/components/filters/filters';
 import { filterValues } from '~/shared/helpers/filter-values';
-import {
-  AdminFiltersSchema,
-  defaultAdminFilters,
-  getAdminFiltersConfig,
-} from '~/routes/console/films/-helpers/get-admin-filters-config';
 import { countObjectKeys } from '~/shared/helpers/count-keys';
 import type { SortingParams } from '~/shared/components/modals/sorting-popup';
 import { ContentWithSidebar } from '~/shared/components/layout/content-with-sidebar';
 import { FiltersSidebar } from '~/shared/components/filters/filters-sidebar';
 import { ConsolePageList } from '~/shared/components/layout/console-page-list';
+import {
+  AdminFiltersSchema,
+  defaultAdminFilters,
+  getAdminFiltersConfig,
+} from '~/shared/configs/get-admin-filters-config';
 
 export const Route = createFileRoute('/console/films')({
   validateSearch: (search) => {

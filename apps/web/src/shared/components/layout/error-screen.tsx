@@ -25,7 +25,7 @@ const Status = ({
     <div className="flex items-center justify-center h-screen p-5 w-full">
       <div className="max-w-124">
         <AppImage src={imageSrc} className="max-h-75" />
-        <h1 className="text-5xl font-stretch-ultra-condensed uppercase mt-5">{title}</h1>
+        <h1 className="text-5xl font-stretch-condensed uppercase mt-5">{title}</h1>
         <p className="text-gray-600 mt-2.5 mb-5">{message}</p>
         {isRecoverable ? (
           <Button icon={<RefreshCcwIcon />} onClick={() => window.location.reload()}>

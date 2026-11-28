@@ -20,8 +20,7 @@ export const Award = ({ data }: { data: Props['data'][number] }) => {
       >
         <div className="text-lg text-orange-400">{data.award.title}</div>{' '}
         <div className="uppercase text-xs">
-          Won{' '}
-          <span className="font-stretch-ultra-condensed text-base">{data.nominations.length}</span>{' '}
+          Won <span className="font-stretch-condensed text-base">{data.nominations.length}</span>{' '}
           {getPluralWord('nomination', data.nominations.length)}
         </div>
       </Link>
@@ -46,8 +45,8 @@ export const Award = ({ data }: { data: Props['data'][number] }) => {
 
 export const FilmDrawerAwards = ({ data }: Props) => {
   return (
-    <div className="flex flex-col gap-4 bg-orange-100 border border-orange-400 p-5 mx-5 mb-5 rounded-lg">
-      <div className="bg-orange-400 font-stretch-ultra-condensed text-2xl">Awards</div>
+    <div className="flex flex-col gap-4 bg-orange-50 border border-orange-400 p-5 mx-5 mb-5 rounded-lg">
+      <div className="text-orange-400 font-stretch-condensed text-2xl">Awards</div>
       {data.map((award) => (
         <Award data={award} key={award.award.id} />
       ))}

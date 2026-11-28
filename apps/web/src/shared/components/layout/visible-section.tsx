@@ -11,5 +11,5 @@ export const VisibleSection = <T extends Record<string, any>>({
     return null;
   }
 
-  <VisibleComponent data={data} />;
+  return <VisibleComponent data={data} />;
 };

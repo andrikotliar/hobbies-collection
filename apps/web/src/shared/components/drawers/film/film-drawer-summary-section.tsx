@@ -25,7 +25,8 @@ export const FilmDrawerSummarySection = ({ film }: Props) => {
   return (
     <div className="relative py-7.5 px-4 sm:p-7.5 bg-black/50 overflow-hidden z-2">
       <div
-        className={`bg-[url(${poster})] absolute top-0 left-0 w-full h-full -z-1 scale-150 bg-cover bg-center bg-no-repeat bg-gray-700`}
+        className="absolute top-0 left-0 w-full h-full -z-1 scale-150 bg-cover bg-center bg-no-repeat bg-gray-700 brightness-40 blur-3xl"
+        style={{ backgroundImage: `url(${poster})` }}
       />
 
       <div className="flex flex-col gap-2.5">

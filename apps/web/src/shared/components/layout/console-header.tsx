@@ -1,4 +1,3 @@
-import styles from './styles.module.css';
 import { ArrowLeftIcon, LayoutGridIcon } from 'lucide-react';
 import clsx from 'clsx';
 import { useEffect, useRef, useState } from 'react';
@@ -27,7 +26,7 @@ export const ConsoleHeader = () => {
   const loaderData = routeMatch?.loaderData as Record<string, string | number> | undefined;
 
   return (
-    <div className="flex justify-between gap-5 sticky top-0 bg-sky-50 z-100">
+    <div className="flex justify-between gap-5 sticky top-0 bg-slate-50 z-100 p-5">
       <div className="flex gap-2.5 items-center">
         {routeMatch?.staticData.backPath && (
           <IconLink
@@ -40,14 +39,7 @@ export const ConsoleHeader = () => {
       </div>
       {location.pathname !== '/console' && (
         <Button
-          icon={
-            <LayoutGridIcon
-              className={clsx(styles.menu_icon, {
-                [styles.menu_icon_collapsed]: !isMenuOpen,
-              })}
-              size={20}
-            />
-          }
+          icon={<LayoutGridIcon size={20} />}
           variant="ghost"
           onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
           ref={buttonRef}

@@ -18,7 +18,7 @@ const RoleItem = ({ data }: { data: Props['data'][number] }) => {
         isActorRole && 'items-start',
       )}
     >
-      <h3 className="font-stretch-ultra-condensed uppercase text-sm w-42.5 shrink-0">
+      <h3 className="font-stretch-condensed uppercase text-sm w-42.5 shrink-0">
         {personRoleToTitle[data.role]}
       </h3>
       <ul className={clsx('flex', isActorRole ? 'flex-col gap-2.5' : 'flex-wrap gap-4')}>

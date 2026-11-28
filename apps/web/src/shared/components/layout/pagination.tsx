@@ -72,10 +72,10 @@ export const Pagination = ({
             return (
               <button
                 className={clsx(
-                  'text-gray-600 border border-slate-300 size-9 rounded-md bg-white transition-colors cursor-pointer hover:text-black hover:bg-gray-100',
-                  {
-                    'text-white bg-sky-600 border-sky-600': currentPageIndex + 1 === page,
-                  },
+                  'border size-9 rounded-md transition-colors cursor-pointer',
+                  currentPageIndex + 1 === page
+                    ? 'text-white bg-sky-600 border-sky-600'
+                    : 'bg-white border-slate-300 text-slate-600 hover:text-black hover:bg-slate-100',
                 )}
                 key={index}
                 onClick={() => handlePageChange(page - 1)}

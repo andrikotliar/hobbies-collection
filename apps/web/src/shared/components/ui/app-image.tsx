@@ -29,9 +29,11 @@ export const AppImage = ({
     <img
       ref={ref}
       src={getImageSource()}
-      className={clsx('w-full h-full object-cover select-none pointer-events-none', className, {
-        'object-contain': shouldFitContainer,
-      })}
+      className={clsx(
+        'w-full h-full select-none pointer-events-none',
+        className,
+        shouldFitContainer ? 'object-fit' : 'object-cover',
+      )}
       onError={handleImageError(errorImageSrc)}
       {...props}
     />

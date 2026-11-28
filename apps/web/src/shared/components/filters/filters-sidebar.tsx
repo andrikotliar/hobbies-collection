@@ -49,7 +49,7 @@ export const FiltersSidebar = ({
 
   return (
     <SidebarContentWrapper
-      className={clsx({
+      className={clsx('md:visible', {
         'visible translate-y-0': isOpen,
         [BLOCKING_SCROLL_CLASS_NAME]: isOpen,
       })}
