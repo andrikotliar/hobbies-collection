@@ -1,10 +1,15 @@
-import { api, getEmptyFormValues, getGenresListQueryOptions, queryKey, type Input } from '~/shared';
-import { List, useFormModal, withFormModal } from '~/routes/console/-shared';
 import { createFileRoute } from '@tanstack/react-router';
-import { GenresForm } from '~/routes/console/genres/-components';
 import { mutationOptions, useQuery } from '@tanstack/react-query';
 import { CommonListQuerySchema } from '@hobbies-collection/shared';
 import { useCallback } from 'react';
+import { getGenresListQueryOptions } from '~/shared/helpers/query-options/genres/get-genres-list-query-options';
+import { withFormModal } from '~/shared/helpers/with-form-modal';
+import { GenresForm } from '~/routes/console/genres/-components/genres-form';
+import { getEmptyFormValues } from '~/shared/helpers/get-empty-form-values';
+import type { Input } from '~/shared/types/extract-params';
+import { api, queryKey } from '~/shared/services/api';
+import { useFormModal } from '~/shared/context/form-modal-context';
+import { ConsolePageList } from '~/shared/components/layout/console-page-list';
 
 export const Route = createFileRoute('/console/genres')({
   validateSearch: (search) => CommonListQuerySchema.parse(search),
@@ -67,7 +72,7 @@ function PageContainer() {
   }, []);
 
   return (
-    <List
+    <ConsolePageList
       data={data}
       onSearch={handleSearch}
       getDeleteMutationOptions={getDeleteMutationOptions}

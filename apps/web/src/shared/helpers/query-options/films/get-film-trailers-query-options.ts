@@ -1,6 +1,6 @@
 import { queryOptions } from '@tanstack/react-query';
 import { getEmbeddableYoutubeUrl } from '~/shared/helpers/get-embeddable-youtube-url';
-import { api, queryKey } from '~/shared/services';
+import { api, queryKey } from '~/shared/services/api';
 
 export const getFilmTrailersQueryOptions = (id: number | null) => {
   return queryOptions({

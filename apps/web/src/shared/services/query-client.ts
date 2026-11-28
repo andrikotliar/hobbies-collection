@@ -1,5 +1,5 @@
 import { MutationCache, QueryClient } from '@tanstack/react-query';
-import { toaster } from '~/shared/utils';
+import { toaster } from '~/shared/utils/toaster';
 
 const getQueryKey = (value: string | number | (string | number)[]) => {
   if (Array.isArray(value)) {

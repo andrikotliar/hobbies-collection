@@ -1,4 +1,4 @@
-import type { FilterId } from '~/shared/context';
+import type { FilterId } from '~/shared/context/filter-context';
 import { useFilterContext } from '~/shared/hooks/use-filter-context';
 
 export const useSidebarVisibility = (filterId: FilterId) => {

@@ -2,16 +2,13 @@ import { UpdateUserPasswordInputSchema } from '@hobbies-collection/shared';
 import { useMutation } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
 import z from 'zod';
-import {
-  Form,
-  getUserDataQueryOptions,
-  Panel,
-  queryKey,
-  SectionTitle,
-  toaster,
-  api,
-  type Input,
-} from '~/shared';
+import { AppForm } from '~/shared/components/form/app-form';
+import { Panel } from '~/shared/components/ui/panel';
+import { SectionTitle } from '~/shared/components/layout/section-title';
+import { getUserDataQueryOptions } from '~/shared/helpers/query-options/users/get-user-data-query-options';
+import { api, queryKey } from '~/shared/services/api';
+import type { Input } from '~/shared/types/extract-params';
+import { toaster } from '~/shared/utils/toaster';
 
 const UserFormSchema = z
   .object({
@@ -81,11 +78,11 @@ function RouteComponent() {
 
   return (
     <Panel>
-      <Form schema={UserFormSchema} onSubmit={mutateAsync} isLoading={isPending}>
+      <AppForm schema={UserFormSchema} onSubmit={mutateAsync} isLoading={isPending}>
         <SectionTitle>Password</SectionTitle>
-        <Form.PasswordInput label="Actual password" name="actualPassword" />
-        <Form.PasswordInput label="New password" name="newPassword" />
-      </Form>
+        <AppForm.PasswordInput label="Actual password" name="actualPassword" />
+        <AppForm.PasswordInput label="New password" name="newPassword" />
+      </AppForm>
     </Panel>
   );
 }

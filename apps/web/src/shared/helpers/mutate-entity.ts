@@ -1,5 +1,6 @@
 import { isNewItem } from '~/shared/helpers/is-new-item';
-import type { Input, Entity } from '~/shared/types';
+import type { Entity } from '~/shared/types/entity';
+import type { Input } from '~/shared/types/extract-params';
 
 export const mutateEntity = <
   TCreateFunction extends (args: { input: any }) => Promise<unknown>,

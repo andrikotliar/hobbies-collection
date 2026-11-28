@@ -1,11 +1,13 @@
 import type z from 'zod';
-import styles from './filters.module.css';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm, FormProvider, type DefaultValues } from 'react-hook-form';
 import { RefreshCcwIcon, SearchIcon } from 'lucide-react';
-import { type FilterItem, Button, TextInput, useDebouncedSearch } from '~/shared';
-import { FilterOptions } from './components';
+import { FilterOptions } from './filter-option-variants';
 import { useEffect, useState } from 'react';
+import type { FilterItem } from '~/shared/types/filter';
+import { useDebouncedSearch } from '~/shared/hooks/use-debounced-search';
+import { TextInput } from '~/shared/components/controls/text-input';
+import { Button } from '~/shared/components/controls/button';
 
 export type FiltersProps<
   TDefaultValues extends Record<string, unknown>,
@@ -103,15 +105,18 @@ export const Filters = <TDefaultValues extends Record<string, unknown>, TSchema 
 
   return (
     <FormProvider {...filtersForm}>
-      <div className={styles.search_wrapper}>
+      <div className="flex items-center h-15 px-2.5 bg-slate-100">
         <TextInput
           onChange={searchFilter}
           icon={<SearchIcon />}
           placeholder="Search filter or group"
         />
       </div>
-      <form onSubmit={filtersForm.handleSubmit(handleSubmit)} className={styles.filters}>
-        <div className={styles.filter_groups}>
+      <form
+        onSubmit={filtersForm.handleSubmit(handleSubmit)}
+        className="flex flex-col h-[calc(100%-60px)] overflow-hidden bg-white"
+      >
+        <div className="flex flex-col gap-5 p-5 overflow-y-auto h-full">
           {filteredConfig.length === 0 && <div>No config values found</div>}
 
           {filteredConfig.map((filter) => {
@@ -122,7 +127,7 @@ export const Filters = <TDefaultValues extends Record<string, unknown>, TSchema 
             return <FilterOptions filter={filter} key={filter.title} />;
           })}
         </div>
-        <div className={styles.controls}>
+        <div className="py-5 pl-5 pr-15 md:pr-5 flex flex-col w-full gap-2.5 mt-auto">
           <Button icon={<SearchIcon />} type="submit">
             Search
           </Button>

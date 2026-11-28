@@ -1,12 +1,12 @@
 import type { FileRoutesByTo } from '~/routeTree.gen';
-import type { Colors } from '~/shared/configs/css-colors';
 
 export type MenuConfigItem = {
   id: string;
   title: string;
   shortTitle?: string;
   icon: React.ReactNode;
-  color?: Colors;
+  bg: string;
+  color: string;
   route: keyof FileRoutesByTo;
   search?: Record<string, any>;
 };

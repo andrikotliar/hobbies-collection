@@ -1,7 +1,8 @@
 import { HttpError } from '@hobbies-collection/contracts';
 import { createRouter } from '@tanstack/react-router';
 import { routeTree } from '~/routeTree.gen';
-import { ErrorScreen, PageLoader } from '~/shared/components';
+import { ErrorScreen } from '~/shared/components/layout/error-screen';
+import { Loader } from '~/shared/components/ui/loader';
 import { queryClient } from '~/shared/services/query-client';
 
 export const router = createRouter({
@@ -13,7 +14,7 @@ export const router = createRouter({
   defaultErrorComponent: ({ error }) => {
     return <ErrorScreen error={error} />;
   },
-  defaultPendingComponent: PageLoader,
+  defaultPendingComponent: () => <Loader isFullPage />,
   defaultPendingMs: 0,
   defaultPendingMinMs: 0,
   context: { queryClient },

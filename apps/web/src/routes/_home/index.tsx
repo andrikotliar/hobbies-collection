@@ -1,18 +1,21 @@
+import type z from 'zod';
 import { useMemo } from 'react';
 import { createFileRoute } from '@tanstack/react-router';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { GetFilmsListQuerySchema } from '@hobbies-collection/shared';
+import { getFilmsListQueryOptions } from '~/shared/helpers/query-options/films/get-films-list-query-options';
+import { useSidebarVisibility } from '~/shared/hooks/use-sidebar-visibility';
+import { getInitialDataQueryOptions } from '~/shared/helpers/query-options/initial-data/get-initial-data-query-options';
 import {
-  countObjectKeys,
-  Filters,
-  FiltersSidebar,
-  filterValues,
-  getFilmsListQueryOptions,
-  getInitialDataQueryOptions,
-  useSidebarVisibility,
-} from '~/shared';
-import { FilmsSection, RootPageLayout } from './-components';
-import { filterDefaultValues, FiltersSchema, getFiltersConfig } from '~/routes/_home/-helpers';
+  filterDefaultValues,
+  FiltersSchema,
+  getFiltersConfig,
+} from '~/shared/configs/root-filters-config';
+import { Filters } from '~/shared/components/filters/filters';
+import { filterValues } from '~/shared/helpers/filter-values';
+import { countObjectKeys } from '~/shared/helpers/count-keys';
+import { FilmsSection } from '~/routes/_home/-components/films-section';
+import { FiltersSidebar } from '~/shared/components/filters/filters-sidebar';
 
 export const Route = createFileRoute('/_home/')({
   validateSearch: (search) => {
@@ -51,7 +54,7 @@ function RootPageContainer() {
     return getFiltersConfig(initialData);
   }, [initialData]);
 
-  const submitFilter: React.ComponentProps<typeof Filters>['onSubmit'] = (data) => {
+  const submitFilter = (data: z.infer<typeof FiltersSchema>) => {
     const filledOptions = filterValues(data);
     navigate({
       search: (prev) => ({
@@ -80,7 +83,7 @@ function RootPageContainer() {
   const filtersCount = countObjectKeys(routeSearch, ['pageIndex', 'filmId']);
 
   return (
-    <RootPageLayout>
+    <div className="min-h-screen flex gap-5 p-5 w-full">
       <FilmsSection />
       <FiltersSidebar
         isLoading={isInitialDataLoading}
@@ -99,6 +102,6 @@ function RootPageContainer() {
           config={filtersConfig}
         />
       </FiltersSidebar>
-    </RootPageLayout>
+    </div>
   );
 }

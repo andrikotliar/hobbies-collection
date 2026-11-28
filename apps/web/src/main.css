@@ -1,134 +1,69 @@
-:root {
-  --color-blue-primary: hsl(200, 100%, 40%);
-  --color-blue-light: hsl(190, 80%, 90%);
-  --color-blue-extra-light: hsl(200, 100%, 95%);
-  --color-blue-invisible: hsl(220, 37%, 97%);
-  --color-blue-dark: hsl(200, 100%, 30%);
+@import 'tailwindcss';
 
-  --color-green-primary: hsl(180, 100%, 40%);
-  --color-green-dark: hsl(180, 100%, 20%);
-  --color-green-invisible: hsl(180, 90%, 85%);
+@theme {
+  --animate-slide: slide 3s ease infinite;
+  --animate-toast-slide: toast-slide 0.5s;
+  --breakpoint-xs: 480px;
+  --text-xxs: 10px;
 
-  --color-blue-green-primary: hsl(195 47% 63%);
+  @keyframes slide {
+    0% {
+      background-position-x: 200%;
+    }
+    100% {
+      background-position-x: -200%;
+    }
+  }
 
-  --color-lime-primary: hsl(80 72% 50%);
+  @keyframes toast-slide {
+    0% {
+      transform: translateX(120%);
+    }
 
-  --color-yellow-primary: hsl(40, 100%, 50%);
-  --color-yellow-light: hsl(30, 100%, 90%);
-  --color-yellow-extra-light: hsl(30, 100%, 95%);
+    50% {
+      transform: translateX(-10%);
+    }
 
-  --color-orange-primary: hsl(20, 70%, 50%);
-  --color-orange-light: hsl(38, 100%, 70%);
-
-  --color-black: hsl(0, 0%, 14%);
-  --color-white: hsl(0, 0%, 100%);
-
-  --color-gray-primary: hsl(0, 0%, 80%);
-  --color-gray-light: hsl(0, 0%, 95%);
-  --color-gray-extra-light: hsl(0, 0%, 97%);
-  --color-gray-invisible: hsl(0, 0%, 99%);
-  --color-gray-light-dark: hsl(0, 0%, 92%);
-  --color-gray-dark: hsl(0, 0%, 50%);
-  --color-gray-extra-dark: hsl(0, 0%, 20%);
-
-  --color-red-primary: hsl(0, 60%, 50%);
-  --color-red-light: hsl(0, 100%, 70%);
-  --color-red-extra-light: hsl(0, 100%, 95%);
-
-  --color-brown-light: hsl(47 47% 63%);
-
-  --color-purple-primary: hsl(280, 30%, 50%);
-  --color-purple-light: hsl(270, 60%, 80%);
-  --color-purple-dark: hsl(270, 85%, 20%);
-
-  --border-default: 1px solid var(--color-gray-primary);
-  --rounded-default: 8px;
-  --rounded-sm: 5px;
-  --shadow-sm: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-
-  --screen-height: 100vh;
-
-  --text-xxs: 0.665rem;
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 2rem;
-  --text-4xl: 2.5rem;
-
-  --font-condensed: 'Roboto-Condensed', sans-serif;
+    100% {
+      transform: translateX(0);
+    }
+  }
 }
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto-Regular.woff2');
-  font-weight: normal;
+@custom-variant slider-thumb-webkit (&::-webkit-slider-thumb);
+@custom-variant slider-thumb {
+  &::-webkit-slider-thumb {
+    @slot;
+  }
+
+  &::-moz-range-thumb {
+    @slot;
+  }
 }
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/Roboto-Bold.woff2');
-  font-weight: bold;
+@custom-variant rating-hover {
+  &:hover,
+  &:hover ~ & {
+    @slot;
+  }
 }
 
-@font-face {
-  font-family: 'Roboto-Condensed';
-  src: url('/fonts/Roboto-Condensed-Medium.woff2');
-  font-weight: 500;
+@custom-variant rating-selected {
+  &:hover,
+  &:has(.input:checked),
+  &:has(.input:checked) ~ &,
+  &:not(:has(.input:checked)):hover ~ & {
+    @slot;
+  }
 }
 
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  -webkit-tap-highlight-color: transparent;
-}
-
-li {
-  list-style: none;
-}
-
-button {
-  display: block;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  border: none;
-  background: none;
-  cursor: pointer;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-input {
-  color: inherit;
-  font-size: inherit;
-  font-family: inherit;
-}
-
-html {
-  scrollbar-gutter: stable;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  position: relative;
-  background-color: var(--color-blue-invisible);
-}
-
-body:has(.no-doc-scroll) {
-  overflow: hidden;
+@utility responsive-grid {
+  @apply grid grid-cols-12 gap-6.25;
+  @apply max-[1920px]:grid-cols-8;
+  @apply max-xl:grid-cols-6;
+  @apply max-[960px]:grid-cols-4;
+  @apply max-[540px]:grid-cols-3;
+  @apply max-[400px]:gap-3.75;
 }
 
 .is-dragging {

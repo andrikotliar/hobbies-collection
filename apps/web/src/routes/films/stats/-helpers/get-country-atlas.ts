@@ -1,6 +1,6 @@
 import landAtlasJson from 'world-atlas/land-110m.json';
 import { feature } from 'topojson-client';
-import { isRecord } from '~/shared';
+import { isRecord } from '~/shared/helpers/is-record';
 import type { ExtendedFeature, GeoGeometryObjects, GeoSphere } from 'd3-geo';
 
 type AtlasTopology = Parameters<typeof feature>[0];

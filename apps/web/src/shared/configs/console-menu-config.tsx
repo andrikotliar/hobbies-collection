@@ -1,4 +1,3 @@
-import { type MenuConfigItem } from '../types';
 import {
   BuildingIcon,
   CalendarClockIcon,
@@ -15,6 +14,8 @@ import {
   VideotapeIcon,
 } from 'lucide-react';
 import { DraftLevel } from '@hobbies-collection/shared';
+import type { MenuConfigItem } from '~/shared/types/menu-config-item';
+import clsx from 'clsx';
 
 export const consoleMenuConfig: Record<string, MenuConfigItem> = {
   films: {
@@ -22,7 +23,8 @@ export const consoleMenuConfig: Record<string, MenuConfigItem> = {
     route: '/console/films',
     title: 'Films',
     icon: <ClapperboardIcon />,
-    color: 'colorBluePrimary',
+    bg: clsx('from-sky-600 to-sky-400'),
+    color: clsx('text-sky-600 hover:border-sky-600 hover:bg-sky-100'),
   },
   pendingFilms: {
     id: 'pendingFilms',
@@ -35,7 +37,8 @@ export const consoleMenuConfig: Record<string, MenuConfigItem> = {
     title: 'Pending Films',
     shortTitle: 'Pending',
     icon: <CalendarClockIcon />,
-    color: 'colorOrangePrimary',
+    bg: clsx('from-orange-400 to-orange-300'),
+    color: clsx('text-orange-600 hover:border-orange-600 hover:bg-orange-100'),
   },
   upcomingFilms: {
     id: 'upcomingFilms',
@@ -46,7 +49,8 @@ export const consoleMenuConfig: Record<string, MenuConfigItem> = {
       draftLevels: [DraftLevel.UPCOMING],
     },
     icon: <ClockIcon />,
-    color: 'colorBrownLight',
+    bg: clsx('from-amber-800 to-amber-600'),
+    color: clsx('text-amber-800 hover:border-amber-800 hover:bg-amber-50'),
   },
   collectionEvents: {
     id: 'collection-events',
@@ -54,42 +58,48 @@ export const consoleMenuConfig: Record<string, MenuConfigItem> = {
     title: 'Collection Events',
     shortTitle: 'Events',
     icon: <CalendarIcon />,
-    color: 'colorOrangeLight',
+    bg: clsx('from-amber-400 to-amber-300'),
+    color: clsx('text-amber-400 hover:border-amber-400 hover:bg-amber-50'),
   },
   awards: {
     id: 'awards',
     route: '/console/awards',
     title: 'Awards',
     icon: <TrophyIcon />,
-    color: 'colorYellowPrimary',
+    bg: clsx('from-yellow-400 to-yellow-300'),
+    color: clsx('text-yellow-400 hover:border-yellow-400 hover:bg-yellow-50'),
   },
   collections: {
     id: 'collections',
     route: '/console/collections',
     title: 'Collections',
     icon: <LibraryIcon />,
-    color: 'colorRedLight',
+    bg: clsx('from-red-400 to-red-200'),
+    color: clsx('text-red-400 hover:border-red-400 hover:bg-red-50'),
   },
   countries: {
     id: 'countries',
     route: '/console/countries',
     title: 'Countries',
     icon: <MapIcon />,
-    color: 'colorGreenPrimary',
+    bg: clsx('from-teal-400 to-teal-300'),
+    color: clsx('text-teal-400 hover:border-teal-400 hover:bg-teal-50'),
   },
   genres: {
     id: 'genres',
     route: '/console/genres',
     title: 'Genres',
     icon: <VideotapeIcon />,
-    color: 'colorPurplePrimary',
+    bg: clsx('from-indigo-600 to-indigo-400'),
+    color: clsx('text-indigo-600 hover:border-indigo-600 hover:bg-indigo-100'),
   },
   studios: {
     id: 'studios',
     route: '/console/studios',
     title: 'Studios',
     icon: <BuildingIcon />,
-    color: 'colorGrayDark',
+    bg: clsx('from-rose-600 to-rose-400'),
+    color: clsx('text-rose-600 hover:border-rose-600 hover:bg-rose-100'),
   },
   people: {
     id: 'people',
@@ -97,28 +107,32 @@ export const consoleMenuConfig: Record<string, MenuConfigItem> = {
     title: 'Actors / Creators',
     shortTitle: 'People',
     icon: <UserIcon />,
-    color: 'colorBlueDark',
+    bg: clsx('from-cyan-600 to-cyan-400'),
+    color: clsx('text-cyan-600 hover:border-cyan-600 hover:bg-cyan-100'),
   },
   hobbies: {
     id: 'hobbies',
     route: '/console/hobbies',
     title: 'Hobbies',
     icon: <DicesIcon />,
-    color: 'colorPurpleDark',
+    bg: clsx('from-fuchsia-600 to-fuchsia-400'),
+    color: clsx('text-fuchsia-600 hover:border-fuchsia-600 hover:bg-fuchsia-100'),
   },
   sessions: {
     id: 'sessions',
     route: '/console/sessions',
     title: 'Sessions',
     icon: <KeyRoundIcon />,
-    color: 'colorPurpleLight',
+    bg: clsx('from-purple-600 to-purple-400'),
+    color: clsx('text-purple-600 hover:border-purple-600 hover:bg-purple-100'),
   },
   user: {
     id: 'user',
     route: '/console/user',
     title: 'User',
     icon: <UserCogIcon />,
-    color: 'colorLimePrimary',
+    bg: clsx('from-lime-600 to-lime-400'),
+    color: clsx('text-lime-600 hover:border-lime-600 hover:bg-lime-100'),
   },
 };
 

@@ -1,5 +1,5 @@
 import { queryOptions } from '@tanstack/react-query';
-import { api, queryKey } from '~/shared/services';
+import { api, queryKey } from '~/shared/services/api';
 
 export const getHobbyByTitleQueryOptions = (title: string) => {
   return queryOptions({

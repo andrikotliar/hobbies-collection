@@ -1,10 +1,12 @@
 import { mutationOptions, useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
-import { List, useFormModal, withFormModal } from '~/routes/console/-shared';
-import { HobbyItemForm } from '~/routes/console/hobbies_/-components';
-import { getDefaultHobbyItem } from '~/routes/console/hobbies_/-configs';
-import { api } from '~/shared';
+import { HobbyItemForm } from '~/routes/console/hobbies_/-components/hobby-item-form';
+import { getDefaultHobbyItem } from '~/routes/console/hobbies_/-configs/default-form-values';
+import { ConsolePageList } from '~/shared/components/layout/console-page-list';
+import { useFormModal } from '~/shared/context/form-modal-context';
 import { getHobbyAdminQueryOptions } from '~/shared/helpers/query-options/hobbies/get-hobby-admin-query-options';
+import { withFormModal } from '~/shared/helpers/with-form-modal';
+import { api } from '~/shared/services/api';
 
 const getDeleteHobbyItemMutations = (hobbyId: number) => {
   return () => {
@@ -40,7 +42,7 @@ function RouteComponent() {
   const { onOpen } = useFormModal();
 
   return (
-    <List
+    <ConsolePageList
       data={{ list: data.items }}
       getDeleteMutationOptions={getDeleteHobbyItemMutations(Number(params.id))}
       isFetching={isLoading}

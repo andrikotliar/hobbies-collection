@@ -2,8 +2,9 @@ import { CommonListQuerySchema } from '@hobbies-collection/shared';
 import { mutationOptions, useQuery } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
 import { useCallback } from 'react';
-import { List } from '~/routes/console/-shared';
-import { api, getAwardsBaseDataListQueryOptions, queryKey } from '~/shared';
+import { ConsolePageList } from '~/shared/components/layout/console-page-list';
+import { getAwardsBaseDataListQueryOptions } from '~/shared/helpers/query-options/awards/get-awards-base-data-list-query-options';
+import { api, queryKey } from '~/shared/services/api';
 
 export const Route = createFileRoute('/console/awards')({
   validateSearch: (search) => CommonListQuerySchema.parse(search),
@@ -67,7 +68,7 @@ function PageContainer() {
   }, []);
 
   return (
-    <List
+    <ConsolePageList
       data={data}
       onSearch={handleSearch}
       getDeleteMutationOptions={getDeleteMutationOptions}

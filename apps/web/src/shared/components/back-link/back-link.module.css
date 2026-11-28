@@ -1,9 +1,0 @@
-.back_link {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.back_link:hover {
-  color: var(--color-blue-primary);
-}

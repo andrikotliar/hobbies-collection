@@ -1,4 +1,4 @@
-import { Priority } from '../enums';
+import { Priority } from '../enums/priority';
 
 export const getPriorityTitle = (priority: number) => {
   switch (priority) {

@@ -1,6 +1,8 @@
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
-import { getHobbyByTitleQueryOptions, HobbyContainer, HobbyItemsGrid, HobbyTitle } from '~/shared';
+import { HobbyItemsGrid } from '~/shared/components/layout/hobby-items-grid';
+import { HobbyTitle } from '~/shared/components/layout/hobby-title';
+import { getHobbyByTitleQueryOptions } from '~/shared/helpers/query-options/hobbies/get-hobby-by-title-query-options';
 
 export const Route = createFileRoute('/board-games')({
   loader: async ({ context }) => {
@@ -13,11 +15,9 @@ function RouteComponent() {
   const { data } = useSuspenseQuery(getHobbyByTitleQueryOptions('Board Games'));
 
   return (
-    <HobbyContainer>
-      <HobbyTitle imagePath={data.imagePath} total={data.items.length}>
-        {data.title} Collection
-      </HobbyTitle>
+    <div className="w-full">
+      <HobbyTitle total={data.items.length}>{data.title} Collection</HobbyTitle>
       <HobbyItemsGrid items={data.items} />
-    </HobbyContainer>
+    </div>
   );
 }

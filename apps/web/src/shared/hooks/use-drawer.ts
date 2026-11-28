@@ -1,10 +1,10 @@
 import { useLayoutEffect, useRef } from 'react';
-import { BLOCKING_SCROLL_CLASS_NAME } from '~/shared/constants';
+import { BLOCKING_SCROLL_CLASS_NAME } from '~/shared/constants/app';
 
 type DrawerPosition = 'left' | 'right';
 type StopMoveConditionHandler = (x: number, y: number) => boolean;
 
-type UseDrawerProps = {
+type Options = {
   closeHandler: VoidFunction;
   position: DrawerPosition;
 };
@@ -48,7 +48,7 @@ const setClosingClass = (element: HTMLDivElement | null, position: DrawerPositio
   element.classList.add(positionToClassName[position]);
 };
 
-export const useDrawer = ({ closeHandler, position }: UseDrawerProps) => {
+export const useDrawer = ({ closeHandler, position }: Options) => {
   const drawerWrapperRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
   const dragStartX = useRef(0);

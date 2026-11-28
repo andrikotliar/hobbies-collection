@@ -1,4 +1,4 @@
-import { api, queryKey } from '~/shared/services';
+import { api, queryKey } from '~/shared/services/api';
 import { queryOptions } from '@tanstack/react-query';
 
 export const getFilmsSearchQueryOptions = (searchString: string | null) => {

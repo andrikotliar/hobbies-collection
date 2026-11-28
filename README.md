@@ -33,6 +33,11 @@ Name images in a way they are defined in the seed data:
 }
 ```
 
+### Color schema
+
+Primary - `*-sky-600`
+Border - `*-slate-300`
+
 ## Backend
 
 ### Tech stack

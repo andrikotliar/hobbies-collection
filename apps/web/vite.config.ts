@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import ReactVite from '@vitejs/plugin-react';
 import { tanstackRouter } from '@tanstack/router-plugin/vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   server: {
@@ -22,6 +23,7 @@ export default defineConfig({
       routeFileIgnorePrefix: '-',
     }),
     ReactVite(),
+    tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
       workbox: {

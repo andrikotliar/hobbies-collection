@@ -1,6 +1,0 @@
-.scrollable_line {
-  display: flex;
-  gap: 20px;
-  overflow-y: auto;
-  padding: 5px;
-}
